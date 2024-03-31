@@ -12,7 +12,7 @@ export default function Home() {
     .map((slide) => ({ ...slide, id: uuidv4() }))
     .map((slide) => (
       <div key={slide.id}>
-        <Image src={slide.imageUrl} alt={slide.altText} fill={true} />
+        <Image src={slide.imageUrl} alt={slide.altText} fill={true} className="object-fit" />
       </div>
     ));
 
