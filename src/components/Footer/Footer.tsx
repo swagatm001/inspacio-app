@@ -1,3 +1,7 @@
+import { ImageLeftCopyRight } from "../ImageLeftCopyRight"
+
 export const Footer = () => {
-    return <footer>Footer</footer>
+    return <footer>
+        <ImageLeftCopyRight leftTemplate={<div></div>} rightTemplate={<div></div>} />
+    </footer>
 }
