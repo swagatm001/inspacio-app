@@ -1,10 +1,16 @@
 export const footerConstants = {
-    title: "Kick-start your dream home with us",
-    subTitle: "Kreative Dezine Studio",
-    addresses: [
-        {
-            title: "Bangalore, India.",
-            detailedAddress: `<div class="flex flex-col"><p>WeWork Embassy TechVillage,</p> <p>Block L, Devarabisanahalli,</p> <p>Outer Ring Rd, Bellandur,</p> <p>Bengaluru, Karnataka 560103</p></div>`
-        }
-    ]
+    left: {
+        text1: `Kick-start your dream home with us`,
+        text2: `Experience Excellent Quality & Timely Delivery with`,
+        text3: `Kreative Dezine Studio`
+    },
+    right: {
+        address: {
+            place: "Bangalore, India.",
+            details: "WeWork Embassy TechVillage, Block L, Devarabisanahalli, Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103"
+        },
+        email: "hello@kds.design",
+        phone: "+8(663)125-08-59"
+    },
+    copyright: "© Copyright Kreative Dezine Studio - All Rights Reserved"
 }

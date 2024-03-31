@@ -1,6 +1,6 @@
 export const headerConstants = {
   logo: {
-    imageUrl: "/images/kds-logo.png",
+    imageUrl: "/kds/main/kds-logo.png",
     altText: "brand logo",
     width: 53,
     height: 26,
@@ -32,17 +32,17 @@ export const headerConstants = {
     socials: [
       {
         label: "Instagram",
-        imageUrl: "",
+        imageUrl: "/kds/main/insta.png",
         href: "/",
       },
       {
         label: "Facebook",
-        imageUrl: "",
+        imageUrl: "/kds/main/fb.png",
         href: "/",
       },
       {
         label: "Linkedin",
-        imageUrl: "",
+        imageUrl: "/kds/main/linkedin.png",
         href: "/",
       },
     ],

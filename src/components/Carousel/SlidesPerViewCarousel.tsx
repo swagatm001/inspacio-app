@@ -6,12 +6,27 @@ import { FreeMode } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
+import React from "react";
+import { uuidv4 } from "@/utils/uuid4";
 
-export const SlidesPerViewCarousel = () => {
+interface I_SlidesPerViewCarousel {
+  slides: React.ReactNode[];
+}
+
+export const SlidesPerViewCarousel: React.FC<I_SlidesPerViewCarousel> = ({
+  slides,
+}) => {
+  const _slides = slides.map((slide) => (
+    <SwiperSlide
+      key={uuidv4()}
+    >
+      {slide}
+    </SwiperSlide>
+  ));
   return (
     <div className="SlidesPerViewCarousel w-full h-full">
       <Swiper
-      slidesPerView={2.4}
+        slidesPerView={1.5}
         spaceBetween={30}
         freeMode={true}
         modules={[FreeMode]}
@@ -27,10 +42,7 @@ export const SlidesPerViewCarousel = () => {
         }}
         className="rounded-lg w-full h-full"
       >
-        <SwiperSlide className="bg-white rounded-lg h-80 border">Slide 1</SwiperSlide>
-        <SwiperSlide className="bg-white rounded-lg h-80 border">Slide 1</SwiperSlide>
-        <SwiperSlide className="bg-white rounded-lg h-80 border">Slide 1</SwiperSlide>
-        <SwiperSlide className="bg-white rounded-lg h-80 border">Slide 1</SwiperSlide>
+        {_slides}
       </Swiper>
     </div>
   );

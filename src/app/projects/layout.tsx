@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { Container } from "@/components/Container";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,5 +16,10 @@ export default function ProjectsLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <Container className="pt-20">{children}</Container>;
+  return (
+    <Container className="pt-20">
+      <div>{children}</div>
+      <Footer />
+    </Container>
+  );
 }

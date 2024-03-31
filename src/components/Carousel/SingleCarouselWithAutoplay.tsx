@@ -37,7 +37,6 @@ export const SingleCarouselWithAutoplay: React.FC<
       >
         {$slides.map(({ slide, id }) => (
           <SwiperSlide
-          className="h-full"
             key={id}
           >
             {slide}

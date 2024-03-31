@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { playfair } from "@/fonts/playfair";
+import { helvetica } from "@/fonts/helvetica";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,15 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={helvetica.className}>
         <main>
           <End2EndWrapper>
             <Header />
           </End2EndWrapper>
           {children}
-          <End2EndWrapper>
-            <Footer />
-          </End2EndWrapper>
         </main>
       </body>
     </html>

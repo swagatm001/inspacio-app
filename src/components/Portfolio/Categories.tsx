@@ -1,9 +1,9 @@
+import { playfair } from "@/fonts/playfair";
 import { T_Options } from "@/interfaces/Types";
 import clsx from "clsx";
 import React from "react";
 
-
-export type T_Category = T_Options
+export type T_Category = T_Options;
 
 interface I_Categories {
   categories: Array<T_Category>;
@@ -32,16 +32,13 @@ export const Categories: React.FC<I_Categories> = ({
             <li
               key={category.value}
               className={clsx(
-                "pr-6 mr-6 text-gray-400",
+                "pr-6 mr-6 text-gray-400 text-2xl font-semibold",
                 idx !== categories.length - 1 && "border-r border-gray-400",
-                category.value === selected?.value && "text-gray-900"
+                category.value === selected?.value && "text-gray-900",
+                playfair.className
               )}
             >
-              <button
-                type="button"
-                className="text-xl"
-                onClick={() => handleSelection(category)}
-              >
+              <button type="button" onClick={() => handleSelection(category)}>
                 {category.label}
               </button>
             </li>

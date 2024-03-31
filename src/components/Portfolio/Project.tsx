@@ -1,25 +1,28 @@
 import { T_Options } from "@/interfaces/Types";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export interface I_Project {
   title: string
-  images: Array<string>
-  subTitle?: string
-  description?: string
-  address?: string
+  thumbnail: string
   category: T_Options
+  slug: string
+  address: string
+  description?: string
+  image?: string[]
 }
 
-export const Project:React.FC<I_Project> = ({title, images, subTitle, address}) => {
+export const Project:React.FC<I_Project> = ({title, thumbnail, address, slug}) => {
+
   return (
-    <div className="w-full">
-      <div className="aspect-video bg-gray-200">
-        <Image src="" alt="" />
+    <div className="w-full cursor-pointer">
+      <div className="aspect-video bg-gray-200 relative overflow-hidden">
+        <Image src={thumbnail as string} alt="project image" fill className="w-full h-auto object-cover transition duration-[3000ms] hover:scale-150" />
       </div>
       <div className="mt-4">
-        <p>{title}</p>
-        <p>Tin factory, Banaglore</p>
+        <Link href={slug} className="hover:underline block mb-2">{title}</Link>
+        <p className="text-gray-400">{address}</p>
       </div>
     </div>
   );
