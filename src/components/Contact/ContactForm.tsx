@@ -6,6 +6,8 @@ import { playfair } from "@/fonts/playfair";
 import Image from "next/image";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const formGroupCSS = "w-full flex flex-col gap-2";
 const inputCSS =
@@ -39,7 +41,7 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<I_FormData>();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -48,15 +50,28 @@ export const ContactForm = () => {
     try {
       await sendMail(data);
       setIsLoading(false);
+      toast.success(
+        "Your query has been successfully registered with us. Stay tuned we will get back to you shortly."
+      );
       reset();
     } catch (error) {
       console.log(error);
       setIsLoading(false);
+      toast.error("Something went wrong, please try again later");
     }
   };
 
   return (
     <div className="py-10">
+      <ToastContainer
+        theme="colored"
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        draggable={false}
+      />
       <ImageLeftCopyRight
         wrapperClassName="gap-10"
         leftTemplate={

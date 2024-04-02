@@ -24,6 +24,7 @@
     "react-hook-form": "^7.51.2",
     "react-notifications": "^1.7.4",
     "react-slick": "^0.30.2",
+    "react-toastify": "^10.0.5",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.8.4",
     "swiper": "^11.0.7",
