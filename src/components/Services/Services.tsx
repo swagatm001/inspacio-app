@@ -6,10 +6,10 @@ export const Services = () => {
   return (
     <section className="mb-20">
       <div>
-        <p className="lg:text-4xl mb-3 text-gray-500">Services</p>
+        <p className="text-2xl lg:text-4xl mb-3 text-gray-500">Services</p>
         <p
           className={clsx(
-            "text-base lg:text-3xl mb-10 text-gray-400",
+            "text-xl lg:text-3xl mb-10 text-gray-400",
             playfair.className
           )}
         >

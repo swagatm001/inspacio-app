@@ -6,7 +6,7 @@ export const Partners = () => {
   return (
     <section className="mb-20">
       <div>
-        <p className="lg:text-4xl mb-4 text-gray-500">Our Trusted Partners</p>
+        <p className="text-2xl lg:text-4xl mb-4 text-gray-500">Our Trusted Partners</p>
       </div>
       <div>
         <ul className="flex justify-between items-center flex-wrap">

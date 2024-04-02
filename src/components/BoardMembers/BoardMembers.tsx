@@ -5,10 +5,10 @@ import Image from "next/image";
 export const Boardmembers = () => {
   return (
     <section className="mb-20">
-      <div className="bg-[#212529] p-20 text-white">
+      <div className="bg-[#212529] py-20 px-10 md:p-20 text-white">
         <div className="mb-20">
-          <p className="lg:text-4xl mb-4">Board Members</p>
-          <p className={clsx(playfair.className, "text-3xl")}>
+          <p className="text-2xl lg:text-4xl mb-4">Board Members</p>
+          <p className={clsx(playfair.className, "text-xl lg:text-3xl")}>
             We&apos;re lucky to be supported by some of the best investors in
             the world.
           </p>

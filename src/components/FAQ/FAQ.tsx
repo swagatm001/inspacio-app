@@ -51,7 +51,7 @@ export const FAQ = () => {
   return (
     <div className="py-10">
       <div className="text-gray-600">
-        <p className="text-4xl mb-2">Frequently asked questions</p>
+        <p className="text-2xl lg:text-4xl mb-2">Frequently asked questions</p>
         <p className={clsx(playfair.className, "text-3xl")}>
           Everything you need to know about the product and billing.
         </p>
