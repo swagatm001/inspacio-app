@@ -13,10 +13,10 @@ export const Portfolio = () => {
 
   return (
     <PortfolioContext.Provider value={{  }}>
-      <div className="flex flex-col gap-16 py-6">
+      <section className="flex flex-col gap-16 mb-20">
         <Categories categories={categoriesConstants} onSelect={setSelectedPortfolio} />
         <Gallery projects={projectsConstants} selectedCategory={selectedPortfolio} />
-      </div>
+      </section>
     </PortfolioContext.Provider>
   );
 };

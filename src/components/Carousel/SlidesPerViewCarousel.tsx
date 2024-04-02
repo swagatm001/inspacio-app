@@ -26,8 +26,8 @@ export const SlidesPerViewCarousel: React.FC<I_SlidesPerViewCarousel> = ({
   return (
     <div className="SlidesPerViewCarousel w-full h-full">
       <Swiper
-        slidesPerView={1.5}
-        spaceBetween={30}
+        slidesPerView={3}
+        spaceBetween={20}
         freeMode={true}
         modules={[FreeMode]}
         breakpoints={{
@@ -37,7 +37,7 @@ export const SlidesPerViewCarousel: React.FC<I_SlidesPerViewCarousel> = ({
           },
           768: {
             slidesPerView: 4,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
         }}
         className="rounded-lg w-full h-full"

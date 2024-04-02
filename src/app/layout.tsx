@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { playfair } from "@/fonts/playfair";
 import { helvetica } from "@/fonts/helvetica";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Create Next App",

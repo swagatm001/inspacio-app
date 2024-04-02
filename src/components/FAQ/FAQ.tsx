@@ -4,6 +4,7 @@ import { faqsConstants } from "@/constants/faq";
 import { playfair } from "@/fonts/playfair";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface I_Question {
@@ -20,9 +21,14 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
   return (
     <div className={clsx("py-10", isLast && "border-b")}>
       <div className="flex justify-between items-center">
-        <p className="font-semibold">{question}</p>
+        <p className="font-semibold w-10/12">{question}</p>
         <button type="button" onClick={toggle}>
-          +
+          <Image
+            src={showAnswer ? "/kds/main/minus.png" : "/kds/main/plus.png"}
+            width={20}
+            height={20}
+            alt="toggle button"
+          />
         </button>
       </div>
       <AnimatePresence>
@@ -31,9 +37,9 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="mt-4"
+            className="mt-4 text-gray-500"
           >
-            {question}
+            {answer}
           </motion.p>
         )}
       </AnimatePresence>
