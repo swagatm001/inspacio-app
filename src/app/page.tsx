@@ -28,14 +28,19 @@ export default function Home() {
           priority
           style={{ objectFit: "cover" }}
         />
-        <div className="absolute top-0 left-0 w-full h-full flex items-center px-10 lg:px-32">
+        <div className="absolute top-0 left-0 w-full h-full flex items-center px-10 bg-black bg-opacity-30 lg:px-32">
           <p
-            dangerouslySetInnerHTML={{ __html: slide.tagLine }}
             className={clsx(
               playfair.className,
-              "text-3xl sm:text-4xl lg:text-6xl text-white font-bold leading-normal"
+              "text-3xl sm:text-4xl lg:text-6xl text-white leading-normal"
             )}
-          ></p>
+          >
+            <span>Concept to Creation</span>
+            <br />
+            <span className="lg:text-7xl font-bold">Designing Timeless</span>
+            <br />
+            <span>Spaces</span>
+          </p>
         </div>
       </div>
     ));
