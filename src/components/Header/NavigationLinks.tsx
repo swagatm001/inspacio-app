@@ -3,7 +3,7 @@ import { clsx } from "clsx";
 import Link from "next/link";
 import React from "react";
 
-export const NavigationLinks: React.FC<{ className?: string, onClick: () => void }> = ({
+export const NavigationLinks: React.FC<{ className?: string, onClick?: () => void }> = ({
   className,
   onClick
 }) => {
