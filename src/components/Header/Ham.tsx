@@ -24,7 +24,7 @@ export const HamMenu: React.FC<{ className: string }> = ({ className }) => {
             <Navigation className="w-full flex-col">
               <NavigationLinks className="w-full flex-col items-center justify-center" onClick={() => setOpen(false)} />
               <SocialLinks />
-              <GetInTouch />
+              <GetInTouch title="Get In Touch" />
             </Navigation>
           </motion.div>
         )}
