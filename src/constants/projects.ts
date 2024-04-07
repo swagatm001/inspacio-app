@@ -17,19 +17,21 @@ export const categoriesConstants = [
 ];
 
 const anthology = {
-  thumbnail: "/kds/antology/1689260576477.jpg",
-  title: "Antology",
+  thumbnail: "/kds/anthology/img1.png",
+  title: "Anthology",
   slug: "anthology",
   image: [
-    "/kds/antology/1689260576477.jpg",
-    "/kds/antology/1689260576642.jpg",
-    "/kds/antology/1689260576528.jpg",
-    "/kds/antology/1689260576577.jpg",
-    "/kds/antology/1689260576453.jpg",
-    "/kds/antology/1689260576619.jpg",
-    "/kds/antology/1689260576550.jpg",
-    "/kds/antology/1689260576598.jpg",
-    "/kds/antology/1689260576598.jpg",
+    "/kds/anthology/img1.png",
+    "/kds/anthology/img2.jpg",
+    "/kds/anthology/img3.jpg",
+    "/kds/anthology/img4.jpg",
+    "/kds/anthology/img5.jpg",
+    "/kds/anthology/img6.jpg",
+    "/kds/anthology/img7.jpg",
+    "/kds/anthology/img8.jpg",
+    "/kds/anthology/img9.jpg",
+    "/kds/anthology/img10.jpg",
+    "/kds/anthology/img11.jpg",
   ],
   description: `Anthology is a global workplace continually striving toward deeper inclusivity, authenticity, and professional advancement. We were assigned the task to design the workspace with an
   idea that showcase a contemporary smart approach to design, technology and aesthetics.
@@ -43,7 +45,7 @@ const anthology = {
   palette and beautiful lighting in lounge/ meeting rooms adds in more drama and life to the
   space.
   `,
-  address: `TinFactory, Salarpuria Magnificia, Bangalore`,
+  address: `Jalahalli, Bangalore`,
   category: {
     label: "Commercial",
     value: "commercial"
