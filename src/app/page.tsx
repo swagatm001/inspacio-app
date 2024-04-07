@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
+import { OurCreativeProcess } from "@/components/OurCreativeProcess";
 import { Partners } from "@/components/Partners/Partners";
 import { Portfolio } from "@/components/Portfolio";
 import { Services } from "@/components/Services";
@@ -83,6 +84,7 @@ export default function Home() {
         <Banner />
         <Services />
         <Partners />
+        <OurCreativeProcess />
         <Boardmembers />
         <ContactForm />
         <FAQ />

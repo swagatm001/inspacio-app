@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={helvetica.className}>
         <main>
+          <div id="modal-portal" />
           <End2EndWrapper>
             <Header />
           </End2EndWrapper>

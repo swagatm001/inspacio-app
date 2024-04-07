@@ -45,14 +45,17 @@ export const Footer = () => {
                 </div>
                 <div>
                   <p className="text-gray-500">Email us at</p>
-                  <a href={`mailto:${footerConstants.right.email}`} className="text-2xl">
+                  <a href={`mailto:${footerConstants.right.email}`} className="text-2xl hover:underline">
                     {footerConstants.right.email}
                   </a>
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <p className="text-gray-500">If you&apos;re hurry, quick call for us</p>
-                  <a href={`tel:${footerConstants.right.phone}`} className="text-2xl">
-                    {footerConstants.right.phone}
+                  <a href={`tel:${footerConstants.right.phone1}`} className="text-2xl hover:underline">
+                    {footerConstants.right.phone1}
+                  </a>
+                  <a href={`tel:${footerConstants.right.phone2}`} className="text-2xl hover:underline">
+                    {footerConstants.right.phone2}
                   </a>
                 </div>
               </div>

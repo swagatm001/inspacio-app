@@ -33,17 +33,17 @@ export const headerConstants = {
       {
         label: "Instagram",
         imageUrl: "/kds/main/insta.png",
-        href: "/",
+        href: "https://www.instagram.com/kreativedezinestudio/",
       },
       {
         label: "Facebook",
         imageUrl: "/kds/main/fb.png",
-        href: "/",
+        href: "https://www.facebook.com/kreativedezinestudio",
       },
       {
         label: "Linkedin",
         imageUrl: "/kds/main/linkedin.png",
-        href: "/",
+        href: "https://www.linkedin.com/company/kreative-dezine-studio/",
       },
     ],
   },

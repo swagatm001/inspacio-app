@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
+import { Sections } from "../Sections";
 
 interface I_Question {
   isLast: boolean;
@@ -49,13 +50,10 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
 
 export const FAQ = () => {
   return (
-    <div className="py-10">
-      <div className="text-gray-600">
-        <p className="text-2xl lg:text-4xl mb-2">Frequently asked questions</p>
-        <p className={clsx(playfair.className, "text-3xl")}>
-          Everything you need to know about the product and billing.
-        </p>
-      </div>
+    <Sections
+      title="Frequently asked questions"
+      subtitle="Everything you need to know about the product and billing."
+    >
       <div>
         {faqsConstants.map((faq, i) => (
           <Question
@@ -66,6 +64,6 @@ export const FAQ = () => {
           />
         ))}
       </div>
-    </div>
+    </Sections>
   );
 };

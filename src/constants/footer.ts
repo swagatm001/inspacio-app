@@ -9,8 +9,9 @@ export const footerConstants = {
             place: "Bangalore, India.",
             details: "WeWork Embassy TechVillage, Block L, Devarabisanahalli, Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103"
         },
-        email: "hello@kds.design",
-        phone: "+8(663)125-08-59"
+        email: "kreativedezinestudio@outlook.com",
+        phone1: "+91 9731270042",
+        phone2: "+91 9916492056"
     },
     copyright: "© Copyright Kreative Dezine Studio - All Rights Reserved"
 }

@@ -18,7 +18,6 @@ export const Partners = () => {
                   alt={partner.name}
                   fill
                   className="object-contain"
-                  style={{ filter: "grayscale(100%)" }}
                 />
               </div>
             </li>
