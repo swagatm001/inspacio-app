@@ -15,7 +15,17 @@ import { homePageContants } from "@/constants/home";
 import { playfair } from "@/fonts/playfair";
 import { uuidv4 } from "@/utils/uuid4";
 import clsx from "clsx";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Residential and Commercial Interior Designers in Bangalore - Kreative Dezine Studio",
+  description: "Get high quality residential and commercial interior designs from expertise designers of kreative design studio in Bangalore",
+  icons: {
+    icon: "https://ik.imagekit.io/yc3qb8x6t/kds/main/kds-logo.png"
+  }
+};
+
 
 export default function Home() {
   const heroSlides = homePageContants.hero.slides
