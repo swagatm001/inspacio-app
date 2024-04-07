@@ -32,7 +32,7 @@ export const Header = () => {
           <Navigation className="hidden lg:flex">
             <NavigationLinks />
             <SocialLinks />
-            <GetInTouch />
+            <GetInTouch title="Get In Touch" />
           </Navigation>
         </div>
       </Container>

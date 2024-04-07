@@ -20,10 +20,10 @@ export const headerConstants = {
         label: "About",
         href: "/about",
       },
-      {
-        label: "Blog",
-        href: "/blogs",
-      },
+      // {
+      //   label: "Blog",
+      //   href: "/blogs",
+      // },
       {
         label: "Contact",
         href: "/contact",
