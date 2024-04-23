@@ -25,7 +25,7 @@ export const Boardmembers = () => {
             </div>
             <div className="flex flex-col justify-center items-center">
               <p>Swati Panda</p>
-              <p>Co-Founder</p>
+              <p>Founder & MD</p>
             </div>
           </div>
           <div>
@@ -39,7 +39,7 @@ export const Boardmembers = () => {
             </div>
             <div className="flex flex-col justify-center items-center">
               <p>Sangeeta Poojari</p>
-              <p>Co-Founder</p>
+              <p>Project Co-ordinator</p>
             </div>
           </div>
         </div>

@@ -8,11 +8,23 @@ import Image from "next/image";
 import { useState } from "react";
 
 const ProjectPage = ({ params }: { params: { slug: string } }) => {
-  const [open, setOpen] = useState<string>("");
+  const [imgIdx, setImgIdx] = useState<number | null>(null);
   const project = projectsConstants.find((p) => p.slug === params.slug);
 
   if (!project) {
     return <div>Not project found</div>;
+  }
+
+  const next = () => {
+    if(typeof imgIdx === "number" && project.image?.[imgIdx + 1]){
+      setImgIdx(imgIdx + 1)
+    }
+  }
+
+  const prev = () => {
+    if(typeof imgIdx === "number" && project.image?.[imgIdx - 1]){
+      setImgIdx(imgIdx - 1)
+    }
   }
 
   return (
@@ -70,17 +82,28 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
         <div className="aspect-video relative mb-6">
           <Image src={project.image[0]} fill alt="" className="object-cover" />
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {project.image.map((img, i) => (
             <div className="h-44 lg:h-64 relative cursor-pointer" key={i}>
-              <Image src={img} fill alt="" onClick={() => setOpen(img)} />
+              <Image src={img} fill alt="" onClick={() => setImgIdx(i)} />
             </div>
           ))}
         </div>
       </div>
-      <Modal open={Boolean(open)} onClose={() => setOpen("")}>
+      <Modal open={typeof imgIdx === "number"} onClose={() => setImgIdx(null)}>
         <div className="relative aspect-square w-full h-full">
-          <Image src={open} fill alt="" />
+          <Image
+            src={typeof imgIdx === "number" ? project.image[imgIdx] : ""}
+            fill
+            alt=""
+            className="object-contain"
+          />
+          <div onClick={next} className="absolute bottom-4 left-1/2 bg-white w-8 h-8 rounded-r-full flex justify-center items-center active:bg-gray-200 duration-300 cursor-pointer">
+            {">"}
+          </div>
+          <div onClick={prev} className="absolute bottom-4 right-1/2 bg-white w-8 h-8 rounded-l-full flex justify-center items-center active:bg-gray-200 duration-300 cursor-pointer">
+            {"<"}
+          </div>
         </div>
       </Modal>
     </div>
