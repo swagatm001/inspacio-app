@@ -7,6 +7,8 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 
+// Test
+
 const ProjectPage = ({ params }: { params: { slug: string } }) => {
   const [imgIdx, setImgIdx] = useState<number | null>(null);
   const project = projectsConstants.find((p) => p.slug === params.slug);
