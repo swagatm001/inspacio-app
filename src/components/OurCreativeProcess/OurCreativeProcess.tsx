@@ -8,10 +8,7 @@ import { playfair } from "@/fonts/playfair";
 
 export const OurCreativeProcess = () => {
   return (
-    <Sections
-      title={processConstants.title}
-      subtitle={processConstants.subTitle}
-    >
+    <Sections title={processConstants.title}>
       <ul className="w-full grid grid-cols-2 lg:grid-cols-5 gap-6 py-10">
         {processConstants.steps.map((step) => (
           <li key={uuidv4()}>

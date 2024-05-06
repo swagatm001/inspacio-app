@@ -50,10 +50,7 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
 
 export const FAQ = () => {
   return (
-    <Sections
-      title="Frequently asked questions"
-      subtitle="Everything you need to know about the product and billing."
-    >
+    <Sections title="Frequently asked questions">
       <div>
         {faqsConstants.map((faq, i) => (
           <Question
