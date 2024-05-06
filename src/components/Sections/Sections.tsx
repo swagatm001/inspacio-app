@@ -18,7 +18,7 @@ export const Sections: React.FC<I_Sections> = ({
   return (
     <section className={clsx("py-10", className)}>
       <div className="text-gray-600">
-        <p className={clsx(playfair.className, "text-2xl lg:text-4xl mb-2")}>
+        <p className={clsx(playfair.className, "text-3xl lg:text-5xl mb-2")}>
           {title}
         </p>
         {subtitle && (
