@@ -1,12 +1,21 @@
 import { partners } from "@/constants/partnerts";
+import { playfair } from "@/fonts/playfair";
 import { uuidv4 } from "@/utils/uuid4";
+import clsx from "clsx";
 import Image from "next/image";
 
 export const Partners = () => {
   return (
     <section className="mb-20">
       <div>
-        <p className="text-2xl lg:text-4xl mb-4 text-gray-500">Our Trusted Partners</p>
+        <p
+          className={clsx(
+            playfair.className,
+            "text-2xl lg:text-4xl mb-4 text-gray-500"
+          )}
+        >
+          Our Trusted Partners
+        </p>
       </div>
       <div>
         <ul className="flex justify-between items-center flex-wrap">

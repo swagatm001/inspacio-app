@@ -7,11 +7,7 @@ export const Boardmembers = () => {
     <section className="mb-20">
       <div className="bg-[#212529] py-20 px-10 md:p-20 text-white">
         <div className="mb-20">
-          <p className="text-2xl lg:text-4xl mb-4">Board Members</p>
-          <p className={clsx(playfair.className, "text-xl lg:text-3xl")}>
-            We&apos;re lucky to be supported by some of the best investors in
-            the world.
-          </p>
+          <p className={clsx(playfair.className, "text-2xl lg:text-4xl mb-4")}>Leadership</p>
         </div>
         <div className="flex flex-col justify-center items-center gap-10 lg:gap-64 md:flex-row">
           <div>
@@ -26,20 +22,6 @@ export const Boardmembers = () => {
             <div className="flex flex-col justify-center items-center">
               <p>Swati Panda</p>
               <p>Founder & MD</p>
-            </div>
-          </div>
-          <div>
-            <div className="w-52 h-52 relative mb-3">
-              <Image
-                fill
-                src="/kds/main/sangeeta.jpg"
-                alt="Swati Panda"
-                className="rounded-full object-cover"
-              />
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <p>Sangeeta Poojari</p>
-              <p>Project Co-ordinator</p>
             </div>
           </div>
         </div>
