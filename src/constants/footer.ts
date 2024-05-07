@@ -6,7 +6,7 @@ export const footerConstants = {
     },
     right: {
         address: {
-            place: "Bangalore, India.",
+            place: "Bangalore, India",
             details: "WeWork Embassy TechVillage, Block L, Devarabisanahalli, Outer Ring Rd, Bellandur, Bengaluru, Karnataka 560103"
         },
         email: "info@kreativedezines.com",
