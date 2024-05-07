@@ -71,7 +71,7 @@ export const Contact = () => {
         draggable={false}
       />
       <div>
-        <p className={clsx("text-3xl lg:text-5xl mb-10", playfair.className)}>
+        <p className={clsx("text-3xl lg:text-4xl mb-10 text-gray-500", playfair.className)}>
           Our friendly team would <br/> love to hear from you.
         </p>
       </div>

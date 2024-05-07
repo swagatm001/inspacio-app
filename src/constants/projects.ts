@@ -33,42 +33,31 @@ const anthology = {
     "/kds/anthology/img10.jpg",
     "/kds/anthology/img11.jpg",
   ],
-  description: `Anthology is a global workplace continually striving toward deeper inclusivity, authenticity, and professional advancement. We were assigned the task to design the workspace with an
-  idea that showcase a contemporary smart approach to design, technology and aesthetics.
-  Architect and the entire team of interior designers produce sketches, 3D models, 3D
-  rendering of commercial space simulations to help clients visualize the results. After multiple
-  brainstorming and presentations with the client, we finalized on the interiors of the space.
-  The structural glazing of the building and the arial view of passing metro rails, embracing in
-  natural light brightening the workspace and makes the office feel bigger and more spacious. The workspace, meeting rooms and collaborative spaces were strategically planned which
-  reduces the usage of lights and Airconditioning extensively. A big welcoming reception along
-  with collaborative spaces create a sense of openness. Strategically placed warm color
-  palette and beautiful lighting in lounge/ meeting rooms adds in more drama and life to the
-  space.
-  `,
-  address: `Jalahalli, Bangalore`,
+  description: `Anthology is a global workplace continually striving toward deeper inclusivity, authenticity, and professional advancement. We were assigned the task of designing the workspace with an idea that showcases a contemporary smart approach to design, technology and aesthetics. The architect and the entire team of interior designers produced sketches, 3-D models and 3-D renderings of the commercial space simulations to help clients visualise the results. After multiple brainstorming and presentations with the client, we finalised the interiors of the space. The structural glazing of the building and the aerial view of passing metro rails, embracing natural light brightening the workspace and making the office feel bigger and more spacious. The workspace, meeting rooms and collaborative spaces were strategically planned, which extensively reduced the usage of lights and air conditioning. A big welcoming reception along with collaborative spaces create a sense of openness. Strategically placed warm colour palette and beautiful lighting in lounge/ meeting rooms added more drama and life to the space.`,
+  address: `TinFactory, Salarpuria Magnificia, Bangalore`,
   category: {
     label: "Commercial",
-    value: "commercial"
+    value: "commercial",
   },
   attributes: [
     {
       label: "Style",
-      value: "Corporate"
+      value: "Corporate",
     },
     {
       label: "Service",
-      value: "Workspace Design"
+      value: "Workspace Design",
     },
     {
       label: "Space Type",
-      value: "Commercial Office Space"
+      value: "Commercial Office Space",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const citadel = {
   thumbnail: "/kds/citadel/img10.jpg",
@@ -87,35 +76,35 @@ const citadel = {
     "/kds/citadel/img10.jpg",
     "/kds/citadel/img11.jpg",
     "/kds/citadel/img12.jpg",
-    "/kds/citadel/img13.jpg"
+    // "/kds/citadel/img13.jpg",
   ],
-  description: `Redesigning the office space was to create a fresh, new and impressive look and feel for Celegence team. There was another valuable goal that aimed for: better utilization of space. A dull, bland, and unfurnished interior space, no matter how functional, will never impart pleasant vibes. In our initial visit to the existing office, we came up with an idea to redesign the entire space, and upgrading according to recent trends. The process begins with a meeting between the architect/ interior designer, project manager and the client’s Project manager, who is in charge of the commercial project. The three stakeholders brainstorm ideas to understand their feasibility for the given space and prepare the schematics, concepts to finally freezing on the design for executions. The workspace was changed from curvilinear to linear workstations opening up more collaborative spaces. Adding different textures, colours, patterns to the space was the main concept to uplift the space from a dull and old look ambiance to a bright, energetic and motivated office ambiance.  Bringing in more natural light and adding the biophilic use of plants more generously brought in positive effects on employee well-being. Staying focused on the client’s needs and achieving high-end results within the assigned budget was the ultimate motive.
-
-  `,
-  address: `Jayanagar, Bangalore`,
+  description: `A recent handover of a small contemporary office space designed for corporate executive staff. In my early visit to the site, I realized that the space was quite small to accommodate a director's cabin, executive meeting room, conference, lounge, phone booth, workspace area, pantry & restrooms. That's when the team realized that another way to make this small office look modern yet stylish was by going white. An all-White interior design can make your office look calm and classy. One excellent benefit of a white office is that it creates an illusion of space. The room will appear bigger than it is in square feet. In an all-white office, consider texturing the walls. Wall art with bold colours would be an ideal texture for the white walls. Also, ensure you let in enough light to illuminate the entire office. You can achieve that by opening the windows or using light lamps. I intended to add a white pastel colour Jali partition, a wooden texture hexagonal ceiling, and a splash of colour that adds character to the space.
+  
+  Contemporary office designs focus on simple but stylish décor with aesthetic qualities based on the principles of building modern offices. When improving your office look, use contemporary furniture and a colour palette with neutral accents and tones to add character to your office.`,
+  address: `Indiranagar`,
   category: {
     label: "Commercial",
-    value: "commercial"
+    value: "commercial",
   },
   attributes: [
     {
       label: "Style",
-      value: "Corporate"
+      value: "Classy & Contemporary",
     },
     {
       label: "Service",
-      value: "Interior Design"
+      value: "Interior Design & Built",
     },
     {
       label: "Space Type",
-      value: "Office Space"
+      value: "Office Space",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const excelya = {
   thumbnail: "/kds/excelya/img10.jpg",
@@ -134,68 +123,60 @@ const excelya = {
     "/kds/excelya/img10.jpg",
     "/kds/excelya/img11.jpg",
     "/kds/excelya/img12.jpg",
-    "/kds/excelya/img13.jpg"
+    "/kds/excelya/img13.jpg",
   ],
-  description: `Redesigning the office space was to create a fresh, new and impressive look and feel for Celegence team. There was another valuable goal that aimed for: better utilization of space. A dull, bland, and unfurnished interior space, no matter how functional, will never impart pleasant vibes. In our initial visit to the existing office, we came up with an idea to redesign the entire space, and upgrading according to recent trends. The process begins with a meeting between the architect/ interior designer, project manager and the client’s Project manager, who is in charge of the commercial project. The three stakeholders brainstorm ideas to understand their feasibility for the given space and prepare the schematics, concepts to finally freezing on the design for executions. The workspace was changed from curvilinear to linear workstations opening up more collaborative spaces. Adding different textures, colours, patterns to the space was the main concept to uplift the space from a dull and old look ambiance to a bright, energetic and motivated office ambiance. Bringing in more natural light and adding the biophilic use of plants more generously brought in positive effects on employee well-being. Staying focused on the client’s needs and achieving high- end results within the assigned budget was the ultimate motive.`,
-  address: `Jalahalli, Bangalore`,
+  description: `Excleya, a renowned independent partner that serves Biotech, Pharma and Medical Device Organisations, was a wonderful space to revamp. The Kreative Dezine team had so much fun designing this modern workplace, spread across 10,000 sq. ft. Our ultimate goal was the same as it is for any other commercial project, to design a workplace that fosters productivity, collaboration and the well-being of employees. Apart from this, at Excelya, our team had the mission to create additional collaboration spaces, phone booths, and wall art and revamp the boardroom space. To begin with, we chose wall colours and wallpapers that were vibrant, playful and not distracting at all.  The phone booths were designed in a way that there is space for employees to sit and focus on their calls without feeling suffocated inside. Since the office space highlighted an open plan layout, encouraging communication and collaboration among employees, we decided to breakout areas, and collaborative zones. While each space stood out by itself, the workplace as a whole looked cohesive, which was the aim.`,
+  address: `RMZ Millenia, Bangalore`,
   category: {
     label: "Commercial",
-    value: "commercial"
+    value: "commercial",
   },
   attributes: [
     {
-      label: "Style",
-      value: "Corporate"
-    },
-    {
-      label: "Service",
-      value: "Workspace Design"
-    },
-    {
-      label: "Space Type",
-      value: "Office Space"
+      label: "Area",
+      value: "10000 Sq. Ft",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const celegence = {
   thumbnail: "/kds/celegence/img1.jpg",
-  title: "Celegence",
+  title: "Celegence Systems Private Limited",
   slug: "celegence",
   image: [
     "/kds/celegence/img1.jpg",
     "/kds/celegence/img2.jpg",
     "/kds/celegence/img3.jpg",
   ],
-  description: `Redesigning the office space was to create a fresh, new and impressive look and feel for Celegence team. There was another valuable goal that aimed for: better utilization of space. A dull, bland, and unfurnished interior space, no matter how functional, will never impart pleasant vibes. In our initial visit to the existing office, we came up with an idea to redesign the entire space, and upgrading according to recent trends. The process begins with a meeting between the architect/ interior designer, project manager and the client’s Project manager, who is in charge of the commercial project. The three stakeholders brainstorm ideas to understand their feasibility for the given space and prepare the schematics, concepts to finally freezing on the design for executions. The workspace was changed from curvilinear to linear workstations opening up more collaborative spaces. Adding different textures, colours, patterns to the space was the main concept to uplift the space from a dull and old look ambiance to a bright, energetic and motivated office ambiance. Bringing in more natural light and adding the biophilic use of plants more generously brought in positive effects on employee well-being. Staying focused on the client’s needs and achieving high- end results within the assigned budget was the ultimate motive.`,
-  address: `Jalahalli, Bangalore`,
+  description: `The Celegence team approached Kreative Dezine Studio to redesign their office space. The aim was to create a fresh, new and impressive look and feel. . Apart from these, the team also aimed for better utilization of space. A dull, bland, and unfurnished interior space, no matter how functional, will never impart pleasant vibes. In our initial visit to the existing office, we came up with an idea to redesign the entire space and upgrade it according to recent trends. The process begans with a meeting between the architect/ interior designer, project manager and the client’s project manager, who was in charge of the commercial project. The three stakeholders brainstormed ideas to understand the feasibility of the given space and prepared the schematics, and concepts to freeze on the design for executions finally. The workspace was changed from curvilinear to linear workstations, opening up more collaborative spaces. Adding different textures, colours and patterns to the space was the main concept to uplift the space from a dull ambience to a bright, energetic and motivated office ambience.  Bringing in more natural light and adding the biophilic use of plants more generously brought a positive effect on employees' well-being. Staying focused on the client’s requirements and achieving high-end results within the assigned budget was the ultimate motive.`,
+  address: `Jayanagar, Bangalore`,
   category: {
     label: "Commercial",
-    value: "commercial"
+    value: "commercial",
   },
   attributes: [
     {
       label: "Style",
-      value: "Corporate"
+      value: "Corporate",
     },
     {
       label: "Service",
-      value: "Workspace Design"
+      value: "Interior ReDesign & Built",
     },
     {
       label: "Space Type",
-      value: "Office Space"
+      value: "Commercial Office Space",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const texport = {
   thumbnail: "/kds/texport/img1.png",
@@ -211,35 +192,27 @@ const texport = {
     "/kds/texport/img7.png",
     "/kds/texport/img8.png",
     "/kds/texport/img9.png",
-    "/kds/texport/img10.png",
+    // "/kds/texport/img10.png",
     "/kds/texport/img11.png",
     "/kds/texport/img12.png",
   ],
-  description: `Redesigning the office space was to create a fresh, new and impressive look and feel for texport team. There was another valuable goal that aimed for: better utilization of space. A dull, bland, and unfurnished interior space, no matter how functional, will never impart pleasant vibes. In our initial visit to the existing office, we came up with an idea to redesign the entire space, and upgrading according to recent trends. The process begins with a meeting between the architect/ interior designer, project manager and the client’s Project manager, who is in charge of the commercial project. The three stakeholders brainstorm ideas to understand their feasibility for the given space and prepare the schematics, concepts to finally freezing on the design for executions. The workspace was changed from curvilinear to linear workstations opening up more collaborative spaces. Adding different textures, colours, patterns to the space was the main concept to uplift the space from a dull and old look ambiance to a bright, energetic and motivated office ambiance. Bringing in more natural light and adding the biophilic use of plants more generously brought in positive effects on employee well-being. Staying focused on the client’s needs and achieving high- end results within the assigned budget was the ultimate motive.`,
-  address: `Jalahalli, Bangalore`,
+  description: `Texport Overseas is a textile company situated in Yeshwanthpur. The project was a challenging yet fun project the Kreative Dezine Studio team dived right into it. When the team visited the Texport Overseas office to take a look at how we can make it better for the people to work here, we noticed quite a few things. First of all the space looked and felt cramped, the office featured a low ceiling, ancient workstations, narrow passages, lighting issues and wooden partitions, to name a few. The team got down to work. We took down the false ceiling and to our surprise, the ceiling was 14’ high ceiling, which not only brightened up the space and allowed daylight to seep in, but it also offered excellent ventilation and made the space look bigger. We also worked around the old-style workstations and swapped it for open workstations. Coming to the colours, we used tones of grey, green and wooden shades, giving it a calming effect.`,
+  address: `Yeswanthpur, Bangalore`,
   category: {
     label: "Commercial",
-    value: "commercial"
+    value: "commercial",
   },
   attributes: [
     {
-      label: "Style",
-      value: "Corporate"
-    },
-    {
-      label: "Service",
-      value: "Workspace Design"
-    },
-    {
-      label: "Space Type",
-      value: "Office Space"
+      label: "Carpet Area",
+      value: "8000 sq. ft",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const penthouse = {
   thumbnail: "/kds/penthouse/img1.jpg",
@@ -267,35 +240,42 @@ const penthouse = {
     "/kds/penthouse/img19.jpg",
     "/kds/penthouse/img20.jpg",
   ],
-  description: `After jotting down the client’s vision and his ideas about the space, we as designers try our best to put his vision and dreams into reality. Brainstorming ideas and discussing them with the client gave a clearer picture of the home Mr.Prakash was looking at. High-end interior design exudes a sense of opulence, and a wonderful overall aesthetic, achieved by the strategic placement of furniture and decorative. We as interior designers have used every element to bring forth an aesthetic that is rich and vibrant. The fusion of traditional and contemporary elements is very smartly incorporated to bring in elegance to the entire living areas. Shades of wooden textures, pastel shades of paint, glasses and warm décor lighting to the space brings in life to the fulfilled home.`,
+  description: `Situated on the 29th floor, the penthouse boasts 360° floor-to-ceiling windows that allow abundant natural light and excellent cross ventilation. The Kreative Dezine Studio had yet another challenge, this time it was the interiors of this beautiful 4600 sq. ft. 4 BHK Penthouse.
+
+  The bedrooms are tranquil sanctuaries, adorned with soft linens and thoughtfully curated decor, offering a peaceful retreat from the hustle and bustle of the outside world. The white colour paint used throughout the penthouse gives it a calming appeal. 
+  
+  Not to mention the spacious living room that soaks in all the natural lighting throughout the day, illuminating every corner, and giving the room an aesthetic and serene feel. While also allowing the cool evening breeze to sweep across the room.
+  
+  You will find plush furnishings throughout the penthouse that symbolise luxury and comfort. Every detail has been carefully considered, from the elegant lighting fixtures to the splendidly done mirrors adorning the walls. This Bangalore home is the perfect amalgamation of simplicity and luxury. It is a calm and sophisticated space where the residents can enjoy a beautiful day away from the city noise.
+  `,
   address: `Jalahalli, Bangalore`,
   category: {
     label: "Residential",
-    value: "residential"
+    value: "residential",
   },
   attributes: [
     {
       label: "Style",
-      value: "Corporate"
+      value: "Modern Contemporary",
     },
     {
       label: "Service",
-      value: "Workspace Design"
+      value: "Interior Design & Built",
     },
     {
       label: "Space Type",
-      value: "Office Space"
+      value: "Residential",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const duplex = {
   thumbnail: "/kds/duplex/img1.jpg",
-  title: "Duplex Apartment -Interiors– Sri Lakshmi Venkateshwara Nilaya.",
+  title: "Duplex Apartment - Sri Lakshmi Venkateshwara Nilaya",
   slug: "duplex",
   image: [
     "/kds/duplex/img1.jpg",
@@ -308,35 +288,35 @@ const duplex = {
     "/kds/duplex/img8.jpg",
     "/kds/duplex/img9.jpg",
   ],
-  description: `After jotting down the client’s vision and his ideas about the space, we as designers try our best to put his vision and dreams into reality. Brainstorming ideas and discussing them with the client gave a clearer picture of the home Mr.Prakash was looking at. High-end interior design exudes a sense of opulence, and a wonderful overall aesthetic, achieved by the strategic placement of furniture and decorative. We as interior designers have used every element to bring forth an aesthetic that is rich and vibrant. The fusion of traditional and contemporary elements is very smartly incorporated to bring in elegance to the entire living areas. Shades of wooden textures, pastel shades of paint, glasses and warm décor lighting to the space brings in life to the fulfilled home.`,
+  description: `After jotting down the client’s vision and ideas about the space, the Kreative Dezine Studio team put our best into bringing our client’s vision and dreams into reality. Brainstorming ideas and discussing them with the client gave a clearer picture of the home Mr.Prakash was looking at. High-end interior design exudes a sense of opulence, and a wonderful overall aesthetic, achieved by the strategic placement of furniture and decorative. We as interior designers have used every element to bring forth a vibrant aesthetic. The fusion of traditional and contemporary elements is very smartly incorporated to bring elegance to the entire living area. Shades of wooden textures, pastel shades of paint, glasses and warm décor lighting to the space bring life to the fulfilled home.`,
   address: `Jalahalli, Bangalore`,
   category: {
     label: "Residential",
-    value: "residential"
+    value: "residential",
   },
   attributes: [
     {
       label: "Style",
-      value: "Corporate"
+      value: "Traditional & Contemporary fusion",
     },
     {
       label: "Service",
-      value: "Workspace Design"
+      value: "Interior Design",
     },
     {
       label: "Space Type",
-      value: "Office Space"
+      value: "Residential",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const appartment = {
   thumbnail: "/kds/appartment/img1.jpg",
-  title: "Apartment Interior",
+  title: "Vaswani Gardenia",
   slug: "appartment",
   image: [
     "/kds/appartment/img1.jpg",
@@ -355,35 +335,35 @@ const appartment = {
     "/kds/appartment/img14.jpg",
     "/kds/appartment/img15.jpg",
   ],
-  description: `After jotting down the client’s vision and his ideas about the space, we as designers try our best to put his vision and dreams into reality. Brainstorming ideas and discussing them with the client gave a clearer picture of the home Mr.Prakash was looking at. High-end interior design exudes a sense of opulence, and a wonderful overall aesthetic, achieved by the strategic placement of furniture and decorative. We as interior designers have used every element to bring forth an aesthetic that is rich and vibrant. The fusion of traditional and contemporary elements is very smartly incorporated to bring in elegance to the entire living areas. Shades of wooden textures, pastel shades of paint, glasses and warm décor lighting to the space brings in life to the fulfilled home.`,
+  description: `The Kreative Dezine team was approached for the initial spatial planning and refinement of the home layouts, alongside comprehensive interior design, lighting planning, and service coordination. The kitchen boasts a contemporary German design, taupe lacquered cabinets, and dark-stained oak timber. The master suite, in particular, stands out for its generous space and luxurious feel. It offers a retreat from the rest of the property, with a thoughtfully designed layout including a vestibule that welcomes the owner into a serene environment. This vestibule not only separates the bedroom from the hallway but also acts as a seamless link between the interconnected rooms, facilitating movement between the bathroom, dressing room, and hallway without causing disturbance to the bedroom. For the property's decor, we specified all internal finishes such as wallcoverings, tiles, floorings, and paint finishes. Additionally, we designed and oversaw the installation of all window treatments, including blinds and curtains, adding the final touches to this exceptional villa property.`,
   address: `Jalahalli, Bangalore`,
   category: {
     label: "Residential",
-    value: "residential"
+    value: "residential",
   },
   attributes: [
     {
       label: "Style",
-      value: "Corporate"
+      value: "Modern Contemporary",
     },
     {
       label: "Service",
-      value: "Workspace Design"
+      value: "Interior Design & Built",
     },
     {
       label: "Space Type",
-      value: "Office Space"
+      value: "Residential",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 const villa = {
   thumbnail: "/kds/villa/img1.jpg",
-  title: "Villa Interiors",
+  title: "Villament - Interiors",
   slug: "villa",
   image: [
     "/kds/villa/img1.jpg",
@@ -407,31 +387,31 @@ const villa = {
     "/kds/villa/img19.jpg",
     "/kds/villa/img20.jpg",
   ],
-  description: `We were engaged to dress and style this new-build property in Navi Mumbai. We designed the furniture and accessory schemes for all rooms, as well as window treatments, lighting and styling. The main room of the house is the open plan living space comprising kitchen, dining and lounge area. A spacious kitchen with breakfast bar, a dining table set for dinner, and a casual sitting area looking out onto the garden. We captured some of the latest interior design trends. A separate sitting room is designed with a cozier feel. Here we added a beautiful brick wallcovering to form the backdrop to the room, and lit the space with a selection of lamps. Embroidered cushions and bright silks and velvets give a much more grown-up feel to this room. The bedrooms were all designed with elegant and inviting schemes – luxurious and contemporary in character. We dressed the fourth bedroom as a study. Using modern furnishings and lighting, with colorful accents and accessories, suggests a space that could be used for working from home or studying.  `,
-  address: `Jalahalli, Bangalore`,
+  description: `We were commissioned to furnish and style a newly constructed property in Bangalore. Our tasks included conceptualizing furniture layouts, selecting accessories, implementing window treatments, optimizing lighting, and enhancing overall aesthetics. The focal point of the residence is its expansive open-plan living area, seamlessly integrating the kitchen, dining, and lounge zones. We curated modern furniture pieces, including a breakfast bar in the kitchen, a well-appointed dining ensemble, and a relaxed seating arrangement overlooking the garden. Our design approach incorporated contemporary interior trends, ensuring a stylish and functional space. Additionally, we crafted a separate sitting room to evoke a cosy ambience. This involved incorporating a striking brick wallcovering as a focal point, complemented by carefully curated lighting fixtures and plush furnishings such as embroidered cushions and vibrant textiles, adding sophistication to the room. Each bedroom was meticulously designed to exude elegance and comfort, featuring luxurious and contemporary decor themes. We transformed the fourth bedroom into a versatile study area, utilizing modern furnishings, vibrant accents, and appropriate lighting to create an inspiring environment suitable for remote work or academic pursuits.`,
+  address: `J.P Nagar, Bangalore`,
   category: {
     label: "Residential",
-    value: "residential"
+    value: "residential",
   },
   attributes: [
     {
       label: "Style",
-      value: "Corporate"
+      value: "Modern Contemporary",
     },
     {
       label: "Service",
-      value: "Workspace Design"
+      value: "Interior Design & Built",
     },
     {
       label: "Space Type",
-      value: "Office Space"
+      value: "Residential",
     },
     {
       label: "Status",
-      value: "Completed"
-    }
-  ]
-}
+      value: "Completed",
+    },
+  ],
+};
 
 export const projectsConstants = [
   anthology,
@@ -442,5 +422,5 @@ export const projectsConstants = [
   penthouse,
   duplex,
   appartment,
-  villa
+  villa,
 ];

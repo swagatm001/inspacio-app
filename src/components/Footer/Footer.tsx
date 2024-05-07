@@ -49,7 +49,7 @@ export const Footer = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-gray-500">Email us at</p>
+                  <p className="text-gray-500">Email us</p>
                   <a
                     href={`mailto:${footerConstants.right.email}`}
                     className="text-2xl hover:underline"
@@ -59,7 +59,7 @@ export const Footer = () => {
                 </div>
                 <div className="flex flex-col">
                   <p className="text-gray-500">
-                    If you&apos;re hurry, quick call for us
+                    Call us
                   </p>
                   <a
                     href={`tel:${footerConstants.right.phone1}`}

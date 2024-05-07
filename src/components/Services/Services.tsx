@@ -5,7 +5,7 @@ import Image from "next/image";
 export const Services = () => {
   return (
     <section className="mb-20">
-      <div>
+      <div className="mb-10">
         <p
           className={clsx(
             playfair.className,

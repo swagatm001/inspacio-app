@@ -24,7 +24,7 @@ export const Categories: React.FC<I_Categories> = ({
   return (
     <div>
       <div>
-        <p className="text-3xl font-semibold">Categories</p>
+        <p className={clsx(playfair.className, "text-3xl lg:text-4xl font-semibold text-gray-500")}>Categories</p>
       </div>
       <div className="mt-4">
         <ul className="flex">
