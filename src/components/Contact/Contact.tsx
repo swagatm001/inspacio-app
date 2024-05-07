@@ -71,9 +71,8 @@ export const Contact = () => {
         draggable={false}
       />
       <div>
-        <p className="text-4xl mb-3">Contact us</p>
-        <p className={clsx("text-2xl mb-10", playfair.className)}>
-          Our friendly team would love to hear from you.
+        <p className={clsx("text-3xl lg:text-5xl mb-10", playfair.className)}>
+          Our friendly team would <br/> love to hear from you.
         </p>
       </div>
       <form
