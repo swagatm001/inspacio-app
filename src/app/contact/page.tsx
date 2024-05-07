@@ -8,8 +8,8 @@ const ContactUs = () => {
   return (
     <div>
       <ProjectsHero html={projectConstants.hero.text} />
-      <FAQ />
       <ContactForm />
+      <FAQ />
       <Banner />
     </div>
   );
