@@ -13,14 +13,16 @@ export const Footer = () => {
             <div>
               <p
                 className={clsx(
-                  "lg:hidden text-5xl leading-tight font-light w-9/12 text-gray-500"
+                  "text-5xl leading-tight font-light w-9/12 text-gray-500",
+                  playfair.className
                 )}
               >
                 {footerConstants.left.text1}
               </p>
               <p
                 className={clsx(
-                  "hidden lg:block text-5xl leading-tight font-light w-9/12 text-gray-500"
+                  "text-5xl leading-tight font-light w-9/12 text-gray-500",
+                  playfair.className
                 )}
               >
                 {footerConstants.left.text2}

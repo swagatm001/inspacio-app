@@ -1,7 +1,7 @@
 export const footerConstants = {
     left: {
-        text1: `Kick-start your dream home with us`,
-        text2: `Experience Excellent Quality & Timely Delivery with`,
+        text1: `You Dream`,
+        text2: `We Create`,
         text3: `Kreative Dezine Studio`
     },
     right: {
@@ -11,7 +11,7 @@ export const footerConstants = {
         },
         email: "info@kreativedezines.com",
         phone1: "+91 9731270042",
-        phone2: "+91 9916492056"
+        phone2: ""
     },
     copyright: "© Copyright Kreative Dezine Studio - All Rights Reserved"
 }
