@@ -16,7 +16,7 @@ export const Header = () => {
   return (
     <header className="bg-white bg-opacity-70 fixed top-0 left-0 w-full h-20 z-50">
       <Container className="h-full">
-        <div className="h-full flex items-center justify-between px-6 lg:px-32">
+        <div className="h-full flex items-center justify-between px-6 lg:lx-0">
           <Link href="/">
             <div className="flex items-center gap-2">
               <Image

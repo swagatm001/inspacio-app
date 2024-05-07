@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
-import { FAQ } from "@/components/FAQ";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,6 @@ export default function ContactLayout({
   return (
     <Container className="pt-20">
       <div>{children}</div>
-      <FAQ />
       <Footer />
     </Container>
   );
