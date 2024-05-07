@@ -76,7 +76,7 @@ const citadel = {
     "/kds/citadel/img10.jpg",
     "/kds/citadel/img11.jpg",
     "/kds/citadel/img12.jpg",
-    "/kds/citadel/img13.jpg",
+    // "/kds/citadel/img13.jpg",
   ],
   description: `A recent handover of a small contemporary office space designed for corporate executive staff. In my early visit to the site, I realized that the space was quite small to accommodate a director's cabin, executive meeting room, conference, lounge, phone booth, workspace area, pantry & restrooms. That's when the team realized that another way to make this small office look modern yet stylish was by going white. An all-White interior design can make your office look calm and classy. One excellent benefit of a white office is that it creates an illusion of space. The room will appear bigger than it is in square feet. In an all-white office, consider texturing the walls. Wall art with bold colours would be an ideal texture for the white walls. Also, ensure you let in enough light to illuminate the entire office. You can achieve that by opening the windows or using light lamps. I intended to add a white pastel colour Jali partition, a wooden texture hexagonal ceiling, and a splash of colour that adds character to the space.
   
