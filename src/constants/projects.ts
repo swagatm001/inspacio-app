@@ -192,7 +192,7 @@ const texport = {
     "/kds/texport/img7.png",
     "/kds/texport/img8.png",
     "/kds/texport/img9.png",
-    "/kds/texport/img10.png",
+    // "/kds/texport/img10.png",
     "/kds/texport/img11.png",
     "/kds/texport/img12.png",
   ],
