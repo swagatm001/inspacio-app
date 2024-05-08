@@ -31,9 +31,13 @@ export const SlidesPerViewCarousel: React.FC<I_SlidesPerViewCarousel> = ({
         freeMode={true}
         modules={[FreeMode]}
         breakpoints={{
+          300: {
+            slidesPerView: 2.25,
+            spaceBetween: 10,
+          },
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 3,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 3,
