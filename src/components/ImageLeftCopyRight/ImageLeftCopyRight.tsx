@@ -12,6 +12,14 @@ export const ImageLeftCopyRight: React.FC<I_ImageLeftCopyRight> = ({
   rightTemplate,
   wrapperClassName,
 }) => {
+
+  return (
+    <div className={clsx("w-full flex flex-col md:flex-row", wrapperClassName)}>
+      <div className="flex-1">{leftTemplate}</div>
+      <div className="flex-1">{rightTemplate}</div>
+    </div>
+  );
+
   return (
     <div className={clsx("w-full lg:flex", wrapperClassName)}>
       <div className="w-full lg:w-1/2">{leftTemplate}</div>

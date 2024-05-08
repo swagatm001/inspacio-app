@@ -4,7 +4,7 @@ import { Contact } from ".";
 
 export const ContactForm = () => {
   return (
-    <div className="py-10">
+    <div className="md:py-10">
       <ImageLeftCopyRight
         wrapperClassName="gap-10"
         leftTemplate={
