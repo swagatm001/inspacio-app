@@ -9,7 +9,7 @@ const imageKitLoader = ({ src, width, quality }: ImageLoaderProps) => {
     params.push(`q-${quality}`);
   }
   const paramsString = params.join(",");
-  const imageKitId = "yc3qb8x6t"
+  const imageKitId = "0icmp9gly"
   var urlEndpoint = `https://ik.imagekit.io/${imageKitId}`;
   if (urlEndpoint[urlEndpoint.length - 1] === "/")
     urlEndpoint = urlEndpoint.substring(0, urlEndpoint.length - 1);

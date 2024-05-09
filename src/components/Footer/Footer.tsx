@@ -38,13 +38,13 @@ export const Footer = () => {
             </div>
           }
           rightTemplate={
-            <div className="w-full flex md:justify-end">
-              <div className="md:w-1/2 md:pl-6 pt-10 lg:pt-0 flex flex-col gap-10">
+            <div className="w-full flex lg:justify-end">
+              <div className="lg:w-1/2 md:pl-6 pt-10 lg:pt-0 flex flex-col gap-10">
                 <div>
                   <p className={clsx("text-2xl text-gray-500")}>
                     {footerConstants.right.address.place}
                   </p>
-                  <p className="pr-20 text-sm leading-normal">
+                  <p className="lg:pr-20 text-sm leading-normal">
                     {footerConstants.right.address.details}
                   </p>
                 </div>

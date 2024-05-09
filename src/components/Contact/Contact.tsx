@@ -60,7 +60,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="py-10">
+    <div className="md:py-10">
       <ToastContainer
         theme="colored"
         position="top-right"

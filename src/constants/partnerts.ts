@@ -16,8 +16,8 @@ export const partners = [
         logo: "/kds/client-logos/excelya.jpg"
     },
     {
-        name: "Transport Overseas",
-        logo: "/kds/client-logos/transport.jpg"
+        name: "Texport Overseas",
+        logo: "/kds/client-logos/texport.jpg"
     },
     {
         name: "Citadel",
