@@ -53,7 +53,7 @@ const About = () => {
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start lg:items-start gap-6 mb-16">
           <div className="flex-1 ">
-            <div className="w-[354px] h-[484px] lg:h-[720px] lg:w-full xl:h-[720px] xl:w-[592px]">
+            <div className="w-[354px] h-[484px] lg:h-[600px] lg:w-full xl:h-[720px] xl:w-[592px]">
               <div className="w-full h-full relative">
                 <Image src="/kds/main/swati.jpg" fill alt="swati panda" />
               </div>
