@@ -11,6 +11,7 @@ import { OurCreativeProcess } from "@/components/OurCreativeProcess";
 import { Partners } from "@/components/Partners/Partners";
 import { Portfolio } from "@/components/Portfolio";
 import { Services } from "@/components/Services";
+import Testimonials from "@/components/Testimonial/Testimonials";
 import { homePageContants } from "@/constants/home";
 import { playfair } from "@/fonts/playfair";
 import { uuidv4 } from "@/utils/uuid4";
@@ -97,6 +98,7 @@ export default function Home() {
         <OurCreativeProcess />
         <Boardmembers />
         <ContactForm />
+        <Testimonials />
         <FAQ />
         <Footer />
       </Container>
