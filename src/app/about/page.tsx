@@ -89,9 +89,8 @@ const About = () => {
                 of clean lines with a luxurious mix of materials colors and
                 texture to create a distinct look for each project. Swati
                 believes that no space is too small to be designed, as
-                creativity has no size, nor limits. She worked as a Senior
-                Architect for 14+ years before launching Kreative Dezine Studio
-                in 2020.
+                creativity has no size, nor limits. She is Senior
+                Architect with 13+ years of experience and executed various residential and commercial projects in her career.
               </p>
             </div>
           </div>
