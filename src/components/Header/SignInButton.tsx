@@ -4,12 +4,13 @@ import { useState } from "react";
 import { Contact } from "../Contact";
 import { Modal } from "../Modal";
 
-export const GetInTouch = ({ title }: { title: string }) => {
+export const SignInButton = ({ title }: { title: string }) => {
   const [open, setOpen] = useState(false);
   return (
     <div>
       <button
-        className="bg-[#885739] text-white font-normal px-6 py-2 rounded-lg"
+        className="bg-gradient-to-r from-[#FDFDFD] to-[#FDFDFD] text-black font-normal px-6 py-2 rounded-lg border border-[#A4A4A4]"
+        style={{ borderWidth: '0.75px' }}
         onClick={() => setOpen(true)}
       >
         {title}

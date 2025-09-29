@@ -13,11 +13,11 @@ export const headerConstants = {
         href: "/",
       },
       {
-        label: "Project",
+        label: "Projects",
         href: "/projects",
       },
       {
-        label: "About",
+        label: "Our Story",
         href: "/about",
       },
       // {
@@ -27,6 +27,10 @@ export const headerConstants = {
       {
         label: "Contact",
         href: "/contact",
+      },
+      {
+        label: "Our Brands",
+        href: "/",
       },
     ],
     socials: [
