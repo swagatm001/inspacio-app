@@ -11,7 +11,7 @@ export const NavigationLinks: React.FC<{ className?: string, onClick?: () => voi
     <ul className={clsx("flex gap-8", className)}>
       {headerConstants.menu.links.map((link, i) => (
         <li key={i}>
-          <Link href={link.href} className="" onClick={onClick}>
+          <Link href={link.href} className="text-white" onClick={onClick}>
             {link.label}
           </Link>
         </li>

@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
+import { LatestProjects } from "@/components/LatestProject";
 import { OurCreativeProcess } from "@/components/OurCreativeProcess";
 import { Partners } from "@/components/Partners/Partners";
 import { Portfolio } from "@/components/Portfolio";
@@ -86,12 +87,7 @@ export default function Home() {
         <SingleCarouselWithAutoplay slides={heroSlides} />
       </End2EndWrapper>
       <Container>
-        <div className="flex flex-col gap-10 lg:gap-20">
-          <div className="w-full h-[180px] lg:h-[414px]">
-            <SlidesPerViewCarousel slides={servicesSlides} />
-          </div>
-          <Portfolio />
-        </div>
+        <LatestProjects />
         <Banner />
         <Services />
         <Partners />

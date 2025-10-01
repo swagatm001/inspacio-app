@@ -1,3 +1,8 @@
+import citadelImg from './citadel.jpg';
+import excelyaImg from './excelya.jpg';
+import anthologyImg from './anthro.jpg';
+import texportImg from './texport.jpg';
+
 export const projectConstants = {
   hero: {
     text: `<span class="leading-normal">Transforming <strong>Spaces,</strong></span> <br/> <span class="leading-normal">Capturing <strong>Dreams</strong></span><br/>
@@ -17,7 +22,7 @@ export const categoriesConstants = [
 ];
 
 const anthology = {
-  thumbnail: "/kds/anthology/img1.png",
+  thumbnail: "/images/anthro.jpg",
   title: "Anthology",
   slug: "anthology",
   image: [
@@ -60,7 +65,7 @@ const anthology = {
 };
 
 const citadel = {
-  thumbnail: "/kds/citadel/img10.jpg",
+  thumbnail: "/images/citadel.jpg",
   title: "Citadel PropCon.",
   slug: "citadel",
   image: [
@@ -79,7 +84,6 @@ const citadel = {
     // "/kds/citadel/img13.jpg",
   ],
   description: `A recent handover of a small contemporary office space designed for corporate executive staff. In my early visit to the site, I realized that the space was quite small to accommodate a director's cabin, executive meeting room, conference, lounge, phone booth, workspace area, pantry & restrooms. That's when the team realized that another way to make this small office look modern yet stylish was by going white. An all-White interior design can make your office look calm and classy. One excellent benefit of a white office is that it creates an illusion of space. The room will appear bigger than it is in square feet. In an all-white office, consider texturing the walls. Wall art with bold colours would be an ideal texture for the white walls. Also, ensure you let in enough light to illuminate the entire office. You can achieve that by opening the windows or using light lamps. I intended to add a white pastel colour Jali partition, a wooden texture hexagonal ceiling, and a splash of colour that adds character to the space.
-  
   Contemporary office designs focus on simple but stylish décor with aesthetic qualities based on the principles of building modern offices. When improving your office look, use contemporary furniture and a colour palette with neutral accents and tones to add character to your office.`,
   address: `Indiranagar`,
   category: {
@@ -107,7 +111,7 @@ const citadel = {
 };
 
 const excelya = {
-  thumbnail: "/kds/excelya/img10.jpg",
+  thumbnail: "/images/excelya.jpg",
   title: "Excelya",
   slug: "excelya",
   image: [
@@ -188,7 +192,7 @@ const celegence = {
 };
 
 const texport = {
-  thumbnail: "/kds/texport/img1.png",
+  thumbnail: "/images/texport.jpg",
   title: "Texport Overseas",
   slug: "texport",
   image: [
@@ -433,3 +437,10 @@ export const projectsConstants = [
   appartment,
   villa,
 ];
+
+export const latestProjectConstants = [
+  citadel,
+  texport,
+  excelya,
+  anthology
+]

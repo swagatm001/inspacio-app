@@ -15,7 +15,7 @@ import { SignInButton } from "./SignInButton";
 
 export const Header = () => {
   return (
-    <header className="bg-white fixed left-1/2 -translate-x-1/2 top-[21px] w-[90%] max-w-[1253px] px-2 sm:px-4 md:px-6 h-20 z-50 rounded-xl shadow-lg">
+    <header className="backdrop-blur-md backdrop-saturate-150 fixed left-1/2 -translate-x-1/2 top-[21px] w-[90%] max-w-[1253px] px-2 sm:px-4 md:px-6 h-20 z-50 rounded-full shadow-lg">
       <div className="h-full flex items-center justify-between lg:lx-0">
         <Link href="/">
           <div className="flex items-center gap-2">
@@ -31,7 +31,7 @@ export const Header = () => {
         <HamMenu className="lg:hidden" />
         <Navigation className="hidden lg:flex">
           <NavigationLinks />
-          <SignInButton title="Sign In" />
+          {/* <SignInButton title="Sign In" /> */}
           <GetInTouch title="Book Free Consultation" />
         </Navigation>
       </div>
