@@ -1,18 +1,22 @@
+import Awards from "@/components/Awards/Awards";
 import { Banner } from "@/components/Banner";
 import { Boardmembers } from "@/components/BoardMembers/BoardMembers";
 import { SlidesPerViewCarousel } from "@/components/Carousel";
 import { SingleCarouselWithAutoplay } from "@/components/Carousel/SingleCarouselWithAutoplay";
 import { ContactForm } from "@/components/Contact";
-import { Container } from "@/components/Container";
+import CustomContainer from "@/components/Container/CustomContainer";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { LatestProjects } from "@/components/LatestProject";
-import { OurCreativeProcess } from "@/components/OurCreativeProcess";
+import { OurCreativeProcessV2 } from "@/components/OurCreativeProcess";
+import OurStory from "@/components/OurStory/OurStory";
 import { Partners } from "@/components/Partners/Partners";
 import { Portfolio } from "@/components/Portfolio";
-import { Services } from "@/components/Services";
-import Testimonials from "@/components/Testimonial/Testimonials";
+import ProjectTransformation from "@/components/ProjectTransformation/ProjectTransformation";
+import { Services } from "@/components/ServicesV2";
+import TestimonialV2 from "@/components/Testimonial/TestimonialV2";
+import TextScroll from "@/components/TextScroll/TextScroll";
 import { homePageContants } from "@/constants/home";
 import { playfair } from "@/fonts/playfair";
 import { uuidv4 } from "@/utils/uuid4";
@@ -84,20 +88,23 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-20">
       <End2EndWrapper className="h-[542px] lg:h-screen">
-        <SingleCarouselWithAutoplay slides={heroSlides} />
+      <SingleCarouselWithAutoplay slides={heroSlides} />
       </End2EndWrapper>
-      <Container>
+      <CustomContainer>
         <LatestProjects />
-        <Banner />
         <Services />
         <Partners />
-        <OurCreativeProcess />
+        <OurStory />
+        <ProjectTransformation />
+        <TestimonialV2 />
+        <TextScroll />
+        <Awards />
+        <OurCreativeProcessV2 />
         <Boardmembers />
         <ContactForm />
-        <Testimonials />
         <FAQ />
         <Footer />
-      </Container>
+      </CustomContainer>
     </div>
   );
 }

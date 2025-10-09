@@ -3,6 +3,7 @@
 import { ImageLoaderProps } from "next/image";
 
 const imageKitLoader = ({ src, width, quality }: ImageLoaderProps) => {
+  if(src.startsWith("/images")) return src;
   if (src[0] === "/") src = src.slice(1);
   const params = [`w-${width}`];
   if (quality) {

@@ -15,29 +15,20 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
     const [parallax, setParallax] = useState(0);
 
     useEffect(() => {
-        let throttleTimeout: number | null = null;
-        const throttleDelay = 5; // ms
         const handleScroll = () => {
-            if (throttleTimeout !== null) return;
-            throttleTimeout = window.setTimeout(() => {
-                if (!cardRef.current) return;
-                const rect = cardRef.current.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-                const cardCenter = rect.top + rect.height / 2;
-                const viewportCenter = windowHeight / 2;
-                const distance = cardCenter - viewportCenter;
-                const factor = 0.1;
-                setParallax(-distance * factor);
-                throttleTimeout = null;
-            }, throttleDelay);
+            if (!cardRef.current) return;
+            const rect = cardRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const cardCenter = rect.top + rect.height / 2;
+            const viewportCenter = windowHeight / 2;
+            const distance = cardCenter - viewportCenter;
+            const factor = 0.1;
+            setParallax(-distance * factor);
         };
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            if (throttleTimeout !== null) {
-                clearTimeout(throttleTimeout);
-            }
         };
     }, []);
 
