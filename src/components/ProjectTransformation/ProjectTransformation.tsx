@@ -29,7 +29,7 @@ const ProjectTransformation: React.FC = () => {
                 <div className="flex-1 min-w-[300px] max-w-[400px]">
                     <h4 className="text-xl font-semibold mb-3">Witness the Transformation</h4>
                     <p className="text-gray-600 mb-6">
-                        Lorem ipsum dolor sit amet consectetur. Velit aenean sed elit gravida viverra sed urna. Lacus at gravida.
+                        Here we highlight, the power of thoughtful design, intelligent space planning, and curated décor. We reimagine outdated, underutilized commercial spaces into vibrant, functional environments that reflect your brand and support your business goals. Each transformation is a testament to our commitment to elevating interiors that leave lasting impressions and inspire everyone who walks through the door.
                     </p>
                     <ul className="list-none p-0 m-0">
                         {projects.map((project, idx) => (

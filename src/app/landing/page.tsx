@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/Contact";
 import CustomContainer from "@/components/Container/CustomContainer";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { FAQ } from "@/components/FAQ";
-import { Footer } from "@/components/Footer";
+import  FooterV2 from "@/components/Footer/FooterV2";
 import { LatestProjects } from "@/components/LatestProject";
 import { OurCreativeProcessV2 } from "@/components/OurCreativeProcess";
 import OurStory from "@/components/OurStory/OurStory";
@@ -18,6 +18,7 @@ import { Services } from "@/components/ServicesV2";
 import TestimonialV2 from "@/components/Testimonial/TestimonialV2";
 import TextScroll from "@/components/TextScroll/TextScroll";
 import { homePageContants } from "@/constants/home";
+import { montserrat } from "@/fonts/montserrat";
 import { playfair } from "@/fonts/playfair";
 import { uuidv4 } from "@/utils/uuid4";
 import clsx from "clsx";
@@ -45,18 +46,18 @@ export default function Home() {
           priority
           style={{ objectFit: "cover" }}
         />
-        <div className="absolute top-0 left-0 w-full h-full flex items-center px-10 bg-black bg-opacity-30 lg:px-32">
+        <div className="absolute bottom-0 left-0 w-full h-full flex items-center px-10 bg-black bg-opacity-30 lg:px-32">
           <p
             className={clsx(
-              playfair.className,
+              montserrat.className,
               "text-3xl sm:text-4xl lg:text-6xl text-white leading-normal"
             )}
           >
-            <span>Concept to Creation</span>
+            <span>You Dream, we Create</span>
             <br />
-            <span className="lg:text-7xl font-bold">Designing Timeless</span>
+            {/* <span className="lg:text-7xl font-bold">Designing Timeless</span> */}
             <br />
-            <span>Spaces</span>
+            {/* <span>Spaces</span> */}
           </p>
         </div>
       </div>
@@ -100,11 +101,9 @@ export default function Home() {
         <TextScroll />
         <Awards />
         <OurCreativeProcessV2 />
-        <Boardmembers />
-        <ContactForm />
         <FAQ />
-        <Footer />
       </CustomContainer>
+      <FooterV2 />
     </div>
   );
 }

@@ -13,8 +13,8 @@ export const Services = () => {
     },[])
 
     return (
-        <div className='flex flex-row justify-between'>
-            <div className='flex flex-row gap-0'>
+        <div className='flex lg:flex-row justify-between sm:flex-col mb-10'>
+            <div className='flex flex-row gap-0 sm:display-none'>
                 {imageList.map((url, index) => (
                     url && <Image key={index} src={url} alt={`Service ${index + 1}`} width={200} height={573} />
                 ))}

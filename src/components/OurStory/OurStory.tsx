@@ -5,7 +5,7 @@ import { OurStory as OurStoryData } from "@/constants/ourStory";
 
 const OurStory: React.FC = () => {
     return (
-        <section className="flex flex-col md:flex-row justify-between my-16 gap-[90px]">
+        <section className="flex sm:flex-col md:flex-row lg:flex-row sm:flex-reverse justify-between my-16 gap-[90px]">
             {/* Left: Video Card */}
             <div className="w-full md:w-[70%] flex justify-center items-center">
                 <div className="w-full h-full bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
