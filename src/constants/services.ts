@@ -12,20 +12,20 @@ interface ServiceList {
 export const services:ServiceList = {
     "Architectural Design": {
         title: "Architectural Design",
-        paragraph: "We provide top-notch architectural design services that blend creativity with functionality to bring your vision to life.",
-        points: ["point 1", "point 2", "point 3"],
+        paragraph: "At Inspacio Design, we offer a full spectrum of design services that combine innovation, functionality, and aesthetic excellence. Whether you're designing a new space or transforming an existing one, we provide end-to-end solutions that align with your vision and business goals.",
+        points: [],
         imageUrl: "/images/architect.jpg"
     },
     "Interior Design": {
         title: "Interior Design",
-        paragraph: "Our interior design services focus on creating beautiful and functional spaces that reflect your personal style and needs.",
-        points: ["point 1", "point 2", "point 3"],
+        paragraph: "We craft interiors that are as functional as they are beautiful. Our expertise spans:",
+        points: ["Office Interiors: Designing workspaces that foster productivity and collaboration through ergonomic planning, thoughtful layouts, and inspiring aesthetics.", "Commercial Interior Décor: Enhancing brand identity through curated décor, modern furnishings, and impactful spatial design in retail outlets, showrooms, and business environments.", "Hospitality & Recreation Spaces: Creating immersive guest experiences with luxurious, welcoming interiors for hotels, lounges, restaurants, and recreational facilities."],
         imageUrl: "/images/interior.jpg"
     },
     "Turnkey Solutions": {
         title: "Turnkey Solutions",
-        paragraph: "We offer comprehensive turnkey solutions that manage every aspect of your project from concept to completion, ensuring a seamless experience.",
-        points: ["point 1", "point 2", "point 3"],
+        paragraph: "From concept development to final execution, we offer complete project management across all sectors—ensuring timely delivery, quality control, and a stress-free experience for our clients.We handle every aspect, including planning, procurement, execution, and final handover, whether it's a corporate office, retail chain, or a boutique resort.",
+        points: [],
         imageUrl: "/images/turnkey.jpg"
     },
 }
