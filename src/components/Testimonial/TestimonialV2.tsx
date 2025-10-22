@@ -9,7 +9,7 @@ import { montserrat } from "@/fonts/montserrat";
 
 const TestimonialV2: React.FC = () => {
     
-    const options: EmblaOptionsType = {align:'start',loop:true}
+    const options: EmblaOptionsType = {align:'start',loop:true,breakpoints: {"(max-width: 768px)": {align: 'center'}}};
     const getTestimonials = () => {
         let items = testimonialsData.map((data,index) => {
             return <TestimonialCard key={index} testimonial={data}/>
