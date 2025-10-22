@@ -13,8 +13,9 @@ import {
   usePrevNextButtons
 } from './ArrowButtons'
 import { DotButton, useDotButton } from './DotButtons'
-import './base.css';
+import AutoPlay from 'embla-carousel-autoplay';
 import './embla.css';
+import './base.css';
 
 const TWEEN_FACTOR_BASE = 0.52
 
@@ -24,11 +25,13 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 type PropType = {
   slides: React.ReactNode[]
   options?: EmblaOptionsType
+  isDarkBackground?: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const { isDarkBackground } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoPlay({ delay: 3000, playOnInit: true, stopOnInteraction: false, stopOnFocusIn: true })])
   const tweenFactor = useRef(0)
   const tweenNodes = useRef<HTMLElement[]>([])
 
@@ -122,8 +125,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
       <div className="embla__controls">
         <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} isDark={isDarkBackground} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} isDark={isDarkBackground} />
         </div>
 
         <div className="embla__dots">
@@ -131,9 +134,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
+              isDark={isDarkBackground}
+              className={'embla__dot'.concat(index === selectedIndex ? ' embla__dot--selected' : '')}
             />
           ))}
         </div>

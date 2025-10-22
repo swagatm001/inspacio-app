@@ -1,15 +1,21 @@
 import { headerConstants } from "@/constants/headers";
 import { SocialLink } from "./SocialLink";
 
-export const SocialLinks = () => {
+
+type SocialLinksProps = {
+  light?: boolean;
+  removeBorder?: boolean;
+}
+export const SocialLinks:React.FC<SocialLinksProps> = ({light,removeBorder}) => {
   return (
     <div className="flex gap-5">
       {headerConstants.menu.socials.map((link, i) => (
         <SocialLink
           key={i}
-          imageUrl={link.imageUrl}
+          imageUrl={light ? link.imageUrlLight : link.imageUrl}
           altText={link.label}
           href={link.href}
+          removeBorder={removeBorder}
         />
       ))}
     </div>

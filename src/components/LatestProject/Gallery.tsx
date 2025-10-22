@@ -33,15 +33,15 @@ export const Gallery: React.FC<I_Gallery> = ({ projects }) => {
     return (
         <div className="flex flex-col gap-6 mb-10">
             {projectPairs.map((pair, rowIdx) => (
-                <div className="grid lg:grid-cols-3 gap-6 sm:grid-cols-1 md:grid-cols-2" key={rowIdx}>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:grid-cols-2" key={rowIdx}>
                     {pair.map((p, colIdx) => {
                         // Odd rows: first col col-span-2, second col col-span-1
                         // Even rows: first col col-span-1, second col col-span-2
                         let colSpan = '';
                         if (rowIdx % 2 === 0) {
-                            colSpan = colIdx === 0 ? 'lg:col-span-2 sm:col-span-1' : 'col-span-1';
+                            colSpan = colIdx === 0 ? 'col-span-1 lg:col-span-2' : 'col-span-1';
                         } else {
-                            colSpan = colIdx === 0 ? 'col-span-1' : 'lg:col-span-2 sm:col-span-1';
+                            colSpan = colIdx === 0 ? 'col-span-1' : 'col-span-1 lg:col-span-2';
                         }
                         return (
                             <GalleryCard key={colIdx} project={p} colSpan={colSpan} />

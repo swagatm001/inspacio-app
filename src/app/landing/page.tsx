@@ -97,7 +97,9 @@ export default function Home() {
         <Partners />
         <OurStory />
         <ProjectTransformation />
-        <TestimonialV2 />
+      </CustomContainer>
+      <TestimonialV2 />
+      <CustomContainer>
         <TextScroll />
         <Awards />
         <OurCreativeProcessV2 />

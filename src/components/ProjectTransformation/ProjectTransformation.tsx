@@ -13,7 +13,7 @@ const projects = [
 
 const ProjectTransformation: React.FC = () => {
     return (
-        <section className="px-4 py-12 max-w-[1200px] mx-auto">
+        <section className="px-4 py-12 max-w-[1200px] mx-auto mb-16">
             {/* Section Heading */}
             <div className={clsx(montserrat.className,"text-center mb-10")}>
                 <div className="text-gray-500 text-base tracking-wider mb-2">[The ‘Dream Team’ that always delivers]</div>

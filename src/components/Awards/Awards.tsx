@@ -28,8 +28,11 @@ const Awards: React.FC = () => {
                     <p className="mb-6 text-lg text-gray-700">
                         Inspacio Design has been recognized for excellence in interior design, innovation, and creativity. Explore our award-winning projects and discover what sets us apart.
                     </p>
-                    <button className="mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1 sm:display-none">
-                        Check it Out
+                    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1 sm:display-none">
+                        <span>Check it Out</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
                     </button>
                 </div>
                 {/* Right Side */}

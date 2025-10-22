@@ -50,15 +50,15 @@ export const OurCreativeProcessV2: React.FC = () => {
             <h2 className={clsx(montserrat.className,"text-[#3D3834] text-3xl font-medium text-center mb-12")}>{processConstants2.title}</h2>
             <div className="relative">
                 {/* Vertical divider */}
-                <div className="sm:hidden md:hidden absolute left-1/2 top-0 h-full w-0.5 bg-gray-200 z-0" />
+                <div className="hidden lg:block absolute left-1/2 top-0 h-full w-0.5 bg-gray-200 z-0" />
                 {/* vertical circle */}
-                <div className="sm:hidden md:hidden absolute left-1/2 -translate-x-4 -bottom-6 w-8 h-8 rounded-full bg-gradient-to-b from-amber-800 to-white"></div>
+                <div className="hidden lg:block absolute left-1/2 -translate-x-4 -bottom-6 w-8 h-8 rounded-full bg-gradient-to-b from-amber-800 to-white"></div>
                 <div className="flex flex-col gap-12 relative z-10">
                     {processConstants2.steps.map((step, idx:number) => (
                         <>
                         <div
                             key={uuidv4()}
-                            className="sm:hidden md:hidden flex sm:flex-col md:flex-col lg:flex-row items-center justify-between gap-[10vw]"
+                            className="hidden lg:flex flex-row items-center justify-between gap-[10vw]"
                         >
                             {idx % 2 === 0 ? (
                                 <>
@@ -84,7 +84,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                                     {/* Content left */}
                                     <div className="flex-1">
                                         <div className="flex gap-4 mb-8">
-                                            <Step />
+                                            <Step num={idx+1}/>
                                             <div className="flex-col">
                                                 <h3 className={clsx(montserrat.className,"text-[#3D3834] text-2xl font-semibold mb-2 uppercase")}>{step.stepTitle}</h3>
                                                 <p className={clsx(satoshi.className,"text-lg text-[#696969] border rounded-full border-gray-300 bg-gray-200 inline-block px-2.5 py-1")}>{step.timeline}</p>
@@ -102,7 +102,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                         </div>
                         <div
                             key={uuidv4()}
-                            className="lg:hidden flex sm:flex-col md:flex-col lg:flex-row items-center justify-between gap-[10vw]"
+                            className="block lg:hidden flex flex-col items-center justify-between gap-[10vw]"
                         >
                                     {/* Image left */}
                                     <div className="flex-1 flex justify-end">
@@ -111,7 +111,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="flex-1">
-                                        <div className="flex gap-4 mb-8">
+                                        <div className="flex gap-4 mb-8 justify-center">
                                             <Step num={idx+1}/>
                                             <div className="flex-col">
                                                 <h3 className={clsx(montserrat.className,"text-[#3D3834] text-2xl font-semibold mb-2 uppercase")}>{step.stepTitle}</h3>
@@ -129,7 +129,11 @@ export const OurCreativeProcessV2: React.FC = () => {
     );
 };
 
-const Step = ({num}) => {
+type StepProps = {
+    num: number;
+}
+
+const Step:React.FC<StepProps> = ({num}) => {
 
     return (
       <div className="relative w-16 h-16 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl bg-gradient-to-b from-amber-800 to-white shadow overflow-hidden">

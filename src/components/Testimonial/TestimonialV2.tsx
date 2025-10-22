@@ -20,7 +20,7 @@ const TestimonialV2: React.FC = () => {
         <section className="py-10 align-center bg-[#2D221C]">
         <h2 className={clsx(montserrat.className,'font-medium text-[40px] text-center text-white')}>What Our Clients Say</h2>
         <div className="">
-            <EmblaCarousel options={options} slides={getTestimonials()} />
+            <EmblaCarousel options={options} slides={getTestimonials()} isDarkBackground={true}/>
         </div>
     </section>
     )

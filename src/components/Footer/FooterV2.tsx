@@ -18,18 +18,22 @@ const infoLinks = [
 ];
 
 const FooterV2: React.FC = () => (
-    <footer className="bg-[#885739] text-white pt-12 pb-4">
+    <footer className="bg-[#885739] text-white pt-12 pb-4 w-full">
         {/* Top Section */}
         <div className="flex flex-wrap justify-between items-start px-8 gap-8">
             {/* Left Section */}
             <div className="flex-1 min-w-[280px]">
                 <h2 className={clsx(montserrat.className,"text-8xl font-medium mb-6")}>Want to Start <br/>a Project?</h2>
                 <button
-                        className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition"
-                        style={{ pointerEvents: 'auto' }}
-                    >
-                        Book a FREE Consulation
-                    </button>
+                    type="button"
+                    aria-label="Book a free consultation"
+                    className="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition whitespace-nowrap"
+                >
+                    <span>Book a FREE Consultation</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                </button>
             </div>
             {/* Right Section */}
             <nav className="flex-2 min-w-[180px] flex flex-col gap-4">
@@ -50,7 +54,7 @@ const FooterV2: React.FC = () => (
             {/* Logo */}
             <div className="flex-1 min-w-[120px]">
                 {/* Replace with your logo */}
-                <img src="/logo.svg" alt="Logo" className="h-10" />
+                <img src="/images/inspacio-logo-white.jpg" alt="Logo" className="h-10" />
             </div>
             {/* Info Links */}
             <div className="flex-2 min-w-[220px] flex justify-center gap-8">
@@ -66,10 +70,10 @@ const FooterV2: React.FC = () => (
             </div>
             {/* Social Icons */}
             <div className="flex-1 flex justify-end">
-                <SocialLinks />
+                <SocialLinks light={true} removeBorder={true}/>
             </div>
         </div>
-    <div className="border-2 border-[#F8F7F326] width-[80%] m-auto"></div>
+    <div className="border border-[#F8F7F326] w-11/12 mx-8 "></div>
         {/* Bottom Section */}
     <div className="text-center text-sm text-white mt-4">
             &copy; 2025 Inspacio Design. All rights reserved.

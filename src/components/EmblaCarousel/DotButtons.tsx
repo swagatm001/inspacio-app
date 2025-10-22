@@ -5,6 +5,7 @@ import React, {
   useEffect,
   useState
 } from 'react'
+import clsx from 'clsx'
 import { EmblaCarouselType } from 'embla-carousel'
 
 type UseDotButtonType = {
@@ -53,13 +54,14 @@ export const useDotButton = (
   }
 }
 
-type PropType = ComponentPropsWithRef<'button'>
+type PropType = ComponentPropsWithRef<'button'> & { isDark?: boolean }
 
 export const DotButton: React.FC<PropType> = (props) => {
-  const { children, ...restProps } = props
+  const { children, isDark, className, ...restProps } = props
+  const modeClass = isDark ? 'embla__dot--mode-dark' : 'embla__dot--mode-light'
 
   return (
-    <button type="button" {...restProps}>
+    <button type="button" className={clsx(className, modeClass)} {...restProps}>
       {children}
     </button>
   )
