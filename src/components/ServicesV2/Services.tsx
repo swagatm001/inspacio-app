@@ -10,14 +10,23 @@ export const Services = () => {
 
     const imageList = useMemo(() => {
         return Object.keys(services).map((key) => services[key].imageUrl);
-    }, [])
+    }, []);
+
+    const imageListMobile = useMemo(() => {
+        return Object.keys(services).map((key) => services[key].imageUrlMobile);
+    },[]);
 
     return (
-        <div className='flex lg:flex-row justify-between sm:flex-col mb-28'>
-            <div className='flex flex-row gap-0 sm:display-none'>
-                {imageList.map((url, index) => (
-                    url && <Image key={index} src={url} alt={`Service ${index + 1}`} width={200} height={573} />
-                ))}
+        <div className='flex lg:flex-row justify-between flex-col mb-28 md:min-h-[600px] align-center'>
+            <div className='hidden lg:flex flex-row gap-0 max-h-[500px]'>
+                <Image className='relative top-0' src={imageList[0] || ''} alt={`Architectural Design`} width={200} height={573} />
+                <Image className='relative top-32' src={imageList[1] || ''} alt={`Interior Design`} width={200} height={573} />
+                <Image className='relative top-16' src={imageList[2] || ''} alt={`Turnkey Solutions`} width={200} height={573} />
+            </div>
+            <div className='flex lg:hidden flex-col gap-0 items-center'>
+                <Image className='relative left-10' src={imageListMobile[0] || ''} alt={`Architectural Design`} width={200} height={573} />
+                <Image className='relative -left-15' src={imageListMobile[1] || ''} alt={`Interior Design`} width={200} height={573} />
+                <Image className='relative left-5' src={imageListMobile[2] || ''} alt={`Turnkey Solutions`} width={200} height={573} />
             </div>
             <div className='flex-[0_1_40%]'>
                 <h1 className={clsx(montserrat.className, 'text-[40px] font-medium mb-10 text-[#3D3834]')}>Our Services</h1>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Testimonial } from "@/constants/testimonials";
 import Image from "next/image";
+import clsx from "clsx";
+import { montserrat } from "@/fonts/montserrat";
 
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
   return (
@@ -14,7 +16,23 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
             {/* Gradient circles behind glass */}
             
             {/* Content */}
-            <div className="absolute z-10 bottom-5">
+            <div className="block md:hidden flex flex-row gap-3 align-center mb-3">
+              <img
+                    src='/images/interior.jpg'
+                    alt="Profile"
+                    className="w-20 h-20 rounded-2xl object-cover shadow-2xl border-2 border-white/30"
+                />
+                <div className={clsx(montserrat.className,"flex flex-col justify-center")}>
+                  <h2 className="text-white text-lg h-auto">Ritesh Soni</h2>
+                  <p className="text-neutral-300 text-base">CEO</p>
+                </div>
+            </div>
+            <div className="block md:hidden">
+                  <p className="text-neutral-200 text-base leading-relaxed font-normal">
+                    They are a set of professional interior team young, energetic and motivated. Would highly recommend this team if you want to tie stress free with Vastur complainces.
+                  </p>
+                </div>
+            <div className="hidden md:block absolute z-10 bottom-5">
               <h2 className="text-white text-2xl font-semibold mb-2">Ritesh Soni</h2>
               <p className="text-neutral-300 text-base">CEO</p>
               
@@ -30,7 +48,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
               </div>
             </div>
                 {/* Profile image - positioned on the right edge of the box, extending above */}
-            <div className="absolute -right-10 -translate-y-1/2 top-1/2">
+            <div className="hidden md:block absolute -right-10 -translate-y-1/2 top-1/2">
                 <img
                     src='/images/interior.jpg'
                     alt="Profile"
@@ -39,7 +57,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
             </div>
           </div>
           {/* Content text on the right */}
-          <div className="">
+          <div className="hidden md:block">
             <p className="text-neutral-200 text-base leading-relaxed font-normal">
               They are a set of professional interior team young, energetic and motivated. Would highly recommend this team if you want to tie stress free with Vastur complainces.
             </p>

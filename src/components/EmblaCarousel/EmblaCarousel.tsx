@@ -31,7 +31,7 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
   const { isDarkBackground } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoPlay({ delay: 3000, playOnInit: true, stopOnInteraction: false, stopOnFocusIn: true })])
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoPlay({ delay: 3000, playOnInit: false, stopOnInteraction: false, stopOnFocusIn: true })])
   const tweenFactor = useRef(0)
   const tweenNodes = useRef<HTMLElement[]>([])
 
@@ -112,7 +112,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   }, [emblaApi, tweenScale])
 
   return (
-    <div className="embla theme-light">
+    <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((node,index) => (

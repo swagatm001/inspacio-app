@@ -17,7 +17,7 @@ const Awards: React.FC = () => {
         return [...items,...items];
     }
 
-    const options: EmblaOptionsType = {align:'start',loop:true}
+    const options: EmblaOptionsType = {align:'start',loop:true,breakpoints: {"(max-width: 768px)": {align: 'center'}}}
     return (
         <section className="py-8">
             <h2 className={clsx(montserrat.className,"mb-8 text-center text-3xl font-medium text-[#3D3834]")}>Awards We Are Proud Of</h2>

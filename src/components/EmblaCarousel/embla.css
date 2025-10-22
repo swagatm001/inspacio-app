@@ -4,6 +4,7 @@
   --slide-height: 100%;
   --slide-spacing: 2rem;
   --slide-size: 70%;
+  --slide-size-sm: 50%;
 }
 .embla__viewport {
   overflow: hidden;
@@ -18,6 +19,11 @@
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
+}
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 var(--slide-size-sm);
+  }
 }
 .embla__slide__number {
   height: var(--slide-height);
