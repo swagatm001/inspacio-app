@@ -7,10 +7,10 @@ import Link from "next/link";
 
 const OurStory: React.FC = () => {
     return (
-        <section className="flex sm:flex-col md:flex-row lg:flex-row sm:flex-reverse justify-between mt-16 gap-[90px] mb-28">
+        <section className="flex flex-col-reverse md:flex-row lg:flex-row sm:flex-reverse justify-between mt-16 gap-3 md:gap-[90px] mb-28">
             {/* Left: Video Card */}
             <div className="w-full md:w-[70%] flex justify-center items-center">
-                <div className="w-full h-full bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                <div className="w-full h-full bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center aspect-w-16 aspect-h-9">
                     {/* Replace src with your video URL */}
                     <video
                         className="w-full h-full object-cover"
@@ -24,9 +24,9 @@ const OurStory: React.FC = () => {
             </div>
 
             {/* Right: Title, Description, Button */}
-            <div className="w-full md:w-[30%] flex flex-col justify-center items-start px-4 py-8 md:py-0">
+            <div className="w-full md:w-[30%] flex flex-col justify-center items-center px-4 py-8 md:py-0">
                 <h2 className={clsx(montserrat.className, "text-5xl font-medium mb-4 uppercase")}>{OurStoryData.title}</h2>
-                <p className="text-gray-600 mb-6">{OurStoryData.description}</p>
+                <p className="text-gray-600 mb-6 text-center">{OurStoryData.description}</p>
                 <Link href={OurStoryData.redirectUrl}>
                     <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
                         <span>{OurStoryData.buttonText}</span>

@@ -21,7 +21,7 @@ const Awards: React.FC = () => {
     return (
         <section className="py-8">
             <h2 className={clsx(montserrat.className,"mb-8 text-center text-3xl font-medium text-[#3D3834]")}>Awards We Are Proud Of</h2>
-            <div className={clsx(satoshi.className,"flex sm:flex-col md:flex-row lg:flex-row items-center gap-8")}>
+            <div className={clsx(satoshi.className,"flex flex-col md:flex-row lg:flex-row items-center gap-8")}>
                 {/* Left Side */}
                 <div className="basis-1/3">
                     <h3 className="mb-4 text-2xl font-bold">We’ve got felicitated</h3>
