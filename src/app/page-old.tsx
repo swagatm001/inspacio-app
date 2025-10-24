@@ -1,24 +1,18 @@
-import Awards from "@/components/Awards/Awards";
 import { Banner } from "@/components/Banner";
 import { Boardmembers } from "@/components/BoardMembers/BoardMembers";
 import { SlidesPerViewCarousel } from "@/components/Carousel";
 import { SingleCarouselWithAutoplay } from "@/components/Carousel/SingleCarouselWithAutoplay";
 import { ContactForm } from "@/components/Contact";
-import CustomContainer from "@/components/Container/CustomContainer";
+import { Container } from "@/components/Container";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { FAQ } from "@/components/FAQ";
-import  FooterV2 from "@/components/Footer/FooterV2";
-import { LatestProjects } from "@/components/LatestProject";
+import { Footer } from "@/components/Footer";
 import { OurCreativeProcessV2 } from "@/components/OurCreativeProcess";
-import OurStory from "@/components/OurStory/OurStory";
 import { Partners } from "@/components/Partners/Partners";
 import { Portfolio } from "@/components/Portfolio";
-import ProjectTransformation from "@/components/ProjectTransformation/ProjectTransformation";
-import { Services } from "@/components/ServicesV2";
-import TestimonialV2 from "@/components/Testimonial/TestimonialV2";
-import TextScroll from "@/components/TextScroll/TextScroll";
+import { Services } from "@/components/Services";
+import Testimonials from "@/components/Testimonial/Testimonials";
 import { homePageContants } from "@/constants/home";
-import { montserrat } from "@/fonts/montserrat";
 import { playfair } from "@/fonts/playfair";
 import { uuidv4 } from "@/utils/uuid4";
 import clsx from "clsx";
@@ -46,27 +40,19 @@ export default function Home() {
           priority
           style={{ objectFit: "cover" }}
         />
-        <div className="bottom-1/2 flex-col md:flex-row translate-y-1/2 md:translate-y-0 absolute md:bottom-0 left-0 w-full flex items-center px-10 bg-black bg-opacity-10 lg:px-16 justify-between align-center pb-10 pt-10">
+        <div className="absolute top-0 left-0 w-full h-full flex items-center px-10 bg-black bg-opacity-30 lg:px-32">
           <p
             className={clsx(
-              montserrat.className,
-              "text-3xl sm:text-4xl lg:text-5xl text-white inline-block"
+              playfair.className,
+              "text-3xl sm:text-4xl lg:text-6xl text-white leading-normal"
             )}
           >
-            <span>You Dream, we <span className="italic">Create</span></span>
+            <span>Concept to Creation</span>
+            <br />
+            <span className="lg:text-7xl font-bold">Designing Timeless</span>
+            <br />
+            <span>Spaces</span>
           </p>
-          <button className="backdrop-blur-sm backdrop-saturate-150 inline-flex md:hidden gap-3 items-center align-center border border-[#A4A4A4] rounded-lg px-[20px] py-[13px] m-0 text-base/[13px] text-white">
-                <span className="font-medium">Make Your Dream Come True</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
-          </button>
-          <button className="hidden md:inline-flex gap-3 items-center align-center border border-[#A4A4A4] rounded-md px-[20px] py-[13px] m-0 text-base/[13px] text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3]">
-                <span className="font-medium">Make Your Dream Come True</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
-          </button>
         </div>
       </div>
     ));
@@ -97,23 +83,25 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-20">
       <End2EndWrapper className="h-[542px] lg:h-screen">
-      <SingleCarouselWithAutoplay slides={heroSlides} />
+        <SingleCarouselWithAutoplay slides={heroSlides} />
       </End2EndWrapper>
-      <CustomContainer>
-        <LatestProjects />
+      <Container>
+        <div className="flex flex-col gap-10 lg:gap-20">
+          <div className="w-full h-[180px] lg:h-[414px]">
+            <SlidesPerViewCarousel slides={servicesSlides} />
+          </div>
+          <Portfolio />
+        </div>
+        <Banner />
         <Services />
         <Partners />
-        <OurStory />
-        <ProjectTransformation />
-      </CustomContainer>
-      <TestimonialV2 />
-      <CustomContainer>
-        <TextScroll />
-        <Awards />
         <OurCreativeProcessV2 />
+        <Boardmembers />
+        <ContactForm />
+        <Testimonials />
         <FAQ />
-      </CustomContainer>
-      <FooterV2 />
+        <Footer />
+      </Container>
     </div>
   );
 }

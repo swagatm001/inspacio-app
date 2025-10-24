@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { SocialLinks } from "../Header/SocialLinks";
 import clsx from "clsx";

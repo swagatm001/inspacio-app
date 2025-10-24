@@ -1,3 +1,4 @@
+"use client";
 import { montserrat } from "@/fonts/montserrat";
 import clsx from "clsx";
 import React from "react";

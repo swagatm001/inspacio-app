@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Testimonial } from "@/constants/testimonials";
 import Image from "next/image";

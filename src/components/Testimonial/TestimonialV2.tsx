@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
 import { testimonialsData } from "@/constants/testimonials";
@@ -16,7 +17,7 @@ const TestimonialV2: React.FC = () => {
         })
         return items;
     }
-    console.log(getTestimonials());
+
     return (
         <section className="py-10 align-center bg-brown-texture-pattern bg-cover bg-center">
         <h2 className={clsx(montserrat.className,'font-medium text-[40px] text-center text-white')}>What Our Clients Say</h2>
