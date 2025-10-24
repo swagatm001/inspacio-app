@@ -1,6 +1,6 @@
 export const headerConstants = {
   logo: {
-    imageUrl: "/images/inspacio-logo-trans.svg",
+    imageUrl: "/images/logo-3.svg",
     altText: "brand logo",
     width: 53,
     height: 26,

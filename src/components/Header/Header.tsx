@@ -18,9 +18,9 @@ export const Header = () => {
     <header className="backdrop-blur-lg backdrop-saturate-150 fixed left-1/2 -translate-x-1/2 top-[21px] w-[90%] max-w-[1253px] px-2 sm:px-4 md:px-6 h-20 z-50 rounded-full shadow-lg bg-gray-500/50">
       <div className="h-full flex items-center justify-between lg:lx-0">
         <Link href="/">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             <Image
-              className="w-full"
+              className="w-[250px] h-auto user-select-none"
               src={headerConstants.logo.imageUrl}
               alt={headerConstants.logo.altText}
               width={headerConstants.logo.width}
