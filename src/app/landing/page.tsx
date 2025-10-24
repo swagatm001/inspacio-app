@@ -46,7 +46,7 @@ export default function Home() {
           priority
           style={{ objectFit: "cover" }}
         />
-        <div className="absolute bottom-0 left-0 w-full flex items-center px-10 bg-black bg-opacity-10 lg:px-16 justify-between align-center pb-10 pt-10">
+        <div className="bottom-1/2 flex-col md:flex-row translate-y-1/2 md:translate-y-0 absolute md:bottom-0 left-0 w-full flex items-center px-10 bg-black bg-opacity-10 lg:px-16 justify-between align-center pb-10 pt-10">
           <p
             className={clsx(
               montserrat.className,
@@ -55,7 +55,13 @@ export default function Home() {
           >
             <span>You Dream, we <span className="italic">Create</span></span>
           </p>
-          <button className="inline-flex gap-3 items-center align-center border border-[#A4A4A4] rounded-md px-[20px] py-[13px] m-0 text-base/[13px] text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3]">
+          <button className="backdrop-blur-sm backdrop-saturate-150 inline-flex md:hidden gap-3 items-center align-center border border-[#A4A4A4] rounded-lg px-[20px] py-[13px] m-0 text-base/[13px] text-white">
+                <span className="font-medium">Make Your Dream Come True</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+          </button>
+          <button className="hidden md:inline-flex gap-3 items-center align-center border border-[#A4A4A4] rounded-md px-[20px] py-[13px] m-0 text-base/[13px] text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3]">
                 <span className="font-medium">Make Your Dream Come True</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />

@@ -18,23 +18,23 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
             {/* Content */}
             <div className="block md:hidden flex flex-row gap-3 align-center mb-3">
               <img
-                    src='/images/interior.jpg'
+                    src={testimonial.avatar}
                     alt="Profile"
-                    className="w-20 h-20 rounded-2xl object-cover shadow-2xl border-2 border-white/30"
+                    className="w-20 h-20 rounded-full object-cover shadow-2xl border-2 border-white/30"
                 />
                 <div className={clsx(montserrat.className,"flex flex-col justify-center")}>
-                  <h2 className="text-white text-lg h-auto">Ritesh Soni</h2>
-                  <p className="text-neutral-300 text-base">CEO</p>
+                  <h2 className="text-white text-lg h-auto">{testimonial.name}</h2>
+                  {/* <p className="text-neutral-300 text-base">CEO</p> */}
                 </div>
             </div>
             <div className="block md:hidden">
-                  <p className="text-neutral-200 text-base leading-relaxed font-normal">
-                    They are a set of professional interior team young, energetic and motivated. Would highly recommend this team if you want to tie stress free with Vastur complainces.
+                  <p className="text-neutral-200 text-base leading-relaxed font-normal line-clamp-6">
+                    {testimonial.content}
                   </p>
                 </div>
-            <div className="hidden md:block absolute z-10 bottom-5">
-              <h2 className="text-white text-2xl font-semibold mb-2">Ritesh Soni</h2>
-              <p className="text-neutral-300 text-base">CEO</p>
+            <div className="hidden md:block absolute z-10 bottom-5 w-3/4">
+              <h2 className="text-white text-2xl font-semibold mb-2">{testimonial.name}</h2>
+              {/* <p className="text-neutral-300 text-base">CEO</p> */}
               
               {/* Logo at bottom */}
               <div className="mt-24 flex items-center gap-2">
@@ -44,22 +44,22 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
                     <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2"/>
                   </svg>
                 </div>
-                <span className="text-white text-sm font-medium">Logopsum</span>
+                {/* <span className="text-white text-sm font-medium">Logopsum</span> */}
               </div>
             </div>
                 {/* Profile image - positioned on the right edge of the box, extending above */}
             <div className="hidden md:block absolute -right-10 -translate-y-1/2 top-1/2">
                 <img
-                    src='/images/interior.jpg'
+                    src={testimonial.avatar}
                     alt="Profile"
-                    className="w-32 h-32 rounded-2xl object-cover shadow-2xl border-2 border-white/30"
+                    className="w-32 h-32 rounded-full object-cover shadow-2xl border-2 border-white/30"
                 />
             </div>
           </div>
           {/* Content text on the right */}
           <div className="hidden md:block">
-            <p className="text-neutral-200 text-base leading-relaxed font-normal">
-              They are a set of professional interior team young, energetic and motivated. Would highly recommend this team if you want to tie stress free with Vastur complainces.
+            <p className="text-neutral-200 text-base leading-relaxed font-normal line-clamp-6">
+              {testimonial.content}
             </p>
           </div>
         </div>
