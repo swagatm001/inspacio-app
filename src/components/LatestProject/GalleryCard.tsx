@@ -4,6 +4,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import { I_Project } from './Gallery';
 import { montserrat } from '@/fonts/montserrat';
+import Link from 'next/link';
 
 interface GalleryCardProps {
     project: I_Project;
@@ -71,12 +72,14 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
                     <p className="font-medium text-2xl mb-2">{project.title}</p>
                     <span className="text-sm text-gray-200 mb-2 border rounded-full px-3 py-0.5">{project.address}</span>
                     <p className="font-normal w-[80%] text-lg text-white-300 mb-4 line-clamp-3 mb-2 mt-2 mx-auto">{project.description}</p>
-                    <button
+                    <Link href={`projects/${project.slug}`}>
+                        <button
                         className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition"
                         style={{ pointerEvents: 'auto' }}
-                    >
-                        Take me there
-                    </button>
+                        >
+                            Take me there
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

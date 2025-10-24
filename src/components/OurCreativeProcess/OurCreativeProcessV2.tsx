@@ -1,3 +1,4 @@
+"use client";
 import { processConstants2 } from "@/constants/process";
 import { montserrat } from "@/fonts/montserrat";
 import { satoshi } from "@/fonts/satoshi";

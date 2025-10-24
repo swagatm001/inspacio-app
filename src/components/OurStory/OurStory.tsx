@@ -2,6 +2,7 @@ import { montserrat } from "@/fonts/montserrat";
 import clsx from "clsx";
 import React from "react";
 import { OurStory as OurStoryData } from "@/constants/ourStory";
+import Link from "next/link";
 
 const OurStory: React.FC = () => {
     return (
@@ -25,12 +26,14 @@ const OurStory: React.FC = () => {
             <div className="w-full md:w-[30%] flex flex-col justify-center items-start px-4 py-8 md:py-0">
                 <h2 className={clsx(montserrat.className, "text-5xl font-medium mb-4 uppercase")}>{OurStoryData.title}</h2>
                 <p className="text-gray-600 mb-6">{OurStoryData.description}</p>
-                <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
-                    <span>{OurStoryData.buttonText}</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-                </button>
+                <Link href={OurStoryData.redirectUrl}>
+                    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
+                        <span>{OurStoryData.buttonText}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                    </button>
+                </Link>
             </div>
         </section>
     );

@@ -1,10 +1,10 @@
 export const headerConstants = {
   logo: {
-    imageUrl: "/kds/main/kds-logo.png",
+    imageUrl: "/images/inspacio-logo-trans.svg",
     altText: "brand logo",
     width: 53,
     height: 26,
-    brandLabel: "Kreative Dezine Studio"
+    brandLabel: "Inspacio"
   },
   menu: {
     links: [

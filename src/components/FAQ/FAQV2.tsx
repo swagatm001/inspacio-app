@@ -53,8 +53,8 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
 export const FAQ = () => {
   return (
     <Sections title="">
-        <div className="flex">
-            <p className={clsx(montserrat.className,"font-medium flex-1 text-8xl mt-10")}>FAQs</p>
+        <div className="flex flex-col lg:flex-row">
+            <p className={clsx(montserrat.className,"font-medium flex-1 text-2xl lg:text-8xl mt-10 sm:m-auto lg:m-0 sm:mb-5")}>FAQs</p>
             <div className="flex-1">
                 {faqsConstantsV2.map((faq, i) => (
                 <Question

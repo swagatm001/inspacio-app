@@ -2,13 +2,14 @@ import React from "react";
 import { SocialLinks } from "../Header/SocialLinks";
 import clsx from "clsx";
 import { montserrat } from "@/fonts/montserrat";
+import { satoshi } from "@/fonts/satoshi";
 
 const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Our Works", href: "/works" },
+    { label: "Our Works", href: "/projects" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
-    { label: "Awards", href: "/awards" },
+    { label: "Awards", href: "/" },
 ];
 
 const infoLinks = [
@@ -20,14 +21,14 @@ const infoLinks = [
 const FooterV2: React.FC = () => (
     <footer className="bg-[#885739] text-white pt-12 pb-4 w-full">
         {/* Top Section */}
-        <div className="flex flex-wrap justify-between items-start px-8 gap-8">
+        <div className="flex flex-col md:flex-row flex-wrap justify-between items-start px-8 gap-8">
             {/* Left Section */}
             <div className="flex-1 min-w-[280px]">
-                <h2 className={clsx(montserrat.className,"text-8xl font-medium mb-6")}>Want to Start <br/>a Project?</h2>
+                <h2 className={clsx(montserrat.className,"text-5xl md:text-8xl font-medium mb-6")}>Want to Start <br/>a Project?</h2>
                 <button
                     type="button"
                     aria-label="Book a free consultation"
-                    className="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition whitespace-nowrap"
+                    className={clsx(satoshi.className,"inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition whitespace-nowrap")}
                 >
                     <span>Book a FREE Consultation</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
@@ -49,15 +50,18 @@ const FooterV2: React.FC = () => (
             </nav>
         </div>
 
+        <div className="block md:hidden border border-[#F8F7F326] w-11/12 mx-8 mt-10"></div>
+
         {/* Middle Section */}
-        <div className="flex flex-wrap justify-between items-center my-12 mb-6 px-8 gap-8">
+        <div className="flex flex-col md:flex-row items-start flex-wrap justify-between md:items-center my-12 mb-6 px-8 gap-8">
             {/* Logo */}
-            <div className="flex-1 min-w-[120px]">
+            <p className={clsx(satoshi.className,"block md:hidden text-5xl font-semibold")}>Inspacio.</p>
+            <div className="hidden md:block flex-1 min-w-[120px]">
                 {/* Replace with your logo */}
                 <img src="/images/inspacio-logo-white.jpg" alt="Logo" className="h-10" />
             </div>
             {/* Info Links */}
-            <div className="flex-2 min-w-[220px] flex justify-center gap-8">
+            <div className="flex-2 min-w-[220px] flex flex-col md:flex-row justify-center gap-8">
                 {infoLinks.map(link => (
                     <a
                         key={link.label}
