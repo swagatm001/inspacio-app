@@ -1,9 +1,5 @@
 import Awards from "@/components/Awards/Awards";
-import { Banner } from "@/components/Banner";
-import { Boardmembers } from "@/components/BoardMembers/BoardMembers";
-import { SlidesPerViewCarousel } from "@/components/Carousel";
 import { SingleCarouselWithAutoplay } from "@/components/Carousel/SingleCarouselWithAutoplay";
-import { ContactForm } from "@/components/Contact";
 import CustomContainer from "@/components/Container/CustomContainer";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { FAQ } from "@/components/FAQ";
@@ -12,8 +8,6 @@ import { LatestProjects } from "@/components/LatestProject";
 import { OurCreativeProcessV2 } from "@/components/OurCreativeProcess";
 import OurStory from "@/components/OurStory/OurStory";
 import { Partners } from "@/components/Partners/Partners";
-import { Portfolio } from "@/components/Portfolio";
-import ProjectTransformation from "@/components/ProjectTransformation/ProjectTransformation";
 import { Services } from "@/components/ServicesV2";
 import TestimonialV2 from "@/components/Testimonial/TestimonialV2";
 import TextScroll from "@/components/TextScroll/TextScroll";
@@ -104,7 +98,6 @@ export default function Home() {
         <Services />
         <Partners />
         <OurStory />
-        <ProjectTransformation />
       </CustomContainer>
       <TestimonialV2 />
       <CustomContainer>
