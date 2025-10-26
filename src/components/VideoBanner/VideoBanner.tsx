@@ -41,16 +41,16 @@ export const VideoBanner: React.FC = () => {
                     <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
                 </svg>}
             </div>
-            <div className="bottom-1/2 flex-col md:flex-row translate-y-1/2 md:translate-y-0 absolute md:bottom-0 left-0 w-full flex items-center px-10 bg-black bg-opacity-10 lg:px-16 justify-between align-center pb-10 pt-10">
+            <div className="flex-col md:flex-row translate-y-0 absolute bottom-0 left-0 w-full flex items-center px-10 bg-black bg-opacity-10 lg:px-16 justify-between align-center pb-10 pt-10">
                 <p
                     className={clsx(
                         montserrat.className,
-                        "text-3xl sm:text-4xl lg:text-5xl text-white inline-block"
+                        "text-2xl sm:text-4xl lg:text-5xl text-white inline-block"
                     )}
                 >
                     <span>You Dream, we <span className="italic">Create</span></span>
                 </p>
-                <button className="backdrop-blur-sm backdrop-saturate-150 inline-flex md:hidden gap-3 items-center align-center border border-[#A4A4A4] rounded-lg px-[20px] py-[13px] m-0 text-base/[13px] text-white">
+                <button className="backdrop-blur-lg backdrop-saturate-150 inline-flex md:hidden gap-3 items-center align-center border border-[#A4A4A4] rounded-lg px-[20px] py-[13px] m-0 text-base/[13px] text-white">
                     <span className="font-medium">Make Your Dream Come True</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />

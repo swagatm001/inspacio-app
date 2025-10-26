@@ -20,8 +20,8 @@ export const HamMenu: React.FC<{ className: string }> = ({ className }) => {
       </div>
       <AnimatePresence>
         {isOpen && (
-          <motion.div className="w-full h-full bg-white">
-            <Navigation className="w-full flex-col">
+          <motion.div className="">
+            <Navigation className="w-full flex-col py-3 bg-gray-500 opacity-90 rounded-lg">
               <NavigationLinks className="w-full flex-col items-center justify-center" onClick={() => setOpen(false)} />
               <SocialLinks />
               <GetInTouch title="Get In Touch" />

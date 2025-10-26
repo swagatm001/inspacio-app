@@ -13,7 +13,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
             <div className="absolute -bottom-10 left-[150px] w-24 h-24 bg-white rounded-full bg-[linear-gradient(180deg,#2B32FA_0%,#47E9B6_100%)] -z-1"></div>
             
           {/* Glass card */}
-          <div className="overflow-visible relative z-10 max-w-[250px] min-h-[280px] relative bg-white/10 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-white/20 w-80 flex-shrink-0 overflow-hidden">
+          <div className="overflow-visible relative z-10 w-full max-w-[250px] min-h-[280px] relative bg-white/10 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-white/20 w-80 flex-shrink-0 overflow-hidden">
             {/* Gradient circles behind glass */}
             
             {/* Content */}

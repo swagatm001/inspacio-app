@@ -39,7 +39,7 @@ const anthology = {
     // "/kds/anthology/img11.jpg",
   ],
   description: `Anthology is a global workplace continually striving toward deeper inclusivity, authenticity, and professional advancement. We were assigned the task of designing the workspace with an idea that showcases a contemporary smart approach to design, technology and aesthetics. The architect and the entire team of interior designers produced sketches, 3-D models and 3-D renderings of the commercial space simulations to help clients visualise the results. After multiple brainstorming and presentations with the client, we finalised the interiors of the space. The structural glazing of the building and the aerial view of passing metro rails, embracing natural light brightening the workspace and making the office feel bigger and more spacious. The workspace, meeting rooms and collaborative spaces were strategically planned, which extensively reduced the usage of lights and air conditioning. A big welcoming reception along with collaborative spaces create a sense of openness. Strategically placed warm colour palette and beautiful lighting in lounge/ meeting rooms added more drama and life to the space.`,
-  address: `TinFactory, Salarpuria Magnificia, Bangalore`,
+  address: `TinFactory, Bangalore`,
   category: {
     label: "Commercial",
     value: "commercial",
