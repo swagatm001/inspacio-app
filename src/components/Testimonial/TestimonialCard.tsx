@@ -9,8 +9,8 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
   return (
       <div className="relative w-full max-w-4xl min-h-[360px] flex items-center">
         <div className="relative flex items-center gap-x-[80px]">
-            <div className="absolute -top-8 -left-8 w-24 h-24 rounded-full bg-white bg-[linear-gradient(266.78deg,#FFE339_-22.82%,#FF9470_38.96%)] -z-1"></div>
-            <div className="absolute -bottom-10 left-[150px] w-24 h-24 bg-white rounded-full bg-[linear-gradient(180deg,#2B32FA_0%,#47E9B6_100%)] -z-1"></div>
+            <div className="absolute -top-6 md:-top-8 -left-6 md:-left-8 w-20 h-20 md:w-24 md:h-24 rounded-full bg-white bg-[linear-gradient(266.78deg,#FFE339_-22.82%,#FF9470_38.96%)] -z-1"></div>
+            <div className="absolute -bottom-5 md:-bottom-10 -right-5 md:left-[200px] w-20 h-20 md:w-24 md:h-24 bg-white rounded-full bg-[linear-gradient(180deg,#2B32FA_0%,#47E9B6_100%)] -z-1"></div>
             
           {/* Glass card */}
           <div className="overflow-visible relative z-10 w-full max-w-[250px] min-h-[280px] relative bg-white/10 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-white/20 w-80 flex-shrink-0 overflow-hidden">

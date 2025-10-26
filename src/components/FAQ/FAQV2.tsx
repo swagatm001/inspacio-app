@@ -22,9 +22,9 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
   const toggle = () => setShowAnswer((x) => !x);
 
   return (
-    <div className={clsx("p-10 border-2 rounded-xl mb-10", isLast && "m-0")}>
+    <div className={clsx("p-3 md:p-10 border-2 rounded-xl mb-5 md:mb-10", isLast && "m-0")}>
       <div className="flex justify-between items-center">
-        <p className={clsx(satoshi.className,"font-medium text-2xl w-10/12", showAnswer ? "text-[#3D3834]" : "text-[#696969]")}>{question}</p>
+        <p className={clsx(satoshi.className,"font-medium text-lg md:text-2xl w-10/12", showAnswer ? "text-[#3D3834]" : "text-[#696969]")}>{question}</p>
         <button type="button" onClick={toggle}>
           <Image
             src={showAnswer ? "/kds/main/minus.png" : "/kds/main/plus.png"}
@@ -40,7 +40,7 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={clsx(satoshi.className,"mt-4 text-lg")}
+            className={clsx(satoshi.className,"mt-4 text-md md:text-lg text-[#3D3834]")}
           >
             {answer}
           </motion.p>
@@ -54,7 +54,7 @@ export const FAQ = () => {
   return (
     <Sections title="">
         <div className="flex flex-col lg:flex-row">
-            <p className={clsx(montserrat.className,"text-center font-medium flex-1 text-2xl lg:text-8xl mt-10 sm:m-auto lg:m-0 mb-5 text-[#3D3834] lg:text-left")}>FAQs</p>
+            <p className={clsx(montserrat.className,"text-center font-medium flex-1 text-2xl lg:text-8xl mt-10 sm:mt-0 sm:mx-auto lg:m-0 mb-5 text-[#3D3834] lg:text-left")}>FAQs</p>
             <div className="flex-1">
                 {faqsConstantsV2.map((faq, i) => (
                 <Question

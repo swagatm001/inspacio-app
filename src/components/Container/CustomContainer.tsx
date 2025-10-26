@@ -6,7 +6,7 @@ interface CustomContainerProps {
 }
 
 const CustomContainer: React.FC<CustomContainerProps> = ({ children, className = "" }) => (
-    <div className={`overflow-hidden px-2 w-full mx-auto md:px-10 box-border max-w-[1280px] lg:max-w-full ${className}`}>
+    <div className={`overflow-hidden px-2 w-[95%] mx-auto md:px-7 box-border max-w-[1253px] ${className}`}>
         {children}
     </div>
 );
