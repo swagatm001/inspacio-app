@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { I_Project } from './Gallery';
 import { montserrat } from '@/fonts/montserrat';
 import Link from 'next/link';
+import { satoshi } from '@/fonts/satoshi';
 
 interface GalleryCardProps {
     project: I_Project;
@@ -47,7 +48,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
             ref={cardRef}
             className={clsx(montserrat.className,
                 colSpan,
-                'relative group rounded-lg overflow-hidden h-80 cursor-pointer'
+                'relative group rounded-lg overflow-hidden h-80 cursor-pointer aspect-3/2'
             )}
         >
             {/* Image covers whole card with parallax effect */}
@@ -56,7 +57,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
                 alt={project.title}
                 fill
                 className="object-cover w-full h-full transition-transform duration-500"
-                style={{ zIndex: 1, transform: `scale(1.15) translateY(${parallax}px)` }}
+                style={{ transform: `scale(1.15) translateY(${parallax}px)` }}
             />
             {/* Gradient shadow at bottom of image */}
             <div
@@ -74,13 +75,13 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
             </div>
             {/* Hidden details, slide up on hover */}
             <div
-                className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black/80 text-white opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 p-6"
+                className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black/80 text-white opacity-0 translate-y-10 group-hover:opacity-80 group-hover:translate-y-0 transition-all duration-300 z-20 p-4"
                 style={{ pointerEvents: 'none' }}
             >
                 <div className="w-full text-center">
                     <p className="font-medium text-2xl mb-2">{project.title}</p>
                     <span className="text-sm text-gray-200 mb-2 border rounded-full px-3 py-0.5">{project.address}</span>
-                    <p className="font-normal w-[80%] text-lg text-white-300 mb-4 line-clamp-3 mb-2 mt-2 mx-auto">{project.description}</p>
+                    <p className={clsx(satoshi.className,"font-normal w-[80%] text-lg text-white-300 mb-4 line-clamp-3 mb-2 mt-2 mx-auto")}>{project.description}</p>
                     <Link href={`projects/${project.slug}`}>
                         <button
                         className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition"

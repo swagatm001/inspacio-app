@@ -13,7 +13,7 @@ const OurStory: React.FC = () => {
                 <div className="w-full h-full bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center aspect-w-16 aspect-h-9">
                     {/* Replace src with your video URL */}
                     <video
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover aspect-video"
                         controls
                         poster={OurStoryData.posterUrl}
                     >

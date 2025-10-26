@@ -1,5 +1,5 @@
 import { partners } from "@/constants/partnerts";
-import { playfair } from "@/fonts/playfair";
+import { montserrat } from "@/fonts/montserrat";
 import { uuidv4 } from "@/utils/uuid4";
 import clsx from "clsx";
 import Image from "next/image";
@@ -10,8 +10,8 @@ export const Partners = () => {
       <div>
         <p
           className={clsx(
-            playfair.className,
-            "text-2xl lg:text-4xl mb-4 text-gray-500"
+            montserrat.className,
+            "text-center text-2xl lg:text-4xl mb-4 text-[#3D3834] font-medium"
           )}
         >
           Our Trusted Partners

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function Home() {
 
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-20 bg-[#F8F7F3] overflow-x-hidden">
       <End2EndWrapper className="h-[542px] lg:h-screen">
         <VideoBanner />
       </End2EndWrapper>

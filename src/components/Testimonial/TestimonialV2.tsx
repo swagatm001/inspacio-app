@@ -20,10 +20,13 @@ const TestimonialV2: React.FC = () => {
 
     return (
         <section className="py-10 align-center bg-brown-texture-pattern bg-cover bg-center">
-        <h2 className={clsx(montserrat.className,'font-medium text-[40px] text-center text-white')}>What Our Clients Say</h2>
-        <div className="">
-            <EmblaCarousel options={options} slides={getTestimonials()} isDarkBackground={true}/>
+        <h2 className={clsx(montserrat.className,'font-medium text-2xl md:text-[40px] text-center text-white')}>What Our Customers Say</h2>
+        <div className="w-full flex justify-end">
+            <div className="w-full md:w-[90%]">
+                <EmblaCarousel options={options} slides={getTestimonials()} isDarkBackground={true}/>
+            </div>
         </div>
+        
     </section>
     )
     
