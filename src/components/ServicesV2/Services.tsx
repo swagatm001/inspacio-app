@@ -29,7 +29,7 @@ export const Services = () => {
                 <Image className='relative left-5' src={imageListMobile[2] || ''} alt={`Turnkey Solutions`} width={200} height={573} />
             </div>
             <div className='flex-[0_1_40%]'>
-                <h1 className={clsx(montserrat.className, 'text-[40px] font-medium mb-10 text-[#3D3834]')}>Our Services</h1>
+                <h1 className={clsx(montserrat.className, 'mt-3 md:m-0 text-2xl text-center md:text-[40px] font-medium mb-10 text-[#3D3834]')}>Our Services</h1>
                 {/* Horizontal Tabs */}
                 <div className="flex flex-row gap-1 mb-8 bg-[#E0D9C9] border rounded-lg px-3 py-0.5 justify-between">
                     {Object.keys(services).map((key) => (

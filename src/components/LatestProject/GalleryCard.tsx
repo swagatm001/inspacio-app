@@ -58,7 +58,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
             />
             {/* Title & address at bottom center, no background */}
             <div
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 px-6 py-2 text-center text-white w-[80%] pointer-events-none group-hover:opacity-0 transition-opacity duration-300"
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 px-2 md:px-6 py-2 text-center text-white w-[80%] pointer-events-none group-hover:opacity-0 transition-opacity duration-300"
             >
                 <p className="font-medium text-2xl drop-shadow mb-2">{project.title}</p>
                 <span className="text-sm text-gray-200 border rounded-full px-3 py-0.5 backdrop-blur-lg backdrop-saturate-200">{project.address}</span>

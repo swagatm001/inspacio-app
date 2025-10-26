@@ -25,7 +25,7 @@ const OurStory: React.FC = () => {
 
             {/* Right: Title, Description, Button */}
             <div className="w-full md:w-[30%] flex flex-col justify-center items-center px-4 py-8 md:py-0">
-                <h2 className={clsx(montserrat.className, "text-5xl font-medium mb-4 uppercase")}>{OurStoryData.title}</h2>
+                <h2 className={clsx(montserrat.className, "text-center text-2xl md:text-5xl font-medium mb-4 uppercase text-[#3D3834]")}>{OurStoryData.title}</h2>
                 <p className="text-gray-600 mb-6 text-center">{OurStoryData.description}</p>
                 <Link href={OurStoryData.redirectUrl}>
                     <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">

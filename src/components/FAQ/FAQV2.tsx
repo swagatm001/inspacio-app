@@ -54,7 +54,7 @@ export const FAQ = () => {
   return (
     <Sections title="">
         <div className="flex flex-col lg:flex-row">
-            <p className={clsx(montserrat.className,"font-medium flex-1 text-2xl lg:text-8xl mt-10 sm:m-auto lg:m-0 sm:mb-5")}>FAQs</p>
+            <p className={clsx(montserrat.className,"text-center font-medium flex-1 text-2xl lg:text-8xl mt-10 sm:m-auto lg:m-0 mb-5 text-[#3D3834] lg:text-left")}>FAQs</p>
             <div className="flex-1">
                 {faqsConstantsV2.map((faq, i) => (
                 <Question

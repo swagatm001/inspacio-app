@@ -11,7 +11,7 @@ export const LatestProjects = () => {
     return (
         <div className="mb-28">
             <div className={clsx(montserrat.className,"flex justify-between mb-10")}>
-                <h1 className="text-[40px] text-gray-600">Our Latest Works</h1>
+                <h1 className="text-2xl md:text-[40px] text-[#3D3834]">Our Latest Works</h1>
                 <Link href={'/projects'}>
                 <button className="inline-flex gap-3 items-center hidden md:inline-flex border border-[#A4A4A4] rounded-md px-[20px] py-[13px] m-0 text-base/[13px] text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3]">
                     <span>View All Projects</span>
