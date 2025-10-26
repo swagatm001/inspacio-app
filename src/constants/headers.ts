@@ -28,10 +28,10 @@ export const headerConstants = {
         label: "Contact",
         href: "/contact",
       },
-      {
-        label: "Our Brands",
-        href: "/",
-      },
+      // {
+      //   label: "Our Brands",
+      //   href: "/",
+      // },
     ],
     socials: [
       {
