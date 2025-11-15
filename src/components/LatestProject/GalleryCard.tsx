@@ -73,9 +73,9 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
                 <p className="font-medium text-2xl drop-shadow mb-2">{project.title}</p>
                 <span className="text-sm text-gray-200 border rounded-full px-3 py-0.5 backdrop-blur-lg backdrop-saturate-200">{project.address}</span>
             </div>
-            {/* Hidden details, slide up on hover */}
+            {/* Hidden details, expand from center on hover */}
             <div
-                className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black/80 text-white opacity-0 translate-y-10 group-hover:opacity-80 group-hover:translate-y-0 transition-all duration-300 z-20 p-4"
+                className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black/80 text-white opacity-0 scale-[0] group-hover:opacity-80 group-hover:scale-[1] transition-all duration-300 z-20 p-4"
                 style={{ pointerEvents: 'none' }}
             >
                 <div className="w-full text-center">

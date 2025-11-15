@@ -4,6 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import { montserrat } from "@/fonts/montserrat";
 import Image from "next/image";
+import { satoshi } from "@/fonts/satoshi";
 
 export const VideoBanner: React.FC = () => {
     const videoRef = React.useRef<HTMLVideoElement>(null);
@@ -41,27 +42,51 @@ export const VideoBanner: React.FC = () => {
                     <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clipRule="evenodd" />
                 </svg>}
             </div>
-            <div className="flex-col md:flex-row translate-y-0 absolute bottom-0 left-0 w-full flex items-center px-10 bg-black bg-opacity-10 lg:px-16 justify-between align-center pb-10 pt-10">
-                <p
+            <div className="flex-col md:flex-row translate-y-0 absolute bottom-0 left-0 w-full flex items-center md:items-center px-10 bg-black bg-opacity-10 lg:px-16 justify-between align-center pb-10 pt-10 gap-6 md:gap-0">
+                <div className="flex-col">
+                    <p
                     className={clsx(
                         montserrat.className,
-                        "text-2xl sm:text-4xl lg:text-5xl text-white inline-block"
+                        "text-2xl sm:text-4xl lg:text-5xl text-white"
                     )}
                 >
-                    <span>You Dream, we <span className="italic">Create</span></span>
+                    Ek Safar, Ghar Tak
                 </p>
-                <button className="backdrop-blur-lg backdrop-saturate-150 inline-flex md:hidden gap-3 items-center align-center border border-[#A4A4A4] rounded-lg px-[20px] py-[13px] m-0 text-base/[13px] text-white">
-                    <span className="font-medium">Make Your Dream Come True</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-                </button>
-                <button className="hidden md:inline-flex gap-3 items-center align-center border border-[#A4A4A4] rounded-md px-[20px] py-[13px] m-0 text-base/[13px] text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3]">
-                    <span className="font-medium">Make Your Dream Come True</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-                </button>
+                <p
+                    className={clsx(
+                        satoshi.className,
+                        "text-md sm:text-lg lg:text-2xl text-white"
+                    )}
+                >
+                    A journey where every design tells a story.
+                </p>
+
+                </div>
+                {/* Gradient border CTA wrapper - always expanded on mobile, collapsible on desktop */}
+                <div
+                    className="inline-flex items-center rounded-lg md:rounded-full p-[1px] group transition-all duration-1000 md:group-hover:rounded-lg"
+                    style={{ background: 'linear-gradient(to bottom, #ffffff, #F36730)' }}
+                >
+                    <button
+                        aria-label="Book a free appointment"
+                        type="button"
+                        className="inline-flex items-center relative w-auto h-12 px-4 md:px-0 md:max-w-[48px] md:group-hover:max-w-[900px] md:group-hover:px-4 md:group-hover:flex-row-reverse rounded-lg md:rounded-full overflow-hidden bg-[#F36730] transition-all duration-1000 ease-out flex-row-reverse md:flex-row"
+                    >
+                        {/* circular icon container (fixed) */}
+                        <span className="flex items-center justify-center w-12 h-12 shrink-0">
+                            <Image src="/images/phone_icon.svg" alt="phone" width={20} height={20} />
+                        </span>
+
+                        {/* label - always visible on mobile, hidden on desktop until hover */}
+                        <span className={clsx(
+                            satoshi.className,
+                            "md:ml-3 md:opacity-0 md:translate-x-2 text-white font-medium whitespace-nowrap transition-all duration-1000",
+                            "md:group-hover:opacity-100 md:group-hover:translate-x-0 md:group-hover:ml-0 md:group-hover:mr-1",
+                        )}>
+                            Book a FREE Appointment
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     )

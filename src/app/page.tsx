@@ -19,6 +19,7 @@ import clsx from "clsx";
 import { Metadata } from "next";
 import Image from "next/image";
 import {VideoBanner}  from "@/components/VideoBanner";
+import DescriptivePara from "@/components/DescriptivePara/DescriptivePara";
 
 export const metadata: Metadata = {
   title: "Residential and Commercial Interior Designers in Bangalore - Kreative Dezine Studio",
@@ -37,6 +38,7 @@ export default function Home() {
         <VideoBanner />
       </End2EndWrapper>
       <CustomContainer>
+        <DescriptivePara />
         <LatestProjects />
         <Services />
         <Partners />

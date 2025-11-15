@@ -1,6 +1,6 @@
 export interface Service {
     title: string;
-    paragraph: string;
+    paragraph: string[];
     points: string[];
     imageUrl?: string;
     imageUrlMobile?: string;
@@ -11,25 +11,84 @@ interface ServiceList {
 }
 
 export const services:ServiceList = {
-    "Architectural Design": {
-        title: "Architectural Design",
-        paragraph: "At Inspacio Design, we offer a full spectrum of design services that combine innovation, functionality, and aesthetic excellence. Whether you're designing a new space or transforming an existing one, we provide end-to-end solutions that align with your vision and business goals.",
-        points: [],
-        imageUrl: "/images/architect.jpg",
-        imageUrlMobile: "/images/architect_mobile.jpg"
+    "Our Expertise": {
+        title: "Our Expertise",
+        paragraph: [
+            "We design across scales and sectors, creating spaces that are as functional as they are beautiful.","Every project begins with a clear understanding of purpose, aesthetics, and emotion, shaping environments that truly reflect their people",
+            "Every project begins with a clear understanding of purpose, aesthetics, and emotion, shaping environments that truly reflect their people",
+            "Our approach combines design intelligence, material sensitivity, and craftsmanship to deliver timeless results."
+        ],
+        points: [
+            "Residential Design",
+            "Commercial Design",
+            "Retail & Hospitality",
+            "Landscape & Outdoor"
+        ],
+        imageUrl: "/images/services.jpg",
+        imageUrlMobile: "/images/services.jpg"
     },
-    "Interior Design": {
-        title: "Interior Design",
-        paragraph: "We craft interiors that are as functional as they are beautiful. Our expertise spans:",
-        points: ["Office Interiors: Designing workspaces that foster productivity and collaboration through ergonomic planning, thoughtful layouts, and inspiring aesthetics.", "Commercial Interior Décor: Enhancing brand identity through curated décor, modern furnishings, and impactful spatial design in retail outlets, showrooms, and business environments.", "Hospitality & Recreation Spaces: Creating immersive guest experiences with luxurious, welcoming interiors for hotels, lounges, restaurants, and recreational facilities."],
-        imageUrl: "/images/interior.jpg",
-        imageUrlMobile: "/images/interior_mobile.jpg"
+    "Conceptualization & Design": {
+        title: "Conceptualization & Design",
+        paragraph: [
+            "Every project begins with a vision, and our role is to give it form and feeling.",
+            "We listen, explore, and translate your aspirations into thoughtful concepts that define the tone and personality of your space.",
+            "Each idea evolves through creativity, collaboration, and precision,  ensuring design becomes an expression of who you are.",
+            "Includes:"
+        ],
+        points: [
+            "Space planning & feasibility studies",
+            "Theme creation & mood boards",
+            "3D visualizations & walkthroughs"
+        ],
+        imageUrl: "/images/services.jpg",
+        imageUrlMobile: "/images/services.jpg"
     },
-    "Turnkey Solutions": {
-        title: "Turnkey Solutions",
-        paragraph: "From concept development to final execution, we offer complete project management across all sectors—ensuring timely delivery, quality control, and a stress-free experience for our clients.We handle every aspect, including planning, procurement, execution, and final handover, whether it's a corporate office, retail chain, or a boutique resort.",
-        points: [],
-        imageUrl: "/images/turnkey.jpg",
-        imageUrlMobile: "/images/turnkey_mobile.jpg"
+    "Detailing & Documentation": {
+        title: "Detailing & Documentation",
+        paragraph: [
+            "Our team prepares detailed drawings and specifications that ensure every idea is executed exactly as envisioned.",
+            "This is where creativity meets technical mastery,  translating concepts into construction.",
+            "Every document, drawing, and specification is crafted with accuracy to maintain quality and design integrity at every step.",
+            "Includes:"
+        ],
+        points: [
+            "Civil, furniture, MEP, ceiling & lighting drawings",
+            "BOQs & specifications",
+            "Material palette & procurement support"
+        ],
+        imageUrl: "/images/services.jpg",
+        imageUrlMobile: "/images/services.jpg"
+    },
+    "Execution & Supervision": {
+        title: "Execution & Supervision",
+        paragraph: [
+            "Design meets reality through disciplined execution and constant quality checks.",
+            "We oversee every stage of on-site progress, ensuring that craftsmanship and timelines align with our design intent.",
+            "Our hands-on supervision guarantees consistency, precision, and a finished space that matches the vision in every detail.",
+            "Includes:"
+        ],
+        points: [
+            "Project management & quality supervision",
+            "Vendor & contractor coordination",
+            "On-site execution with timely delivery"
+        ],
+        imageUrl: "/images/services.jpg",
+        imageUrlMobile: "/images/services.jpg"
+    },
+    "Sustainable Design": {
+        title: "Sustainable Design",
+        paragraph: [
+            "From material selection to energy use, we design consciously to create spaces that are efficient, enduring, and environmentally responsible",
+            "Each decision is guided by balance, longevity, and mindfulness,  proving that luxury and sustainability can coexist beautifully.",
+            "Our goal is to build spaces that not only inspire but also nurture the world around them.",
+            "Includes:"
+        ],
+        points: [
+            "Eco-conscious Materials",
+            "Energy-efficient Solutions",
+            "Responsible Spaces"
+        ],
+        imageUrl: "/images/services.jpg",
+        imageUrlMobile: "/images/services.jpg"
     },
 }
