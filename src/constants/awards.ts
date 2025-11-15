@@ -5,10 +5,15 @@ export interface Award {
 
 export const awards: Award[] = [
     {
-        title: "Inteward 2025",
-        description: "Best Designer, Bengaluru",
-    }, {
-        title: "X-wards 2025",
-        description: "Best Concept, Kolkata",
+        title: "WADE Asia 2025",
+        description: "Outstanding & Creative Architecture Firm of the Year – India",
+    }, 
+    {
+        title: "Times Business Awards 2024",
+        description: "Best Coworking Brand for Design – 315 Work Avenue",
+    },
+    {
+        title: "Women Entrepreneurs Review 2024",
+        description: "Top 10 Women Architects – Swati Panda",
     }
 ]

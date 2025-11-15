@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Service, services } from '../../constants/services';
 import clsx from 'clsx';
 import { montserrat } from '@/fonts/montserrat';
+import { satoshi } from '@/fonts/satoshi';
 
 export const Services = () => {
     const [selectedService, setSelectedService] = useState<Service | null>(services[Object.keys(services)[0]] || null);
@@ -12,64 +13,111 @@ export const Services = () => {
         return Object.keys(services).map((key) => services[key].imageUrl);
     }, []);
 
+    
     const imageListMobile = useMemo(() => {
         return Object.keys(services).map((key) => services[key].imageUrlMobile);
     },[]);
 
     return (
-        <div className='flex lg:flex-row justify-between flex-col mb-28 md:min-h-[600px] align-center'>
-            <div className='hidden lg:flex flex-row gap-0 max-h-[500px]'>
-                <Image className='relative top-0' src={imageList[0] || ''} alt={`Architectural Design`} width={200} height={573} />
-                <Image className='relative top-32' src={imageList[1] || ''} alt={`Interior Design`} width={200} height={573} />
-                <Image className='relative top-16' src={imageList[2] || ''} alt={`Turnkey Solutions`} width={200} height={573} />
-            </div>
-            <div className='flex lg:hidden flex-col gap-0 items-center'>
-                <Image className='relative left-10' src={imageListMobile[0] || ''} alt={`Architectural Design`} width={200} height={573} />
-                <Image className='relative -left-15' src={imageListMobile[1] || ''} alt={`Interior Design`} width={200} height={573} />
-                <Image className='relative left-5' src={imageListMobile[2] || ''} alt={`Turnkey Solutions`} width={200} height={573} />
-            </div>
-            <div className='flex-[0_1_40%]'>
-                <h1 className={clsx(montserrat.className, 'mt-3 md:mt-0 text-2xl text-center md:text-left md:text-[40px] font-medium mb-10 text-[#3D3834]')}>Our Services</h1>
-                {/* Horizontal Tabs */}
-                <div className="flex flex-row gap-1 mb-8 bg-[#E0D9C9] border rounded-lg px-3 py-0.5 justify-between">
-                    {Object.keys(services).map((key) => (
-                        <button
-                            key={key}
-                            onClick={() => setSelectedService(services[key])}
-                            className={clsx(
-                                'text-md font-medium focus:outline-none transition rounded shadow-sm',
-                                selectedService === services[key]
-                                    ? 'bg-[#EFEBE2] text-gray-800 shadow-md px-4 py-1.5'
-                                    : 'text-[#A6836E] px-4 py-1.5'
-                            )}
-                            type="button"
-                        >
-                            {key}
-                        </button>
-                    ))}
-                </div>
-                <div>
-                    {selectedService && (
-                        <>
-                            {selectedService.title && <h2 className="text-[#3D3834] text-2xl font-semibold mb-2">{selectedService.title}</h2>}
-                            {selectedService.paragraph && <p className="mb-4 text-gray-600">{selectedService.paragraph}</p>}
-                            {selectedService.points && selectedService.points.length > 0 && (
-                                <ul className="list-disc pl-5 mb-4">
-                                    {selectedService.points.map((point, index) => (
-                                        <li key={index} className="mb-1 text-gray-700">{point}</li>
-                                    ))}
-                                </ul>
-                            )}
-                            <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
-                                <span>Check it Out</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                </svg>
-                            </button>
-                        </>
-                    )}
-                </div>
+        <div className='mb-24'>
+            <h2 className={clsx(montserrat.className,'text-center text-4xl font-medium mb-6 text-[#3D3834]')}>Our Services</h2>
+            <div className='flex flex-col'>
+                        {/* Tabs */}
+                        <div className='w-full overflow-x-auto no-scrollbar border-b border-light-gray'>
+                             <div className='w-full flex flex-nowrap whitespace-nowrap'>
+                            {Object.keys(services).map((key) => (
+                                <button key={key} className={clsx(satoshi.className,`py-2 px-4 flex-shrink-0`,selectedService === services[key] ? 'border-b-2 border-[#3D3834] text-[#3D3834] font-medium' : 'text-[#78736F]')} onClick={() => setSelectedService(services[key])}>{key}</button>
+                            ))}
+                        </div>
+                        </div>
+                       
+                        {/* Tab content (content left, image right on md+) */}
+                        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                            {/* Left: textual content */}
+                            <div>
+                                {selectedService && (
+                                    <>
+                                        {selectedService.paragraph && selectedService.paragraph.map((para,index) => {
+                                            return <p key={index} className="mb-4 text-gray-600">{para}</p>
+                                        })}
+                                        {selectedService.points && selectedService.points.length > 0 && (
+                                            <ul className="list-disc pl-5 mb-4">
+                                                {selectedService.points.map((point, index) => (
+                                                    <li key={index} className="mb-1 text-gray-700">{point}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                        <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
+                                            <span>Book a FREE Appointment</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                            </svg>
+                                        </button>
+                                    </>
+                                )}
+                            </div>
+
+                            {/* Right: responsive image */}
+                            <div className="flex items-center justify-center">
+                                {selectedService ? (
+                                    <div className="w-full max-w-lg">
+                                        {selectedService.imageUrlMobile && (
+                                            <div className="block md:hidden w-full">
+                                                <Image src={selectedService.imageUrlMobile} alt={selectedService.title || 'service image'} width={800} height={520} className="w-full h-auto object-cover rounded-md" />
+                                            </div>
+                                        )}
+
+                                        {selectedService.imageUrl && (
+                                            <div className="hidden md:block w-full">
+                                                <Image src={selectedService.imageUrl} alt={selectedService.title || 'service image'} width={800} height={520} className="w-full h-auto object-cover rounded-md" />
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <div className="text-gray-500">Select a service to see details</div>
+                                )}
+                            </div>
+                        </div>
             </div>
         </div>
     )
 }
+
+const Tab1Content = () => <div>
+    <h2 className="text-[#3D3834] text-2xl font-semibold mb-2">Service 1</h2>
+    <p className="mb-4 text-gray-600">This is the content for Service 1.</p>
+    <ul className="list-disc pl-5 mb-4">
+        <li className="mb-1 text-gray-700">Point 1</li>
+        <li className="mb-1 text-gray-700">Point 2</li>
+        <li className="mb-1 text-gray-700">Point 3</li>
+    </ul>
+    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
+        Learn More
+    </button>
+</div>;
+
+const Tab2Content = () => <div>
+    <h2 className="text-[#3D3834] text-2xl font-semibold mb-2">Service 2</h2>
+    <p className="mb-4 text-gray-600">This is the content for Service 2.</p>
+    <ul className="list-disc pl-5 mb-4">
+        <li className="mb-1 text-gray-700">Point 1</li>
+        <li className="mb-1 text-gray-700">Point 2</li>
+        <li className="mb-1 text-gray-700">Point 3</li>
+    </ul>
+    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
+        Learn More
+    </button>
+</div>;
+
+const Tab3Content = () => <div>
+    <h2 className="text-[#3D3834] text-2xl font-semibold mb-2">Service 3</h2>
+    <p className="mb-4 text-gray-600">This is the content for Service 3.</p>
+    <ul className="list-disc pl-5 mb-4">
+        <li className="mb-1 text-gray-700">Point 1</li>
+        <li className="mb-1 text-gray-700">Point 2</li>
+        <li className="mb-1 text-gray-700">Point 3</li>
+    </ul>
+    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
+        Learn More
+    </button>
+</div>;

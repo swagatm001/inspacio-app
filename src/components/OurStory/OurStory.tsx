@@ -9,7 +9,7 @@ const OurStory: React.FC = () => {
     return (
         <section className="flex flex-col-reverse md:flex-row lg:flex-row sm:flex-reverse justify-between mt-16 gap-3 md:gap-[90px] mb-28">
             {/* Left: Video Card */}
-            <div className="w-full md:w-[70%] flex justify-center items-center">
+            <div className="w-full md:w-[60%] flex justify-center items-center">
                 <div className="w-full h-full bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center aspect-w-16 aspect-h-9">
                     {/* Replace src with your video URL */}
                     <video
@@ -24,9 +24,9 @@ const OurStory: React.FC = () => {
             </div>
 
             {/* Right: Title, Description, Button */}
-            <div className="w-full md:w-[30%] flex flex-col justify-center items-center px-4 py-8 md:py-0">
+            <div className="w-full md:w-[40%] flex flex-col justify-center items-center px-4 py-8 md:py-0">
                 <h2 className={clsx(montserrat.className, "text-center text-2xl md:text-5xl font-medium mb-4 uppercase text-[#3D3834]")}>{OurStoryData.title}</h2>
-                <p className="text-gray-600 mb-6 text-center">{OurStoryData.description}</p>
+                <p className="text-gray-600 mb-6 text-center whitespace-pre-line">{OurStoryData.description}</p>
                 <Link href={OurStoryData.redirectUrl}>
                     <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
                         <span>{OurStoryData.buttonText}</span>

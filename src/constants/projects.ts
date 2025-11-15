@@ -426,6 +426,54 @@ const villa = {
   ],
 };
 
+const bunsik = {
+  category: {
+    label: "",
+    value: "",
+  },
+  slug: "",
+  thumbnail: "/images/citadel.jpg",
+  title:"Bunsik Korean Café",
+  address: "Koramangala, Bangalore",
+  description: "A compact, street-style café designed with soul: minimal, sustainable, and full of warmth. Concrete floors, wooden trims, and upcycled décor bring an authentic, Korean street charm within a tight budget."
+}
+
+const brita = {
+  category: {
+    label: "",
+    value: "",
+  },
+  slug: "",
+  thumbnail: "/images/texport.jpg",
+  title:"Brita India Corporate Office",
+  address: "Whitefield, Bangalore",
+  description: "A modern workspace that embodies Brita’s philosophy of purity and innovation. With curved wooden forms, cascading greenery, and fluid blue accents, the design reflects balance, function, and sustainability."
+}
+
+const penthouse2 = {
+  category: {
+    label: "",
+    value: "",
+  },
+  slug: "",
+  thumbnail: "/images/excelya.jpg",
+  title:"Penthouse at Tata Aquila Heights",
+  address: "Yeshwanthpur, Bangalore",
+  description: "A 4,600 sq.ft. penthouse designed as a serene urban retreat: open, airy, and elegant. Natural light, soft textures, and bespoke lighting define this home of understated luxury."
+}
+
+const prestige = {
+  category: {
+    label: "",
+    value: "",
+  },
+  slug: "",
+  thumbnail: "/images/anthro.jpg",
+  title:"Prestige Golfshire – Landscape Design",
+  address: "Nandi Hills, Bangalore",
+  description: "An intimate, outdoor bar and lounge crafted under a sleek pergola. Luxurious yet cozy, the design transforms by night into a warm, ambient retreat amid lush greenery."
+}
+
 export const projectsConstants = [
   anthology,
   citadel,
@@ -439,8 +487,8 @@ export const projectsConstants = [
 ];
 
 export const latestProjectConstants = [
-  citadel,
-  texport,
-  excelya,
-  anthology
+  bunsik,
+  brita,
+  penthouse2,
+  prestige
 ]

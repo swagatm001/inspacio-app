@@ -23,7 +23,7 @@ export const Partners = () => {
             <li key={uuidv4()}>
               <div className="w-40 md:w-52 h-28 relative">
                 <Image
-                  src={partner.logo}
+                  src={partner.logo2}
                   alt={partner.name}
                   fill
                   className="object-contain"
