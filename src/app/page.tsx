@@ -1,5 +1,4 @@
 import Awards from "@/components/Awards/Awards";
-import { SingleCarouselWithAutoplay } from "@/components/Carousel/SingleCarouselWithAutoplay";
 import CustomContainer from "@/components/Container/CustomContainer";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { FAQ } from "@/components/FAQ";
@@ -11,15 +10,10 @@ import { Partners } from "@/components/Partners/Partners";
 import { Services } from "@/components/ServicesV2";
 import TestimonialV2 from "@/components/Testimonial/TestimonialV2";
 import TextScroll from "@/components/TextScroll/TextScroll";
-import { homePageContants } from "@/constants/home";
-import { montserrat } from "@/fonts/montserrat";
-import { playfair } from "@/fonts/playfair";
-import { uuidv4 } from "@/utils/uuid4";
-import clsx from "clsx";
 import { Metadata } from "next";
-import Image from "next/image";
 import {VideoBanner}  from "@/components/VideoBanner";
 import DescriptivePara from "@/components/DescriptivePara/DescriptivePara";
+import {WhyChooseUs} from "@/components/WhyChooseUs";
 
 export const metadata: Metadata = {
   title: "Residential and Commercial Interior Designers in Bangalore - Kreative Dezine Studio",
@@ -49,6 +43,7 @@ export default function Home() {
         <TextScroll />
         <Awards />
         <OurCreativeProcessV2 />
+        <WhyChooseUs />
         <FAQ />
       </CustomContainer>
       <FooterV2 />

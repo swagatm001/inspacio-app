@@ -51,10 +51,12 @@ export const Header = () => {
 
           {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-64 bg-black/95 backdrop-blur-md rounded-lg shadow-2xl py-4 px-4 z-10 animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute right-0 mt-2 w-64 bg-black/95 backdrop-blur-md rounded-lg shadow-2xl py-4 px-4 z-10 origin-top-right animate-in zoom-in-75 duration-300" style={{
+              animation: "scaleExpandDiagonal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)"
+            }}>
               {/* Navigation Links */}
               <nav className="flex flex-col gap-2 mb-4">
-                <NavigationLinks className="flex-col"/>
+                <NavigationLinks className="flex-col" isDropdownOpen={isDropdownOpen}/>
               </nav>
             </div>
           )}

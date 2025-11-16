@@ -36,32 +36,44 @@ export const processConstants2 = {
     title: "Our Creative Process",
     steps: [
         {
-            stepTitle: "DESIGN CONCEPT",
-            desc: "We begin with an exhaustive questionnaire to fully understand the client’s needs and expectation. The most important of all steps.",
+            stepTitle: "Free Consultation",
+            desc: "Every journey begins with a conversation.\nWe start with a free consultation, a relaxed discussion where we understand your needs, style, and goals, while you get to know our process and approach.",
             imgUrl: "/images/filling-survey.jpg",
             timeline:"1-2 weeks"
         },
         {
-            stepTitle: "3d renderings",
-            desc: "Translating the brief into the blueprint of what is to come. From moodboards to models, we design every last detail.",
+            stepTitle: "Site Visit",
+            desc: "Our team visits the site to study its layout, natural light, and potential.\nThis helps us assess dimensions, constraints, and opportunities before design begins, setting the foundation for everything that follows.",
             imgUrl: "/images/designer-color-palette.jpg",
             timeline: "3-6 weeks"
         },
         {
-            stepTitle: "project kick off",
-            desc: "Bringing our designs to life by building it from ground up. As we only take on end-to-end projects, everything from structural design to decor is executed in this phase.",
+            stepTitle: "Design Concept",
+            desc: "We translate your aspirations into design intent.\nThrough brainstorming, sketches, and moodboards, we define the look, feel, and flow of your space, setting the tone for the project ahead.",
             imgUrl: "/images/lets-start.jpg",
             timeline:"8-16 weeks"
         },
         {
-            stepTitle: "execution",
-            desc: "The most anticipated moment, where we hand our clients the keys to their new space, all ready to move in.",
+            stepTitle: "3D Renderings",
+            desc: "Your ideas come to life visually.\nWe present realistic 3D models and walkthroughs to help you experience the design before execution, every texture, tone, and light detail considered.",
             imgUrl: "/images/designer-working.jpg",
             timeline: "1 week"
         },
         {
-            stepTitle: "handover",
-            desc: "Bringing our designs to life by building it from ground up. As we only take on end-to-end projects, everything from structural design to decor is executed in this phase.",
+            stepTitle: "Project Kick-Off",
+            desc: "Once the design is finalized, we bring it to life.\nFrom structural coordination to decor detailing, our team manages every aspect, ensuring seamless progress from paper to reality.",
+            imgUrl: "/images/business-deal.jpg",
+            timeline:"1 week"
+        },
+        {
+            stepTitle: "Execution",
+            desc: "This is where vision turns tangible.\nOur project management team oversees on-site work with precision, ensuring timelines, quality, and design integrity at every step.",
+            imgUrl: "/images/filling-survey.jpg",
+            timeline: "8-16 weeks"
+        },
+        {
+            stepTitle: "Handover",
+            desc: "The most rewarding moment, we hand over your completed space, ready to move in.\nEvery corner, finish, and fixture is checked to perfection, ensuring your new environment feels just as it was imagined.",
             imgUrl: "/images/business-deal.jpg",
             timeline:"8-16 weeks"
         },
