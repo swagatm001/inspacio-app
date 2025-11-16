@@ -35,7 +35,7 @@ export const VideoBanner: React.FC = () => {
                 <source src={'/videos/banner-video.mp4'} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div onClick={handlePlayPause} className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 cursor-pointer">
+            <div onClick={handlePlayPause} className="absolute top-0 left-0 w-full h-full cursor-pointer">
                 {showOnce.current && <Image src={'/images/banner.jpg'} className="object-cover" alt="Design video" fill/>}
                 {/* play icon */}
                 {!isPlaying && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 size-32 text-white opacity-60">
