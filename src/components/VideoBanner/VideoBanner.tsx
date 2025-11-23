@@ -50,7 +50,7 @@ export const VideoBanner: React.FC = () => {
                         "text-2xl sm:text-4xl lg:text-5xl text-white"
                     )}
                 >
-                    Ek Safar, Ghar Tak
+                    Designing Spaces That Inspire
                 </p>
                 <p
                     className={clsx(
