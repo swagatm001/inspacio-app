@@ -1,8 +1,3 @@
-import citadelImg from './citadel.jpg';
-import excelyaImg from './excelya.jpg';
-import anthologyImg from './anthro.jpg';
-import texportImg from './texport.jpg';
-
 export const projectConstants = {
   hero: {
     text: `<span class="leading-normal">Transforming <strong>Spaces,</strong></span> <br/> <span class="leading-normal">Capturing <strong>Dreams</strong></span><br/>
@@ -432,7 +427,7 @@ const bunsik = {
     value: "",
   },
   slug: "",
-  thumbnail: "/images/citadel.jpg",
+  thumbnail: "/images/bunsik.webp",
   title:"Bunsik Korean Café",
   address: "Koramangala, Bangalore",
   description: "A compact, street-style café designed with soul: minimal, sustainable, and full of warmth. Concrete floors, wooden trims, and upcycled décor bring an authentic, Korean street charm within a tight budget."
@@ -444,7 +439,7 @@ const brita = {
     value: "",
   },
   slug: "",
-  thumbnail: "/images/texport.jpg",
+  thumbnail: "/images/brita.webp",
   title:"Brita India Corporate Office",
   address: "Whitefield, Bangalore",
   description: "A modern workspace that embodies Brita’s philosophy of purity and innovation. With curved wooden forms, cascading greenery, and fluid blue accents, the design reflects balance, function, and sustainability."
@@ -456,7 +451,7 @@ const penthouse2 = {
     value: "",
   },
   slug: "",
-  thumbnail: "/images/excelya.jpg",
+  thumbnail: "/images/penthouse.webp",
   title:"Penthouse at Tata Aquila Heights",
   address: "Yeshwanthpur, Bangalore",
   description: "A 4,600 sq.ft. penthouse designed as a serene urban retreat: open, airy, and elegant. Natural light, soft textures, and bespoke lighting define this home of understated luxury."
@@ -468,7 +463,7 @@ const prestige = {
     value: "",
   },
   slug: "",
-  thumbnail: "/images/anthro.jpg",
+  thumbnail: "/images/golfshire.webp",
   title:"Prestige Golfshire – Landscape Design",
   address: "Nandi Hills, Bangalore",
   description: "An intimate, outdoor bar and lounge crafted under a sleek pergola. Luxurious yet cozy, the design transforms by night into a warm, ambient retreat amid lush greenery."

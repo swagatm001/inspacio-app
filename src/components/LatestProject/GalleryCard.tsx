@@ -13,39 +13,68 @@ interface GalleryCardProps {
 }
 
 export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) => {
-    const cardRef = useRef<HTMLDivElement>(null);
+    const cardRef = useRef<HTMLImageElement>(null);
     const [parallax, setParallax] = useState(0);
+    const isVisible = useRef(false);
 
     useEffect(() => {
-        let ticking = false;
-        const handleScroll = () => {
-            if (!cardRef.current) return;
+        const el = cardRef.current;
+        if (!el) return;
+        let latestScroll = 0;
+        let currentScroll = 0;
 
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const rect = cardRef.current!.getBoundingClientRect();
-                    const windowHeight = window.innerHeight;
-                    const cardCenter = rect.top + rect.height / 2;
-                    const viewportCenter = windowHeight / 2;
-                    const distance = cardCenter - viewportCenter;
-                    const factor = 0.1;
+        const speed = 0.1;  // parallax strength
+        const smooth = 0.1; // easing
 
-                    setParallax(-distance * factor);
-                    ticking = false;
-                });
-                ticking = true;
+        // Observe visibility of THIS card
+        const observer = new IntersectionObserver(
+            (entries) => {
+                isVisible.current = entries[0].isIntersecting;
+            },
+            {
+                threshold: 0,
+                rootMargin: "200px", // start animation slightly before entering
             }
+        );
+
+        observer.observe(el);
+
+        // Scroll listener (very light)
+        const onScroll = () => {
+            latestScroll = window.scrollY;
         };
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+
+        // Animation loop
+        const animate = () => {
+            if (isVisible.current) {
+                currentScroll += (latestScroll - currentScroll) * smooth;
+
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                const viewportCenter = windowHeight / 2;
+                const elementCenter = rect.top + rect.height / 2;
+
+                const distance = elementCenter - viewportCenter;
+                const y = distance * speed;
+
+                el.style.transform = `translateY(${-y}px)`;
+            }
+
+            requestAnimationFrame(animate);
+        };
+
+        animate();
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            observer.disconnect();
+            window.removeEventListener("scroll", onScroll);
         };
+
     }, []);
 
     return (
         <div
-            ref={cardRef}
+         
             className={clsx(montserrat.className,
                 colSpan,
                 'relative group rounded-lg overflow-hidden h-80 cursor-pointer aspect-3/2'
@@ -53,11 +82,12 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) =>
         >
             {/* Image covers whole card with parallax effect */}
             <Image
+                ref={cardRef}
                 src={project.thumbnail}
                 alt={project.title}
                 fill
-                className="object-cover w-full h-full transition-transform duration-500"
-                style={{ transform: `scale(1.15) translateY(${parallax}px)` }}
+                className="object-cover w-full h-full transition-transform"
+                style={{ transform: `scale(1.15)` }}
             />
             {/* Gradient shadow at bottom of image */}
             <div

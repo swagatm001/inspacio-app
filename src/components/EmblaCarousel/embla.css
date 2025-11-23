@@ -87,6 +87,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+  gap: 0.5em;
 }
 .embla__dot {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
@@ -100,8 +101,8 @@
   border: 0;
   padding: 0;
   margin: 0;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
