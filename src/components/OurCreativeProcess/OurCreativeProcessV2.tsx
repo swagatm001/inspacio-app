@@ -77,7 +77,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                                                 <p className={clsx(satoshi.className,"text-lg text-[#696969] border rounded-full border-gray-300 bg-gray-200 inline-block px-2.5 py-1")}>{step.timeline}</p>
                                             </div>
                                         </div>
-                                        <p className={clsx(satoshi,"text-lg text-gray-600")}>{step.desc}</p>
+                                        <p className={clsx(satoshi.className,"text-lg text-[#3D3834]")}>{step.desc}</p>
                                     </div>
                                 </>
                             ) : (
@@ -91,7 +91,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                                                 <p className={clsx(satoshi.className,"text-lg text-[#696969] border rounded-full border-gray-300 bg-gray-200 inline-block px-2.5 py-1")}>{step.timeline}</p>
                                             </div>
                                         </div>
-                                        <p className="text-gray-600">{step.desc}</p>
+                                        <p className={clsx(satoshi.className,"text-sm md:text-lg text-[#3D3834]")}>{step.desc}</p>
                                     </div>
                                     <div className="flex-1 flex justify-start">
                                         <div className="flex items-center justify-center">
@@ -119,7 +119,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                                                 <p className={clsx(satoshi.className,"text-lg text-[#696969] border rounded-full border-gray-300 bg-gray-200 inline-block px-2.5 py-1")}>{step.timeline}</p>
                                             </div>
                                         </div>
-                                        <p className={clsx(satoshi,"text-lg text-gray-600")}>{step.desc}</p>
+                                        <p className={clsx(satoshi.className,"text-sm md:text-lg text-[#3D3834]")}>{step.desc}</p>
                                     </div>
                         </div>
                         </>

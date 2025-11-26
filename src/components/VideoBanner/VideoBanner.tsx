@@ -1,15 +1,18 @@
 "use client";
 // create a video banner component with play/pause functionality
-import React from "react";
+import React, {useState} from "react";
 import clsx from "clsx";
 import { montserrat } from "@/fonts/montserrat";
 import Image from "next/image";
 import { satoshi } from "@/fonts/satoshi";
+import { Contact } from "../Contact";
+import { Modal } from "../Modal";
 
 export const VideoBanner: React.FC = () => {
     const videoRef = React.useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = React.useState<boolean>(false);
     const showOnce = React.useRef(true);
+    const [open, setOpen] = useState(false);
 
     const handlePlayPause = () => {
         if (!videoRef.current) return;
@@ -68,6 +71,7 @@ export const VideoBanner: React.FC = () => {
                     style={{ background: 'linear-gradient(to bottom, #ffffff, #F36730)' }}
                 >
                     <button
+                        onClick={() => setOpen(true)}
                         aria-label="Book a free appointment"
                         type="button"
                         className="inline-flex items-center relative w-auto h-12 px-4 md:px-0 md:max-w-[48px] md:group-hover:max-w-[900px] md:group-hover:px-4 md:group-hover:flex-row-reverse rounded-lg md:rounded-full overflow-hidden bg-[#F36730] transition-all duration-1000 ease-out flex-row-reverse md:flex-row"
@@ -88,6 +92,11 @@ export const VideoBanner: React.FC = () => {
                     </button>
                 </div>
             </div>
+            <Modal open={open} onClose={() => setOpen(false)}>
+                <div className="bg-white p-6 rounded-lg">
+                    <Contact />
+                </div>
+            </Modal>
         </div>
     )
 };

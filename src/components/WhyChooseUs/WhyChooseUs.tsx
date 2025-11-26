@@ -21,7 +21,7 @@ export const WhyChooseUs:React.FC = () => {
                     {WHY_CHOOSE_US.subheading}
                 </p>
 
-                <div role="list" className="mt-10 flex flex-col w-full max-w-4xl bg-[#EFEBE2] rounded-lg overflow-hidden px-16 py-8">
+                <div role="list" className="mt-10 flex flex-col w-full max-w-4xl bg-[#EFEBE2] rounded-lg overflow-hidden px-8 md:px-16 py-8">
                     {WHY_CHOOSE_US.items.map((item, i) => {
                         const isOpen = openIndex === i;
                         const maxHeight =
