@@ -1,14 +1,15 @@
-import { ProjectsHero } from "@/components/Hero";
-import { projectConstants } from "@/constants/projects";
-import { Portfolio } from "@/components/Portfolio";
+"use client";
+import React from "react";
 
-const Projects = () => {
+import ProjectsCatalog from "@/components/Projects/ProjectsCatalog";
+
+const ProjectsPage: React.FC = () => {
+
   return (
     <div>
-      <ProjectsHero html={projectConstants.hero.text} />
-      <Portfolio />
+      <ProjectsCatalog />
     </div>
   );
 };
 
-export default Projects;
+export default ProjectsPage;

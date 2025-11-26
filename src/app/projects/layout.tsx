@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { Footer } from "@/components/Footer";
+import { End2EndWrapper } from "@/components/End2EndWrapper";
+import { Header } from "@/components/Header";
+import FooterV2 from "@/components/Footer/FooterV2";
+import CustomContainer from "@/components/Container/CustomContainer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,9 +16,14 @@ export default function ProjectsLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Container className="pt-20">
-      <div>{children}</div>
-      <Footer />
-    </Container>
+    <div className="bg-[#F8F7F3]">
+      <End2EndWrapper>
+        <Header lightBackground={true}/>
+      </End2EndWrapper>
+      <CustomContainer>
+        {children}
+      </CustomContainer>
+      <FooterV2 />
+    </div>
   );
 }

@@ -4,7 +4,8 @@ export const headerConstants = {
     altText: "brand logo",
     width: 53,
     height: 26,
-    brandLabel: "Inspacio"
+    brandLabel: "Inspacio",
+    darkImageUrl: "/images/logo_dark.svg",
   },
   menu: {
     links: [

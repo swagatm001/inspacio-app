@@ -14,6 +14,7 @@ import { Metadata } from "next";
 import {VideoBanner}  from "@/components/VideoBanner";
 import DescriptivePara from "@/components/DescriptivePara/DescriptivePara";
 import {WhyChooseUs} from "@/components/WhyChooseUs";
+import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Residential and Commercial Interior Designers in Bangalore - Kreative Dezine Studio",
@@ -29,6 +30,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-20 bg-[#F8F7F3] overflow-x-hidden">
       <End2EndWrapper className="h-[542px] lg:h-screen">
+        <Header />
         <VideoBanner />
       </End2EndWrapper>
       <CustomContainer>
