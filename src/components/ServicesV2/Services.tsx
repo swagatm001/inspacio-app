@@ -5,6 +5,7 @@ import { Service, services } from '../../constants/services';
 import clsx from 'clsx';
 import { montserrat } from '@/fonts/montserrat';
 import { satoshi } from '@/fonts/satoshi';
+import BookFreeAppointment from '../BookFreeAppointment/BookFreeAppointment';
 
 export const Services = () => {
     const [selectedService, setSelectedService] = useState<Service | null>(services[Object.keys(services)[0]] || null);
@@ -47,12 +48,7 @@ export const Services = () => {
                                                 ))}
                                             </ul>
                                         )}
-                                        <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
-                                            <span>Book a FREE Appointment</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                            </svg>
-                                        </button>
+                                        <BookFreeAppointment title='Book a FREE Appointment' bgClassName='bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3]' textClassName='text-[#3D3834]'/>
                                     </>
                                 )}
                             </div>
