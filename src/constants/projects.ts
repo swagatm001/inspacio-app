@@ -487,3 +487,18 @@ export const latestProjectConstants = [
   penthouse2,
   prestige
 ]
+
+export const projectCategories = [
+  { label: "All", value: "all" },
+  { label: "Architectural design", value: "architectural" },
+  { label: "Interior design", value: "interior" },
+  { label: "Turnkey solutions", value: "turnkey" },
+];
+
+// Group projects by these categories (light classification for demo; update as needed)
+export const projectsByCategory = {
+  architectural: [anthology, citadel, excelya, celegence, texport],
+  interior: [penthouse, duplex, appartment, villa],
+  turnkey: [bunsik, brita, penthouse2, prestige],
+  all: [anthology, citadel, excelya, celegence, texport, penthouse, duplex, appartment, villa, bunsik, brita, penthouse2, prestige],
+};

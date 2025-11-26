@@ -1,6 +1,4 @@
 import "./globals.css";
-import { End2EndWrapper } from "@/components/End2EndWrapper";
-import { Header } from "@/components/Header";
 import { helvetica } from "@/fonts/helvetica";
 import { Metadata } from "next";
 
@@ -20,9 +18,6 @@ export default function RootLayout({
       <body className={helvetica.className}>
         <main>
           <div id="modal-portal" />
-          <End2EndWrapper>
-            <Header />
-          </End2EndWrapper>
           {children}
         </main>
       </body>

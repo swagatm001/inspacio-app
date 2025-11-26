@@ -9,10 +9,10 @@ import { satoshi } from '@/fonts/satoshi';
 
 interface GalleryCardProps {
     project: I_Project;
-    colSpan: string;
+    colSpan?: string;
 }
 
-export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan }) => {
+export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan = "col-span-1" }) => {
     const cardRef = useRef<HTMLImageElement>(null);
     const [parallax, setParallax] = useState(0);
     const isVisible = useRef(false);
