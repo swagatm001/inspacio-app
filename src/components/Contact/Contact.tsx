@@ -6,6 +6,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { satoshi } from "@/fonts/satoshi";
 
 const formGroupCSS = "w-full flex flex-col gap-2";
 const inputCSS =
@@ -34,7 +35,11 @@ const sendMail = (data = {}) => {
   });
 };
 
-export const Contact = () => {
+interface ContactProps {
+  removeDescription?: boolean;
+}
+
+export const Contact = ({ removeDescription }: ContactProps) => {
   const {
     register,
     handleSubmit,
@@ -71,17 +76,24 @@ export const Contact = () => {
         draggable={false}
       />
       <div>
-        <p className={clsx("text-3xl lg:text-4xl mb-10 text-gray-500", playfair.className)}>
+        {!removeDescription && <p className={clsx("text-3xl lg:text-4xl mb-10 text-gray-500", playfair.className)}>
           Our friendly team would <br/> love to hear from you.
-        </p>
+        </p>}
       </div>
-      <form
-        className="grid grid-cols-1 gap-6"
-        onSubmit={handleSubmit(onSubmit)}
-      >
+      <div className="relative p-6">
+        {/* Decorative corner-only border: four corner segments (horizontal + vertical) */}
+        <span className="absolute left-0 top-0 h-20 w-20 rounded-tl-2xl border-l-4 border-t-4 border-[#885739]" />
+        <span className="absolute right-0 top-0 h-20 w-20 rounded-tr-2xl border-r-4 border-t-4 border-[#885739]" />
+        <span className="absolute left-0 bottom-0 h-20 w-20 rounded-bl-2xl border-b-4 border-l-4 border-[#885739]" />
+        <span className="absolute right-0 bottom-0 h-20 w-20 rounded-br-2xl border-b-4 border-r-4 border-[#885739]" />
+
+        <form
+          className="grid grid-cols-1 gap-6 p-5 rounded bg-white border border-[#D9D9D9]"
+          onSubmit={handleSubmit(onSubmit)}
+        >
         <div className="flex flex-col lg:flex-row gap-6">
           <div className={formGroupCSS}>
-            <label htmlFor="fname">First name</label>
+            <label htmlFor="fname" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>First name</label>
             <input
               id="fname"
               type="text"
@@ -91,7 +103,7 @@ export const Contact = () => {
             />
           </div>
           <div className={formGroupCSS}>
-            <label htmlFor="lname">Last name</label>
+            <label htmlFor="lname" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Last name</label>
             <input
               id="lname"
               type="text"
@@ -102,7 +114,7 @@ export const Contact = () => {
           </div>
         </div>
         <div className={formGroupCSS}>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Email</label>
           <input
             id="email"
             type="email"
@@ -115,7 +127,7 @@ export const Contact = () => {
           />
         </div>
         <div className={formGroupCSS}>
-          <label htmlFor="phone">Phone number</label>
+          <label htmlFor="phone" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Phone number</label>
           <input
             id="phone"
             type="tel"
@@ -128,7 +140,7 @@ export const Contact = () => {
           />
         </div>
         <div className={formGroupCSS}>
-          <label htmlFor="message">Can you tell me what you need?</label>
+          <label htmlFor="message" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Can you tell me what you need?</label>
           <textarea
             id="message"
             placeholder="Leave us a message..."
@@ -147,7 +159,7 @@ export const Contact = () => {
               type="checkbox"
               {...register("isPrivacyPolicyChecked", { required: true })}
             />
-            <label htmlFor="policyCheck">
+            <label htmlFor="policyCheck" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>
               You agree to our friendly privacy policy.{" "}
             </label>
           </div>
@@ -162,12 +174,13 @@ export const Contact = () => {
         <div>
           <button
             type="submit"
-            className="bg-black text-white h-12 w-full rounded-lg"
+            className="bg-[#885739] text-white h-12 w-full rounded-lg"
           >
             {isLoading ? "Sending message, please wait..." : "Send message"}
           </button>
         </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
