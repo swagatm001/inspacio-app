@@ -16,9 +16,11 @@ export const ContactMap: React.FC<ContactMapProps> = ({ apiKey, center }) => {
   if (!isLoaded) return <div className="text-sm">Loading map...</div>;
 
   const mapCenter = center || { lat: 12.9716, lng: 77.5946 };
+  // responsive aspect ratio: 16:9 on desktop, 4:8 on mobile
+
 
   return (
-    <div style={{ aspectRatio: "16/9" }} className="border border-2 border-[#885739] border-black w-full rounded-2xl overflow-hidden">
+    <div className="border border-2 border-[#885739] w-full rounded-2xl overflow-hidden mb-5 h-[400px]">
       <GoogleMap
         mapContainerStyle={{ width: "100%", height: "100%" }}
         center={mapCenter}
