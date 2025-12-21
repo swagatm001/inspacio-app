@@ -28,6 +28,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "brown-texture-pattern": "url('/images/testimonial-background.jpg')",
         "white-texture-pattern": "url('/images/join-our-club.jpg')",
+        "contact-us-texture-pattern": "url('/images/contact-us-bg.jpg')",
       },
     },
   },
