@@ -7,29 +7,72 @@ import { satoshi } from '@/fonts/satoshi';
 import { GalleryCard } from "@/components/LatestProject/GalleryCard";
 
 const ProjectsCatalog: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>(projectCategories[0].value);
+  const [selectedLocation, setSelectedLocation] = useState<string>("");
+  const [selectedType, setSelectedType] = useState<string>("");
+
+  // build list from full projects dataset (projectsByCategory is still available, but we'll filter from all projects)
+  const allProjects = useMemo(() => {
+    // flatten projectsByCategory 'all' is fine
+    return (projectsByCategory.all || []);
+  }, []);
 
   const projects = useMemo(() => {
-    return projectsByCategory[selectedCategory as keyof typeof projectsByCategory] || projectsByCategory.all;
-  }, [selectedCategory]);
+    return allProjects.filter((p: any) => {
+      if (selectedLocation && (p.location || p.address) && !String(p.location || p.address).toLowerCase().includes(selectedLocation.toLowerCase())) {
+        return false;
+      }
+      if (selectedType && p.type && p.type.toLowerCase() !== selectedType.toLowerCase()) {
+        return false;
+      }
+      return true;
+    });
+  }, [allProjects, selectedLocation, selectedType]);
 
   return (
     <main className="mt-16">
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h1 className={clsx(montserrat.className, 'text-2xl md:text-4xl text-center font-medium mb-4 text-[#3D3834]')}>Projects</h1>
 
-        {/* Category tabs (horizontal scroll like services) */}
-        <div className="w-full overflow-x-auto no-scrollbar border-b border-light-gray mb-6">
-          <div className="w-full flex flex-nowrap whitespace-nowrap md:justify-center">
-            {projectCategories.map((c) => (
-              <button
-                key={c.value}
-                onClick={() => setSelectedCategory(c.value)}
-                className={clsx(satoshi.className, 'py-2 px-4 flex-shrink-0 whitespace-nowrap', selectedCategory === c.value ? 'border-b-2 border-[#3D3834] text-[#3D3834] font-medium' : 'text-[#78736F]')}
+        {/* Filters: Location and Type as dropdowns, chips on right */}
+        <div className="w-full flex flex-col md:flex-row items-center gap-4 mb-6">
+          <div className="flex gap-4 items-center">
+            <div>
+              <select
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                className="border rounded py-2 px-3 bg-transparent border-[#E2D5CC] focus:outline-none focus:ring-0 focus:border-[#E2D5CC]"
               >
-                {c.label}
-              </button>
-            ))}
+                <option value="">location</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Delhi">Delhi</option>
+              </select>
+            </div>
+            <div>
+              <select
+                value={selectedType}
+                onChange={(e) => setSelectedType(e.target.value)}
+                className="border rounded px-3 py-2 bg-transparent border-[#E2D5CC] focus:outline-none focus:ring-0 focus:border-[#E2D5CC]"
+              >
+                <option value="">Type</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="ml-auto flex gap-2 items-center">
+            {selectedLocation && (
+              <div className="flex items-center gap-2 bg-[#F3F2F0] px-3 py-1 rounded-full">
+                <span className={clsx(satoshi.className, "text-sm")}>{selectedLocation}</span>
+                <button onClick={() => setSelectedLocation("")} aria-label="remove location" className="text-sm">✕</button>
+              </div>
+            )}
+            {selectedType && (
+              <div className="flex items-center gap-2 bg-[#F3F2F0] px-3 py-1 rounded-full">
+                <span className={clsx(satoshi.className, "text-sm")}>{selectedType}</span>
+                <button onClick={() => setSelectedType("")} aria-label="remove type" className="text-sm">✕</button>
+              </div>
+            )}
           </div>
         </div>
 
