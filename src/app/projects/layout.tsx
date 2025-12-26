@@ -20,9 +20,7 @@ export default function ProjectsLayout({
       <End2EndWrapper>
         <Header lightBackground={true}/>
       </End2EndWrapper>
-      <CustomContainer>
-        {children}
-      </CustomContainer>
+      {children}
       <FooterV2 />
     </div>
   );

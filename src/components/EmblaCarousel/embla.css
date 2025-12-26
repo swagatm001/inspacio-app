@@ -7,6 +7,15 @@
   --slide-size-sm: 50%;
   --slide-spacing-sm: 0;
 }
+
+/* Modifier: use when the embla instance should render full-width slides
+   (e.g. add class `embla--fullwidth` to the root embla element). */
+.embla--fullwidth {
+  --slide-size: 100%;
+  --slide-size-sm: 100%;
+  --slide-spacing: 0;
+  --slide-spacing-sm: 0;
+}
 .embla__viewport {
   overflow: hidden;
 }

@@ -5,12 +5,10 @@ import { ProjectMainImage } from "@/components/Projects/ProjectMainImage";
 import { ProjectDescription } from "@/components/Projects/ProjectDescription";
 import { ProjectSection } from "@/components/Projects/ProjectSection";
 import { ProjectGallery } from "@/components/Projects/ProjectGallery";
+import ProjectShowcaseSection from "@/components/Projects/ProjectShowcaseSection";
 import { ProjectOtherProjects } from "@/components/Projects/ProjectOtherProjects";
+import Testimonials from '@/components/Testimonial/Testimonials'
 import { projectsConstants } from "@/constants/projects";
-import { useState } from "react";
-
-// Test
-
 
 const ProjectPage = ({ params }: { params: { slug: string } }) => {
   const project = projectsConstants.find((p) => p.slug === params.slug);
@@ -22,7 +20,7 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
   // Map available data from the project object
   const title = project.title || "";
   // No subtitle or year in data, so pass empty string
-  const subtitle = "";
+  const subtitle = project.subtitle || "";
   const type = project.category?.label || "";
   const location = project.address || "";
   const year = "";
@@ -56,7 +54,17 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
         <ProjectDescription>{description}</ProjectDescription>
       )}
       {/* No sections in data, so skip ProjectSection */}
-      {gallery && gallery.length > 0 && <ProjectGallery images={gallery} />}
+      {gallery && gallery.length > 0 && (
+        <ProjectShowcaseSection
+          title="Layouts"
+          intro={description ? description.slice(0, 180) : ''}
+          moreText={description}
+          images={[mainImage, ...gallery]}
+          projectTitle={title}
+        />
+      )}
+      {/* Testimonials section placed under the showcase */}
+      <Testimonials />
       {otherProjects && otherProjects.length > 0 && (
         <ProjectOtherProjects projects={otherProjects} />
       )}

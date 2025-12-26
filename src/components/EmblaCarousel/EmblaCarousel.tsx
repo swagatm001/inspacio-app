@@ -26,11 +26,11 @@ type PropType = {
   slides: React.ReactNode[]
   options?: EmblaOptionsType
   isDarkBackground?: boolean
+  fullWidth?: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
-  const { isDarkBackground } = props
+  const { slides, options, isDarkBackground, fullWidth } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoPlay({ delay: 3000, playOnInit: false, stopOnInteraction: false, stopOnFocusIn: true })])
   const tweenFactor = useRef(0)
   const tweenNodes = useRef<HTMLElement[]>([])
@@ -111,8 +111,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       .on('slideFocus', tweenScale)
   }, [emblaApi, tweenScale])
 
+  const rootClass = `embla${fullWidth ? ' embla--fullwidth' : ''}`
+
   return (
-    <div className="embla">
+    <div className={rootClass}>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((node,index) => (
