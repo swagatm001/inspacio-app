@@ -19,6 +19,7 @@ export const categoriesConstants = [
 const anthology = {
   thumbnail: "/images/anthro.jpg",
   title: "Anthology",
+  subtitle: "A contemporary workplace designed for inclusivity, authenticity and productivity.",
   slug: "anthology",
   image: [
     "/kds/anthology/img1.png",
@@ -64,6 +65,7 @@ const anthology = {
 const citadel = {
   thumbnail: "/images/citadel.jpg",
   title: "Citadel PropCon.",
+  subtitle: "A recent handover of a small contemporary office space designed for corporate executive staff.",
   slug: "citadel",
   image: [
     "/kds/citadel/img1.jpg",
@@ -112,6 +114,7 @@ const citadel = {
 const excelya = {
   thumbnail: "/images/excelya.jpg",
   title: "Excelya",
+  subtitle: "A modern 10,000 sq.ft. workplace revamp focused on collaboration and vibrant interiors.",
   slug: "excelya",
   image: [
     "/kds/excelya/img1.jpg",
@@ -151,6 +154,7 @@ const excelya = {
 const celegence = {
   thumbnail: "/kds/celegence/DSC_0084.JPG",
   title: "Celegence Systems Private Limited",
+  subtitle: "Office redesign focused on improved space utilization, texture and natural light.",
   slug: "celegence",
   image: [
     "/kds/celegence/DSC_0082.JPG",
@@ -197,6 +201,7 @@ const celegence = {
 const texport = {
   thumbnail: "/images/texport.jpg",
   title: "Texport Overseas",
+  subtitle: "Textile company office transformed to improve space, light and ventilation.",
   slug: "texport",
   image: [
     "/kds/texport/img1.png",
@@ -235,6 +240,7 @@ const texport = {
 const penthouse = {
   thumbnail: "/kds/penthouse/img1.jpg",
   title: "Penthouse",
+  subtitle: "A 4 BHK penthouse with 360° windows and luxurious, light-filled interiors.",
   slug: "penthouse",
   image: [
     "/kds/penthouse/img1.jpg",
@@ -296,6 +302,7 @@ const penthouse = {
 const duplex = {
   thumbnail: "/kds/duplex/img1.jpg",
   title: "Duplex Apartment - Sri Lakshmi Venkateshwara Nilaya",
+  subtitle: "A traditional-contemporary duplex blending wooden textures with modern layouts.",
   slug: "duplex",
   image: [
     "/kds/duplex/img1.jpg",
@@ -339,6 +346,7 @@ const duplex = {
 const appartment = {
   thumbnail: "/kds/appartment/img1.jpg",
   title: "Vaswani Gardenia",
+  subtitle: "A refined villa with a contemporary German kitchen and luxurious master suite.",
   slug: "appartment",
   image: [
     "/kds/appartment/img1.jpg",
@@ -388,6 +396,7 @@ const appartment = {
 const villa = {
   thumbnail: "/kds/villa/img1.jpg",
   title: "Villament - Interiors",
+  subtitle: "A modern contemporary residence with curated furniture and cosy living spaces.",
   slug: "villa",
   image: [
     "/kds/villa/img1.jpg",
@@ -447,6 +456,7 @@ const bunsik = {
   slug: "",
   thumbnail: "/images/bunsik.webp",
   title:"Bunsik Korean Café",
+  subtitle: "A compact, street-style Korean café: minimal, sustainable and warm.",
   address: "Koramangala, Bangalore",
   location: "Bangalore",
   type: "Commercial",
@@ -461,6 +471,7 @@ const brita = {
   slug: "",
   thumbnail: "/images/brita.webp",
   title:"Brita India Corporate Office",
+  subtitle: "A modern workspace reflecting purity and innovation with fluid forms and greenery.",
   address: "Whitefield, Bangalore",
   location: "Delhi",
   type: "Commercial",
@@ -475,6 +486,7 @@ const penthouse2 = {
   slug: "",
   thumbnail: "/images/penthouse.webp",
   title:"Penthouse at Tata Aquila Heights",
+  subtitle: "A serene 4,600 sq.ft. urban penthouse defined by natural light and bespoke lighting.",
   address: "Yeshwanthpur, Bangalore",
   location: "Bangalore",
   type: "Residential",
@@ -489,6 +501,7 @@ const prestige = {
   slug: "",
   thumbnail: "/images/golfshire.webp",
   title:"Prestige Golfshire – Landscape Design",
+  subtitle: "An intimate outdoor bar and lounge crafted under a sleek pergola, warm by night.",
   address: "Nandi Hills, Bangalore",
   location: "Delhi",
   type: "Commercial",
