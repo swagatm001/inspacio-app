@@ -8,7 +8,7 @@ interface ProjectHeroProps {
   subtitle: string;
   type: string;
   location: string;
-  year: string;
+  year: string | number;
 }
 
 export const ProjectHero: React.FC<ProjectHeroProps> = ({ title, subtitle, type, location, year }) => (

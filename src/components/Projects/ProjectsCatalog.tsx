@@ -1,10 +1,11 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import clsx from "clsx";
-import { projectCategories, projectsByCategory } from "@/constants/projects";
+import { Project, projectsConstants } from "@/constants/projects";
 import { montserrat } from '@/fonts/montserrat';
 import { satoshi } from '@/fonts/satoshi';
 import { GalleryCard } from "@/components/LatestProject/GalleryCard";
+import { I_Project } from "@/components/LatestProject/Gallery";
 
 const ProjectsCatalog: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>("");
@@ -13,11 +14,26 @@ const ProjectsCatalog: React.FC = () => {
   // build list from full projects dataset (projectsByCategory is still available, but we'll filter from all projects)
   const allProjects = useMemo(() => {
     // flatten projectsByCategory 'all' is fine
-    return (projectsByCategory.all || []);
+    return (projectsConstants || []);
   }, []);
 
+  // Extract unique locations from projects
+  const locations = useMemo(() => {
+    const uniqueLocations = new Set<string>();
+    allProjects.forEach((p: Project) => {
+      if (p.location) {
+        uniqueLocations.add(p.location);
+      } else if (p.address) {
+        // Extract city from address if location is not set
+        const city = p.address.split(",").pop()?.trim();
+        if (city) uniqueLocations.add(city);
+      }
+    });
+    return Array.from(uniqueLocations).sort();
+  }, [allProjects]);
+
   const projects = useMemo(() => {
-    return allProjects.filter((p: any) => {
+    return allProjects.filter((p: Project) => {
       if (selectedLocation && (p.location || p.address) && !String(p.location || p.address).toLowerCase().includes(selectedLocation.toLowerCase())) {
         return false;
       }
@@ -25,7 +41,7 @@ const ProjectsCatalog: React.FC = () => {
         return false;
       }
       return true;
-    });
+    }) as I_Project[];
   }, [allProjects, selectedLocation, selectedType]);
 
   return (
@@ -43,8 +59,11 @@ const ProjectsCatalog: React.FC = () => {
                 className="border rounded py-2 px-3 bg-transparent border-[#E2D5CC] focus:outline-none focus:ring-0 focus:border-[#E2D5CC]"
               >
                 <option value="">location</option>
-                <option value="Bangalore">Bangalore</option>
-                <option value="Delhi">Delhi</option>
+                {locations.map((location) => (
+                  <option key={location} value={location}>
+                    {location}
+                  </option>
+                ))}
               </select>
             </div>
             <div>

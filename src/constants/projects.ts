@@ -16,11 +16,45 @@ export const categoriesConstants = [
   },
 ];
 
-const anthology = {
+export interface Section {
+  title: string;
+  intro?: string[];
+  moreText?: {
+    title: string;
+    points: string[];
+    finishLine?: string;
+  }
+  images?: string[];
+}
+
+export interface Project {
+  slug: string;
+  thumbnail: string;
+  title: string;
+  subtitle: string;
+  image: string[];
+  description: string;
+  sections?: Section[];
+  address: string;
+  location?: string;
+  category: {
+    label: string;
+    value: string;
+  };
+  type: string;
+  attributes?: {
+    label: string;
+    value: string;
+  }[];
+  year?: number;
+}
+
+const anthology: Project = {
   thumbnail: "/images/anthro.jpg",
   title: "Anthology",
-  subtitle: "A contemporary workplace designed for inclusivity, authenticity and productivity.",
+  subtitle: "A contemporary corporate workspace designed to feel open, inclusive, and future-ready.",
   slug: "anthology",
+  year: 2022,
   image: [
     "/kds/anthology/img1.png",
     "/kds/anthology/img2.jpg",
@@ -31,10 +65,60 @@ const anthology = {
     "/kds/anthology/img7.jpg",
     "/kds/anthology/img8.jpg",
     "/kds/anthology/img9.jpg",
-    // "/kds/anthology/img10.jpg",
-    // "/kds/anthology/img11.jpg",
   ],
-  description: `Anthology is a global workplace continually striving toward deeper inclusivity, authenticity, and professional advancement. We were assigned the task of designing the workspace with an idea that showcases a contemporary smart approach to design, technology and aesthetics. The architect and the entire team of interior designers produced sketches, 3-D models and 3-D renderings of the commercial space simulations to help clients visualise the results. After multiple brainstorming and presentations with the client, we finalised the interiors of the space. The structural glazing of the building and the aerial view of passing metro rails, embracing natural light brightening the workspace and making the office feel bigger and more spacious. The workspace, meeting rooms and collaborative spaces were strategically planned, which extensively reduced the usage of lights and air conditioning. A big welcoming reception along with collaborative spaces create a sense of openness. Strategically placed warm colour palette and beautiful lighting in lounge/ meeting rooms added more drama and life to the space.`,
+  description: `Corporate office design today must support inclusivity, collaboration, and adaptability while embracing technology and sustainability. It should feel open, intelligent, and people-centric. For Anthology, the intent was to create a modern workspace that reflects its global outlook and progressive values. The result is a light-filled, thoughtfully planned office that feels spacious, efficient, and engaging.`,
+  sections: [
+    {
+      title: "Problem Statement",
+      images: [
+        "/kds/anthology/img1.png",
+        "/kds/anthology/img2.jpg",
+        "/kds/anthology/img3.jpg",
+      ],
+      intro: [
+        "Anthology required the design of a contemporary corporate workspace aligned with its values of inclusivity, authenticity, and professional growth.",
+        "The brief called for a smart, technology-driven office that balances aesthetics with functionality.",
+        "The challenge was to create a workspace that feels open and expansive while optimising energy use and spatial efficiency."
+      ]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design approach focused on openness, strategic planning, and natural light.",
+        "Extensive design development through sketches, 3D models, and renderings helped visualise and refine the space before execution.",
+        "Structural glazing and views of the surrounding context were leveraged to enhance brightness and spatial perception."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "Strategic space planning for workspaces, meeting rooms, and collaboration zones",
+          "Maximising natural light through structural glazing",
+          "Reducing reliance on artificial lighting and air conditioning",
+          "A welcoming reception to establish openness",
+          "Warm colour palettes and layered lighting in lounge and meeting areas"
+        ],
+        finishLine: "Each element was designed to balance efficiency with visual warmth and character."
+      },
+      images: [
+        "/kds/anthology/img4.jpg",
+        "/kds/anthology/img5.jpg",
+        "/kds/anthology/img6.jpg"
+      ]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The completed workspace feels open, modern, and inclusive.",
+        "Natural light, smart planning, and thoughtful detailing create a comfortable and energy-efficient work environment.",
+        "Anthology now operates from a contemporary office that reflects its global mindset — a workspace designed to support collaboration, growth, and everyday well-being."
+      ],
+      images: [
+        "/kds/anthology/img7.jpg",
+        "/kds/anthology/img8.jpg",
+        "/kds/anthology/img9.jpg"
+      ]
+    }
+  ],
   address: `TinFactory, Bangalore`,
   location: `Bangalore`,
   category: {
@@ -62,10 +146,10 @@ const anthology = {
   ],
 };
 
-const citadel = {
+const citadel: Project = {
   thumbnail: "/images/citadel.jpg",
   title: "Citadel PropCon.",
-  subtitle: "A recent handover of a small contemporary office space designed for corporate executive staff.",
+  subtitle: "A compact corporate workspace designed to seamlessly host client interactions while supporting focused internal collaboration.",
   slug: "citadel",
   image: [
     "/kds/citadel/img1.jpg",
@@ -82,8 +166,7 @@ const citadel = {
     "/kds/citadel/img12.jpg",
     // "/kds/citadel/img13.jpg",
   ],
-  description: `A recent handover of a small contemporary office space designed for corporate executive staff. In my early visit to the site, I realized that the space was quite small to accommodate a director's cabin, executive meeting room, conference, lounge, phone booth, workspace area, pantry & restrooms. That's when the team realized that another way to make this small office look modern yet stylish was by going white. An all-White interior design can make your office look calm and classy. One excellent benefit of a white office is that it creates an illusion of space. The room will appear bigger than it is in square feet. In an all-white office, consider texturing the walls. Wall art with bold colours would be an ideal texture for the white walls. Also, ensure you let in enough light to illuminate the entire office. You can achieve that by opening the windows or using light lamps. I intended to add a white pastel colour Jali partition, a wooden texture hexagonal ceiling, and a splash of colour that adds character to the space.
-  Contemporary office designs focus on simple but stylish décor with aesthetic qualities based on the principles of building modern offices. When improving your office look, use contemporary furniture and a colour palette with neutral accents and tones to add character to your office.`,
+  description: `Corporate office design prioritises structure, efficiency, and clarity. For Citadel PropCon, the brief was to create a contemporary workspace that supports in-house teams, client meetings, and internal sales discussions within a compact footprint. The result is a refined office, professional yet approachable, open yet composed, designed to support both daily operations and client interactions seamlessly.`,
   address: `Indiranagar`,
   location: `Bangalore`,
   category: {
@@ -109,9 +192,49 @@ const citadel = {
       value: "Completed",
     },
   ],
+  year: 2025,
+  sections: [
+    {
+      images: [
+        "/kds/citadel/img1.jpg",
+        "/kds/citadel/img2.jpg",
+        "/kds/citadel/img3.jpg",
+        "/kds/citadel/img4.jpg",
+        "/kds/citadel/img5.jpg",
+      ],
+      title: "Problem Statement",
+      intro: [
+        "Citadel PropCon required a contemporary corporate office within a compact footprint. The brief called for multiple functional zones, from leadership spaces to collaborative and support areas, without compromising openness, comfort, or clarity.",
+        "The primary challenge was to create an environment that feels spacious and composed, while reflecting a professional corporate identity."
+      ],
+      moreText: {
+        title:"Key interventions included:",
+        points: [
+          "Linear lighting to enhance depth",
+          "Textured walls with subtle colour accents",
+          "A pastel Jali partition to define zones while retaining light",
+          "Hexagonal wooden ceiling elements for warmth",
+          "Glass partitions to maximise openness and illumination"
+        ],
+        finishLine: "Each element was selected to balance function with understated elegance."
+      }
+    },
+    {
+      title: "Final Handover",
+      images: [
+        "/kds/citadel/img6.jpg",
+        "/kds/citadel/img8.jpg",
+        "/kds/citadel/img9.jpg",
+        "/kds/citadel/img10.jpg",
+        "/kds/citadel/img11.jpg",
+        "/kds/citadel/img12.jpg",
+      ],
+      intro: ["The completed office presents a clean, modern workspace that feels open and well-organised. Despite spatial limitations, all functional requirements are seamlessly integrated.", "Neutral tones, contemporary furniture, and thoughtful lighting come together to create an efficient, refined corporate environment designed for everyday use and long-term growth."]
+    }
+  ]
 };
 
-const excelya = {
+const excelya: Project = {
   thumbnail: "/images/excelya.jpg",
   title: "Excelya",
   subtitle: "A modern 10,000 sq.ft. workplace revamp focused on collaboration and vibrant interiors.",
@@ -151,7 +274,7 @@ const excelya = {
   ],
 };
 
-const celegence = {
+const celegence: Project = {
   thumbnail: "/kds/celegence/DSC_0084.JPG",
   title: "Celegence Systems Private Limited",
   subtitle: "Office redesign focused on improved space utilization, texture and natural light.",
@@ -198,11 +321,12 @@ const celegence = {
   ],
 };
 
-const texport = {
+const texport: Project = {
   thumbnail: "/images/texport.jpg",
   title: "Texport Overseas",
-  subtitle: "Textile company office transformed to improve space, light and ventilation.",
+  subtitle: "A contemporary corporate workspace transformed to feel open, fresh, and productivity-driven.",
   slug: "texport",
+  year: 2023,
   image: [
     "/kds/texport/img1.png",
     "/kds/texport/img2.png",
@@ -217,7 +341,7 @@ const texport = {
     "/kds/texport/img11.png",
     "/kds/texport/img12.png",
   ],
-  description: `Texport Overseas is a textile company situated in Yeshwanthpur. The project was a challenging yet fun project the Kreative Dezine Studio team dived right into it. When the team visited the Texport Overseas office to take a look at how we can make it better for the people to work here, we noticed quite a few things. First of all the space looked and felt cramped, the office featured a low ceiling, ancient workstations, narrow passages, lighting issues and wooden partitions, to name a few. The team got down to work. We took down the false ceiling and to our surprise, the ceiling was 14’ high ceiling, which not only brightened up the space and allowed daylight to seep in, but it also offered excellent ventilation and made the space look bigger. We also worked around the old-style workstations and swapped it for open workstations. Coming to the colours, we used tones of grey, green and wooden shades, giving it a calming effect.`,
+  description: "Corporate office design demands clarity, efficiency, and spatial intelligence. For Texport Overseas, the goal was to transform a cramped, outdated workspace into an open, breathable, and contemporary office. The result is a light-filled environment that feels expansive, functional, and human-centric.",
   address: `Yeswanthpur, Bangalore`,
   location: `Bangalore`,
   category: {
@@ -235,12 +359,63 @@ const texport = {
       value: "Completed",
     },
   ],
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "Texport Overseas operated out of a cramped and outdated office space.",
+        "Low ceilings, narrow passages, and rigid partitions restricted light, movement, and overall comfort.",
+        "The primary challenge was to transform the space into a contemporary office that enhances productivity, well-being, and spatial openness within the existing footprint."
+      ],
+      images: [
+        "/kds/texport/img1.png",
+        "/kds/texport/img2.png",
+        "/kds/texport/img3.png"
+      ]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design approach focused on openness, biophilic elements, and spatial optimization.",
+        "Outdated layouts were removed to introduce flexibility, light, and visual continuity.",
+        "A lighter palette and open planning helped redefine the workspace experience."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "Removal of false ceilings to reveal a 14-foot clear height",
+          "Open workstation planning for better flow and collaboration",
+          "Biophilic design elements to enhance well-being",
+          "A lighter colour palette to improve brightness",
+          "Improved ventilation and access to natural light"
+        ],
+        finishLine: "Each intervention was aimed at improving comfort, efficiency, and spatial quality."
+      },
+      images: [
+        "/kds/texport/img4.png",
+        "/kds/texport/img5.png",
+        "/kds/texport/img6.png"
+      ]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The completed office feels open, modern, and inviting.",
+        "Enhanced ceiling height, natural light, and thoughtful planning create a more expansive and breathable workspace.",
+        "Texport Overseas now operates from a functional, contemporary office that supports productivity, collaboration, and employee well-being, a clear transformation from its earlier condition."
+      ],
+      images: [
+        "/kds/texport/img11.png",
+        "/kds/texport/img12.png"
+      ]
+    }
+  ],
 };
 
-const penthouse = {
+const penthouse: Project = {
   thumbnail: "/kds/penthouse/img1.jpg",
-  title: "Penthouse",
-  subtitle: "A 4 BHK penthouse with 360° windows and luxurious, light-filled interiors.",
+  title: "Penthouse at Tata Aquila Heights",
+  subtitle: "A light-filled penthouse designed as a serene retreat above the city.",
   slug: "penthouse",
   image: [
     "/kds/penthouse/img1.jpg",
@@ -264,14 +439,9 @@ const penthouse = {
     "/kds/penthouse/img19.jpg",
     "/kds/penthouse/img20.jpg",
   ],
-  description: `Situated on the 29th floor, the penthouse boasts 360° floor-to-ceiling windows that allow abundant natural light and excellent cross ventilation. The Kreative Dezine Studio had yet another challenge, this time it was the interiors of this beautiful 4600 sq. ft. 4 BHK Penthouse.
-
-  The bedrooms are tranquil sanctuaries, adorned with soft linens and thoughtfully curated decor, offering a peaceful retreat from the hustle and bustle of the outside world. The white colour paint used throughout the penthouse gives it a calming appeal. 
-  
-  Not to mention the spacious living room that soaks in all the natural lighting throughout the day, illuminating every corner, and giving the room an aesthetic and serene feel. While also allowing the cool evening breeze to sweep across the room.
-  
-  You will find plush furnishings throughout the penthouse that symbolise luxury and comfort. Every detail has been carefully considered, from the elegant lighting fixtures to the splendidly done mirrors adorning the walls. This Bangalore home is the perfect amalgamation of simplicity and luxury. It is a calm and sophisticated space where the residents can enjoy a beautiful day away from the city noise.
-  `,
+  description: `Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional.
+It must balance openness, luxury, and everyday ease, especially in high-rise living.
+The result is a home that feels calm, refined, and deeply connected to its surroundings.`,
   address: `Jalahalli, Bangalore`,
   location: `Bangalore`,
   category: {
@@ -297,9 +467,62 @@ const penthouse = {
       value: "Completed",
     },
   ],
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "This 4,600 sq. ft. penthouse, located on the 29th floor, offered expansive views and abundant natural light.",
+        "The brief was to design interiors that complement the panoramic setting while maintaining a sense of warmth, serenity, and understated luxury.",
+        "The challenge was to balance openness with comfort, creating a peaceful escape from the city below."
+      ],
+      images: [
+        "/kds/penthouse/img1.jpg",
+        "/kds/penthouse/img2.jpg",
+        "/kds/penthouse/img3.jpg"
+      ]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design approach focused on light, flow, and restrained elegance.",
+        "A contemporary aesthetic was chosen to enhance the penthouse’s openness while allowing the views to take centre stage.",
+        "Materials, furnishings, and lighting were curated to create a calm, cohesive living environment."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "Floor-to-ceiling windows to maximise daylight and cross ventilation",
+          "A white palette to enhance brightness and spatial openness",
+          "Plush furnishings and soft linens for comfort",
+          "Thoughtfully curated décor to maintain visual calm",
+          "Mirror accents to add depth and reflect light",
+          "Bespoke lighting fixtures to introduce warmth and sophistication"
+        ],
+        finishLine: "Each element was designed to support a tranquil and luxurious lifestyle."
+      },
+      images: [
+        "/kds/penthouse/img4.jpg",
+        "/kds/penthouse/img5.jpg",
+        "/kds/penthouse/img6.jpg"
+      ]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The completed penthouse feels airy, serene, and timeless.",
+        "Natural light, gentle breezes, and refined interiors come together to create a soothing living experience.",
+        "The Penthouse at Tata Aquila Heights stands as a refined urban sanctuary, offering elevated living with comfort, clarity, and quiet luxury."
+      ],
+      images: [
+        "/kds/penthouse/img11.jpg",
+        "/kds/penthouse/img12.jpg",
+        "/kds/penthouse/img13.jpg"
+      ]
+    }
+  ],
 };
 
-const duplex = {
+const duplex: Project = {
   thumbnail: "/kds/duplex/img1.jpg",
   title: "Duplex Apartment - Sri Lakshmi Venkateshwara Nilaya",
   subtitle: "A traditional-contemporary duplex blending wooden textures with modern layouts.",
@@ -393,10 +616,10 @@ const appartment = {
   ],
 };
 
-const villa = {
+const villa: Project = {
   thumbnail: "/kds/villa/img1.jpg",
   title: "Villament - Interiors",
-  subtitle: "A modern contemporary residence with curated furniture and cosy living spaces.",
+  subtitle: "A recent handover of a small contemporary office space designed for corporate executive staff.",
   slug: "villa",
   image: [
     "/kds/villa/img1.jpg",
@@ -419,6 +642,20 @@ const villa = {
     "/kds/villa/img18.jpg",
     "/kds/villa/img19.jpg",
     "/kds/villa/img20.jpg",
+  ],
+  sections: [
+    {
+      title: "Office Layout",
+      intro: ["A compact executive layout optimised for space and daylight."],
+      images: [
+        "/kds/citadel/img2.jpg",
+        "/kds/citadel/img3.jpg",
+        "/kds/citadel/img4.jpg",
+        "/kds/citadel/img5.jpg",
+        "/kds/citadel/img6.jpg",
+        "/kds/citadel/img8.jpg",
+      ],
+    },
   ],
   description: `We were commissioned to furnish and style a newly constructed property in Bangalore. Our tasks included conceptualizing furniture layouts, selecting accessories, implementing window treatments, optimizing lighting, and enhancing overall aesthetics. The focal point of the residence is its expansive open-plan living area, seamlessly integrating the kitchen, dining, and lounge zones. We curated modern furniture pieces, including a breakfast bar in the kitchen, a well-appointed dining ensemble, and a relaxed seating arrangement overlooking the garden. Our design approach incorporated contemporary interior trends, ensuring a stylish and functional space. Additionally, we crafted a separate sitting room to evoke a cosy ambience. This involved incorporating a striking brick wallcovering as a focal point, complemented by carefully curated lighting fixtures and plush furnishings such as embroidered cushions and vibrant textiles, adding sophistication to the room. Each bedroom was meticulously designed to exude elegance and comfort, featuring luxurious and contemporary decor themes. We transformed the fourth bedroom into a versatile study area, utilizing modern furnishings, vibrant accents, and appropriate lighting to create an inspiring environment suitable for remote work or academic pursuits.`,
   address: `J.P Nagar, Bangalore`,
@@ -448,76 +685,372 @@ const villa = {
   ],
 };
 
-const bunsik = {
+const bunsik: Project = {
   category: {
-    label: "",
-    value: "",
+    label: "Commercial",
+    value: "commercial",
   },
-  slug: "",
+  year:2025,
+  image:[],
+  slug: "bunsik",
   thumbnail: "/images/bunsik.webp",
-  title:"Bunsik Korean Café",
-  subtitle: "A compact, street-style Korean café: minimal, sustainable and warm.",
+  title:"Bunsik",
+  subtitle: "A compact Korean café designed to be warm, soulful, and consciously budget-friendly.",
   address: "Koramangala, Bangalore",
   location: "Bangalore",
   type: "Commercial",
-  description: "A compact, street-style café designed with soul: minimal, sustainable, and full of warmth. Concrete floors, wooden trims, and upcycled décor bring an authentic, Korean street charm within a tight budget."
+  description: "Café design prioritises atmosphere, comfort, and emotional connection over formality. For Bunsik, the focus was on creating an authentic Korean street-style café that was both budget-conscious and sustainable. The result is a space with character and soul, shaped by thoughtful material choices rather than excess",
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "Bunsik required a compact café interior inspired by traditional Korean snack shops.",
+        "The brief demanded a warm and approachable environment that could be delivered within strict budget constraints.",
+        "The primary challenge was to create a space with strong identity and comfort, using low-cost, reusable, and repurposed materials without compromising the overall experience."
+      ],
+      images: ["/images/bunsik.webp"]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design approach focused on material honesty, restraint, and sustainability.",
+        "A neutral base was used to keep the space visually calm, while textures and finishes introduced depth and warmth. Upcycled elements and simple furnishings played a key role in maintaining both budget efficiency and cultural authenticity."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "Concrete flooring to establish an urban, grounded base",
+          "Neutral grey tones for visual balance and calm",
+          "Wooden beadings and trims to add warmth",
+          "Upcycled décor elements for authenticity",
+          "Simple, functional furniture inspired by Korean street cafés"
+        ],
+        finishLine: "Each element was selected to create impact through thoughtful materiality rather than cost."
+      },
+      images: ["/images/bunsik.webp"]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The completed café feels cozy, grounded, and welcoming.",
+        "Despite budget limitations, the design successfully delivers warmth and character through texture and tone.",
+        "Bunsik stands as an example of how meaningful hospitality design can be achieved through restraint, sustainability, and storytelling, creating a space that feels genuine and inviting."
+      ],
+      images: ["/images/bunsik.webp"]
+    }
+  ],
 }
 
-const brita = {
+const brita: Project = {
   category: {
-    label: "",
-    value: "",
+    label: "Commercial",
+    value: "commercial",
   },
-  slug: "",
+  year:2025,
+  slug: "brita",
   thumbnail: "/images/brita.webp",
-  title:"Brita India Corporate Office",
+  image: ["/images/brita.webp"],
+  title:"Brita India Water Solutions Pvt. Ltd.",
   subtitle: "A modern workspace reflecting purity and innovation with fluid forms and greenery.",
   address: "Whitefield, Bangalore",
   location: "Delhi",
   type: "Commercial",
-  description: "A modern workspace that embodies Brita’s philosophy of purity and innovation. With curved wooden forms, cascading greenery, and fluid blue accents, the design reflects balance, function, and sustainability."
+  description: "Corporate office design is most effective when it translates brand values into spatial experience. Beyond functionality, it must communicate identity, purpose, and vision. For Brita India, this meant creating a workspace that embodies purity, sustainability, and innovation through thoughtful design. The result is an office environment that feels inspiring, purposeful, and distinctly aligned with the brand."
+  ,
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "Brita India required a corporate office that clearly reflected its brand philosophy.",
+        "The brief called for a modern workspace that balances aesthetics with functionality, while creating a strong and memorable first impression.",
+        "The challenge was to integrate brand storytelling into the interiors without compromising everyday usability and comfort."
+      ],
+      images: ["/images/brita.webp"]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design approach focused on brand expression, fluidity, and warmth.",
+        "Clean forms and modern finishes were layered with organic elements to reflect Brita’s connection to water and sustainability.",
+        "Every zone was designed to reinforce identity while supporting function."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "A curved wooden reception desk with a sleek white front panel",
+          "Circular ceiling planters introducing cascading greenery",
+          "Copper ceiling panels to add warmth and depth",
+          "Fluid blue wave wall graphics inspired by water",
+          "Futuristic ring lighting to enhance ambience",
+          "Integrated product displays seamlessly embedded into the space"
+        ],
+        finishLine: "Each element was designed to balance visual impact with functional clarity."
+      },
+      images: ["/images/brita.webp"]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The completed office is more than a workplace,  it is a physical expression of Brita’s values.",
+        "The space feels modern, welcoming, and purposeful, with brand cues woven subtly throughout.",
+        "This project demonstrates how thoughtful corporate design can successfully unite identity, sustainability, and everyday function into a cohesive environment."
+      ],
+      images: ["/images/brita.webp"]
+    }
+  ]
 }
 
-const penthouse2 = {
+const penthouse2: Project = {
   category: {
-    label: "",
-    value: "",
+    label: "Residential",
+    value: "residential",
   },
-  slug: "",
+  slug: "penthouse",
+  image: ["/images/penthouse.webp"],
   thumbnail: "/images/penthouse.webp",
   title:"Penthouse at Tata Aquila Heights",
-  subtitle: "A serene 4,600 sq.ft. urban penthouse defined by natural light and bespoke lighting.",
+  subtitle: "A light-filled penthouse designed as a serene retreat above the city.",
   address: "Yeshwanthpur, Bangalore",
   location: "Bangalore",
   type: "Residential",
-  description: "A 4,600 sq.ft. penthouse designed as a serene urban retreat: open, airy, and elegant. Natural light, soft textures, and bespoke lighting define this home of understated luxury."
+  year: 2025,
+  description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance openness, luxury, and everyday ease, especially in high-rise living. The result is a home that feels calm, refined, and deeply connected to its surroundings.",
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "This 4,600 sq. ft. penthouse, located on the 29th floor, offered expansive views and abundant natural light.",
+        "The brief was to design interiors that complement the panoramic setting while maintaining a sense of warmth, serenity, and understated luxury.",
+        "The challenge was to balance openness with comfort, creating a peaceful escape from the city below."
+      ],
+      images: [
+        "/images/penthouse.webp"
+      ]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design approach focused on light, flow, and restrained elegance.",
+        "A contemporary aesthetic was chosen to enhance the penthouse’s openness while allowing the views to take centre stage.",
+        "Materials, furnishings, and lighting were curated to create a calm, cohesive living environment."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "Floor-to-ceiling windows to maximise daylight and cross ventilation",
+          "A white palette to enhance brightness and spatial openness",
+          "Plush furnishings and soft linens for comfort",
+          "Thoughtfully curated décor to maintain visual calm",
+          "Mirror accents to add depth and reflect light",
+          "Bespoke lighting fixtures to introduce warmth and sophistication"
+        ],
+        finishLine: "Each element was designed to support a tranquil and luxurious lifestyle."
+      },
+      images: [
+        "/images/penthouse.webp"
+      ]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The completed penthouse feels airy, serene, and timeless.",
+        "Natural light, gentle breezes, and refined interiors come together to create a soothing living experience.",
+        "The Penthouse at Tata Aquila Heights stands as a refined urban sanctuary, offering elevated living with comfort, clarity, and quiet luxury."
+      ],
+      images: [
+        "/images/penthouse.webp"
+      ]
+    }
+  ]
 }
 
-const prestige = {
+const prestige: Project = {
   category: {
-    label: "",
-    value: "",
+    label: "Residential",
+    value: "residential",
   },
-  slug: "",
+  slug: "prestige-golfshire",
   thumbnail: "/images/golfshire.webp",
-  title:"Prestige Golfshire – Landscape Design",
-  subtitle: "An intimate outdoor bar and lounge crafted under a sleek pergola, warm by night.",
+  image: ["/images/golfshire.webp"],
+  title:"Prestige Golfshire – Landscaping",
+  subtitle: "A comprehensive residential upgrade designed to elevate ambience through interiors and landscape design",
   address: "Nandi Hills, Bangalore",
-  location: "Delhi",
+  location: "Bangalore",
   type: "Commercial",
-  description: "An intimate, outdoor bar and lounge crafted under a sleek pergola. Luxurious yet cozy, the design transforms by night into a warm, ambient retreat amid lush greenery."
+  year: 2024,
+  description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance interiors and outdoor environments to support everyday living and visual harmony. The result is a home where design upgrades enhance both lifestyle and atmosphere.",
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "The villa at Prestige Golfshire required a complete aesthetic and functional upgrade.",
+        "The brief focused on refreshing interiors while redesigning the landscaping to elevate the overall living experience.",
+        "The challenge was to ensure that interior enhancements and outdoor spaces felt cohesive and well-integrated."
+      ],
+      images: ["/images/golfshire.webp"]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design approach focused on holistic transformation, addressing both indoor and outdoor environments.",
+        "Key upgrades were planned to improve visual warmth, lighting quality, and spatial experience.",
+        "Landscape design was treated as an extension of the home rather than a separate element."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "Introduction of stylish wallpaper across key interior spaces",
+          "Complete replacement of the lighting system",
+          "New furniture selections to enhance comfort and flow",
+          "Redesigned landscaping to elevate outdoor ambience",
+          "Improved indoor–outdoor visual continuity"
+        ],
+        finishLine: "Each intervention was carefully coordinated to enhance the villa’s overall character."
+      },
+      images: ["/images/golfshire.webp"]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The upgraded villa feels refreshed, cohesive, and visually elevated.",
+        "Interior enhancements and landscaping work together to create a balanced and inviting environment.",
+        "Prestige Golfshire now stands as a residence where thoughtful upgrades and landscape design come together to enhance everyday living and long-term comfort."
+      ],
+      images: ["/images/golfshire.webp"]
+    }
+  ]
+}
+
+const cedar: Project = {
+  thumbnail: "",
+  title: "Cedar String",
+  subtitle: "A 5,000 sq. ft. luxury villa designed to balance modern elegance with warmth and livability.",
+  slug: "cedar-string",
+  image: [],
+  description: `Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional.
+It must balance aesthetics with utility while reflecting the lifestyle and personality of its occupants.
+The result is a home that offers sensory richness and elevates everyday living.`,
+  address: `Whitefield, Bangalore`,
+  location: `Bangalore`,
+  category: {
+    label: "Residential",
+    value: "residential",
+  },
+  year: 2024,
+  type: `Residential`,
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "The brief for Cedar String was to design a luxury villa that feels experiential rather than ornamental.",
+        "The homeowners sought a space that blends contemporary architecture with natural materials, while maintaining a strong indoor–outdoor connection.",
+        "The challenge was to create opulence that feels warm, grounded, and timeless."
+      ],
+      images: ["/images/cedar.webp"]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design concept, Modern Elegance with Earthy Roots, guided every spatial and material decision.",
+        "Clean architectural lines were softened with natural textures, layered lighting, and curated views of greenery.",
+        "Spaces were planned to flow organically, allowing the indoors and outdoors to feel seamlessly connected."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "Contemporary architectural forms with clean lines and symmetry",
+          "Split-level planning to add visual interest and functional zoning",
+          "Double-height ceilings to enhance scale and natural light",
+          "Use of wood, stone, glass, and greenery for material balance",
+          "Curated indoor–outdoor transitions with gardens and sit-outs",
+          "Layered lighting to create depth and understated luxury"
+        ],
+        finishLine: "Each element was designed to contribute to a refined yet livable environment."
+      },
+      images: ["/images/cedar.webp"]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "Cedar String emerges as a villa where luxury feels intuitive and deeply personal.",
+        "Thoughtful spatial planning, natural materials, and layered detailing create a home that is both elegant and grounded.",
+        "The result is a residence that tells a story, one of modern living shaped by warmth, balance, and timeless design."
+      ],
+      images: ["/images/cedar.webp"]
+    }
+  ],
+}
+
+const embassy: Project = {
+  thumbnail: "",
+  title: "Embassy Casabella",
+  year: 2025,
+  subtitle: "A luxury residence that blends classic elegance with contemporary comfort.",
+  slug: "embassy-casabella",
+  image: [],
+  description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance timeless character with modern living, while reflecting the personality of its occupants. The result is a home that feels warm, refined, and deeply rooted in everyday comfort.",
+  address: `Whitefield, Bangalore`,
+  location: `Bangalore`,
+  category: {
+    label: "Residential",
+    value: "residential",
+  },
+  type: `Residential`,
+
+  sections: [
+    {
+      title: "Problem Statement",
+      intro: [
+        "This 5,000 sq. ft. residence at Embassy Casabella was envisioned as a home that merges old-world charm with present-day sensibilities.",
+        "The brief focused on creating a space that feels intimate yet expansive, luxurious yet lived-in.",
+        "The challenge was to balance traditional influences with contemporary design without losing warmth or character."
+      ],
+      images: ["/images/embassy.webp"]
+    },
+    {
+      title: "How We Built It",
+      intro: [
+        "The design narrative centred on layering, of textures, tones, and forms, to achieve understated opulence.",
+        "Classic design elements were reinterpreted through a contemporary lens to create spaces that feel both timeless and current.",
+        "Artisanal detailing and curated décor played a key role in shaping the home’s character."
+      ],
+      moreText: {
+        title: "Key interventions included:",
+        points: [
+          "A palette of warm hues and tactile materials",
+          "Thoughtful layering of textures and finishes",
+          "Vintage-inspired details such as brass hardware and carved wood accents",
+          "Clean contemporary lines softened by traditional forms",
+          "Curated décor and artwork for a collected, lived-in feel",
+          "Clearly defined yet open spaces suitable for entertaining and quiet moments"
+        ],
+        finishLine: "Each room was carefully composed to reflect the client’s personality and values."
+      },
+      images: ["/images/embassy.webp"]
+    },
+    {
+      title: "Final Handover",
+      intro: [
+        "The completed residence feels elegant, warm, and deeply personal.",
+        "Classic detailing and contemporary design come together to create a home that is both sophisticated and welcoming.",
+        "Embassy Casabella stands as a refined urban retreat, a space that tells a story of heritage, comfort, and timeless taste."
+      ],
+      images: ["/images/embassy.webp"]
+    }
+  ],
+
 }
 
 export const projectsConstants = [
   anthology,
   citadel,
-  excelya,
-  celegence,
   texport,
   penthouse,
-  duplex,
-  appartment,
-  villa,
+  cedar,
+  prestige,
+  bunsik,
+  brita,
+  embassy
 ];
 
 export const latestProjectConstants = [
@@ -526,18 +1059,3 @@ export const latestProjectConstants = [
   penthouse2,
   prestige
 ]
-
-export const projectCategories = [
-  { label: "All", value: "all" },
-  { label: "Architectural design", value: "architectural" },
-  { label: "Interior design", value: "interior" },
-  { label: "Turnkey solutions", value: "turnkey" },
-];
-
-// Group projects by these categories (light classification for demo; update as needed)
-export const projectsByCategory = {
-  architectural: [anthology, citadel, excelya, celegence, texport],
-  interior: [penthouse, duplex, appartment, villa],
-  turnkey: [bunsik, brita, penthouse2, prestige],
-  all: [anthology, citadel, excelya, celegence, texport, penthouse, duplex, appartment, villa, bunsik, brita, penthouse2, prestige],
-};
