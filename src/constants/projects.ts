@@ -328,18 +328,24 @@ const texport: Project = {
   slug: "texport",
   year: 2023,
   image: [
-    "/kds/texport/img1.png",
-    "/kds/texport/img2.png",
-    "/kds/texport/img3.png",
-    "/kds/texport/img4.png",
-    "/kds/texport/img5.png",
-    "/kds/texport/img6.png",
-    "/kds/texport/img7.png",
-    "/kds/texport/img8.png",
-    "/kds/texport/img9.png",
-    // "/kds/texport/img10.png",
-    "/kds/texport/img11.png",
-    "/kds/texport/img12.png",
+    "/images/texport/IMG_3659.webp",
+    "/images/texport/IMG_3667.webp",
+    "/images/texport/IMG_3676.webp",
+    "/images/texport/IMG_3901.webp",
+    "/images/texport/IMG_3902.webp",
+    "/images/texport/IMG_3926.webp",
+    "/images/texport/IMG_3979.webp",
+    "/images/texport/IMG_3987.webp",
+    "/images/texport/IMG_3991.webp",
+    "/images/texport/IMG_3999.webp",
+    "/images/texport/IMG_4001.webp",
+    "/images/texport/IMG_4018.webp",
+    "/images/texport/IMG_4023.webp",
+    "/images/texport/IMG_4033.webp",
+    "/images/texport/IMG_4038.webp",
+    "/images/texport/IMG_4043.webp",
+    "/images/texport/IMG_4047.webp",
+    "/images/texport/IMG_4052.webp",
   ],
   description: "Corporate office design demands clarity, efficiency, and spatial intelligence. For Texport Overseas, the goal was to transform a cramped, outdated workspace into an open, breathable, and contemporary office. The result is a light-filled environment that feels expansive, functional, and human-centric.",
   address: `Yeswanthpur, Bangalore`,
@@ -368,10 +374,12 @@ const texport: Project = {
         "The primary challenge was to transform the space into a contemporary office that enhances productivity, well-being, and spatial openness within the existing footprint."
       ],
       images: [
-        "/kds/texport/img1.png",
-        "/kds/texport/img2.png",
-        "/kds/texport/img3.png"
-      ]
+        "/images/texport/IMG_3659.webp",
+        "/images/texport/IMG_3667.webp",
+        "/images/texport/IMG_3676.webp",
+        "/images/texport/IMG_3901.webp",
+        "/images/texport/IMG_3902.webp",
+      ],
     },
     {
       title: "How We Built It",
@@ -392,9 +400,12 @@ const texport: Project = {
         finishLine: "Each intervention was aimed at improving comfort, efficiency, and spatial quality."
       },
       images: [
-        "/kds/texport/img4.png",
-        "/kds/texport/img5.png",
-        "/kds/texport/img6.png"
+        "/images/texport/IMG_3979.webp",
+        "/images/texport/IMG_3987.webp",
+        "/images/texport/IMG_3991.webp",
+        "/images/texport/IMG_3999.webp",
+        "/images/texport/IMG_4001.webp",
+        "/images/texport/IMG_4018.webp"
       ]
     },
     {
@@ -405,8 +416,12 @@ const texport: Project = {
         "Texport Overseas now operates from a functional, contemporary office that supports productivity, collaboration, and employee well-being, a clear transformation from its earlier condition."
       ],
       images: [
-        "/kds/texport/img11.png",
-        "/kds/texport/img12.png"
+        "/images/texport/IMG_4023.webp",
+        "/images/texport/IMG_4033.webp",
+        "/images/texport/IMG_4038.webp",
+        "/images/texport/IMG_4043.webp",
+        "/images/texport/IMG_4047.webp",
+        "/images/texport/IMG_4052.webp"
       ]
     }
   ],
@@ -418,26 +433,35 @@ const penthouse: Project = {
   subtitle: "A light-filled penthouse designed as a serene retreat above the city.",
   slug: "penthouse",
   image: [
-    "/kds/penthouse/img1.jpg",
-    "/kds/penthouse/img2.jpg",
-    "/kds/penthouse/img3.jpg",
-    "/kds/penthouse/img4.jpg",
-    "/kds/penthouse/img5.jpg",
-    "/kds/penthouse/img6.jpg",
-    "/kds/penthouse/img7.jpg",
-    "/kds/penthouse/img8.jpg",
-    "/kds/penthouse/img9.jpg",
-    "/kds/penthouse/img10.jpg",
-    "/kds/penthouse/img11.jpg",
-    "/kds/penthouse/img12.jpg",
-    "/kds/penthouse/img13.jpg",
-    "/kds/penthouse/img14.jpg",
-    "/kds/penthouse/img15.jpg",
-    "/kds/penthouse/img16.jpg",
-    "/kds/penthouse/img17.jpg",
-    "/kds/penthouse/img18.jpg",
-    "/kds/penthouse/img19.jpg",
-    "/kds/penthouse/img20.jpg",
+    "/images/penthouse/_SNF0296.webp",
+    "/images/penthouse/_SNF0301.webp",
+    "/images/penthouse/_SNF0306.webp",
+    "/images/penthouse/_SNF0311.webp",
+    "/images/penthouse/_SNF0326.webp",
+    "/images/penthouse/_SNF0346.webp",
+    "/images/penthouse/_SNF0361.webp",
+    "/images/penthouse/_SNF0366.webp",
+    "/images/penthouse/_SNF0376.webp",
+    "/images/penthouse/_SNF0381.webp",
+    "/images/penthouse/_SNF0391.webp",
+    "/images/penthouse/_SNF0406.webp",
+    "/images/penthouse/_SNF0411.webp",
+    "/images/penthouse/_SNF0421.webp",
+    "/images/penthouse/_SNF0441.webp",
+    "/images/penthouse/_SNF0446.webp",
+    "/images/penthouse/_SNF0461.webp",
+    "/images/penthouse/_SNF0481.webp",
+    "/images/penthouse/_SNF0501.webp",
+    "/images/penthouse/_SNF0526.webp",
+    "/images/penthouse/_SNF0536.webp",
+    "/images/penthouse/_SNF0541.webp",
+    "/images/penthouse/_SNF0551.webp",
+    "/images/penthouse/_SNF0556.webp",
+    "/images/penthouse/_SNF0561.webp",
+    "/images/penthouse/_SNF0566.webp",
+    "/images/penthouse/_SNF0581.webp",
+    "/images/penthouse/_SNF0586.webp",
+    "/images/penthouse/_SNF0591.webp",
   ],
   description: `Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional.
 It must balance openness, luxury, and everyday ease, especially in high-rise living.
@@ -476,9 +500,16 @@ The result is a home that feels calm, refined, and deeply connected to its surro
         "The challenge was to balance openness with comfort, creating a peaceful escape from the city below."
       ],
       images: [
-        "/kds/penthouse/img1.jpg",
-        "/kds/penthouse/img2.jpg",
-        "/kds/penthouse/img3.jpg"
+        "/images/penthouse/_SNF0296.webp",
+        "/images/penthouse/_SNF0301.webp",
+        "/images/penthouse/_SNF0306.webp",
+        "/images/penthouse/_SNF0311.webp",
+        "/images/penthouse/_SNF0326.webp",
+        "/images/penthouse/_SNF0346.webp",
+        "/images/penthouse/_SNF0361.webp",
+        "/images/penthouse/_SNF0366.webp",
+        "/images/penthouse/_SNF0376.webp",
+        "/images/penthouse/_SNF0381.webp"
       ]
     },
     {
@@ -501,9 +532,16 @@ The result is a home that feels calm, refined, and deeply connected to its surro
         finishLine: "Each element was designed to support a tranquil and luxurious lifestyle."
       },
       images: [
-        "/kds/penthouse/img4.jpg",
-        "/kds/penthouse/img5.jpg",
-        "/kds/penthouse/img6.jpg"
+        "/images/penthouse/_SNF0391.webp",
+        "/images/penthouse/_SNF0406.webp",
+        "/images/penthouse/_SNF0411.webp",
+        "/images/penthouse/_SNF0421.webp",
+        "/images/penthouse/_SNF0441.webp",
+        "/images/penthouse/_SNF0446.webp",
+        "/images/penthouse/_SNF0461.webp",
+        "/images/penthouse/_SNF0481.webp",
+        "/images/penthouse/_SNF0501.webp",
+        "/images/penthouse/_SNF0526.webp"
       ]
     },
     {
@@ -514,9 +552,15 @@ The result is a home that feels calm, refined, and deeply connected to its surro
         "The Penthouse at Tata Aquila Heights stands as a refined urban sanctuary, offering elevated living with comfort, clarity, and quiet luxury."
       ],
       images: [
-        "/kds/penthouse/img11.jpg",
-        "/kds/penthouse/img12.jpg",
-        "/kds/penthouse/img13.jpg"
+        "/images/penthouse/_SNF0536.webp",
+        "/images/penthouse/_SNF0541.webp",
+        "/images/penthouse/_SNF0551.webp",
+        "/images/penthouse/_SNF0556.webp",
+        "/images/penthouse/_SNF0561.webp",
+        "/images/penthouse/_SNF0566.webp",
+        "/images/penthouse/_SNF0581.webp",
+        "/images/penthouse/_SNF0586.webp",
+        "/images/penthouse/_SNF0591.webp"
       ]
     }
   ],
@@ -691,7 +735,23 @@ const bunsik: Project = {
     value: "commercial",
   },
   year:2025,
-  image:[],
+  image:[
+    "/images/bunsik/DSC07141.webp",
+    "/images/bunsik/DSC07150.webp",
+    "/images/bunsik/DSC07156.webp",
+    "/images/bunsik/DSC07159.webp",
+    "/images/bunsik/DSC07165.webp",
+    "/images/bunsik/DSC07168.webp",
+    "/images/bunsik/DSC07171.webp",
+    "/images/bunsik/DSC07174.webp",
+    "/images/bunsik/DSC07177.webp",
+    "/images/bunsik/DSC07183.webp",
+    "/images/bunsik/DSC07186.webp",
+    "/images/bunsik/DSC07189.webp",
+    "/images/bunsik/DSC07195.webp",
+    "/images/bunsik/DSC07198.webp",
+    "/images/bunsik/DSC07204.webp"
+  ],
   slug: "bunsik",
   thumbnail: "/images/bunsik.webp",
   title:"Bunsik",
@@ -708,7 +768,13 @@ const bunsik: Project = {
         "The brief demanded a warm and approachable environment that could be delivered within strict budget constraints.",
         "The primary challenge was to create a space with strong identity and comfort, using low-cost, reusable, and repurposed materials without compromising the overall experience."
       ],
-      images: ["/images/bunsik.webp"]
+      images: [
+        "/images/bunsik/DSC07141.webp",
+        "/images/bunsik/DSC07150.webp",
+        "/images/bunsik/DSC07156.webp",
+        "/images/bunsik/DSC07159.webp",
+        "/images/bunsik/DSC07165.webp"
+      ]
     },
     {
       title: "How We Built It",
@@ -727,7 +793,13 @@ const bunsik: Project = {
         ],
         finishLine: "Each element was selected to create impact through thoughtful materiality rather than cost."
       },
-      images: ["/images/bunsik.webp"]
+      images: [
+        "/images/bunsik/DSC07168.webp",
+        "/images/bunsik/DSC07171.webp",
+        "/images/bunsik/DSC07174.webp",
+        "/images/bunsik/DSC07177.webp",
+        "/images/bunsik/DSC07183.webp"
+      ]
     },
     {
       title: "Final Handover",
@@ -736,7 +808,13 @@ const bunsik: Project = {
         "Despite budget limitations, the design successfully delivers warmth and character through texture and tone.",
         "Bunsik stands as an example of how meaningful hospitality design can be achieved through restraint, sustainability, and storytelling, creating a space that feels genuine and inviting."
       ],
-      images: ["/images/bunsik.webp"]
+      images: [
+        "/images/bunsik/DSC07186.webp",
+        "/images/bunsik/DSC07189.webp",
+        "/images/bunsik/DSC07195.webp",
+        "/images/bunsik/DSC07198.webp",
+        "/images/bunsik/DSC07204.webp"
+      ]
     }
   ],
 }
@@ -747,10 +825,41 @@ const brita: Project = {
     value: "commercial",
   },
   year:2025,
-  slug: "brita",
   thumbnail: "/images/brita.webp",
-  image: ["/images/brita.webp"],
-  title:"Brita India Water Solutions Pvt. Ltd.",
+  title: "Brita India Water Solutions Pvt. Ltd.",
+  slug: "brita",
+  image: [
+    "/images/brita/SNF08922.webp",
+    "/images/brita/SNF08925.webp",
+    "/images/brita/SNF08934.webp",
+    "/images/brita/SNF08937.webp",
+    "/images/brita/SNF08946.webp",
+    "/images/brita/SNF08949.webp",
+    "/images/brita/SNF08955.webp",
+    "/images/brita/SNF08958.webp",
+    "/images/brita/SNF08979.webp",
+    "/images/brita/SNF08982.webp",
+    "/images/brita/SNF08988.webp",
+    "/images/brita/SNF09006.webp",
+    "/images/brita/SNF09036.webp",
+    "/images/brita/SNF09039.webp",
+    "/images/brita/SNF09042.webp",
+    "/images/brita/SNF09045.webp",
+    "/images/brita/SNF09051.webp",
+    "/images/brita/SNF09054.webp",
+    "/images/brita/SNF09057.webp",
+    "/images/brita/SNF09069.webp",
+    "/images/brita/SNF09078.webp",
+    "/images/brita/SNF09085.webp",
+    "/images/brita/SNF09099.webp",
+    "/images/brita/SNF09108.webp",
+    "/images/brita/SNF09114.webp",
+    "/images/brita/SNF09120.webp",
+    "/images/brita/SNF09129.webp",
+    "/images/brita/SNF09132.webp",
+    "/images/brita/SNF09135.webp",
+    "/images/brita/SNF09144.webp",
+  ],
   subtitle: "A modern workspace reflecting purity and innovation with fluid forms and greenery.",
   address: "Whitefield, Bangalore",
   location: "Delhi",
@@ -765,7 +874,18 @@ const brita: Project = {
         "The brief called for a modern workspace that balances aesthetics with functionality, while creating a strong and memorable first impression.",
         "The challenge was to integrate brand storytelling into the interiors without compromising everyday usability and comfort."
       ],
-      images: ["/images/brita.webp"]
+      images: [
+        "/images/brita/SNF08922.webp",
+        "/images/brita/SNF08925.webp",
+        "/images/brita/SNF08934.webp",
+        "/images/brita/SNF08937.webp",
+        "/images/brita/SNF08946.webp",
+        "/images/brita/SNF08949.webp",
+        "/images/brita/SNF08955.webp",
+        "/images/brita/SNF08958.webp",
+        "/images/brita/SNF08979.webp",
+        "/images/brita/SNF08982.webp"
+      ]
     },
     {
       title: "How We Built It",
@@ -786,7 +906,18 @@ const brita: Project = {
         ],
         finishLine: "Each element was designed to balance visual impact with functional clarity."
       },
-      images: ["/images/brita.webp"]
+      images: [
+        "/images/brita/SNF08988.webp",
+        "/images/brita/SNF09006.webp",
+        "/images/brita/SNF09036.webp",
+        "/images/brita/SNF09039.webp",
+        "/images/brita/SNF09042.webp",
+        "/images/brita/SNF09045.webp",
+        "/images/brita/SNF09051.webp",
+        "/images/brita/SNF09054.webp",
+        "/images/brita/SNF09057.webp",
+        "/images/brita/SNF09069.webp"
+      ]
     },
     {
       title: "Final Handover",
@@ -795,7 +926,18 @@ const brita: Project = {
         "The space feels modern, welcoming, and purposeful, with brand cues woven subtly throughout.",
         "This project demonstrates how thoughtful corporate design can successfully unite identity, sustainability, and everyday function into a cohesive environment."
       ],
-      images: ["/images/brita.webp"]
+      images: [
+        "/images/brita/SNF09078.webp",
+        "/images/brita/SNF09085.webp",
+        "/images/brita/SNF09099.webp",
+        "/images/brita/SNF09108.webp",
+        "/images/brita/SNF09114.webp",
+        "/images/brita/SNF09120.webp",
+        "/images/brita/SNF09129.webp",
+        "/images/brita/SNF09132.webp",
+        "/images/brita/SNF09135.webp",
+        "/images/brita/SNF09144.webp"
+      ]
     }
   ]
 }
@@ -871,7 +1013,25 @@ const prestige: Project = {
   },
   slug: "prestige-golfshire",
   thumbnail: "/images/golfshire.webp",
-  image: ["/images/golfshire.webp"],
+  image: [
+    "/images/prestige/052b1b10-fcc5-425b-92c3-a64155877a5c.webp",
+    "/images/prestige/28dc229d-4458-42dd-9cde-a3feb4eec36c.webp",
+    "/images/prestige/f599b886-6eb4-48e0-ab76-0fcd30e7aa37.webp",
+    "/images/prestige/IMG_9960.webp",
+    "/images/prestige/IMG_9961.webp",
+    "/images/prestige/IMG_9962.webp",
+    "/images/prestige/IMG_9963.webp",
+    "/images/prestige/IMG_9964.webp",
+    "/images/prestige/IMG_9965.webp",
+    "/images/prestige/IMG_9966.webp",
+    "/images/prestige/IMG_9967.webp",
+    "/images/prestige/IMG_9971.webp",
+    "/images/prestige/IMG_9972.webp",
+    "/images/prestige/IMG_9973.webp",
+    "/images/prestige/IMG_9974.webp",
+    "/images/prestige/IMG_9975.webp",
+    "/images/prestige/IMG_9976.webp"
+  ],
   title:"Prestige Golfshire – Landscaping",
   subtitle: "A comprehensive residential upgrade designed to elevate ambience through interiors and landscape design",
   address: "Nandi Hills, Bangalore",
@@ -887,7 +1047,14 @@ const prestige: Project = {
         "The brief focused on refreshing interiors while redesigning the landscaping to elevate the overall living experience.",
         "The challenge was to ensure that interior enhancements and outdoor spaces felt cohesive and well-integrated."
       ],
-      images: ["/images/golfshire.webp"]
+      images: [
+        "/images/prestige/052b1b10-fcc5-425b-92c3-a64155877a5c.webp",
+        "/images/prestige/28dc229d-4458-42dd-9cde-a3feb4eec36c.webp",
+        "/images/prestige/f599b886-6eb4-48e0-ab76-0fcd30e7aa37.webp",
+        "/images/prestige/IMG_9960.webp",
+        "/images/prestige/IMG_9961.webp",
+        "/images/prestige/IMG_9962.webp"
+      ]
     },
     {
       title: "How We Built It",
@@ -907,7 +1074,14 @@ const prestige: Project = {
         ],
         finishLine: "Each intervention was carefully coordinated to enhance the villa’s overall character."
       },
-      images: ["/images/golfshire.webp"]
+      images: [
+        "/images/prestige/IMG_9963.webp",
+        "/images/prestige/IMG_9964.webp",
+        "/images/prestige/IMG_9965.webp",
+        "/images/prestige/IMG_9966.webp",
+        "/images/prestige/IMG_9967.webp",
+        "/images/prestige/IMG_9971.webp"
+      ]
     },
     {
       title: "Final Handover",
@@ -916,7 +1090,13 @@ const prestige: Project = {
         "Interior enhancements and landscaping work together to create a balanced and inviting environment.",
         "Prestige Golfshire now stands as a residence where thoughtful upgrades and landscape design come together to enhance everyday living and long-term comfort."
       ],
-      images: ["/images/golfshire.webp"]
+      images: [
+        "/images/prestige/IMG_9972.webp",
+        "/images/prestige/IMG_9973.webp",
+        "/images/prestige/IMG_9974.webp",
+        "/images/prestige/IMG_9975.webp",
+        "/images/prestige/IMG_9976.webp"
+      ]
     }
   ]
 }
@@ -926,7 +1106,43 @@ const cedar: Project = {
   title: "Cedar String",
   subtitle: "A 5,000 sq. ft. luxury villa designed to balance modern elegance with warmth and livability.",
   slug: "cedar-string",
-  image: [],
+  image: [
+    "/images/cedar/102.webp",
+    "/images/cedar/109.webp",
+    "/images/cedar/118.webp",
+    "/images/cedar/127.webp",
+    "/images/cedar/128.webp",
+    "/images/cedar/129.webp",
+    "/images/cedar/133.webp",
+    "/images/cedar/134.webp",
+    "/images/cedar/135.webp",
+    "/images/cedar/138.webp",
+    "/images/cedar/141.webp",
+    "/images/cedar/143.webp",
+    "/images/cedar/144.webp",
+    "/images/cedar/147.webp",
+    "/images/cedar/151.webp",
+    "/images/cedar/154.webp",
+    "/images/cedar/155.webp",
+    "/images/cedar/160.webp",
+    "/images/cedar/161.webp",
+    "/images/cedar/162.webp",
+    "/images/cedar/166.webp",
+    "/images/cedar/170.webp",
+    "/images/cedar/171.webp",
+    "/images/cedar/61.webp",
+    "/images/cedar/62.webp",
+    "/images/cedar/63.webp",
+    "/images/cedar/64.webp",
+    "/images/cedar/65.webp",
+    "/images/cedar/70.webp",
+    "/images/cedar/72.webp",
+    "/images/cedar/74.webp",
+    "/images/cedar/77.webp",
+    "/images/cedar/78.webp",
+    "/images/cedar/81.webp",
+    "/images/cedar/82.webp"
+  ],
   description: `Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional.
 It must balance aesthetics with utility while reflecting the lifestyle and personality of its occupants.
 The result is a home that offers sensory richness and elevates everyday living.`,
@@ -946,7 +1162,20 @@ The result is a home that offers sensory richness and elevates everyday living.`
         "The homeowners sought a space that blends contemporary architecture with natural materials, while maintaining a strong indoor–outdoor connection.",
         "The challenge was to create opulence that feels warm, grounded, and timeless."
       ],
-      images: ["/images/cedar.webp"]
+      images: [
+        "/images/cedar/102.webp",
+        "/images/cedar/109.webp",
+        "/images/cedar/118.webp",
+        "/images/cedar/127.webp",
+        "/images/cedar/128.webp",
+        "/images/cedar/129.webp",
+        "/images/cedar/133.webp",
+        "/images/cedar/134.webp",
+        "/images/cedar/135.webp",
+        "/images/cedar/138.webp",
+        "/images/cedar/141.webp",
+        "/images/cedar/143.webp"
+      ]
     },
     {
       title: "How We Built It",
@@ -967,7 +1196,20 @@ The result is a home that offers sensory richness and elevates everyday living.`
         ],
         finishLine: "Each element was designed to contribute to a refined yet livable environment."
       },
-      images: ["/images/cedar.webp"]
+      images: [
+        "/images/cedar/144.webp",
+        "/images/cedar/147.webp",
+        "/images/cedar/151.webp",
+        "/images/cedar/154.webp",
+        "/images/cedar/155.webp",
+        "/images/cedar/160.webp",
+        "/images/cedar/161.webp",
+        "/images/cedar/162.webp",
+        "/images/cedar/166.webp",
+        "/images/cedar/170.webp",
+        "/images/cedar/171.webp",
+        "/images/cedar/61.webp"
+      ]
     },
     {
       title: "Final Handover",
@@ -976,7 +1218,19 @@ The result is a home that offers sensory richness and elevates everyday living.`
         "Thoughtful spatial planning, natural materials, and layered detailing create a home that is both elegant and grounded.",
         "The result is a residence that tells a story, one of modern living shaped by warmth, balance, and timeless design."
       ],
-      images: ["/images/cedar.webp"]
+      images: [
+        "/images/cedar/62.webp",
+        "/images/cedar/63.webp",
+        "/images/cedar/64.webp",
+        "/images/cedar/65.webp",
+        "/images/cedar/70.webp",
+        "/images/cedar/72.webp",
+        "/images/cedar/74.webp",
+        "/images/cedar/77.webp",
+        "/images/cedar/78.webp",
+        "/images/cedar/81.webp",
+        "/images/cedar/82.webp"
+      ]
     }
   ],
 }
@@ -987,7 +1241,37 @@ const embassy: Project = {
   year: 2025,
   subtitle: "A luxury residence that blends classic elegance with contemporary comfort.",
   slug: "embassy-casabella",
-  image: [],
+  image: [
+    "/images/casabella/11.webp",
+    "/images/casabella/15.webp",
+    "/images/casabella/16.webp",
+    "/images/casabella/17.webp",
+    "/images/casabella/18.webp",
+    "/images/casabella/19.webp",
+    "/images/casabella/24.webp",
+    "/images/casabella/27.webp",
+    "/images/casabella/30.webp",
+    "/images/casabella/39.webp",
+    "/images/casabella/42.webp",
+    "/images/casabella/44.webp",
+    "/images/casabella/46.webp",
+    "/images/casabella/48.webp",
+    "/images/casabella/49.webp",
+    "/images/casabella/50.webp",
+    "/images/casabella/52.webp",
+    "/images/casabella/53.webp",
+    "/images/casabella/54.webp",
+    "/images/casabella/60.webp",
+    "/images/casabella/61.webp",
+    "/images/casabella/62.webp",
+    "/images/casabella/63.webp",
+    "/images/casabella/66.webp",
+    "/images/casabella/71.webp",
+    "/images/casabella/72.webp",
+    "/images/casabella/73.webp",
+    "/images/casabella/75.webp",
+    "/images/casabella/80.webp"
+  ],
   description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance timeless character with modern living, while reflecting the personality of its occupants. The result is a home that feels warm, refined, and deeply rooted in everyday comfort.",
   address: `Whitefield, Bangalore`,
   location: `Bangalore`,
@@ -1005,7 +1289,18 @@ const embassy: Project = {
         "The brief focused on creating a space that feels intimate yet expansive, luxurious yet lived-in.",
         "The challenge was to balance traditional influences with contemporary design without losing warmth or character."
       ],
-      images: ["/images/embassy.webp"]
+      images: [
+        "/images/casabella/11.webp",
+        "/images/casabella/15.webp",
+        "/images/casabella/16.webp",
+        "/images/casabella/17.webp",
+        "/images/casabella/18.webp",
+        "/images/casabella/19.webp",
+        "/images/casabella/24.webp",
+        "/images/casabella/27.webp",
+        "/images/casabella/30.webp",
+        "/images/casabella/39.webp"
+      ]
     },
     {
       title: "How We Built It",
@@ -1026,7 +1321,18 @@ const embassy: Project = {
         ],
         finishLine: "Each room was carefully composed to reflect the client’s personality and values."
       },
-      images: ["/images/embassy.webp"]
+      images: [
+        "/images/casabella/42.webp",
+        "/images/casabella/44.webp",
+        "/images/casabella/46.webp",
+        "/images/casabella/48.webp",
+        "/images/casabella/49.webp",
+        "/images/casabella/50.webp",
+        "/images/casabella/52.webp",
+        "/images/casabella/53.webp",
+        "/images/casabella/54.webp",
+        "/images/casabella/60.webp"
+      ]
     },
     {
       title: "Final Handover",
@@ -1035,7 +1341,17 @@ const embassy: Project = {
         "Classic detailing and contemporary design come together to create a home that is both sophisticated and welcoming.",
         "Embassy Casabella stands as a refined urban retreat, a space that tells a story of heritage, comfort, and timeless taste."
       ],
-      images: ["/images/embassy.webp"]
+      images: [
+        "/images/casabella/61.webp",
+        "/images/casabella/62.webp",
+        "/images/casabella/63.webp",
+        "/images/casabella/66.webp",
+        "/images/casabella/71.webp",
+        "/images/casabella/72.webp",
+        "/images/casabella/73.webp",
+        "/images/casabella/75.webp",
+        "/images/casabella/80.webp"
+      ]
     }
   ],
 
