@@ -9,9 +9,10 @@ import ProjectShowcaseSection from "@/components/Projects/ProjectShowcaseSection
 import { ProjectOtherProjects } from "@/components/Projects/ProjectOtherProjects";
 import Testimonials from '@/components/Testimonial/Testimonials'
 import { projectsConstants } from "@/constants/projects";
+import { Project } from "@/constants/projects";
 
 const ProjectPage = ({ params }: { params: { slug: string } }) => {
-  const project = projectsConstants.find((p) => p.slug === params.slug);
+  const project: Project | undefined = projectsConstants.find((p) => p.slug === params.slug);
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -23,7 +24,7 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
   const subtitle = project.subtitle || "";
   const type = project.category?.label || "";
   const location = project.address || "";
-  const year = "";
+  const year = project.year || "";
   const mainImage = Array.isArray(project.image) && project.image.length > 0 ? project.image[0] : "";
   const description = project.description || "";
   const gallery = Array.isArray(project.image) ? project.image.slice(1) : [];
@@ -49,20 +50,22 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
         location={location}
         year={year}
       />
-      {mainImage && <ProjectMainImage src={mainImage} alt={title} />}
+      <ProjectMainImage src={project.thumbnail} alt={title} />
       {description && (
         <ProjectDescription>{description}</ProjectDescription>
       )}
-      {/* No sections in data, so skip ProjectSection */}
-      {gallery && gallery.length > 0 && (
-        <ProjectShowcaseSection
-          title="Layouts"
-          intro={description ? description.slice(0, 180) : ''}
-          moreText={description}
-          images={[mainImage, ...gallery]}
-          projectTitle={title}
-        />
-      )}
+      {/* Render project sections (each uses ProjectShowcaseSection). If none provided, show testimonials and other projects. */}
+      {project.sections && project.sections.length > 0 ? (
+        project.sections.map((sec, idx) => (
+          <ProjectShowcaseSection
+            key={idx}
+            title={sec.title}
+            intro={sec.intro}
+            moreText={sec.moreText}
+            images={sec.images}
+          />
+        ))
+      ) : null}
       {/* Testimonials section placed under the showcase */}
       <Testimonials />
       {otherProjects && otherProjects.length > 0 && (
