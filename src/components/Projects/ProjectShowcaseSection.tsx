@@ -35,7 +35,7 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = 'Layouts', intro = ['
                 <div className="lg:col-span-6">
                     <h3 className={clsx(montserrat.className, 'text-4xl font-medium text-[#3d3834]')}>{title}</h3>
                     {intro && intro.map((text, index) => (
-                        <p key={index} className={clsx(satoshi.className, 'mt-4 text-lg text-[#3f3f3f]')}>{text}</p>
+                        <p key={index} className={clsx(satoshi.className, 'mt-4 text-lg md:text-xl text-[#3f3f3f]')}>{text}</p>
                     ))}
                 </div>
 
@@ -49,14 +49,14 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = 'Layouts', intro = ['
                             <div className={clsx(satoshi.className, 'text-2xl text-[#3f3f3f]')}>
                                 {moreText.title && <h4 className="text-2xl font-medium text-[#3d3834]">{moreText.title}</h4>}
                                 {moreText.points && moreText.points.length > 0 && (
-                                    <ul className={clsx(satoshi.className, 'mt-6 text-base text-[#3f3f3f] list-disc list-inside')}>
+                                    <ul className={clsx(satoshi.className, 'text-lg mt-6 md:text-xl text-[#3f3f3f] list-disc list-inside')}>
                                         {moreText.points.map((p, i) => (
                                             <li key={i}>{p}</li>
                                         ))}
                                     </ul>
                                 )}
                                 {moreText.finishLine && (
-                                    <p className={clsx(satoshi.className, 'mt-4 text-base text-[#3f3f3f]')}>{moreText.finishLine}</p>
+                                    <p className={clsx(satoshi.className, 'mt-4 text-lg md:text-xl text-[#3f3f3f]')}>{moreText.finishLine}</p>
                                 )}
                             </div>
                         )}

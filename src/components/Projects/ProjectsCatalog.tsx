@@ -45,7 +45,7 @@ const ProjectsCatalog: React.FC = () => {
   }, [allProjects, selectedLocation, selectedType]);
 
   return (
-    <main className="mt-16">
+    <main className="py-16">
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h1 className={clsx(montserrat.className, 'text-2xl md:text-4xl text-center font-medium mb-4 text-[#3D3834]')}>Projects</h1>
 
