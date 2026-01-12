@@ -4,6 +4,7 @@ import clsx from "clsx";
 import React from "react";
 import { OurStory as OurStoryData } from "@/constants/ourStory";
 import Link from "next/link";
+import Image from "next/image";
 
 const OurStory: React.FC = () => {
     return (
@@ -12,14 +13,15 @@ const OurStory: React.FC = () => {
             <div className="w-full md:w-[60%] flex justify-center items-center">
                 <div className="w-full h-full bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center aspect-w-16 aspect-h-9">
                     {/* Replace src with your video URL */}
-                    <video
+                    {/* <video
                         className="w-full h-full object-cover aspect-video"
                         controls
                         poster={OurStoryData.posterUrl}
                     >
                         <source src={OurStoryData.videoUrl} type="video/mp4" />
                         Your browser does not support the video tag.
-                    </video>
+                    </video> */}
+                    <Image src={'/images/director.webp'} width={500} height={300} alt="Managing director" priority={false} loading="lazy" className="h-full w-auto object-cover"/>
                 </div>
             </div>
 

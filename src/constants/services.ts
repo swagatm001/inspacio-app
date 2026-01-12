@@ -24,8 +24,8 @@ export const services:ServiceList = {
             "Retail & Hospitality",
             "Landscape & Outdoor"
         ],
-        imageUrl: "/images/Our-Expertise.jpg",
-        imageUrlMobile: "/images/Our-Expertise.jpg"
+        imageUrl: "/images/Our-Expertise.svg",
+        imageUrlMobile: "/images/Our-Expertise.svg"
     },
     "Conceptualization & Design": {
         title: "Conceptualization & Design",
@@ -40,8 +40,8 @@ export const services:ServiceList = {
             "Theme creation & mood boards",
             "3D visualizations & walkthroughs"
         ],
-        imageUrl: "/images/Conceptualization&Design.jpg",
-        imageUrlMobile: "/images/Conceptualization&Design.jpg"
+        imageUrl: "/images/Conceptualization&Design.svg",
+        imageUrlMobile: "/images/Conceptualization&Design.svg"
     },
     "Detailing & Documentation": {
         title: "Detailing & Documentation",
@@ -56,8 +56,8 @@ export const services:ServiceList = {
             "BOQs & specifications",
             "Material palette & procurement support"
         ],
-        imageUrl: "/images/Detailing&Documentation.jpg",
-        imageUrlMobile: "/images/Detailing&Documentation.jpg"
+        imageUrl: "/images/Detailing&Documentation.svg",
+        imageUrlMobile: "/images/Detailing&Documentation.svg"
     },
     "Execution & Supervision": {
         title: "Execution & Supervision",
@@ -72,8 +72,8 @@ export const services:ServiceList = {
             "Vendor & contractor coordination",
             "On-site execution with timely delivery"
         ],
-        imageUrl: "/images/Execution&Supervision.jpg",
-        imageUrlMobile: "/images/Execution&Supervision.jpg"
+        imageUrl: "/images/Execution&Supervision.svg",
+        imageUrlMobile: "/images/Execution&Supervision.svg"
     },
     "Sustainable Design": {
         title: "Sustainable Design",
@@ -88,7 +88,7 @@ export const services:ServiceList = {
             "Energy-efficient Solutions",
             "Responsible Spaces"
         ],
-        imageUrl: "/images/Sustainable-Design.jpg",
-        imageUrlMobile: "/images/Sustainable-Design.jpg"
+        imageUrl: "/images/Sustainable-Design.svg",
+        imageUrlMobile: "/images/Sustainable-Design.svg"
     },
 }

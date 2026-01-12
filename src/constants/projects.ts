@@ -1102,7 +1102,7 @@ const prestige: Project = {
 }
 
 const cedar: Project = {
-  thumbnail: "",
+  thumbnail: "/images/cedar/61.webp",
   title: "Cedar String",
   subtitle: "A 5,000 sq. ft. luxury villa designed to balance modern elegance with warmth and livability.",
   slug: "cedar-string",
@@ -1236,7 +1236,7 @@ The result is a home that offers sensory richness and elevates everyday living.`
 }
 
 const embassy: Project = {
-  thumbnail: "",
+  thumbnail: "/images/casabella/15.webp",
   title: "Embassy Casabella",
   year: 2025,
   subtitle: "A luxury residence that blends classic elegance with contemporary comfort.",
