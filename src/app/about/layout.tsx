@@ -1,7 +1,9 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { Footer } from "@/components/Footer";
 import { FAQ } from "@/components/FAQ";
+import FooterV2 from "@/components/Footer/FooterV2";
+import CustomContainer from "@/components/Container/CustomContainer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,10 +16,13 @@ export default function ContactLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Container className="pt-20">
-      <div>{children}</div>
-      <FAQ />
-      <Footer />
-    </Container>
+    <React.Fragment>
+      <CustomContainer className="pt-20">
+        <div>{children}</div>
+        <FAQ />
+      </CustomContainer>
+        <FooterV2 />
+    </React.Fragment>
+    
   );
 }

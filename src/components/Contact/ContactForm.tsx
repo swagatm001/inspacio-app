@@ -24,11 +24,11 @@ export const ContactForm = () => {
           <div className="flex flex-row md:flex-col gap-6 md:gap-20 md:pl-6 mt-6 mb-6 justify-between md:justify-start">
             <div className="w-2/5 min-w-0">
               <h3 className={clsx(montserrat.className, "text-[#A6836E] font-medium text-lg")}>Location</h3>
-              <p className={clsx(satoshi.className, "text-[#3D3834] text-xl whitespace-normal break-words")}>32 A, XYZ Building, ABC Street, Indiranagar, Bengaluru - 123456</p>
+              <p className={clsx(satoshi.className, "text-[#3D3834] text-xl whitespace-normal break-words")}>37, Rama Residency, 38, Bowring Hospital Rd, Shivaji Nagar, Bengaluru, Karnataka 560051, Bengaluru, Karnataka 560001</p>
             </div>
             <div className="w-2/5 min-w-0">
               <h3 className={clsx(montserrat.className, "text-[#A6836E] font-medium text-lg")}>React out at</h3>
-              <p className={clsx(satoshi.className, "text-[#3D3834] text-xl whitespace-normal break-words")}>info@kreativedezine.com</p>
+              <p className={clsx(satoshi.className, "text-[#3D3834] text-xl whitespace-normal break-words")}>info@inspacio.in</p>
               <div className="block md:hidden"><SocialLinks removeBorder={true}/></div>
             </div>
             <div className="hidden md:block">

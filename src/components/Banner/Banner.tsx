@@ -17,7 +17,7 @@ export const Banner = () => {
             <p className={clsx("text-center")}>
               Experience Excellent Quality & Timely Delivery with
             </p>
-            <p className="text-center font-bold">Kreative Dezine Studio</p>
+            <p className="text-center font-bold">Inspacio</p>
           </div>
           <GetInTouch title="Book a consultation" />
         </div>

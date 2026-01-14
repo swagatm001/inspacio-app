@@ -2,10 +2,10 @@
 
 import React, { useMemo } from 'react'
 import EmblaCarousel from '@/components/EmblaCarousel/EmblaCarousel'
-import Image from 'next/image'
 import clsx from 'clsx'
 import { montserrat } from '@/fonts/montserrat'
 import { satoshi } from '@/fonts/satoshi'
+import ParallaxImage from './ParallaxImage'
 
 interface Props {
     title?: string
@@ -25,7 +25,7 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = 'Layouts', intro = ['
 
     const carouselSlides = carouselImages.map((src, i) => (
         <div key={i} className="w-full h-56 md:h-72 lg:h-80 relative rounded-md overflow-hidden">
-            <Image src={src} alt={`slide-${i}`} fill className="object-cover" priority={false} loading='lazy'/>
+            <ParallaxImage src={src} alt={`${title || 'slide'}-${i}`}/>
         </div>
     ))
 
@@ -43,7 +43,7 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = 'Layouts', intro = ['
                     <EmblaCarousel slides={carouselSlides} options={{ loop: true }} fullWidth={true}/>
                 </div>
 
-                <div className="lg:col-span-12 mt-20">
+                <div className="lg:col-span-12 mt-10">
                     {
                         moreText && (
                             <div className={clsx(satoshi.className, 'text-2xl text-[#3f3f3f]')}>
@@ -65,7 +65,7 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = 'Layouts', intro = ['
                         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-4">
                             {gridImages.map((src, i) => (
                                 <div key={i} className="relative w-full h-56 md:h-72 lg:h-80 rounded-md overflow-hidden">
-                                    <Image src={src} alt={`grid-${i}`} fill className="object-cover" priority={false} loading='lazy'/>
+                                    <ParallaxImage src={src} alt={`${title || 'grid'}-${i}`}/>
                                 </div>
                             ))}
                         </div>
@@ -76,4 +76,4 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = 'Layouts', intro = ['
     )
 }
 
-export default ProjectShowcaseSection
+export default ProjectShowcaseSection;
