@@ -17,7 +17,7 @@ const About = () => {
         </div>
         <div className="flex flex-col gap-6">
           <p>
-            KDS Design-Build Services specializes in bringing your dream
+            Inspacio Design-Build Services specializes in bringing your dream
             interior decor to life, whether it&apos;s sleek, sophisticated, and
             smart or a contemporary fusion of ethnic styles. Our designs feature
             clean lines, diverse textures, and artwork, seamlessly integrated
@@ -34,7 +34,7 @@ const About = () => {
             existing buildings and conditions.
           </p>
           <p>
-            With KDS, clients benefit from a streamlined process where they
+            With Inspacio, clients benefit from a streamlined process where they
             manage just one contract, providing a single point of
             responsibility. Our designers and contractors work as a cohesive
             team, offering unified recommendations. Any changes are handled by
@@ -73,13 +73,13 @@ const About = () => {
             <div className="flex flex-col gap-8">
               <p>
                 Ms. Swati Panda is the Principal Architect, Founder & Managing
-                Director of Kreative Dezine Studio. Under her guidance, Kreative
-                Dezine Studio has become a well known brand among homebuyers. 
+                Director of Inspacio Design. Under her guidance, Inspacio Design
+                has become a well known brand among homebuyers. 
                 Swati Panda holds a firm conviction that each project ought to
                 be crafted as a contextual evolution of spaces, offering fresh
                 perceptions. Every design is meticulously attuned to the
                 climate, seamlessly weaving in sustainability. This beliefs are
-                reflected in every project by Kreative Dezine Studio. From
+                reflected in every project by Inspacio Design. From
                 planning well to designing interiors that reflect a client’s
                 style is Ms. Swati’s expertise.
               </p>

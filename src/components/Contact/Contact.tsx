@@ -97,7 +97,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
             <input
               id="fname"
               type="text"
-              placeholder="John"
+              placeholder="Enter Your First Name"
               className={clsx(inputCSS, errors.fname && "border-red-500")}
               {...register("fname", { required: true })}
             />
@@ -107,7 +107,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
             <input
               id="lname"
               type="text"
-              placeholder="Doe"
+              placeholder="Enter Your Last Name"
               className={clsx(inputCSS, errors.lname && "border-red-500")}
               {...register("lname", { required: true })}
             />
@@ -118,7 +118,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
           <input
             id="email"
             type="email"
-            placeholder="you@company.com"
+            placeholder="Enter Your Email"
             className={clsx(inputCSS, errors.email && "border-red-500")}
             {...register("email", {
               required: true,
@@ -131,7 +131,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
           <input
             id="phone"
             type="tel"
-            placeholder="+91 9876543210"
+            placeholder="Enter Your Phone Number"
             className={clsx(inputCSS, errors.phone && "border-red-500")}
             {...register("phone", {
               required: true,

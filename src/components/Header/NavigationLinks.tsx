@@ -12,7 +12,7 @@ export const NavigationLinks: React.FC<{ className?: string, onClick?: () => voi
     <ul className={clsx("flex gap-5", className)}>
       {headerConstants.menu.links.map((link, i) => (
         <li key={i} className={clsx(isDropdownOpen && "animate-slide-up", `menu-item-${i}`)}>
-          <Link href={link.href} className="text-white" onClick={onClick}>
+          <Link href={link.href} className="text-[#F8F7F3]" onClick={onClick}>
             {link.label}
           </Link>
         </li>

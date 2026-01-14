@@ -17,10 +17,10 @@ export const headerConstants = {
         label: "Projects",
         href: "/projects",
       },
-      {
-        label: "Our Story",
-        href: "/about",
-      },
+      // {
+      //   label: "Our Story",
+      //   href: "/about",
+      // },
       // {
       //   label: "Blog",
       //   href: "/blogs",
