@@ -54,7 +54,7 @@ const anthology: Project = {
   title: "Anthology",
   subtitle: "A contemporary corporate workspace designed to feel open, inclusive, and future-ready.",
   slug: "anthology",
-  year: 2022,
+  year: 2025,
   image: [
     "/kds/anthology/img1.png",
     "/kds/anthology/img2.jpg",
@@ -69,7 +69,7 @@ const anthology: Project = {
   description: `Corporate office design today must support inclusivity, collaboration, and adaptability while embracing technology and sustainability. It should feel open, intelligent, and people-centric. For Anthology, the intent was to create a modern workspace that reflects its global outlook and progressive values. The result is a light-filled, thoughtfully planned office that feels spacious, efficient, and engaging.`,
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       images: [
         "/kds/anthology/img1.png",
         "/kds/anthology/img2.jpg",
@@ -82,14 +82,14 @@ const anthology: Project = {
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design approach focused on openness, strategic planning, and natural light.",
         "Extensive design development through sketches, 3D models, and renderings helped visualise and refine the space before execution.",
         "Structural glazing and views of the surrounding context were leveraged to enhance brightness and spatial perception."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "Strategic space planning for workspaces, meeting rooms, and collaboration zones",
           "Maximising natural light through structural glazing",
@@ -106,7 +106,7 @@ const anthology: Project = {
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The completed workspace feels open, modern, and inclusive.",
         "Natural light, smart planning, and thoughtful detailing create a comfortable and energy-efficient work environment.",
@@ -119,7 +119,7 @@ const anthology: Project = {
       ]
     }
   ],
-  address: `TinFactory, Bangalore`,
+  address: `Manayata Tech Park, Bangalore`,
   location: `Bangalore`,
   category: {
     label: "Commercial",
@@ -202,7 +202,7 @@ const citadel: Project = {
         "/kds/citadel/img4.jpg",
         "/kds/citadel/img5.jpg",
       ],
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "Citadel PropCon required a contemporary corporate office within a compact footprint. The brief called for multiple functional zones, from leadership spaces to collaborative and support areas, without compromising openness, comfort, or clarity.",
         "The primary challenge was to create an environment that feels spacious and composed, while reflecting a professional corporate identity."
@@ -367,7 +367,7 @@ const texport: Project = {
   ],
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "Texport Overseas operated out of a cramped and outdated office space.",
         "Low ceilings, narrow passages, and rigid partitions restricted light, movement, and overall comfort.",
@@ -382,14 +382,14 @@ const texport: Project = {
       ],
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design approach focused on openness, biophilic elements, and spatial optimization.",
         "Outdated layouts were removed to introduce flexibility, light, and visual continuity.",
         "A lighter palette and open planning helped redefine the workspace experience."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "Removal of false ceilings to reveal a 14-foot clear height",
           "Open workstation planning for better flow and collaboration",
@@ -409,7 +409,7 @@ const texport: Project = {
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The completed office feels open, modern, and inviting.",
         "Enhanced ceiling height, natural light, and thoughtful planning create a more expansive and breathable workspace.",
@@ -493,7 +493,7 @@ The result is a home that feels calm, refined, and deeply connected to its surro
   ],
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "This 4,600 sq. ft. penthouse, located on the 29th floor, offered expansive views and abundant natural light.",
         "The brief was to design interiors that complement the panoramic setting while maintaining a sense of warmth, serenity, and understated luxury.",
@@ -513,14 +513,14 @@ The result is a home that feels calm, refined, and deeply connected to its surro
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design approach focused on light, flow, and restrained elegance.",
         "A contemporary aesthetic was chosen to enhance the penthouse’s openness while allowing the views to take centre stage.",
         "Materials, furnishings, and lighting were curated to create a calm, cohesive living environment."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "Floor-to-ceiling windows to maximise daylight and cross ventilation",
           "A white palette to enhance brightness and spatial openness",
@@ -545,7 +545,7 @@ The result is a home that feels calm, refined, and deeply connected to its surro
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The completed penthouse feels airy, serene, and timeless.",
         "Natural light, gentle breezes, and refined interiors come together to create a soothing living experience.",
@@ -762,7 +762,7 @@ const bunsik: Project = {
   description: "Café design prioritises atmosphere, comfort, and emotional connection over formality. For Bunsik, the focus was on creating an authentic Korean street-style café that was both budget-conscious and sustainable. The result is a space with character and soul, shaped by thoughtful material choices rather than excess",
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "Bunsik required a compact café interior inspired by traditional Korean snack shops.",
         "The brief demanded a warm and approachable environment that could be delivered within strict budget constraints.",
@@ -777,13 +777,13 @@ const bunsik: Project = {
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design approach focused on material honesty, restraint, and sustainability.",
         "A neutral base was used to keep the space visually calm, while textures and finishes introduced depth and warmth. Upcycled elements and simple furnishings played a key role in maintaining both budget efficiency and cultural authenticity."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "Concrete flooring to establish an urban, grounded base",
           "Neutral grey tones for visual balance and calm",
@@ -802,7 +802,7 @@ const bunsik: Project = {
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The completed café feels cozy, grounded, and welcoming.",
         "Despite budget limitations, the design successfully delivers warmth and character through texture and tone.",
@@ -868,7 +868,7 @@ const brita: Project = {
   ,
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "Brita India required a corporate office that clearly reflected its brand philosophy.",
         "The brief called for a modern workspace that balances aesthetics with functionality, while creating a strong and memorable first impression.",
@@ -888,14 +888,14 @@ const brita: Project = {
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design approach focused on brand expression, fluidity, and warmth.",
         "Clean forms and modern finishes were layered with organic elements to reflect Brita’s connection to water and sustainability.",
         "Every zone was designed to reinforce identity while supporting function."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "A curved wooden reception desk with a sleek white front panel",
           "Circular ceiling planters introducing cascading greenery",
@@ -920,7 +920,7 @@ const brita: Project = {
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The completed office is more than a workplace,  it is a physical expression of Brita’s values.",
         "The space feels modern, welcoming, and purposeful, with brand cues woven subtly throughout.",
@@ -959,7 +959,7 @@ const penthouse2: Project = {
   description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance openness, luxury, and everyday ease, especially in high-rise living. The result is a home that feels calm, refined, and deeply connected to its surroundings.",
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "This 4,600 sq. ft. penthouse, located on the 29th floor, offered expansive views and abundant natural light.",
         "The brief was to design interiors that complement the panoramic setting while maintaining a sense of warmth, serenity, and understated luxury.",
@@ -970,14 +970,14 @@ const penthouse2: Project = {
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design approach focused on light, flow, and restrained elegance.",
         "A contemporary aesthetic was chosen to enhance the penthouse’s openness while allowing the views to take centre stage.",
         "Materials, furnishings, and lighting were curated to create a calm, cohesive living environment."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "Floor-to-ceiling windows to maximise daylight and cross ventilation",
           "A white palette to enhance brightness and spatial openness",
@@ -993,7 +993,7 @@ const penthouse2: Project = {
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The completed penthouse feels airy, serene, and timeless.",
         "Natural light, gentle breezes, and refined interiors come together to create a soothing living experience.",
@@ -1041,7 +1041,7 @@ const prestige: Project = {
   description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance interiors and outdoor environments to support everyday living and visual harmony. The result is a home where design upgrades enhance both lifestyle and atmosphere.",
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "The villa at Prestige Golfshire required a complete aesthetic and functional upgrade.",
         "The brief focused on refreshing interiors while redesigning the landscaping to elevate the overall living experience.",
@@ -1057,14 +1057,14 @@ const prestige: Project = {
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design approach focused on holistic transformation, addressing both indoor and outdoor environments.",
         "Key upgrades were planned to improve visual warmth, lighting quality, and spatial experience.",
         "Landscape design was treated as an extension of the home rather than a separate element."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "Introduction of stylish wallpaper across key interior spaces",
           "Complete replacement of the lighting system",
@@ -1084,7 +1084,7 @@ const prestige: Project = {
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The upgraded villa feels refreshed, cohesive, and visually elevated.",
         "Interior enhancements and landscaping work together to create a balanced and inviting environment.",
@@ -1156,7 +1156,7 @@ The result is a home that offers sensory richness and elevates everyday living.`
   type: `Residential`,
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "The brief for Cedar String was to design a luxury villa that feels experiential rather than ornamental.",
         "The homeowners sought a space that blends contemporary architecture with natural materials, while maintaining a strong indoor–outdoor connection.",
@@ -1178,14 +1178,14 @@ The result is a home that offers sensory richness and elevates everyday living.`
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design concept, Modern Elegance with Earthy Roots, guided every spatial and material decision.",
         "Clean architectural lines were softened with natural textures, layered lighting, and curated views of greenery.",
         "Spaces were planned to flow organically, allowing the indoors and outdoors to feel seamlessly connected."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "Contemporary architectural forms with clean lines and symmetry",
           "Split-level planning to add visual interest and functional zoning",
@@ -1212,7 +1212,7 @@ The result is a home that offers sensory richness and elevates everyday living.`
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "Cedar String emerges as a villa where luxury feels intuitive and deeply personal.",
         "Thoughtful spatial planning, natural materials, and layered detailing create a home that is both elegant and grounded.",
@@ -1283,7 +1283,7 @@ const embassy: Project = {
 
   sections: [
     {
-      title: "Problem Statement",
+      title: "The Concept Note",
       intro: [
         "This 5,000 sq. ft. residence at Embassy Casabella was envisioned as a home that merges old-world charm with present-day sensibilities.",
         "The brief focused on creating a space that feels intimate yet expansive, luxurious yet lived-in.",
@@ -1303,14 +1303,14 @@ const embassy: Project = {
       ]
     },
     {
-      title: "How We Built It",
+      title: "Design Strategy & Execution",
       intro: [
         "The design narrative centred on layering, of textures, tones, and forms, to achieve understated opulence.",
         "Classic design elements were reinterpreted through a contemporary lens to create spaces that feel both timeless and current.",
         "Artisanal detailing and curated décor played a key role in shaping the home’s character."
       ],
       moreText: {
-        title: "Key interventions included:",
+        title: "Spatial Highlights:",
         points: [
           "A palette of warm hues and tactile materials",
           "Thoughtful layering of textures and finishes",
@@ -1335,7 +1335,7 @@ const embassy: Project = {
       ]
     },
     {
-      title: "Final Handover",
+      title: "Final Handover: How the Space Came Alive",
       intro: [
         "The completed residence feels elegant, warm, and deeply personal.",
         "Classic detailing and contemporary design come together to create a home that is both sophisticated and welcoming.",
