@@ -14,7 +14,7 @@ export const testimonialsData: Array<Testimonial> = [
     content: `They are a set of professional interior team; young, energetic and motivated. I’ve worked with them for an office renovation project of large scale and they delivered quality on time. Throughout the journey, they were responsive to changing requirements and provided their guidance on what would fit and suit better.
 
     Would highly recommend this team if you want to be stress free with interior works.`,
-    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjWiywKqmjsUQroZ_NxRN5lFiur_E2O9FwbU3aRjJ6s7FsuJEFr7=w54-h54-p-rp-mo-ba3-br100',
+    avatar: '/images/placeholder.webp',
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const testimonialsData: Array<Testimonial> = [
     name: "Tanaya Bhattacharya",
     rating: 5,
     content: `We renovated our home interiors with Kreative in June. All through the discussion / design / execution and support provided by the team was very good. Overall fully satisfied with the finished output quality.`,
-    avatar: "https://lh3.googleusercontent.com/a-/ALV-UjX1EkB5cl2tuIRY9CkBOT9VlxkKfJHj_HCm7Ts145efUloYXGw=w54-h54-p-rp-mo-br100"
+    avatar: "/images/placeholder.webp"
   },
   {
     id: 6,

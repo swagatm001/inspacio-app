@@ -17,8 +17,8 @@ import {WhyChooseUs} from "@/components/WhyChooseUs";
 import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Residential and Commercial Interior Designers in Bangalore - Inspacio Design",
-  description: "Get high quality residential and commercial interior designs from expertise designers of Inspacio Design in Bangalore",
+  title: "Best Interior Designers in Bangalore for Homes & Offices | Inspacio",
+  description: "Looking for trusted interior designers in Bangalore? Inspacio delivers customized interiors, architecture and turnkey execution for homes and commercial spaces.",
   icons: {
     icon: "https://ik.imagekit.io/yc3qb8x6t/kds/main/kds-logo.png"
   }

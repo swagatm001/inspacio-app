@@ -1,5 +1,3 @@
-"use client";
-
 import { ProjectHero } from "@/components/Projects/ProjectHero";
 import { ProjectMainImage } from "@/components/Projects/ProjectMainImage";
 import { ProjectDescription } from "@/components/Projects/ProjectDescription";
@@ -10,6 +8,28 @@ import { ProjectOtherProjects } from "@/components/Projects/ProjectOtherProjects
 import Testimonials from '@/components/Testimonial/Testimonials'
 import { projectsConstants } from "@/constants/projects";
 import { Project } from "@/constants/projects";
+import type { Metadata } from "next";
+
+type Props = {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const project: Project | undefined = projectsConstants.find((p) => p.slug === params.slug);
+  if(project) {
+    return {
+      title: project.title || "Project Details",
+      description: project.subtitle || "Detailed view of the project",
+    }
+  } else {
+    return {
+      title: "Project Not Found",
+      description: "The requested project could not be found.",
+    }
+  }
+}
 
 const ProjectPage = ({ params }: { params: { slug: string } }) => {
   const project: Project | undefined = projectsConstants.find((p) => p.slug === params.slug);
@@ -25,21 +45,7 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
   const type = project.category?.label || "";
   const location = project.address || "";
   const year = project.year || "";
-  const mainImage = Array.isArray(project.image) && project.image.length > 0 ? project.image[0] : "";
   const description = project.description || "";
-  const gallery = Array.isArray(project.image) ? project.image.slice(1) : [];
-
-  // Filter other projects (exclude current)
-  const otherProjects = projectsConstants
-    .filter((p) => p.slug !== project.slug)
-    .slice(0, 3) // Show up to 3 other projects
-    .map((p) => ({
-      title: p.title || "",
-      location: p.address || "",
-      description: p.description ? p.description.slice(0, 100) + (p.description.length > 100 ? "..." : "") : "",
-      image: Array.isArray(p.image) && p.image.length > 0 ? p.image[0] : p.thumbnail || "",
-      onClick: () => window.location.href = `/projects/${p.slug}`
-    }));
 
   return (
     <div className="bg-[#f8f7f3]">
@@ -68,9 +74,7 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
       ) : null}
       {/* Testimonials section placed under the showcase */}
       <Testimonials />
-      {otherProjects && otherProjects.length > 0 && (
-        <ProjectOtherProjects projects={otherProjects} />
-      )}
+      <ProjectOtherProjects project={project} />
     </div>
   );
 };

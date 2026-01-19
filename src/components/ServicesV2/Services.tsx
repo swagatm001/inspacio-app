@@ -39,12 +39,12 @@ export const Services = () => {
                                 {selectedService && (
                                     <>
                                         {selectedService.paragraph && selectedService.paragraph.map((para,index) => {
-                                            return <p key={index} className="mb-4 text-gray-600">{para}</p>
+                                            return <p key={index} className={clsx(satoshi.className, "text-lg mb-4 text-[#3f3f3f]")}>{para}</p>
                                         })}
                                         {selectedService.points && selectedService.points.length > 0 && (
                                             <ul className="list-disc pl-5 mb-4">
                                                 {selectedService.points.map((point, index) => (
-                                                    <li key={index} className="mb-1 text-gray-700">{point}</li>
+                                                    <li key={index} className={clsx(satoshi.className, "text-lg mb-1 text-[#3f3f3f]")}>{point}</li>
                                                 ))}
                                             </ul>
                                         )}

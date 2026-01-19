@@ -1,5 +1,7 @@
+"use client";
+import { Project, projectsConstants } from "@/constants/projects";
 import Image from "next/image";
-import React from "react";
+import React, { useMemo } from "react";
 
 interface ProjectOtherProjectsCardProps {
   title: string;
@@ -23,22 +25,33 @@ export const ProjectOtherProjectsCard: React.FC<ProjectOtherProjectsCardProps> =
 );
 
 interface ProjectOtherProjectsProps {
-  projects: Array<{
-    title: string;
-    location: string;
-    description: string;
-    image: string;
-    onClick?: () => void;
-  }>;
+  project: Project;
 }
 
-export const ProjectOtherProjects: React.FC<ProjectOtherProjectsProps> = ({ projects }) => (
+export const ProjectOtherProjects: React.FC<ProjectOtherProjectsProps> = ({ project }) => {
+
+// Filter other projects (exclude current)
+  const otherProjects = useMemo(() => {
+    return projectsConstants
+    .filter((p) => p.slug !== project.slug)
+    .slice(0, 3) // Show up to 3 other projects
+    .map((p) => ({
+      title: p.title || "",
+      location: p.address || "",
+      description: p.description ? p.description.slice(0, 100) + (p.description.length > 100 ? "..." : "") : "",
+      image: Array.isArray(p.image) && p.image.length > 0 ? p.image[0] : p.thumbnail || "",
+      onClick: () => window.location.href = `/projects/${p.slug}`
+    }));
+  },[projectsConstants] ); 
+
+  return (
   <section className="px-6 md:px-24 py-16 flex flex-col gap-12">
     <h2 className="text-4xl font-montserrat font-medium text-[#3d3834] text-center w-full">Checkout Our Other Projects</h2>
     <div className="flex flex-col md:flex-row gap-8 w-full items-center md:justify-center">
-      {projects.map((p, i) => (
+      {otherProjects.map((p, i) => (
         <ProjectOtherProjectsCard key={i} {...p} />
       ))}
     </div>
   </section>
-);
+  )
+};

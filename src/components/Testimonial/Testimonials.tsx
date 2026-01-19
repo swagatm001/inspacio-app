@@ -10,20 +10,20 @@ const testimonialsData = [
   {
     id: 1,
     name: 'Ritesh Soni',
-    content: `Lorem ipsum dolor sit amet consectetur. Odio aenean est ac lectus. Quis quis nunc quam viverra turpis a id congue. Praesent.`,
-    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80',
+    content: `They are a set of professional interior team; young, energetic and motivated. I’ve worked with them for an office renovation project of large scale and they delivered quality on time.`,
+    avatar: '/images/placeholder.webp',
   },
   {
     id: 2,
     name: 'Sushma Mundargi',
     content: `Sangeeta and Swati are a great team to work with… they worked closely with multiple stakeholders to ensure the project aligned with preferences and expectations.`,
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
+    avatar: '/images/placeholder.webp',
   },
   {
     id:3,
     name: "Abishek D Mavinkurve",
     content: `When we were on a look out for our pent house home interiors, Kreative Design Studio planned and executed the entire project with minute detailing and quality finishes. Highly recommended.`,
-    avatar: "https://images.unsplash.com/photo-1545996124-1f8b2d4e2a6b?w=800&q=80"
+    avatar: '/images/placeholder.webp'
   }
 ];
 

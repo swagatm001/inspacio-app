@@ -16,11 +16,11 @@ interface TestimonialProps {
 const Testimonial: React.FC<TestimonialProps> = ({ name, content, avatar, role }) => {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
-      <div className="relative">
+      <div className="relative bg-gray-600">
         <img className="w-full h-56 object-cover" src={avatar} alt={name} />
         <div className="absolute left-4 bottom-4 text-white">
-          <div className={clsx(montserrat.className,"text-2xl")}>{name}</div>
-          {role && <div className="text-sm opacity-90">{role}</div>}
+          <div className={clsx(montserrat.className,"text-2xl text-gray-600")}>{name}</div>
+          {role && <div className="text-sm">{role}</div>}
         </div>
       </div>
 
