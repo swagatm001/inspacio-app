@@ -111,7 +111,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan = "co
                 <div className="w-full text-center">
                     <p className="font-medium text-2xl mb-2">{project.title}</p>
                     <span className="text-sm text-gray-200 mb-2 border rounded-full px-3 py-0.5">{project.address}</span>
-                    <p className={clsx(satoshi.className,"font-normal w-[80%] text-lg text-white-300 mb-4 line-clamp-3 mb-2 mt-2 mx-auto")}>{project.description}</p>
+                    <p className={clsx(satoshi.className,"font-normal w-[80%] text-lg text-white-300 mb-4 line-clamp-3 mb-2 mt-2 mx-auto")}>{project.intro || project.description}</p>
                     <Link href={`projects/${project.slug}`}>
                         <button
                         className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition"
