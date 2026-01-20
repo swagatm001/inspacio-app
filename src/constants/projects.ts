@@ -29,6 +29,7 @@ export interface Section {
 
 export interface Project {
   slug: string;
+  intro?: string;
   thumbnail: string;
   title: string;
   subtitle: string;
@@ -794,6 +795,7 @@ const bunsik: Project = {
   slug: "bunsik",
   thumbnail: "/images/bunsik.webp",
   title:"Bunsik",
+  intro:"A compact, street-style café designed with soul: minimal, sustainable, and full of warmth. Concrete floors, wooden trims, and upcycled décor bring an authentic, Korean street charm within a tight budget.",
   subtitle: "A compact Korean café designed to be warm, soulful, and consciously budget-friendly.",
   address: "Koramangala, Bangalore",
   location: "Bangalore",
@@ -864,6 +866,7 @@ const brita: Project = {
     value: "commercial",
   },
   year:2025,
+  intro:"A modern workspace that embodies Brita’s philosophy of purity and innovation. With curved wooden forms, cascading greenery, and fluid blue accents, the design reflects balance, function, and sustainability.",
   thumbnail: "/images/brita.webp",
   title: "Brita India Water Solutions Pvt. Ltd.",
   slug: "brita",
@@ -986,6 +989,7 @@ const penthouse2: Project = {
     label: "Residential",
     value: "residential",
   },
+  intro:"A 4,600 sq.ft. penthouse designed as a serene urban retreat: open, airy, and elegant. Natural light, soft textures, and bespoke lighting define this home of understated luxury.",
   slug: "penthouse",
   image: ["/images/penthouse.webp"],
   thumbnail: "/images/penthouse.webp",
@@ -1050,6 +1054,7 @@ const prestige: Project = {
     label: "Residential",
     value: "residential",
   },
+  intro: "An intimate, outdoor bar and lounge crafted under a sleek pergola. Luxurious yet cozy, the design transforms by night into a warm, ambient retreat amid lush greenery.",
   slug: "prestige-golfshire",
   thumbnail: "/images/golfshire.webp",
   image: [

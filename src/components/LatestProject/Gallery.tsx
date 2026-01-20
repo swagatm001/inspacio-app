@@ -10,7 +10,8 @@ export interface I_Project {
     slug: string
     address: string
     description?: string
-    image?: string[]
+    image?: string[],
+    intro?: string,
 }
 
 interface I_Gallery {
