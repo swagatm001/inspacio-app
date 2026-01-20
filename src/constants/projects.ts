@@ -46,34 +46,58 @@ export interface Project {
     label: string;
     value: string;
   }[];
-  year?: number;
+  year: number;
 }
 
 const anthology: Project = {
-  thumbnail: "/images/anthro.jpg",
+  thumbnail: "/images/anthology/Anthology-13.webp",
   title: "Anthology",
   subtitle: "A contemporary corporate workspace designed to feel open, inclusive, and future-ready.",
   slug: "anthology",
   year: 2025,
   image: [
-    "/kds/anthology/img1.png",
-    "/kds/anthology/img2.jpg",
-    "/kds/anthology/img3.jpg",
-    "/kds/anthology/img4.jpg",
-    "/kds/anthology/img5.jpg",
-    "/kds/anthology/img6.jpg",
-    "/kds/anthology/img7.jpg",
-    "/kds/anthology/img8.jpg",
-    "/kds/anthology/img9.jpg",
+    "/images/anthology/1000053858.webp",
+    "/images/anthology/1000053862.webp",
+    "/images/anthology/1000053876.webp",
+    "/images/anthology/1689261367923.webp",
+    "/images/anthology/1689261367938.webp",
+    "/images/anthology/1689261367987.webp",
+    "/images/anthology/1689261368023.webp",
+    "/images/anthology/1689261368113.webp",
+    "/images/anthology/1689261368133.webp",
+    "/images/anthology/1689261368148.webp",
+    "/images/anthology/1689261368198.webp",
+    "/images/anthology/1689261368215.webp",
+    "/images/anthology/1689261368245.webp",
+    "/images/anthology/1689261368261.webp",
+    "/images/anthology/1689261368320.webp",
+    "/images/anthology/1689261405538.webp",
+    "/images/anthology/1691558965806.webp",
+    "/images/anthology/1691558965827.webp",
+    "/images/anthology/1691558965882.webp",
+    "/images/anthology/1691558965937.webp",
+    "/images/anthology/Anthology-02.webp",
+    "/images/anthology/Anthology-03.webp",
+    "/images/anthology/Anthology-04.webp",
+    "/images/anthology/Anthology-05.webp",
+    "/images/anthology/Anthology-13.webp",
+    "/images/anthology/board-room.webp"
   ],
   description: `Corporate office design today must support inclusivity, collaboration, and adaptability while embracing technology and sustainability. It should feel open, intelligent, and people-centric. For Anthology, the intent was to create a modern workspace that reflects its global outlook and progressive values. The result is a light-filled, thoughtfully planned office that feels spacious, efficient, and engaging.`,
   sections: [
     {
       title: "The Concept Note",
       images: [
-        "/kds/anthology/img1.png",
-        "/kds/anthology/img2.jpg",
-        "/kds/anthology/img3.jpg",
+        "/images/anthology/1000053858.webp",
+        "/images/anthology/1000053862.webp",
+        "/images/anthology/1000053876.webp",
+        "/images/anthology/1689261367923.webp",
+        "/images/anthology/1689261367938.webp",
+        "/images/anthology/1689261367987.webp",
+        "/images/anthology/1689261368023.webp",
+        "/images/anthology/1689261368113.webp",
+        "/images/anthology/1689261368133.webp",
+        "/images/anthology/1689261368148.webp",
       ],
       intro: [
         "Anthology required the design of a contemporary corporate workspace aligned with its values of inclusivity, authenticity, and professional growth.",
@@ -100,9 +124,15 @@ const anthology: Project = {
         finishLine: "Each element was designed to balance efficiency with visual warmth and character."
       },
       images: [
-        "/kds/anthology/img4.jpg",
-        "/kds/anthology/img5.jpg",
-        "/kds/anthology/img6.jpg"
+        "/images/anthology/1689261368198.webp",
+        "/images/anthology/1689261368215.webp",
+        "/images/anthology/1689261368245.webp",
+        "/images/anthology/1689261368261.webp",
+        "/images/anthology/1689261368320.webp",
+        "/images/anthology/1689261405538.webp",
+        "/images/anthology/1691558965806.webp",
+        "/images/anthology/1691558965827.webp",
+        "/images/anthology/1691558965882.webp",
       ]
     },
     {
@@ -113,9 +143,13 @@ const anthology: Project = {
         "Anthology now operates from a contemporary office that reflects its global mindset — a workspace designed to support collaboration, growth, and everyday well-being."
       ],
       images: [
-        "/kds/anthology/img7.jpg",
-        "/kds/anthology/img8.jpg",
-        "/kds/anthology/img9.jpg"
+        "/images/anthology/1691558965937.webp",
+        "/images/anthology/Anthology-02.webp",
+        "/images/anthology/Anthology-03.webp",
+        "/images/anthology/Anthology-04.webp",
+        "/images/anthology/Anthology-05.webp",
+        "/images/anthology/Anthology-13.webp",
+        "/images/anthology/board-room.webp"
       ]
     }
   ],
@@ -167,7 +201,7 @@ const citadel: Project = {
     // "/kds/citadel/img13.jpg",
   ],
   description: `Corporate office design prioritises structure, efficiency, and clarity. For Citadel PropCon, the brief was to create a contemporary workspace that supports in-house teams, client meetings, and internal sales discussions within a compact footprint. The result is a refined office, professional yet approachable, open yet composed, designed to support both daily operations and client interactions seamlessly.`,
-  address: `Indiranagar`,
+  address: `Indiranagar, Bangalore`,
   location: `Bangalore`,
   category: {
     label: "Commercial",
@@ -192,7 +226,7 @@ const citadel: Project = {
       value: "Completed",
     },
   ],
-  year: 2025,
+  year: 2022,
   sections: [
     {
       images: [
@@ -239,6 +273,7 @@ const excelya: Project = {
   title: "Excelya",
   subtitle: "A modern 10,000 sq.ft. workplace revamp focused on collaboration and vibrant interiors.",
   slug: "excelya",
+  year: 2024,
   image: [
     "/kds/excelya/img1.jpg",
     "/kds/excelya/img2.jpg",
@@ -279,6 +314,7 @@ const celegence: Project = {
   title: "Celegence Systems Private Limited",
   subtitle: "Office redesign focused on improved space utilization, texture and natural light.",
   slug: "celegence",
+  year: 2023,
   image: [
     "/kds/celegence/DSC_0082.JPG",
     "/kds/celegence/DSC_0108.JPG",
@@ -432,6 +468,7 @@ const penthouse: Project = {
   title: "Penthouse at Tata Aquila Heights",
   subtitle: "A light-filled penthouse designed as a serene retreat above the city.",
   slug: "penthouse",
+  year: 2025,
   image: [
     "/images/penthouse/_SNF0296.webp",
     "/images/penthouse/_SNF0301.webp",
@@ -571,6 +608,7 @@ const duplex: Project = {
   title: "Duplex Apartment - Sri Lakshmi Venkateshwara Nilaya",
   subtitle: "A traditional-contemporary duplex blending wooden textures with modern layouts.",
   slug: "duplex",
+  year: 2023,
   image: [
     "/kds/duplex/img1.jpg",
     "/kds/duplex/img2.jpg",
@@ -665,6 +703,7 @@ const villa: Project = {
   title: "Villament - Interiors",
   subtitle: "A recent handover of a small contemporary office space designed for corporate executive staff.",
   slug: "villa",
+  year: 2024,
   image: [
     "/kds/villa/img1.jpg",
     "/kds/villa/img2.jpg",
@@ -862,7 +901,7 @@ const brita: Project = {
   ],
   subtitle: "A modern workspace reflecting purity and innovation with fluid forms and greenery.",
   address: "Whitefield, Bangalore",
-  location: "Delhi",
+  location: "Bangalore",
   type: "Commercial",
   description: "Corporate office design is most effective when it translates brand values into spatial experience. Beyond functionality, it must communicate identity, purpose, and vision. For Brita India, this meant creating a workspace that embodies purity, sustainability, and innovation through thoughtful design. The result is an office environment that feels inspiring, purposeful, and distinctly aligned with the brand."
   ,
@@ -1034,7 +1073,7 @@ const prestige: Project = {
   ],
   title:"Prestige Golfshire – Landscaping",
   subtitle: "A comprehensive residential upgrade designed to elevate ambience through interiors and landscape design",
-  address: "Nandi Hills, Bangalore",
+  address: "Nandi Hills Road, Bangalore",
   location: "Bangalore",
   type: "Commercial",
   year: 2024,
@@ -1146,13 +1185,13 @@ const cedar: Project = {
   description: `Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional.
 It must balance aesthetics with utility while reflecting the lifestyle and personality of its occupants.
 The result is a home that offers sensory richness and elevates everyday living.`,
-  address: `Whitefield, Bangalore`,
+  address: `Thanisandra Main Rd, Bangalore`,
   location: `Bangalore`,
   category: {
     label: "Residential",
     value: "residential",
   },
-  year: 2024,
+  year: 2025,
   type: `Residential`,
   sections: [
     {
@@ -1273,7 +1312,7 @@ const embassy: Project = {
     "/images/casabella/80.webp"
   ],
   description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance timeless character with modern living, while reflecting the personality of its occupants. The result is a home that feels warm, refined, and deeply rooted in everyday comfort.",
-  address: `Whitefield, Bangalore`,
+  address: `Kasturba Cross Rd, Bangalore`,
   location: `Bangalore`,
   category: {
     label: "Residential",
