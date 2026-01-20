@@ -21,12 +21,9 @@ const ProjectsCatalog: React.FC = () => {
   const locations = useMemo(() => {
     const uniqueLocations = new Set<string>();
     allProjects.forEach((p: Project) => {
-      if (p.location) {
-        uniqueLocations.add(p.location);
-      } else if (p.address) {
+      if (p.address) {
         // Extract city from address if location is not set
-        const city = p.address.split(",").pop()?.trim();
-        if (city) uniqueLocations.add(city);
+        uniqueLocations.add(p.address);
       }
     });
     return Array.from(uniqueLocations).sort();
@@ -34,7 +31,7 @@ const ProjectsCatalog: React.FC = () => {
 
   const projects = useMemo(() => {
     return allProjects.filter((p: Project) => {
-      if (selectedLocation && (p.location || p.address) && !String(p.location || p.address).toLowerCase().includes(selectedLocation.toLowerCase())) {
+      if (selectedLocation && ( p.address) && !String( p.address).toLowerCase().includes(selectedLocation.toLowerCase())) {
         return false;
       }
       if (selectedType && p.type && p.type.toLowerCase() !== selectedType.toLowerCase()) {
