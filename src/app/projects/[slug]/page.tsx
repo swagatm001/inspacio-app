@@ -9,6 +9,7 @@ import Testimonials from '@/components/Testimonial/Testimonials'
 import { projectsConstants } from "@/constants/projects";
 import { Project } from "@/constants/projects";
 import type { Metadata } from "next";
+import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 
 type Props = {
   params: {
@@ -49,32 +50,36 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="bg-[#f8f7f3]">
-      <ProjectHero
+      <ScrollFadeIn>
+        <ProjectHero
         title={title}
         subtitle={subtitle}
         type={type}
         location={location}
         year={year}
       />
-      <ProjectMainImage src={project.thumbnail} alt={title} />
+      </ScrollFadeIn>
+      <ScrollFadeIn delay={300}><ProjectMainImage src={project.thumbnail} alt={title} /></ScrollFadeIn>
       {description && (
-        <ProjectDescription>{description}</ProjectDescription>
+        <ScrollFadeIn><ProjectDescription>{description}</ProjectDescription></ScrollFadeIn>
       )}
       {/* Render project sections (each uses ProjectShowcaseSection). If none provided, show testimonials and other projects. */}
       {project.sections && project.sections.length > 0 ? (
         project.sections.map((sec, idx) => (
-          <ProjectShowcaseSection
+          <ScrollFadeIn key={idx}>
+            <ProjectShowcaseSection
             key={idx}
             title={sec.title}
             intro={sec.intro}
-            moreText={sec.moreText}
+            moreText={undefined}
             images={sec.images}
           />
+          </ScrollFadeIn>
         ))
       ) : null}
       {/* Testimonials section placed under the showcase */}
-      <Testimonials />
-      <ProjectOtherProjects project={project} />
+      <ScrollFadeIn><Testimonials /></ScrollFadeIn>
+      <ScrollFadeIn><ProjectOtherProjects project={project} /></ScrollFadeIn>
     </div>
   );
 };

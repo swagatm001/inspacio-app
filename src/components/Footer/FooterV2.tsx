@@ -11,14 +11,14 @@ import BookFreeAppointment from "../BookFreeAppointment/BookFreeAppointment";
 const navLinks = [
     { label: "Home", href: "/" },
     { label: "Our Works", href: "/projects" },
-    { label: "About", href: "/about" },
+    // { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
 ];
 
-const infoLinks = [
-    { label: "Career", href: "/career" },
-    { label: "Terms & Conditions", href: "/terms" },
-    { label: "Privacy Policy", href: "/privacy" },
+const infoLinks:any[] = [
+    // { label: "Career", href: "/career" },
+    // { label: "Terms & Conditions", href: "/terms" },
+    // { label: "Privacy Policy", href: "/privacy" },
 ];
 
 const FooterV2: React.FC = () => (
@@ -61,7 +61,7 @@ const FooterV2: React.FC = () => (
             </div>
             {/* Info Links */}
             <div className="flex-2 min-w-[220px] flex flex-col md:flex-row justify-center gap-8">
-                {infoLinks.map(link => (
+                {infoLinks.length > 0 && infoLinks.map(link => (
                     <a
                         key={link.label}
                         href={link.href}

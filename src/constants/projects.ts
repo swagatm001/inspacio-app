@@ -87,7 +87,7 @@ const anthology: Project = {
   description: `Corporate office design today must support inclusivity, collaboration, and adaptability while embracing technology and sustainability. It should feel open, intelligent, and people-centric. For Anthology, the intent was to create a modern workspace that reflects its global outlook and progressive values. The result is a light-filled, thoughtfully planned office that feels spacious, efficient, and engaging.`,
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       images: [
         "/images/anthology/1000053858.webp",
         "/images/anthology/1000053862.webp",
@@ -154,7 +154,7 @@ const anthology: Project = {
       ]
     }
   ],
-  address: `Manayata Tech Park, Bangalore`,
+  address: `Salarpuria Magneficia, Bangalore`,
   location: `Bangalore`,
   category: {
     label: "Commercial",
@@ -237,7 +237,7 @@ const citadel: Project = {
         "/kds/citadel/img4.jpg",
         "/kds/citadel/img5.jpg",
       ],
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "Citadel PropCon required a contemporary corporate office within a compact footprint. The brief called for multiple functional zones, from leadership spaces to collaborative and support areas, without compromising openness, comfort, or clarity.",
         "The primary challenge was to create an environment that feels spacious and composed, while reflecting a professional corporate identity."
@@ -359,7 +359,7 @@ const celegence: Project = {
 };
 
 const texport: Project = {
-  thumbnail: "/images/texport.jpg",
+  thumbnail: "/images/texport/texport-1.webp",
   title: "Texport Overseas",
   subtitle: "A contemporary corporate workspace transformed to feel open, fresh, and productivity-driven.",
   slug: "texport",
@@ -404,18 +404,17 @@ const texport: Project = {
   ],
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "Texport Overseas operated out of a cramped and outdated office space.",
         "Low ceilings, narrow passages, and rigid partitions restricted light, movement, and overall comfort.",
         "The primary challenge was to transform the space into a contemporary office that enhances productivity, well-being, and spatial openness within the existing footprint."
       ],
       images: [
+        "/images/texport/texport-1.webp",
         "/images/texport/IMG_3659.webp",
+        "/images/texport/IMG_3987.webp",
         "/images/texport/IMG_3667.webp",
-        "/images/texport/IMG_3676.webp",
-        "/images/texport/IMG_3901.webp",
-        "/images/texport/IMG_3902.webp",
       ],
     },
     {
@@ -437,7 +436,6 @@ const texport: Project = {
         finishLine: "Each intervention was aimed at improving comfort, efficiency, and spatial quality."
       },
       images: [
-        "/images/texport/IMG_3979.webp",
         "/images/texport/IMG_3987.webp",
         "/images/texport/IMG_3991.webp",
         "/images/texport/IMG_3999.webp",
@@ -531,7 +529,7 @@ The result is a home that feels calm, refined, and deeply connected to its surro
   ],
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "This 4,600 sq. ft. penthouse, located on the 29th floor, offered expansive views and abundant natural light.",
         "The brief was to design interiors that complement the panoramic setting while maintaining a sense of warmth, serenity, and understated luxury.",
@@ -803,7 +801,7 @@ const bunsik: Project = {
   description: "Café design prioritises atmosphere, comfort, and emotional connection over formality. For Bunsik, the focus was on creating an authentic Korean street-style café that was both budget-conscious and sustainable. The result is a space with character and soul, shaped by thoughtful material choices rather than excess",
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "Bunsik required a compact café interior inspired by traditional Korean snack shops.",
         "The brief demanded a warm and approachable environment that could be delivered within strict budget constraints.",
@@ -903,14 +901,14 @@ const brita: Project = {
     "/images/brita/SNF09144.webp",
   ],
   subtitle: "A modern workspace reflecting purity and innovation with fluid forms and greenery.",
-  address: "Whitefield, Bangalore",
+  address: "Manayata Tech Park, Bangalore",
   location: "Bangalore",
   type: "Commercial",
   description: "Corporate office design is most effective when it translates brand values into spatial experience. Beyond functionality, it must communicate identity, purpose, and vision. For Brita India, this meant creating a workspace that embodies purity, sustainability, and innovation through thoughtful design. The result is an office environment that feels inspiring, purposeful, and distinctly aligned with the brand."
   ,
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "Brita India required a corporate office that clearly reflected its brand philosophy.",
         "The brief called for a modern workspace that balances aesthetics with functionality, while creating a strong and memorable first impression.",
@@ -995,14 +993,14 @@ const penthouse2: Project = {
   thumbnail: "/images/penthouse.webp",
   title:"Penthouse at Tata Aquila Heights",
   subtitle: "A light-filled penthouse designed as a serene retreat above the city.",
-  address: "Yeshwanthpur, Bangalore",
+  address: "Jalahalli, Bangalore",
   location: "Bangalore",
   type: "Residential",
   year: 2025,
   description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance openness, luxury, and everyday ease, especially in high-rise living. The result is a home that feels calm, refined, and deeply connected to its surroundings.",
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "This 4,600 sq. ft. penthouse, located on the 29th floor, offered expansive views and abundant natural light.",
         "The brief was to design interiors that complement the panoramic setting while maintaining a sense of warmth, serenity, and understated luxury.",
@@ -1085,7 +1083,7 @@ const prestige: Project = {
   description: "Residential design is about creating spaces that feel personal, comfortable, and effortlessly functional. It must balance interiors and outdoor environments to support everyday living and visual harmony. The result is a home where design upgrades enhance both lifestyle and atmosphere.",
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "The villa at Prestige Golfshire required a complete aesthetic and functional upgrade.",
         "The brief focused on refreshing interiors while redesigning the landscaping to elevate the overall living experience.",
@@ -1200,7 +1198,7 @@ The result is a home that offers sensory richness and elevates everyday living.`
   type: `Residential`,
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "The brief for Cedar String was to design a luxury villa that feels experiential rather than ornamental.",
         "The homeowners sought a space that blends contemporary architecture with natural materials, while maintaining a strong indoor–outdoor connection.",
@@ -1327,7 +1325,7 @@ const embassy: Project = {
 
   sections: [
     {
-      title: "The Concept Note",
+      title: "Concept Note",
       intro: [
         "This 5,000 sq. ft. residence at Embassy Casabella was envisioned as a home that merges old-world charm with present-day sensibilities.",
         "The brief focused on creating a space that feels intimate yet expansive, luxurious yet lived-in.",
@@ -1403,19 +1401,19 @@ const embassy: Project = {
 
 export const projectsConstants = [
   anthology,
+  brita,
+  prestige,
+  penthouse,
   citadel,
   texport,
-  penthouse,
   cedar,
-  prestige,
   bunsik,
-  brita,
   embassy
 ];
 
 export const latestProjectConstants = [
-  bunsik,
   brita,
   penthouse2,
-  prestige
+  prestige,
+  bunsik,
 ]

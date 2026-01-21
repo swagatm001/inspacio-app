@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { montserrat } from '@/fonts/montserrat'
 import { satoshi } from '@/fonts/satoshi'
 import ParallaxImage from './ParallaxImage'
+import { ScrollFadeIn } from '../ScrollFadeIn'
 
 interface Props {
     title?: string
@@ -34,9 +35,11 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = 'Layouts', intro = ['
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div className="lg:col-span-6">
                     <h3 className={clsx(montserrat.className, 'text-4xl font-medium text-[#3d3834]')}>{title}</h3>
-                    {intro && intro.map((text, index) => (
-                        <p key={index} className={clsx(satoshi.className, 'mt-4 text-lg md:text-xl text-[#3f3f3f]')}>{text}</p>
-                    ))}
+                    <ScrollFadeIn threshold={0.3}>
+                        {intro && intro.map((text, index) => (
+                            <p key={index} className={clsx(satoshi.className, 'mt-4 text-lg md:text-xl text-[#3f3f3f]')}>{text}</p>
+                        ))}
+                    </ScrollFadeIn>
                 </div>
 
                 <div className="lg:col-span-6">
