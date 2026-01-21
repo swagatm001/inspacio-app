@@ -53,7 +53,7 @@ const ProjectsCatalog: React.FC = () => {
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="border rounded py-2 px-3 bg-transparent border-[#E2D5CC] focus:outline-none focus:ring-0 focus:border-[#E2D5CC]"
+                className="cursor-pointer border rounded py-2 px-3 bg-transparent border-[#E2D5CC] focus:outline-none focus:ring-0 focus:border-[#E2D5CC]"
               >
                 <option value="">location</option>
                 {locations.map((location) => (
@@ -67,7 +67,7 @@ const ProjectsCatalog: React.FC = () => {
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
-                className="border rounded px-3 py-2 bg-transparent border-[#E2D5CC] focus:outline-none focus:ring-0 focus:border-[#E2D5CC]"
+                className="cursor-pointer border rounded px-3 py-2 bg-transparent border-[#E2D5CC] focus:outline-none focus:ring-0 focus:border-[#E2D5CC]"
               >
                 <option value="">Type</option>
                 <option value="Residential">Residential</option>
