@@ -1,12 +1,12 @@
 "use client";
 
 import clsx from "clsx";
-import { playfair } from "@/fonts/playfair";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { satoshi } from "@/fonts/satoshi";
+import { montserrat } from "@/fonts/montserrat";
 
 const formGroupCSS = "w-full flex flex-col gap-2";
 const inputCSS =
@@ -65,7 +65,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
   };
 
   return (
-    <div className="md:py-10">
+    <div className="md:py-5">
       <ToastContainer
         theme="colored"
         position="top-right"
@@ -76,11 +76,11 @@ export const Contact = ({ removeDescription }: ContactProps) => {
         draggable={false}
       />
       <div>
-        {!removeDescription && <p className={clsx("text-3xl lg:text-4xl mb-10 text-gray-500", playfair.className)}>
-          Our friendly team would <br/> love to hear from you.
+        {!removeDescription && <p className={clsx("text-xl mb-5 text-gray-500", montserrat.className)}>
+          Get in touch with our team
         </p>}
       </div>
-      <div className="relative p-6">
+      <div className="relative p-5">
         {/* Decorative corner-only border: four corner segments (horizontal + vertical) */}
         <span className="absolute left-0 top-0 h-20 w-20 rounded-tl-2xl border-l-4 border-t-4 border-[#885739]" />
         <span className="absolute right-0 top-0 h-20 w-20 rounded-tr-2xl border-r-4 border-t-4 border-[#885739]" />
@@ -88,7 +88,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
         <span className="absolute right-0 bottom-0 h-20 w-20 rounded-br-2xl border-b-4 border-r-4 border-[#885739]" />
 
         <form
-          className="grid grid-cols-1 gap-6 p-5 rounded bg-white border border-[#D9D9D9]"
+          className="grid grid-cols-1 gap-4 p-5 rounded bg-white border border-[#D9D9D9]"
           onSubmit={handleSubmit(onSubmit)}
         >
         <div className="flex flex-col lg:flex-row gap-6">
@@ -152,7 +152,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
             {...register("message", { required: true, minLength: 10 })}
           ></textarea>
         </div>
-        <div>
+        {/* <div>
           <div className="flex gap-3">
             <input
               id="policyCheck"
@@ -170,7 +170,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
               </small>
             </div>
           )}
-        </div>
+        </div> */}
         <div>
           <button
             type="submit"

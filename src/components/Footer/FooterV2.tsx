@@ -72,9 +72,9 @@ const FooterV2: React.FC = () => (
                 ))}
             </div>
             {/* Social Icons */}
-            <div className="flex-1 flex justify-end">
+            {/* <div className="flex-1 flex justify-end">
                 <SocialLinks light={true} removeBorder={true}/>
-            </div>
+            </div> */}
         </div>
     <div className="border border-[#F8F7F326] w-11/12 mx-8 "></div>
         {/* Bottom Section */}
