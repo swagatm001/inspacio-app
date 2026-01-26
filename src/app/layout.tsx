@@ -20,7 +20,7 @@ export default function RootLayout({
           href="https://www.instagram.com/inspaciodesignstudio"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 z-50 transition-transform hover:scale-110 bg-[#885739] p-2 rounded-full drop-shadow-lg"
+          className="fixed bottom-6 right-6 z-50 transition-transform hover:scale-110 bg-[#F36730] p-2 rounded-full drop-shadow-lg"
         >
           <Image
             src="/images/instagram-white.svg"
