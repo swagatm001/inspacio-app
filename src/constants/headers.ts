@@ -29,6 +29,10 @@ export const headerConstants = {
         label: "Contact",
         href: "/contact",
       },
+      {
+        label: "Services",
+        href: "/services",
+      },
       // {
       //   label: "Our Brands",
       //   href: "/",

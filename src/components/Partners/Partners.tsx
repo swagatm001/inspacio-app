@@ -11,7 +11,7 @@ export const Partners = () => {
         <p
           className={clsx(
             montserrat.className,
-            "text-center text-2xl lg:text-4xl mb-4 text-[#3D3834] font-medium"
+            "text-center text-2xl md:text-[40px] mb-4 text-[#3D3834] font-medium"
           )}
         >
           Our Trusted Partners
