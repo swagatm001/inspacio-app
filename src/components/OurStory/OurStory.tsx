@@ -10,7 +10,7 @@ import { satoshi } from "@/fonts/satoshi";
 const OurStory: React.FC = () => {
     return (
         <section className="flex flex-col justify-between mt-16 gap-3 mb-28">
-            <h2 className={clsx(montserrat.className, "text-center text-2xl md:text-5xl font-medium mb-6 uppercase text-[#3D3834]")}>{OurStoryData.title}</h2>
+            <h2 className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium mb-6 text-[#3D3834]")}>{OurStoryData.title}</h2>
             <h3 className={clsx(montserrat.className, "text-2xl font-medium text-[#3D3834]")}>Inspacio : Designing Spaces That Inspire.</h3>
             {/* Right: Title, Description, Button */}
             <div className="w-full flex flex-col">
