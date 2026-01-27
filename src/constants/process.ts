@@ -33,7 +33,7 @@ export const processConstants = {
 }
 
 export const processConstants2 = {
-    title: "Our Creative Process",
+    title: "Creative Process",
     steps: [
         {
             stepTitle: "Free Consultation",
