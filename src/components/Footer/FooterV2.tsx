@@ -80,7 +80,7 @@ const FooterV2: React.FC = () => (
     <div className="border border-[#F8F7F326] w-11/12 mx-8 "></div>
         {/* Bottom Section */}
     <div className="text-center text-sm text-white mt-4">
-            &copy; 2025 Inspacio Design. All rights reserved.
+            &copy; 2026 Inspacio Design. All rights reserved.
         </div>
     </footer>
 );
