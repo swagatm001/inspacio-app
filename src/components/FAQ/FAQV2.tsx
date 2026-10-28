@@ -1,7 +1,6 @@
 "use client";
 
 import { faqsConstantsV2 } from "@/constants/faq";
-import { playfair } from "@/fonts/playfair";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -27,7 +26,7 @@ const Question: React.FC<I_Question> = ({ isLast, question, answer }) => {
         <p className={clsx(satoshi.className,"font-medium text-lg md:text-2xl w-10/12", showAnswer ? "text-[#3D3834]" : "text-[#696969]")}>{question}</p>
         <button type="button" onClick={toggle}>
           <Image
-            src={showAnswer ? "/kds/main/minus.png" : "/kds/main/plus.png"}
+            src={showAnswer ? "https://ik.imagekit.io/0icmp9gly/kds/main/minus.png" : "https://ik.imagekit.io/0icmp9gly/kds/main/plus.png"}
             width={20}
             height={20}
             alt="toggle button"

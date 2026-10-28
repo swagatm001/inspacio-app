@@ -9,91 +9,109 @@ import Link from "next/link";
 import clsx from "clsx";
 
 type HeaderProps = {
-    lightBackground?: boolean;
+  lightBackground?: boolean;
 };
 
-export const Header:React.FC<HeaderProps> = ({lightBackground = false}) => {
+export const Header: React.FC<HeaderProps> = ({ lightBackground = false }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!isDropdownOpen) return;
+
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsDropdownOpen(false);
       }
     };
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsDropdownOpen(false);
-      }
+      if (event.key === "Escape") setIsDropdownOpen(false);
     };
-    if (isDropdownOpen) {
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('keydown', handleEscape);
-    document.addEventListener('touchstart', handleClickOutside);
-  }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener('keydown', handleEscape);
-      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
     };
   }, [isDropdownOpen]);
 
+  // Dark text and logo on light pages, and on every page once the frosted bar appears.
+  const light = lightBackground || scrolled;
+  const linkColor = light ? "text-brand-ink" : "text-[#F8F7F3]";
+  const barColor = light ? "bg-brand-brown" : "bg-white";
+
   return (
-    <header className={clsx(
-      'fixed left-1/2 -translate-x-1/2 top-0 w-full px-2 sm:px-4 md:px-8 h-20 z-50',
-      lightBackground ? 'bg-transparent' : 'bg-gradient-to-b from-black via-black/600 to-transparent',
-    )}>
-      <div className="h-full flex items-center justify-between lg:lx-0">
-        <Link href="/">
-          <div className="flex items-center">
-            <Image
-              className="w-[150px] h-auto user-select-none"
-              src={lightBackground ? headerConstants.logo.darkImageUrl : headerConstants.logo.imageUrl}
-              alt={headerConstants.logo.altText}
-              width={headerConstants.logo.width}
-              height={headerConstants.logo.height}
-            />
-            {/* <p className="text-lg">{headerConstants.logo.brandLabel}</p> */}
-          </div>
+    <header
+      className={clsx(
+        "fixed top-0 left-0 w-full px-2 sm:px-4 md:px-8 z-50 transition-[background-color,box-shadow,height] duration-300",
+        scrolled ? "h-16 bg-brand-cream/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(61,56,52,0.08)]" : "h-20",
+        !scrolled && !lightBackground && "bg-gradient-to-b from-black via-black/60 to-transparent"
+      )}
+    >
+      <div className="h-full flex items-center justify-between">
+        <Link href="/" aria-label="Inspacio home" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/50 rounded">
+          <Image
+            className={clsx("h-auto select-none transition-[width] duration-300", scrolled ? "w-[124px]" : "w-[150px]")}
+            src={light ? headerConstants.logo.darkImageUrl : headerConstants.logo.imageUrl}
+            alt={headerConstants.logo.altText}
+            width={headerConstants.logo.width}
+            height={headerConstants.logo.height}
+            priority
+          />
         </Link>
-        {/* <HamMenu className="lg:hidden" /> */}
-        
-        {/* Desktop Hamburger Menu */}
-        <div className="relative" ref={dropdownRef}>
+
+        {/* Desktop navigation */}
+        <nav aria-label="Primary" className="hidden lg:block">
+          <NavigationLinks className="gap-8" linkClassName={clsx(linkColor, "text-base font-medium")} />
+        </nav>
+
+        {/* Mobile and tablet menu */}
+        <div className="relative lg:hidden" ref={dropdownRef}>
           <button
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            type="button"
+            onClick={() => setIsDropdownOpen((open) => !open)}
             className={clsx(
-              'p-2 rounded-lg transition focus:outline-none',
-              lightBackground ? 'hover:bg-black/10' : 'hover:bg-white/10'
+              "p-2 rounded-lg transition focus:outline-none focus-visible:ring-2",
+              light ? "hover:bg-black/10 focus-visible:ring-brand-brown" : "hover:bg-white/10 focus-visible:ring-white"
             )}
             aria-label="Toggle menu"
             aria-expanded={isDropdownOpen}
+            aria-controls="mobile-menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center gap-1.5">
-              <div className={clsx('w-full h-0.5 rounded-full', lightBackground ? 'bg-[#885739]' : 'bg-white')}></div>
-              <div className={clsx('w-4/5 h-0.5 rounded-full ml-auto', lightBackground ? 'bg-[#885739]' : 'bg-white')}></div>
-              <div className={clsx('w-4/5 h-0.5 rounded-full ml-auto', lightBackground ? 'bg-[#885739]' : 'bg-white')}></div>
+              <div className={clsx("w-full h-0.5 rounded-full", barColor)}></div>
+              <div className={clsx("w-4/5 h-0.5 rounded-full ml-auto", barColor)}></div>
+              <div className={clsx("w-4/5 h-0.5 rounded-full ml-auto", barColor)}></div>
             </div>
           </button>
 
-          {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-64 bg-[#F36730] backdrop-blur-md rounded-lg shadow-2xl py-4 px-4 z-10 origin-top-right animate-in zoom-in-75 duration-300" style={{
-              animation: "scaleExpandDiagonal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)"
-            }}>
-              {/* Navigation Links */}
-              <nav className="flex flex-col gap-2 mb-4">
-                <NavigationLinks className="flex-col" isDropdownOpen={isDropdownOpen}/>
-              </nav>
-            </div>
+            <nav
+              id="mobile-menu"
+              aria-label="Primary"
+              className="absolute right-0 mt-2 w-64 bg-brand-orange rounded-lg shadow-2xl py-4 px-4 z-10 origin-top-right"
+              style={{ animation: "scaleExpandDiagonal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)" }}
+            >
+              <NavigationLinks
+                className="flex-col gap-2"
+                linkClassName="text-[#F8F7F3] text-lg"
+                isDropdownOpen={isDropdownOpen}
+                onClick={() => setIsDropdownOpen(false)}
+              />
+            </nav>
           )}
         </div>
-        {/* <Navigation className="hidden lg:flex">
-          <NavigationLinks />
-          {/* <SignInButton title="Sign In" /> */}
-        {/* <GetInTouch title="Book Free Consultation" />
-        </Navigation> */}
       </div>
     </header>
   );

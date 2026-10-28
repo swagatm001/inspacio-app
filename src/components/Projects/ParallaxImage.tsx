@@ -1,87 +1,31 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react';
-import Image from 'next/image';
+import React from "react";
+import { useParallax } from "@/hooks/useParallax";
+import { BlurImage } from "../ui/BlurImage";
 
 interface ParallaxImageProps {
   src: string;
   alt?: string;
   speed?: number;
   className?: string;
+  blurDataURL?: string;
 }
 
-export const ParallaxImage: React.FC<ParallaxImageProps> = ({
-  src,
-  alt = "Parallax image",
-  speed = 0.1,
-  className = ""
-}) => {
-  const imageRef = useRef<HTMLImageElement>(null);
-  const isVisibleRef = useRef(false);
-
-  useEffect(() => {
-    const el = imageRef.current;
-    if (!el) return;
-
-    let latestScroll = 0;
-    let currentScroll = 0;
-    const smooth = 0.1; // easing
-
-    // Observe visibility of this image
-    const observer = new IntersectionObserver(
-      (entries) => {
-        isVisibleRef.current = entries[0].isIntersecting;
-      },
-      {
-        threshold: 0,
-        rootMargin: "200px", // start animation slightly before entering
-      }
-    );
-
-    observer.observe(el);
-
-    // Scroll listener (very light)
-    const onScroll = () => {
-      latestScroll = window.scrollY;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    // Animation loop
-    const animate = () => {
-      if (isVisibleRef.current) {
-        currentScroll += (latestScroll - currentScroll) * smooth;
-
-        const rect = el.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const viewportCenter = windowHeight / 2;
-        const elementCenter = rect.top + rect.height / 2;
-
-        const distance = elementCenter - viewportCenter;
-        const y = distance * speed;
-
-        el.style.transform = `translateY(${-y}px)`;
-      }
-
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [speed]);
+export const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt = "Parallax image", speed = 0.1, className = "", blurDataURL }) => {
+  const imageRef = useParallax<HTMLImageElement>(speed);
 
   return (
-    <div className={`relative w-full h-full overflow-hidden rounded-md ${className}`}>
-      <Image
+    <div className={`relative w-full h-full overflow-hidden rounded-md bg-brand-wash ${className}`}>
+      <BlurImage
         ref={imageRef}
         src={src}
+        blurDataURL={blurDataURL}
         alt={alt}
         fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
         className="object-cover w-full h-full"
-        style={{ transform: `scale(1.15)` }}
+        style={{ transform: "scale(1.15)" }}
         loading="lazy"
       />
     </div>

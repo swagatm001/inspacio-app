@@ -1,7 +1,7 @@
 export const headerConstants = {
   logo: {
     imageUrl: "/images/logo_white.svg",
-    altText: "brand logo",
+    altText: "Inspacio",
     width: 53,
     height: 26,
     brandLabel: "Inspacio",
@@ -9,54 +9,19 @@ export const headerConstants = {
   },
   menu: {
     links: [
-      {
-        label: "Home",
-        href: "/",
-      },
-      {
-        label: "Projects",
-        href: "/projects",
-      },
-      // {
-      //   label: "Our Story",
-      //   href: "/about",
-      // },
-      // {
-      //   label: "Blog",
-      //   href: "/blogs",
-      // },
-      {
-        label: "Contact",
-        href: "/contact",
-      },
-      {
-        label: "Services",
-        href: "/services",
-      },
-      // {
-      //   label: "Our Brands",
-      //   href: "/",
-      // },
+      { label: "Home", href: "/" },
+      { label: "Projects", href: "/projects" },
+      { label: "Services", href: "/services" },
+      { label: "Our Story", href: "/about" },
+      { label: "Contact", href: "/contact" },
     ],
     socials: [
       {
         label: "Instagram",
-        imageUrl: "/kds/main/insta.png",
+        imageUrl: "https://ik.imagekit.io/0icmp9gly/kds/main/insta.png",
         href: "https://www.instagram.com/inspaciodesignstudio",
-        imageUrlLight: "/images/instagram-white.svg"
+        imageUrlLight: "/images/instagram-white.svg",
       },
-      // {
-      //   label: "Facebook",
-      //   imageUrl: "/kds/main/fb.png",
-      //   href: "https://www.facebook.com/kreativedezinestudio",
-      //   imageUrlLight: "/images/facebook-white.svg"
-      // },
-      // {
-      //   label: "Linkedin",
-      //   imageUrl: "/kds/main/linkedin.png",
-      //   href: "https://www.linkedin.com/company/kreative-dezine-studio/",
-      //   imageUrlLight: "/images/linkedin-white.svg"
-      // },
     ],
   },
 };

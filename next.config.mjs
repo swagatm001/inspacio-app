@@ -2,8 +2,15 @@
 
 const nextConfig = {
   images: {
-    loader: "custom",
-    loaderFile: "./src/utils/imageKitLoader.ts",
+    // Local images under /public are optimised by Next.js itself.
+    // Older project photos still live on ImageKit and are referenced by absolute URL.
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+        pathname: "/0icmp9gly/**",
+      },
+    ],
   },
 };
 

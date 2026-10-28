@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/Container";
-import { Footer } from "@/components/Footer";
 import { End2EndWrapper } from "@/components/End2EndWrapper";
 import { Header } from "@/components/Header"
 import CustomContainer from "@/components/Container/CustomContainer";
@@ -9,6 +7,7 @@ import FooterV2 from "@/components/Footer/FooterV2";
 export const metadata: Metadata = {
   title: "Contact Interior Designers in Bangalore | Inspacio Studio",
   description: "Visit Inspacio at Shivaji Nagar, Bengaluru. Call or email us for home interiors, office interiors, architecture and turnkey execution.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactLayout({

@@ -27,8 +27,24 @@ export interface Section {
   images?: string[];
 }
 
+export interface ProjectRecognition {
+  kind: "award" | "press";
+  /** Short label for badges, e.g. "Archello" or "WADE Asia 2025". */
+  label: string;
+  /** Full line, e.g. "Featured on Archello". */
+  title: string;
+  href?: string;
+  /** A short line quoted from the feature, with its attribution. */
+  quote?: string;
+  attribution?: string;
+  /** Credits worth showing, e.g. the photographer. */
+  credits?: { label: string; name: string }[];
+}
+
 export interface Project {
   slug: string;
+  /** Press features and awards tied to this project. */
+  recognition?: ProjectRecognition[];
   intro?: string;
   thumbnail: string;
   title: string;
@@ -48,9 +64,16 @@ export interface Project {
     value: string;
   }[];
   year: number;
+  /** Optional before/after pair shown as a draggable comparison on the project page. */
+  beforeAfter?: {
+    before: string;
+    after: string;
+    caption?: string;
+  };
 }
 
 const anthology: Project = {
+  intro: "For Anthology, the intent was to create a modern workspace that reflects its global outlook and progressive values. The result is a light-filled, thoughtfully planned office that feels spacious, efficient, and engaging.",
   thumbnail: "/images/anthology/Anthology-13.webp",
   title: "Anthology",
   subtitle: "A contemporary corporate workspace designed to feel open, inclusive, and future-ready.",
@@ -182,24 +205,25 @@ const anthology: Project = {
 };
 
 const citadel: Project = {
+  intro: "For Citadel PropCon, the brief was to create a contemporary workspace that supports in-house teams, client meetings, and internal sales discussions within a compact footprint.",
   thumbnail: "/images/citadel.jpg",
   title: "Citadel PropCon.",
   subtitle: "A compact corporate workspace designed to seamlessly host client interactions while supporting focused internal collaboration.",
   slug: "citadel",
   image: [
-    "/kds/citadel/img1.jpg",
-    "/kds/citadel/img2.jpg",
-    "/kds/citadel/img3.jpg",
-    "/kds/citadel/img4.jpg",
-    "/kds/citadel/img5.jpg",
-    "/kds/citadel/img6.jpg",
-    // "/kds/citadel/img7.jpg",
-    "/kds/citadel/img8.jpg",
-    "/kds/citadel/img9.jpg",
-    "/kds/citadel/img10.jpg",
-    "/kds/citadel/img11.jpg",
-    "/kds/citadel/img12.jpg",
-    // "/kds/citadel/img13.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img1.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img2.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img3.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img4.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img5.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img6.jpg",
+    // "https://ik.imagekit.io/0icmp9gly/kds/citadel/img7.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img8.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img9.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img10.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img11.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/citadel/img12.jpg",
+    // "https://ik.imagekit.io/0icmp9gly/kds/citadel/img13.jpg",
   ],
   description: `Corporate office design prioritises structure, efficiency, and clarity. For Citadel PropCon, the brief was to create a contemporary workspace that supports in-house teams, client meetings, and internal sales discussions within a compact footprint. The result is a refined office, professional yet approachable, open yet composed, designed to support both daily operations and client interactions seamlessly.`,
   address: `Indiranagar, Bangalore`,
@@ -231,11 +255,11 @@ const citadel: Project = {
   sections: [
     {
       images: [
-        "/kds/citadel/img1.jpg",
-        "/kds/citadel/img2.jpg",
-        "/kds/citadel/img3.jpg",
-        "/kds/citadel/img4.jpg",
-        "/kds/citadel/img5.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img1.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img2.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img3.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img4.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img5.jpg",
       ],
       title: "Concept Note",
       intro: [
@@ -257,12 +281,12 @@ const citadel: Project = {
     {
       title: "Final Handover",
       images: [
-        "/kds/citadel/img6.jpg",
-        "/kds/citadel/img8.jpg",
-        "/kds/citadel/img9.jpg",
-        "/kds/citadel/img10.jpg",
-        "/kds/citadel/img11.jpg",
-        "/kds/citadel/img12.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img6.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img8.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img9.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img10.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img11.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img12.jpg",
       ],
       intro: ["The completed office presents a clean, modern workspace that feels open and well-organised. Despite spatial limitations, all functional requirements are seamlessly integrated.", "Neutral tones, contemporary furniture, and thoughtful lighting come together to create an efficient, refined corporate environment designed for everyday use and long-term growth."]
     }
@@ -276,19 +300,19 @@ const excelya: Project = {
   slug: "excelya",
   year: 2024,
   image: [
-    "/kds/excelya/img1.jpg",
-    "/kds/excelya/img2.jpg",
-    "/kds/excelya/img3.jpg",
-    "/kds/excelya/img4.jpg",
-    "/kds/excelya/img5.jpg",
-    "/kds/excelya/img6.jpg",
-    "/kds/excelya/img7.jpg",
-    "/kds/excelya/img8.jpg",
-    "/kds/excelya/img9.jpg",
-    "/kds/excelya/img10.jpg",
-    "/kds/excelya/img11.jpg",
-    "/kds/excelya/img12.jpg",
-    // "/kds/excelya/img13.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img1.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img2.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img3.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img4.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img5.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img6.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img7.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img8.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img9.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img10.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img11.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/excelya/img12.jpg",
+    // "https://ik.imagekit.io/0icmp9gly/kds/excelya/img13.jpg",
   ],
   description: `Excleya, a renowned independent partner that serves Biotech, Pharma and Medical Device Organisations, was a wonderful space to revamp. The Kreative Dezine team had so much fun designing this modern workplace, spread across 10,000 sq. ft. Our ultimate goal was the same as it is for any other commercial project, to design a workplace that fosters productivity, collaboration and the well-being of employees. Apart from this, at Excelya, our team had the mission to create additional collaboration spaces, phone booths, and wall art and revamp the boardroom space. To begin with, we chose wall colours and wallpapers that were vibrant, playful and not distracting at all.  The phone booths were designed in a way that there is space for employees to sit and focus on their calls without feeling suffocated inside. Since the office space highlighted an open plan layout, encouraging communication and collaboration among employees, we decided to breakout areas, and collaborative zones. While each space stood out by itself, the workplace as a whole looked cohesive, which was the aim.`,
   address: `RMZ Millenia, Bangalore`,
@@ -311,24 +335,24 @@ const excelya: Project = {
 };
 
 const celegence: Project = {
-  thumbnail: "/kds/celegence/DSC_0084.JPG",
+  thumbnail: "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0084.JPG",
   title: "Celegence Systems Private Limited",
   subtitle: "Office redesign focused on improved space utilization, texture and natural light.",
   slug: "celegence",
   year: 2023,
   image: [
-    "/kds/celegence/DSC_0082.JPG",
-    "/kds/celegence/DSC_0108.JPG",
-    "/kds/celegence/DSC_0077.JPG",
-    "/kds/celegence/DSC_0061.JPG",
-    "/kds/celegence/DSC_0100.JPG",
-    "/kds/celegence/DSC_0097.JPG",
-    "/kds/celegence/DSC_0054.JPG",
-    "/kds/celegence/DSC_0050.JPG",
-    "/kds/celegence/DSC_0071.JPG",
-    "/kds/celegence/DSC_0109.JPG",
-    "/kds/celegence/DSC_0070.JPG",
-    "/kds/celegence/DSC_0083.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0082.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0108.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0077.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0061.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0100.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0097.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0054.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0050.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0071.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0109.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0070.JPG",
+    "https://ik.imagekit.io/0icmp9gly/kds/celegence/DSC_0083.JPG",
   ],
   description: `The Celegence team approached Kreative Dezine Studio to redesign their office space. The aim was to create a fresh, new and impressive look and feel. . Apart from these, the team also aimed for better utilization of space. A dull, bland, and unfurnished interior space, no matter how functional, will never impart pleasant vibes. In our initial visit to the existing office, we came up with an idea to redesign the entire space and upgrade it according to recent trends. The process begans with a meeting between the architect/ interior designer, project manager and the client’s project manager, who was in charge of the commercial project. The three stakeholders brainstormed ideas to understand the feasibility of the given space and prepared the schematics, and concepts to freeze on the design for executions finally. The workspace was changed from curvilinear to linear workstations, opening up more collaborative spaces. Adding different textures, colours and patterns to the space was the main concept to uplift the space from a dull ambience to a bright, energetic and motivated office ambience.  Bringing in more natural light and adding the biophilic use of plants more generously brought a positive effect on employees' well-being. Staying focused on the client’s requirements and achieving high-end results within the assigned budget was the ultimate motive.`,
   address: `Jayanagar, Bangalore`,
@@ -359,6 +383,7 @@ const celegence: Project = {
 };
 
 const texport: Project = {
+  intro: "For Texport Overseas, the goal was to transform a cramped, outdated workspace into an open, breathable, and contemporary office.",
   thumbnail: "/images/texport/texport-1.webp",
   title: "Texport Overseas",
   subtitle: "A contemporary corporate workspace transformed to feel open, fresh, and productivity-driven.",
@@ -463,7 +488,22 @@ const texport: Project = {
 };
 
 const penthouse: Project = {
-  thumbnail: "/kds/penthouse/img1.jpg",
+  recognition: [
+    {
+      kind: "press",
+      label: "Archello",
+      title: "Featured on Archello",
+      href: "https://archello.com/project/bengaluru-penthouse",
+      quote: "A home that had held six people’s lives in its floor plan and made it look, somehow, effortless.",
+      attribution: "Mehar Deep Kaur, writing for Archello",
+      credits: [
+        { label: "Photography", name: "Mohith Ananth" },
+        { label: "Styling", name: "Marchiata" },
+      ],
+    },
+  ],
+  intro: "A 4,600 sq.ft. penthouse designed as a serene urban retreat: open, airy, and elegant. Natural light, soft textures, and bespoke lighting define this home of understated luxury.",
+  thumbnail: "/images/penthouse.webp",
   title: "Penthouse at Tata Aquila Heights",
   subtitle: "A light-filled penthouse designed as a serene retreat above the city.",
   slug: "penthouse",
@@ -603,21 +643,21 @@ The result is a home that feels calm, refined, and deeply connected to its surro
 };
 
 const duplex: Project = {
-  thumbnail: "/kds/duplex/img1.jpg",
+  thumbnail: "https://ik.imagekit.io/0icmp9gly/kds/duplex/img1.jpg",
   title: "Duplex Apartment - Sri Lakshmi Venkateshwara Nilaya",
   subtitle: "A traditional-contemporary duplex blending wooden textures with modern layouts.",
   slug: "duplex",
   year: 2023,
   image: [
-    "/kds/duplex/img1.jpg",
-    "/kds/duplex/img2.jpg",
-    "/kds/duplex/img3.jpg",
-    "/kds/duplex/img4.jpg",
-    "/kds/duplex/img5.jpg",
-    "/kds/duplex/img6.jpg",
-    "/kds/duplex/img7.jpg",
-    "/kds/duplex/img8.jpg",
-    "/kds/duplex/img9.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img1.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img2.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img3.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img4.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img5.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img6.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img7.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img8.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/duplex/img9.jpg",
   ],
   description: `After jotting down the client’s vision and ideas about the space, the Kreative Dezine Studio team put our best into bringing our client’s vision and dreams into reality. Brainstorming ideas and discussing them with the client gave a clearer picture of the home Mr.Prakash was looking at. High-end interior design exudes a sense of opulence, and a wonderful overall aesthetic, achieved by the strategic placement of furniture and decorative. We as interior designers have used every element to bring forth a vibrant aesthetic. The fusion of traditional and contemporary elements is very smartly incorporated to bring elegance to the entire living area. Shades of wooden textures, pastel shades of paint, glasses and warm décor lighting to the space bring life to the fulfilled home.`,
   address: `Anand Alpine, Anjanapura`,
@@ -648,26 +688,26 @@ const duplex: Project = {
 };
 
 const appartment = {
-  thumbnail: "/kds/appartment/img1.jpg",
+  thumbnail: "https://ik.imagekit.io/0icmp9gly/kds/appartment/img1.jpg",
   title: "Vaswani Gardenia",
   subtitle: "A refined villa with a contemporary German kitchen and luxurious master suite.",
   slug: "appartment",
   image: [
-    "/kds/appartment/img1.jpg",
-    "/kds/appartment/img2.jpg",
-    "/kds/appartment/img3.jpg",
-    "/kds/appartment/img4.jpg",
-    "/kds/appartment/img5.jpg",
-    "/kds/appartment/img6.jpg",
-    "/kds/appartment/img7.jpg",
-    "/kds/appartment/img8.jpg",
-    "/kds/appartment/img9.jpg",
-    "/kds/appartment/img10.jpg",
-    "/kds/appartment/img11.jpg",
-    "/kds/appartment/img12.jpg",
-    "/kds/appartment/img13.jpg",
-    "/kds/appartment/img14.jpg",
-    "/kds/appartment/img15.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img1.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img2.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img3.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img4.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img5.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img6.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img7.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img8.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img9.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img10.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img11.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img12.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img13.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img14.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/appartment/img15.jpg",
   ],
   description: `The Kreative Dezine team was approached for the initial spatial planning and refinement of the home layouts, alongside comprehensive interior design, lighting planning, and service coordination. The kitchen boasts a contemporary German design, taupe lacquered cabinets, and dark-stained oak timber. The master suite, in particular, stands out for its generous space and luxurious feel. It offers a retreat from the rest of the property, with a thoughtfully designed layout including a vestibule that welcomes the owner into a serene environment. This vestibule not only separates the bedroom from the hallway but also acts as a seamless link between the interconnected rooms, facilitating movement between the bathroom, dressing room, and hallway without causing disturbance to the bedroom. For the property's decor, we specified all internal finishes such as wallcoverings, tiles, floorings, and paint finishes. Additionally, we designed and oversaw the installation of all window treatments, including blinds and curtains, adding the final touches to this exceptional villa property.`,
   address: `Jalahalli, Bangalore`,
@@ -698,44 +738,44 @@ const appartment = {
 };
 
 const villa: Project = {
-  thumbnail: "/kds/villa/img1.jpg",
+  thumbnail: "https://ik.imagekit.io/0icmp9gly/kds/villa/img1.jpg",
   title: "Villament - Interiors",
   subtitle: "A recent handover of a small contemporary office space designed for corporate executive staff.",
   slug: "villa",
   year: 2024,
   image: [
-    "/kds/villa/img1.jpg",
-    "/kds/villa/img2.jpg",
-    "/kds/villa/img3.jpg",
-    "/kds/villa/img4.jpg",
-    "/kds/villa/img5.jpg",
-    "/kds/villa/img6.jpg",
-    "/kds/villa/img7.jpg",
-    "/kds/villa/img8.jpg",
-    "/kds/villa/img9.jpg",
-    "/kds/villa/img10.jpg",
-    "/kds/villa/img11.jpg",
-    "/kds/villa/img12.jpg",
-    "/kds/villa/img13.jpg",
-    "/kds/villa/img14.jpg",
-    "/kds/villa/img15.jpg",
-    "/kds/villa/img16.jpg",
-    "/kds/villa/img17.jpg",
-    "/kds/villa/img18.jpg",
-    "/kds/villa/img19.jpg",
-    "/kds/villa/img20.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img1.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img2.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img3.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img4.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img5.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img6.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img7.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img8.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img9.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img10.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img11.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img12.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img13.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img14.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img15.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img16.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img17.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img18.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img19.jpg",
+    "https://ik.imagekit.io/0icmp9gly/kds/villa/img20.jpg",
   ],
   sections: [
     {
       title: "Office Layout",
       intro: ["A compact executive layout optimised for space and daylight."],
       images: [
-        "/kds/citadel/img2.jpg",
-        "/kds/citadel/img3.jpg",
-        "/kds/citadel/img4.jpg",
-        "/kds/citadel/img5.jpg",
-        "/kds/citadel/img6.jpg",
-        "/kds/citadel/img8.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img2.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img3.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img4.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img5.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img6.jpg",
+        "https://ik.imagekit.io/0icmp9gly/kds/citadel/img8.jpg",
       ],
     },
   ],
@@ -859,6 +899,13 @@ const bunsik: Project = {
 }
 
 const brita: Project = {
+  recognition: [
+    {
+      kind: "award",
+      label: "WADE Asia 2025",
+      title: "Presented at WADE Asia 2025",
+    },
+  ],
   category: {
     label: "Commercial",
     value: "commercial",
@@ -982,6 +1029,7 @@ const brita: Project = {
   ]
 }
 
+/** Superseded by `penthouse` above, which carries the full photo set; kept for reference. */
 const penthouse2: Project = {
   category: {
     label: "Residential",
@@ -1144,6 +1192,7 @@ const prestige: Project = {
 }
 
 const cedar: Project = {
+  intro: "A home that balances aesthetics with utility while reflecting the lifestyle and personality of its occupants. The result offers sensory richness and elevates everyday living.",
   thumbnail: "/images/cedar/61.webp",
   title: "Cedar String",
   subtitle: "A 5,000 sq. ft. luxury villa designed to balance modern elegance with warmth and livability.",
@@ -1278,6 +1327,7 @@ The result is a home that offers sensory richness and elevates everyday living.`
 }
 
 const embassy: Project = {
+  intro: "A home that balances timeless character with modern living while reflecting the personality of its occupants. The result feels warm, refined, and deeply rooted in everyday comfort.",
   thumbnail: "/images/casabella/15.webp",
   title: "Embassy Casabella",
   year: 2025,
@@ -1413,7 +1463,7 @@ export const projectsConstants = [
 
 export const latestProjectConstants = [
   brita,
-  penthouse2,
+  penthouse,
   prestige,
   bunsik,
 ]
