@@ -51,9 +51,9 @@ export const ProjectList: React.FC<{ projects: I_Project[] }> = ({ projects }) =
               )}
             >
               <span className="col-span-6 font-heading text-2xl md:text-3xl text-brand-ink transition-transform duration-300 group-hover:translate-x-2">{p.title}</span>
-              <span className="col-span-2 font-body text-sm text-[#696969]">{p.type || p.category?.label}</span>
-              <span className="col-span-3 font-body text-sm text-[#696969]">{p.address}</span>
-              <span className="col-span-1 flex items-center justify-end gap-3 font-body text-sm text-[#696969]">
+              <span className="col-span-2 font-body text-sm text-brand-muted">{p.type || p.category?.label}</span>
+              <span className="col-span-3 font-body text-sm text-brand-muted">{p.address}</span>
+              <span className="col-span-1 flex items-center justify-end gap-3 font-body text-sm text-brand-muted">
                 {p.year}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-5 h-5 text-brand-brown opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />

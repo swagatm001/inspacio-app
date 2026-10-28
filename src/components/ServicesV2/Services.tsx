@@ -62,7 +62,7 @@ export const Services: React.FC<ServicesProps> = ({ blurMap }) => {
                 aria-selected={active}
                 className={clsx(
                   "font-body py-3 px-4 flex-shrink-0 -mb-px border-b-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/40 rounded-t",
-                  active ? "border-brand-ink text-brand-ink font-medium" : "border-transparent text-[#78736F] hover:text-brand-ink"
+                  active ? "border-brand-ink text-brand-ink font-medium" : "border-transparent text-brand-muted hover:text-brand-ink"
                 )}
                 onClick={() => selectService(key)}
               >
@@ -89,13 +89,13 @@ export const Services: React.FC<ServicesProps> = ({ blurMap }) => {
           <h3 className="font-heading text-2xl md:text-3xl font-medium text-brand-ink mb-4">{selected.title}</h3>
 
           {paragraphs.map((para, index) => (
-            <p key={index} className={clsx("font-body text-lg text-[#3f3f3f] mb-3", index === 0 && "text-xl text-brand-ink")}>
+            <p key={index} className={clsx("font-body text-lg text-brand-body mb-3", index === 0 && "text-xl text-brand-ink")}>
               {para}
             </p>
           ))}
 
           {selected.bestFor && (
-            <div className="font-body mt-6 rounded-lg bg-brand-wash border-l-4 border-brand-tan px-4 py-3 text-[#3f3f3f]">
+            <div className="font-body mt-6 rounded-lg bg-brand-wash border-l-4 border-brand-tan px-4 py-3 text-brand-body">
               <span className="font-medium text-brand-ink">Best for: </span>
               {selected.bestFor}
             </div>
@@ -108,7 +108,7 @@ export const Services: React.FC<ServicesProps> = ({ blurMap }) => {
               </h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
                 {selected.points.map((point) => (
-                  <li key={point} className="font-body flex gap-2 text-base text-[#3f3f3f]">
+                  <li key={point} className="font-body flex gap-2 text-base text-brand-body">
                     <CheckIcon />
                     <span>{point}</span>
                   </li>
@@ -123,7 +123,7 @@ export const Services: React.FC<ServicesProps> = ({ blurMap }) => {
                 {everyStage ? "Woven through our process" : "Where it fits in our process"}
               </h4>
               <ProcessStrip highlighted={selected.processSteps} />
-              <p className="font-body text-sm text-[#8a847f] mt-2">Highlighted steps show where this service does its work. The full process is described further down the page.</p>
+              <p className="font-body text-sm text-brand-faint mt-2">Highlighted steps show where this service does its work. The full process is described further down the page.</p>
             </>
           )}
 

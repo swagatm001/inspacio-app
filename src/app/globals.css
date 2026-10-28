@@ -2,28 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand palette "Ivory & Espresso" as RGB triplets (used by the Tailwind `brand-*` colours). Change the theme here. */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --c-orange: 232 120 58;      /* #E8783A amber accent */
+  --c-orange-dark: 200 98 44;  /* #C8622C hover */
+  --c-brown: 61 38 28;         /* #3D261C espresso secondary */
+  --c-tan: 139 106 82;         /* #8B6A52 labels */
+  --c-ink: 26 20 17;           /* #1A1411 headings and dark sections */
+  --c-body: 58 52 48;          /* #3A3430 body copy */
+  --c-muted: 112 104 98;       /* #706862 supporting text */
+  --c-faint: 140 130 122;      /* #8C827A captions */
+  --c-sand: 226 213 198;       /* #E2D5C6 borders */
+  --c-cream: 250 247 242;      /* #FAF7F2 ivory page background */
+  --c-wash: 243 237 228;       /* #F3EDE4 tinted panels */
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+  background-color: rgb(var(--c-cream));
 }
 
 @layer utilities {
@@ -143,7 +138,7 @@ body {
 
 /* Outlined display text for the marquee */
 .text-outline {
-  -webkit-text-stroke: 1.5px #885739;
+  -webkit-text-stroke: 1.5px rgb(var(--c-brown));
   color: transparent;
 }
 

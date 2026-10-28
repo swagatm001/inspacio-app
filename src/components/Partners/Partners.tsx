@@ -9,7 +9,7 @@ export const Partners = () => {
     <section className="mb-20" aria-labelledby="partners-heading">
       <div className="flex flex-col items-center mb-6">
         <SectionEyebrow number="05" label="Trusted by" className="justify-center" />
-        <h2 id="partners-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] text-[#3D3834] font-medium")}>
+        <h2 id="partners-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] text-brand-ink font-medium")}>
           Our Trusted Partners
         </h2>
       </div>

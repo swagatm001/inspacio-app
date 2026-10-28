@@ -1,50 +1,31 @@
 "use client";
 import React from "react";
 import { Testimonial } from "@/constants/testimonials";
-import clsx from "clsx";
-import { montserrat } from "@/fonts/montserrat";
 import { Avatar, Stars } from "./TestimonialBits";
 
-const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
-  return (
-    <figure className="relative w-full max-w-4xl min-h-[360px] flex items-center">
-      <div className="relative flex items-center gap-x-[80px]">
-        <div className="absolute -top-6 md:-top-8 -left-6 md:-left-8 w-20 h-20 md:w-24 md:h-24 rounded-full bg-[linear-gradient(266.78deg,#FFE339_-22.82%,#FF9470_38.96%)]"></div>
-        <div className="absolute -bottom-5 md:-bottom-10 -right-5 md:left-[200px] w-20 h-20 md:w-24 md:h-24 rounded-full bg-[linear-gradient(180deg,#2B32FA_0%,#47E9B6_100%)]"></div>
+const QuoteMark = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="absolute top-5 right-5 w-9 h-9 text-white/10 transition-colors group-hover:text-brand-orange/40" aria-hidden="true">
+    <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.5v-6.5H5.25c0-1.6.95-2.5 2.5-2.5V6h-.58Zm9.33 0a5.17 5.17 0 0 0-5.17 5.17V18h6.5v-6.5h-3.25c0-1.6.95-2.5 2.5-2.5V6h-.58Z" />
+  </svg>
+);
 
-        {/* Glass card */}
-        <div className="relative z-10 w-80 max-w-[250px] min-h-[280px] bg-white/10 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-white/20 flex-shrink-0">
-          {/* Mobile layout */}
-          <div className="md:hidden">
-            <div className="flex flex-row gap-3 items-center mb-3">
-              <Avatar name={testimonial.name} className="w-16 h-16 text-xl" />
-              <figcaption className="flex flex-col justify-center gap-1">
-                <span className={clsx(montserrat.className, "text-white text-lg")}>{testimonial.name}</span>
-                <Stars rating={testimonial.rating} />
-              </figcaption>
-            </div>
-            <blockquote className="text-neutral-200 text-base leading-relaxed font-normal line-clamp-6">
-              {testimonial.content}
-            </blockquote>
-          </div>
-
-          {/* Desktop layout */}
-          <figcaption className="hidden md:flex absolute z-10 bottom-5 w-3/4 flex-col gap-3">
-            <span className={clsx(montserrat.className, "text-white text-2xl font-semibold")}>{testimonial.name}</span>
-            <Stars rating={testimonial.rating} />
-          </figcaption>
-          <div className="hidden md:block absolute -right-10 -translate-y-1/2 top-1/2">
-            <Avatar name={testimonial.name} className="w-32 h-32 text-4xl" />
-          </div>
+const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (
+  <figure className="group relative h-full flex flex-col rounded-2xl bg-white/[0.06] border border-white/10 p-6 md:p-7 text-white transition duration-300 hover:bg-white/[0.1] hover:border-white/20">
+    <QuoteMark />
+    <blockquote className="font-body text-base md:text-[17px] leading-relaxed text-white/85 line-clamp-6 pr-8 flex-1">
+      {testimonial.content.trim()}
+    </blockquote>
+    <figcaption className="mt-6 pt-5 border-t border-white/10 flex items-center gap-3">
+      <Avatar name={testimonial.name} className="w-11 h-11 text-sm" />
+      <div className="flex flex-col gap-1 min-w-0">
+        <span className="font-heading text-base font-medium truncate">{testimonial.name}</span>
+        <div className="flex items-center gap-2">
+          <Stars rating={testimonial.rating} />
+          {testimonial.projectType && <span className="font-body text-xs text-white/55">{testimonial.projectType}</span>}
         </div>
-
-        {/* Quote on the right (desktop) */}
-        <blockquote className="hidden md:block text-neutral-200 text-base leading-relaxed font-normal line-clamp-6">
-          {testimonial.content}
-        </blockquote>
       </div>
-    </figure>
-  );
-};
+    </figcaption>
+  </figure>
+);
 
 export default TestimonialCard;

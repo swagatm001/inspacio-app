@@ -91,7 +91,7 @@ const ProjectPage = ({ params }: Props) => {
         </ScrollFadeIn>
       ))}
       <ScrollFadeIn>
-        <Testimonials />
+        <Testimonials projectType={project.type} />
       </ScrollFadeIn>
       <ScrollFadeIn>
         <ProjectPager previous={previous} next={next} />

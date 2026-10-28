@@ -10,7 +10,7 @@ const StatsStrip: React.FC = () => {
         {siteConstants.stats.map((stat) => (
           <div key={stat.label} className="text-center">
             <dd className="font-heading text-3xl md:text-4xl font-medium text-brand-brown">{stat.value}</dd>
-            <dt className="font-body text-sm md:text-base text-[#696969] mt-1">{stat.label}</dt>
+            <dt className="font-body text-sm md:text-base text-brand-muted mt-1">{stat.label}</dt>
           </div>
         ))}
       </dl>

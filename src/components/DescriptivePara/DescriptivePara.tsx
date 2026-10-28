@@ -8,7 +8,7 @@ import { satoshi } from '@/fonts/satoshi';
 const DescriptivePara: React.FC = () => {
     return (
         <div className="flex flex-col items-center justify-center text-center mt-10 mb-24">
-            <h2 className={clsx(montserrat.className,"text-3xl font-medium mb-4 text-[#3D3834]")}>{descriptiveConstants.heading}</h2>
+            <h2 className={clsx(montserrat.className,"text-3xl font-medium mb-4 text-brand-ink")}>{descriptiveConstants.heading}</h2>
             {descriptiveConstants.content.map((para, index) => (
                 <p key={index} className={clsx(satoshi.className,"text-base text-gray-600 mb-2")}>{para}</p>
             ))}

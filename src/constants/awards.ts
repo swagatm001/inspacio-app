@@ -38,4 +38,10 @@ export const press: PressFeature[] = [
         href: "https://archello.com/project/bengaluru-penthouse",
         projectSlug: "penthouse",
     },
+    {
+        outlet: "The Architects Diary",
+        title: "Cedar String residence",
+        href: "https://thearchitectsdiary.com/this-5000-sq-ft-residence-layers-family-life-across-split-level-spaces-chair-and-company-inspacio-design-studio/",
+        projectSlug: "cedar-string",
+    },
 ];

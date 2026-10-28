@@ -29,7 +29,7 @@ export const ContactMap: React.FC = () => {
 
 
   return (
-    <div className="border border-2 border-[#885739] w-full rounded-2xl overflow-hidden mb-5 h-[400px]">
+    <div className="border border-2 border-brand-brown w-full rounded-2xl overflow-hidden mb-5 h-[400px]">
       <GoogleMap
         onLoad={(m: google.maps.Map) => { mapRef.current = m; setMap(m); }}
         onUnmount={() => { mapRef.current = null; setMap(null); }}

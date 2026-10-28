@@ -16,7 +16,7 @@ export default function ContactLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="bg-[#F8F7F3]"> 
+    <div className="bg-brand-cream"> 
       <End2EndWrapper>
         <Header lightBackground={true}/>
       </End2EndWrapper>

@@ -26,13 +26,13 @@ const Awards: React.FC = () => {
     <section className="py-8" aria-labelledby="awards-heading">
       <div className="flex flex-col items-center mb-8">
         <SectionEyebrow number="06" label="Recognition" className="justify-center" />
-        <h2 id="awards-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium text-[#3D3834]")}>
+        <h2 id="awards-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium text-brand-ink")}>
           Awards
         </h2>
       </div>
       <div className={clsx(satoshi.className, "flex flex-col md:flex-row items-center w-full gap-8")}>
         <div className="basis-1/3 flex-shrink-0">
-          <h3 className="mb-4 text-2xl font-bold text-[#3D3834]">Celebrating Design Excellence</h3>
+          <h3 className="mb-4 text-2xl font-bold text-brand-ink">Celebrating Design Excellence</h3>
           <p className="text-lg text-gray-700">
             Honoured for creativity, craftsmanship, and meaningful design, each recognition strengthens our pursuit of
             timeless, human-centric spaces.
@@ -60,7 +60,7 @@ const Awards: React.FC = () => {
                   <ExternalIcon className="w-4 h-4 text-brand-tan" />
                 </a>
                 {item.projectSlug && (
-                  <Link href={`/projects/${item.projectSlug}`} className="font-body text-sm text-[#696969] underline-offset-4 hover:underline hover:text-brand-brown">
+                  <Link href={`/projects/${item.projectSlug}`} className="font-body text-sm text-brand-muted underline-offset-4 hover:underline hover:text-brand-brown">
                     {item.title}
                   </Link>
                 )}

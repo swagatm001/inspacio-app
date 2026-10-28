@@ -87,10 +87,10 @@ export const Contact = ({ removeDescription }: ContactProps) => {
       </div>
       <div className="relative p-5">
         {/* Decorative corner-only border: four corner segments (horizontal + vertical) */}
-        <span className="absolute left-0 top-0 h-20 w-20 rounded-tl-2xl border-l-4 border-t-4 border-[#885739]" />
-        <span className="absolute right-0 top-0 h-20 w-20 rounded-tr-2xl border-r-4 border-t-4 border-[#885739]" />
-        <span className="absolute left-0 bottom-0 h-20 w-20 rounded-bl-2xl border-b-4 border-l-4 border-[#885739]" />
-        <span className="absolute right-0 bottom-0 h-20 w-20 rounded-br-2xl border-b-4 border-r-4 border-[#885739]" />
+        <span className="absolute left-0 top-0 h-20 w-20 rounded-tl-2xl border-l-4 border-t-4 border-brand-brown" />
+        <span className="absolute right-0 top-0 h-20 w-20 rounded-tr-2xl border-r-4 border-t-4 border-brand-brown" />
+        <span className="absolute left-0 bottom-0 h-20 w-20 rounded-bl-2xl border-b-4 border-l-4 border-brand-brown" />
+        <span className="absolute right-0 bottom-0 h-20 w-20 rounded-br-2xl border-b-4 border-r-4 border-brand-brown" />
 
         <form
           className="grid grid-cols-1 gap-4 p-5 rounded bg-white border border-[#D9D9D9]"
@@ -98,7 +98,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
         >
         <div className="flex flex-col lg:flex-row gap-6">
           <div className={formGroupCSS}>
-            <label htmlFor="fname" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>First name</label>
+            <label htmlFor="fname" className={clsx(satoshi.className,"font-medium text-lg text-brand-ink")}>First name</label>
             <input
               id="fname"
               type="text"
@@ -108,7 +108,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
             />
           </div>
           <div className={formGroupCSS}>
-            <label htmlFor="lname" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Last name</label>
+            <label htmlFor="lname" className={clsx(satoshi.className,"font-medium text-lg text-brand-ink")}>Last name</label>
             <input
               id="lname"
               type="text"
@@ -119,7 +119,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
           </div>
         </div>
         <div className={formGroupCSS}>
-          <label htmlFor="email" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Email</label>
+          <label htmlFor="email" className={clsx(satoshi.className,"font-medium text-lg text-brand-ink")}>Email</label>
           <input
             id="email"
             type="email"
@@ -132,7 +132,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
           />
         </div>
         <div className={formGroupCSS}>
-          <label htmlFor="phone" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Phone number</label>
+          <label htmlFor="phone" className={clsx(satoshi.className,"font-medium text-lg text-brand-ink")}>Phone number</label>
           <input
             id="phone"
             type="tel"
@@ -145,7 +145,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
           />
         </div>
         <div className={formGroupCSS}>
-          <label htmlFor="message" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>Can you tell me what you need?</label>
+          <label htmlFor="message" className={clsx(satoshi.className,"font-medium text-lg text-brand-ink")}>Can you tell me what you need?</label>
           <textarea
             id="message"
             placeholder="Leave us a message..."
@@ -164,7 +164,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
               type="checkbox"
               {...register("isPrivacyPolicyChecked", { required: true })}
             />
-            <label htmlFor="policyCheck" className={clsx(satoshi.className,"font-medium text-lg text-[#1E1E1E]")}>
+            <label htmlFor="policyCheck" className={clsx(satoshi.className,"font-medium text-lg text-brand-ink")}>
               You agree to our friendly privacy policy.{" "}
             </label>
           </div>

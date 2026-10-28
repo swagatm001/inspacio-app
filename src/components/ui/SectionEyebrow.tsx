@@ -17,8 +17,12 @@ export const SectionEyebrow: React.FC<SectionEyebrowProps> = ({ number, label, c
       className
     )}
   >
-    <span className="text-brand-orange tabular-nums">{number}</span>
-    <span aria-hidden="true" className={clsx("inline-block w-6 h-px", light ? "bg-white/40" : "bg-brand-sand")} />
+    {number && (
+      <>
+        <span className="text-brand-orange tabular-nums">{number}</span>
+        <span aria-hidden="true" className={clsx("inline-block w-6 h-px", light ? "bg-white/40" : "bg-brand-sand")} />
+      </>
+    )}
     {label}
   </p>
 );

@@ -85,7 +85,7 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
   return (
     <div className="py-16">
       <section className="max-w-6xl mx-auto px-4 py-12">
-        <h1 className={clsx(montserrat.className, "text-2xl md:text-4xl text-center font-medium mb-8 text-[#3D3834]")}>
+        <h1 className={clsx(montserrat.className, "text-2xl md:text-4xl text-center font-medium mb-8 text-brand-ink")}>
           Projects
         </h1>
 
@@ -96,7 +96,7 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
             <div
               role="group"
               aria-label="Project type"
-              className="inline-flex w-full sm:w-auto p-1 rounded-full border border-[#E0D9C9] bg-white shadow-sm"
+              className="inline-flex w-full sm:w-auto p-1 rounded-full border border-brand-sand bg-white shadow-sm"
             >
               {TYPE_OPTIONS.map((option) => {
                 const active = selectedType === option.value;
@@ -107,8 +107,8 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
                     aria-pressed={active}
                     onClick={() => setSelectedType(option.value)}
                     className={clsx(
-                      "flex-1 sm:flex-none h-9 px-5 rounded-full text-sm md:text-base whitespace-nowrap transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#885739]/40",
-                      active ? "bg-[#885739] text-white shadow-sm" : "text-[#3D3834] hover:bg-[#F3EEE8]"
+                      "flex-1 sm:flex-none h-9 px-5 rounded-full text-sm md:text-base whitespace-nowrap transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/40",
+                      active ? "bg-brand-brown text-white shadow-sm" : "text-brand-ink hover:bg-brand-wash"
                     )}
                   >
                     {option.label}
@@ -120,7 +120,7 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
             {/* Location: styled native select */}
             <label className="relative inline-flex items-center w-full sm:w-auto">
               <span className="sr-only">Location</span>
-              <span className="pointer-events-none absolute left-4 text-[#A6836E]">
+              <span className="pointer-events-none absolute left-4 text-brand-tan">
                 <PinIcon />
               </span>
               <select
@@ -128,8 +128,8 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
                 onChange={(e) => setSelectedLocation(e.target.value)}
                 className={clsx(
                   "appearance-none w-full sm:min-w-[260px] h-11 pl-11 pr-11 rounded-full border bg-white text-sm md:text-base cursor-pointer shadow-sm transition-colors",
-                  "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#885739]/40 hover:border-[#A6836E]",
-                  selectedLocation ? "border-[#885739] text-[#3D3834]" : "border-[#E0D9C9] text-[#696969]"
+                  "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/40 hover:border-brand-tan",
+                  selectedLocation ? "border-brand-brown text-brand-ink" : "border-brand-sand text-brand-muted"
                 )}
               >
                 <option value="">All locations</option>
@@ -139,14 +139,14 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
                   </option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute right-4 text-[#885739]">
+              <span className="pointer-events-none absolute right-4 text-brand-brown">
                 <ChevronIcon />
               </span>
             </label>
           </div>
 
           <div className="flex items-center gap-5 text-sm md:text-base">
-            <div role="group" aria-label="View" className="hidden lg:inline-flex p-1 rounded-full border border-[#E0D9C9] bg-white shadow-sm">
+            <div role="group" aria-label="View" className="hidden lg:inline-flex p-1 rounded-full border border-brand-sand bg-white shadow-sm">
               {(["grid", "list"] as View[]).map((v) => (
                 <button
                   key={v}
@@ -154,8 +154,8 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
                   aria-pressed={view === v}
                   onClick={() => setView(v)}
                   className={clsx(
-                    "inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-sm capitalize transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#885739]/40",
-                    view === v ? "bg-[#885739] text-white" : "text-[#3D3834] hover:bg-[#F3EEE8]"
+                    "inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-sm capitalize transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/40",
+                    view === v ? "bg-brand-brown text-white" : "text-brand-ink hover:bg-brand-wash"
                   )}
                 >
                   {v === "grid" ? <GridIcon /> : <ListIcon />}
@@ -163,8 +163,8 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
                 </button>
               ))}
             </div>
-            <p className="text-[#696969]" aria-live="polite">
-              Showing <span className="font-medium text-[#3D3834]">{projects.length}</span> of {allProjects.length} projects
+            <p className="text-brand-muted" aria-live="polite">
+              Showing <span className="font-medium text-brand-ink">{projects.length}</span> of {allProjects.length} projects
             </p>
             {hasFilters && (
               <Button variant="link" onClick={clearFilters} icon={<CloseIcon />}>
@@ -189,8 +189,8 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
             ))}
           </div>
         ) : (
-          <div className={clsx(satoshi.className, "rounded-lg border border-dashed border-[#E0D9C9] bg-white/60 px-6 py-16 text-center")}>
-            <p className="text-lg text-[#3D3834] mb-2">No projects match these filters.</p>
+          <div className={clsx(satoshi.className, "rounded-lg border border-dashed border-brand-sand bg-white/60 px-6 py-16 text-center")}>
+            <p className="text-lg text-brand-ink mb-2">No projects match these filters.</p>
             <Button variant="secondary" onClick={clearFilters}>
               Show all projects
             </Button>

@@ -36,3 +36,22 @@ export const Stars: React.FC<{ rating: number; dim?: string }> = ({ rating, dim 
     ))}
   </div>
 );
+
+export const averageRating = (items: { rating: number }[]) =>
+  items.length ? Math.round((items.reduce((sum, t) => sum + t.rating, 0) / items.length) * 10) / 10 : 0;
+
+export const RatingPill: React.FC<{ rating: number; count: number; light?: boolean; className?: string }> = ({ rating, count, light, className }) => (
+  <div
+    className={clsx(
+      "inline-flex items-center gap-3 rounded-full border px-4 py-2",
+      light ? "bg-white/10 border-white/15 text-white" : "bg-white border-brand-sand text-brand-ink",
+      className
+    )}
+  >
+    <span className="font-heading text-2xl font-medium leading-none">{rating.toFixed(1)}</span>
+    <div className="flex flex-col gap-0.5">
+      <Stars rating={Math.round(rating)} dim={light ? "text-white/30" : "text-brand-sand"} />
+      <span className={clsx("font-body text-[11px]", light ? "text-white/60" : "text-brand-faint")}>from {count} Google reviews</span>
+    </div>
+  </div>
+);

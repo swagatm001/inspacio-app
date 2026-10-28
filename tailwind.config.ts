@@ -27,15 +27,19 @@ const config: Config = {
         body: ["var(--font-satoshi)", "sans-serif"],
       },
       colors: {
+        // Values live in globals.css as RGB triplets so the palette can be changed in one place.
         brand: {
-          orange: "#F36730",
-          "orange-dark": "#D9552A",
-          brown: "#885739",
-          tan: "#A6836E",
-          ink: "#3D3834",
-          sand: "#E0D9C9",
-          cream: "#F8F7F3",
-          wash: "#F3EEE8",
+          orange: "rgb(var(--c-orange) / <alpha-value>)",
+          "orange-dark": "rgb(var(--c-orange-dark) / <alpha-value>)",
+          brown: "rgb(var(--c-brown) / <alpha-value>)",
+          tan: "rgb(var(--c-tan) / <alpha-value>)",
+          ink: "rgb(var(--c-ink) / <alpha-value>)",
+          body: "rgb(var(--c-body) / <alpha-value>)",
+          muted: "rgb(var(--c-muted) / <alpha-value>)",
+          faint: "rgb(var(--c-faint) / <alpha-value>)",
+          sand: "rgb(var(--c-sand) / <alpha-value>)",
+          cream: "rgb(var(--c-cream) / <alpha-value>)",
+          wash: "rgb(var(--c-wash) / <alpha-value>)",
         },
       },
       backgroundImage: {

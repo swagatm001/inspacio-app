@@ -17,7 +17,7 @@ const AwardCard: React.FC<Award> = ({ title, description, presented }) => {
         )}
         <LaurelIcon className="w-9 h-9 text-brand-tan mb-3" />
         <h4 className="font-heading text-lg md:text-xl font-medium text-brand-ink mb-2 leading-snug">{name}</h4>
-        <p className="font-body text-sm md:text-base text-[#696969] leading-snug">{description}</p>
+        <p className="font-body text-sm md:text-base text-brand-muted leading-snug">{description}</p>
         {presented && (
           <Link
             href={`/projects/${presented.slug}`}

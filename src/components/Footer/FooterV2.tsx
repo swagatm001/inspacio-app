@@ -19,7 +19,7 @@ const navLinks = [
 const FooterV2: React.FC = () => (
   <>
   <InstagramStrip />
-  <footer className="bg-[#885739] text-white pt-12 pb-4 w-full">
+  <footer className="bg-brand-brown text-white pt-12 pb-4 w-full">
     <div className="flex flex-col md:flex-row flex-wrap justify-between items-start px-8 gap-8">
       <div className="flex-1 min-w-[280px]">
         <h2 className={clsx(montserrat.className, "text-5xl md:text-8xl font-medium mb-6")}>
@@ -40,7 +40,7 @@ const FooterV2: React.FC = () => (
       </nav>
     </div>
 
-    <div className="block md:hidden border border-[#F8F7F326] w-11/12 mx-8 mt-10"></div>
+    <div className="block md:hidden border border-white/15 w-11/12 mx-8 mt-10"></div>
 
     <div className="flex flex-col md:flex-row items-start md:items-center justify-between my-12 mb-6 px-8 gap-8">
       <Image className="w-[150px] h-auto select-none" src="/images/logo_white.svg" alt="Inspacio" width={120} height={92} />
@@ -53,7 +53,7 @@ const FooterV2: React.FC = () => (
       </address>
     </div>
 
-    <div className="border border-[#F8F7F326] w-11/12 mx-8"></div>
+    <div className="border border-white/15 w-11/12 mx-8"></div>
     <div className="text-center text-sm text-white mt-4">
       &copy; {new Date().getFullYear()} Inspacio Design. All rights reserved.
     </div>

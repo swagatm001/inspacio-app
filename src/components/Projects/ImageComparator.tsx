@@ -48,7 +48,7 @@ export const ImageComparator: React.FC<ImageComparatorProps> = ({ before, after,
           className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize"
         />
       </div>
-      {caption && <figcaption className="font-body mt-3 text-sm text-[#696969] text-center">{caption}</figcaption>}
+      {caption && <figcaption className="font-body mt-3 text-sm text-brand-muted text-center">{caption}</figcaption>}
     </figure>
   );
 };
