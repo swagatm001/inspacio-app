@@ -4,7 +4,6 @@ import { ProjectHero } from "@/components/Projects/ProjectHero";
 import { ProjectMainImage } from "@/components/Projects/ProjectMainImage";
 import { ProjectDescription } from "@/components/Projects/ProjectDescription";
 import ProjectShowcaseSection from "@/components/Projects/ProjectShowcaseSection";
-import { ProjectOtherProjects } from "@/components/Projects/ProjectOtherProjects";
 import { ProjectPager } from "@/components/Projects/ProjectPager";
 import { ImageComparator } from "@/components/Projects/ImageComparator";
 import Testimonials from "@/components/Testimonial/Testimonials";
@@ -82,9 +81,8 @@ const ProjectPage = ({ params }: Props) => {
       <ScrollFadeIn>
         <Testimonials />
       </ScrollFadeIn>
-      <ProjectPager previous={previous} next={next} />
       <ScrollFadeIn>
-        <ProjectOtherProjects project={project} />
+        <ProjectPager previous={previous} next={next} />
       </ScrollFadeIn>
     </div>
   );
