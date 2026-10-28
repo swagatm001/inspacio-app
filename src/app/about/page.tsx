@@ -1,101 +1,66 @@
-import { Banner } from "@/components/Banner";
-import { ProjectsHero } from "@/components/Hero";
-import { ImageLeftCopyRight } from "@/components/ImageLeftCopyRight";
-import { projectConstants } from "@/constants/projects";
-import { playfair } from "@/fonts/playfair";
+import { ourStory } from "@/constants/ourStory";
+import { montserrat } from "@/fonts/montserrat";
+import { satoshi } from "@/fonts/satoshi";
 import clsx from "clsx";
 import Image from "next/image";
 
+const paragraphClass = "text-lg text-[#3f3f3f] mb-4";
+
 const About = () => {
   return (
-    <div>
-      <div>
-        <div className="mt-20 mb-8">
-          <p className={clsx(playfair.className, "text-3xl lg:text-5xl mb-4")}>
-            Company Overview
+    <div className="pb-10">
+      <h1 className={clsx(montserrat.className, "text-3xl md:text-5xl font-medium text-[#3D3834] mb-10")}>
+        {ourStory.title}
+      </h1>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="lg:col-span-5 lg:sticky lg:top-28">
+          <div className="relative w-full aspect-[4/5] max-h-[640px] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src={ourStory.author.photo}
+              alt={`${ourStory.author.name}, ${ourStory.author.role} of Inspacio Design`}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+          <p className={clsx(satoshi.className, "mt-3 text-sm text-[#696969]")}>
+            {ourStory.author.name}, {ourStory.author.role}
           </p>
         </div>
-        <div className="flex flex-col gap-6">
-          <p>
-            Inspacio Design-Build Services specializes in bringing your dream
-            interior decor to life, whether it&apos;s sleek, sophisticated, and
-            smart or a contemporary fusion of ethnic styles. Our designs feature
-            clean lines, diverse textures, and artwork, seamlessly integrated
-            with cutting-edge technology, ensuring that the spaces you inhabit
-            are not only aesthetically pleasing but also comfortable and
-            sustainable.
-          </p>
-          <p>
-            We take pride in the quality of our designs, their
-            cost-effectiveness, and their environmental sensitivity. Achieving
-            these goals requires a high level of technical expertise, enabling
-            us to meet challenging budget and time constraints and effectively
-            address the complexities of integrating new construction with
-            existing buildings and conditions.
-          </p>
-          <p>
-            With Inspacio, clients benefit from a streamlined process where they
-            manage just one contract, providing a single point of
-            responsibility. Our designers and contractors work as a cohesive
-            team, offering unified recommendations. Any changes are handled by
-            the design-build entity, minimizing the need for change orders and
-            ensuring a smooth project delivery
-          </p>
-        </div>
-        <div>
-          <div className="my-16">
-            <p
-              className={clsx(playfair.className, "text-3xl lg:text-5xl mb-4")}
-            >
-              Leadership
+
+        <div className={clsx(satoshi.className, "lg:col-span-7")}>
+          <h2 className={clsx(montserrat.className, "text-2xl font-medium text-[#3D3834] mb-6")}>
+            {ourStory.headline}
+          </h2>
+          {ourStory.paragraphs.map((text) => (
+            <p key={text.slice(0, 32)} className={paragraphClass}>
+              {text}
             </p>
-          </div>
+          ))}
+          {ourStory.closing.map((text) => (
+            <p key={text} className={clsx(paragraphClass, "mb-1 font-medium text-[#3D3834]")}>
+              {text}
+            </p>
+          ))}
+
+          <h2 className={clsx(montserrat.className, "text-2xl font-medium text-[#3D3834] mt-12 mb-6")}>
+            Leadership
+          </h2>
+          <p className={paragraphClass}>
+            Swati Panda is the Principal Architect, Founder and Managing Director of Inspacio Design. Under her
+            guidance, Inspacio has become a well-known name among homebuyers and businesses in Bangalore. She holds a
+            firm conviction that each project ought to be crafted as a contextual evolution of spaces, offering fresh
+            perceptions, with every design attuned to its climate and weaving in sustainability.
+          </p>
+          <p className={paragraphClass}>
+            Known for a simple yet aesthetically rich approach, she juxtaposes the orthogonal nature of clean lines with
+            a luxurious mix of materials, colours and textures to create a distinct look for each project. She believes
+            no space is too small to be designed, because creativity has no size and no limits. A senior architect with
+            more than 13 years of experience, she has delivered residential and commercial projects across sectors.
+          </p>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start lg:items-start gap-6 mb-16">
-          <div className="flex-1 ">
-            <div className="w-[354px] h-[484px] lg:h-[600px] lg:w-full xl:h-[720px] xl:w-[592px]">
-              <div className="w-full h-full relative">
-                <Image src="/kds/main/swati.jpg" fill alt="swati panda" />
-              </div>
-            </div>
-          </div>
-          <div className="flex-1 h-full">
-            <div className="my-8">
-              <p
-                className={clsx(
-                  playfair.className,
-                  "text-3xl lg:text-5xl mb-4"
-                )}
-              >
-                Swati Panda
-              </p>
-            </div>
-            <div className="flex flex-col gap-8">
-              <p>
-                Ms. Swati Panda is the Principal Architect, Founder & Managing
-                Director of Inspacio Design. Under her guidance, Inspacio Design
-                has become a well known brand among homebuyers. 
-                Swati Panda holds a firm conviction that each project ought to
-                be crafted as a contextual evolution of spaces, offering fresh
-                perceptions. Every design is meticulously attuned to the
-                climate, seamlessly weaving in sustainability. This beliefs are
-                reflected in every project by Inspacio Design. From
-                planning well to designing interiors that reflect a client’s
-                style is Ms. Swati’s expertise.
-              </p>
-              <p>
-                Known for simplicity, yet aesthetically pleasing design
-                approach, Architect Swati Panda juxtaposes the orthogonal nature
-                of clean lines with a luxurious mix of materials colors and
-                texture to create a distinct look for each project. Swati
-                believes that no space is too small to be designed, as
-                creativity has no size, nor limits. She is Senior
-                Architect with 13+ years of experience and executed various residential and commercial projects in her career.
-              </p>
-            </div>
-          </div>
-        </div>
-        <Banner />
       </div>
     </div>
   );

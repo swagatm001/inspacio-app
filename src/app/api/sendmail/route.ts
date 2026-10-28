@@ -1,5 +1,4 @@
 import { NextResponse, NextRequest } from 'next/server'
-const nodemailer = require('nodemailer');
 
 // Handles POST requests to /api
 
@@ -50,7 +49,11 @@ export async function POST(request: NextRequest) {
         }),
     });
 
-       const data = await res.json();
+    if (!res.ok) {
+      throw new Error(`Lead endpoint responded with status ${res.status}`);
+    }
+
+    const data = await res.json();
 
     return NextResponse.json({ success: true, data });
 

@@ -77,3 +77,26 @@ body {
 .menu-item-2 { animation-delay: 0.65s; }
 .menu-item-3 { animation-delay: 0.8s; }
 .menu-item-4 { animation-delay: 0.95s; }
+/* Scrolling text strip (CSS-driven, no JS animation loop) */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee__track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

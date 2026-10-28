@@ -14,8 +14,8 @@ export const services:ServiceList = {
     "Our Expertise": {
         title: "Our Expertise",
         paragraph: [
-            "We design across scales and sectors, creating spaces that are as functional as they are beautiful.","Every project begins with a clear understanding of purpose, aesthetics, and emotion, shaping environments that truly reflect their people",
-            "Every project begins with a clear understanding of purpose, aesthetics, and emotion, shaping environments that truly reflect their people",
+            "We design across scales and sectors, creating spaces that are as functional as they are beautiful.",
+            "Every project begins with a clear understanding of purpose, aesthetics, and emotion, shaping environments that truly reflect their people.",
             "Our approach combines design intelligence, material sensitivity, and craftsmanship to deliver timeless results."
         ],
         points: [

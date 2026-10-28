@@ -9,8 +9,9 @@ import CustomContainer from "@/components/Container/CustomContainer";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Interior Design Projects in Bangalore | Inspacio Portfolio",
-        description: "Explore Inspacio’s interior design projects in Bangalore, featuring residential, commercial, architecture and turnkey project execution. View our portfolio.",
+        title: "Interior Design Services in Bangalore | Inspacio",
+        description: "Concept design, detailing, on-site execution and sustainable design for homes, offices and commercial spaces. See how Inspacio takes a project from idea to handover.",
+        alternates: { canonical: "/services" },
     };
 }
 

@@ -1,7 +1,35 @@
 import "./globals.css";
+import type { Metadata } from "next";
+import clsx from "clsx";
 import { helvetica } from "@/fonts/helvetica";
-import Link from "next/link";
-import Image from "next/image";
+import { montserrat } from "@/fonts/montserrat";
+import { satoshi } from "@/fonts/satoshi";
+import { SITE_URL, siteConstants } from "@/constants/site";
+import { FloatingActions } from "@/components/ContactActions/FloatingActions";
+import { MobileActionBar } from "@/components/ContactActions/MobileActionBar";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: "Interior Designers in Bangalore | Inspacio",
+  description:
+    "Inspacio is a Bangalore-based architecture and interior design studio delivering homes, offices and commercial spaces from concept to turnkey execution.",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: siteConstants.name,
+    images: [
+      {
+        url: siteConstants.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "An interior designed by Inspacio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -10,26 +38,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={helvetica.className}>
-        <main>
+      <body className={clsx(helvetica.className, montserrat.variable, satoshi.variable)}>
+        {/* Bottom padding keeps the last content clear of the mobile action bar */}
+        <main className="pb-[72px] lg:pb-0">
           <div id="modal-portal" />
           {children}
         </main>
-        {/* Floating Instagram Icon */}
-        <Link
-          href="https://www.instagram.com/inspaciodesignstudio"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 z-50 transition-transform hover:scale-110 bg-[#F36730] p-2 rounded-full drop-shadow-lg"
-        >
-          <Image
-            src="/images/instagram-white.svg"
-            alt="Instagram"
-            width={26}
-            height={26}
-            className="drop-shadow-lg"
-          />
-        </Link>
+        <FloatingActions />
+        <MobileActionBar />
       </body>
     </html>
   );

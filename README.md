@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Inspacio website
 
-## Getting Started
+Marketing site for [Inspacio Design](https://www.inspacio.in), a Bangalore architecture and interior design studio. Built with Next.js 14 (App Router), TypeScript and Tailwind CSS.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Script          | What it does                      |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Start the dev server              |
+| `npm run build` | Production build                  |
+| `npm run start` | Serve the production build        |
+| `npm run lint`  | Run ESLint (next/core-web-vitals) |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Environment variables
 
-## Learn More
+| Variable                          | Used by                              |
+| --------------------------------- | ------------------------------------ |
+| `NEXT_PUBLIC_API_URL`             | `/api/sendmail` forwards contact form leads here |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Map on the contact page              |
+| `NEXT_PUBLIC_SITE_URL`            | Canonical URLs, sitemap and Open Graph (defaults to `https://www.inspacio.in`) |
 
-To learn more about Next.js, take a look at the following resources:
+Put them in `.env.local` for local development.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Where things live
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `src/app` routes: home, `/projects`, `/projects/[slug]`, `/services`, `/about`, `/contact`, plus `sitemap.ts` and `robots.ts`.
+- `src/components` UI, grouped by section.
+- `src/constants` all copy and data: projects, services, testimonials, awards, partners, the founder's story and site-wide details (`site.ts`).
+- `src/hooks/useParallax.ts` the shared scroll parallax used by project images.
+- `public/images` local images, optimised at request time by Next.js. Older project photos are served from ImageKit by absolute URL (allowed in `next.config.mjs`).
 
-## Deploy on Vercel
+## Editing content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Most text changes are data edits in `src/constants`. Adding a project means adding an entry to `projectsConstants` in `src/constants/projects.ts`; the sitemap picks it up automatically.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Keep new images reasonably sized (around 2000 px on the long edge is plenty). The hero video in `public/videos` should be a short loop, ideally under 5 MB.

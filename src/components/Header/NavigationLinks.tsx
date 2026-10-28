@@ -3,16 +3,28 @@ import { clsx } from "clsx";
 import Link from "next/link";
 import React from "react";
 
-export const NavigationLinks: React.FC<{ className?: string, onClick?: () => void, isDropdownOpen?: boolean }> = ({
+type NavigationLinksProps = {
+  className?: string;
+  linkClassName?: string;
+  onClick?: () => void;
+  isDropdownOpen?: boolean;
+};
+
+export const NavigationLinks: React.FC<NavigationLinksProps> = ({
   className,
+  linkClassName = "text-[#F8F7F3]",
   onClick,
-  isDropdownOpen
+  isDropdownOpen,
 }) => {
   return (
     <ul className={clsx("flex gap-5", className)}>
       {headerConstants.menu.links.map((link, i) => (
-        <li key={i} className={clsx(isDropdownOpen && "animate-slide-up", `menu-item-${i}`)}>
-          <Link href={link.href} className="text-[#F8F7F3]" onClick={onClick}>
+        <li key={link.href} className={clsx(isDropdownOpen && "animate-slide-up", `menu-item-${i}`)}>
+          <Link
+            href={link.href}
+            onClick={onClick}
+            className={clsx(linkClassName, "transition-opacity hover:opacity-75 focus:outline-none focus-visible:underline")}
+          >
             {link.label}
           </Link>
         </li>

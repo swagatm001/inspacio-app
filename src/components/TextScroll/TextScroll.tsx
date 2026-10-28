@@ -1,67 +1,37 @@
-"use client";
-import { montserrat } from '@/fonts/montserrat';
-import { satoshi } from '@/fonts/satoshi';
-import clsx from 'clsx';
-import React, { useRef, useEffect } from 'react';
+import { montserrat } from "@/fonts/montserrat";
+import { satoshi } from "@/fonts/satoshi";
+import clsx from "clsx";
+import React from "react";
 
-const TEXTS = [
-    "Be part of the Inspacio makeover",
-    "#YouDreamWeCreate",
-    "When",
-    "#YouDreamWeCreate",
-];
+const TEXTS = ["Be part of the Inspacio makeover", "#YouDreamWeCreate"];
 
-const SCROLL_SPEED = 50; // pixels per second
+/** Enough repetitions to span wide screens; the track is duplicated once more for the seamless loop. */
+const GROUP = [...TEXTS, ...TEXTS, ...TEXTS];
 
-const TextScroll:React.FC = () => {
-    const scrollRef = useRef<HTMLDivElement>(null);
+const Group: React.FC<{ hidden?: boolean }> = ({ hidden }) => (
+  <div className="inline-flex items-center" aria-hidden={hidden || undefined}>
+    {GROUP.map((text, idx) => (
+      <span
+        key={`${text}-${idx}`}
+        className={clsx(
+          idx % 2 === 0 ? montserrat.className : satoshi.className,
+          "inline-block px-8 text-4xl",
+          idx % 2 === 0 ? "font-medium text-[#885739]" : "font-light italic text-[#3D3834]"
+        )}
+      >
+        {text}
+      </span>
+    ))}
+  </div>
+);
 
-    useEffect(() => {
-        const scrollContainer = scrollRef.current;
-        if (!scrollContainer) return;
-
-        let start: number | null = null;
-        let animationFrame: number;
-
-        const scrollWidth = scrollContainer.scrollWidth / 2;
-
-        function animateScroll(timestamp: number) {
-            if (start === null) start = timestamp;
-            const elapsed = timestamp - start;
-            const distance = (elapsed / 1000) * SCROLL_SPEED;
-            scrollContainer && (scrollContainer.scrollLeft = distance % scrollWidth);
-            animationFrame = requestAnimationFrame(animateScroll);
-        }
-
-        animationFrame = requestAnimationFrame(animateScroll);
-
-        return () => cancelAnimationFrame(animationFrame);
-    }, []);
-
-    // Duplicate texts for seamless infinite scroll
-    const items = [...TEXTS, ...TEXTS];
-
-    return (
-        <div
-            ref={scrollRef}
-            className="mb-10 mt-10 w-full overflow-hidden whitespace-nowrap"
-        >
-            <div className="inline-block">
-                {items.map((text, idx) => (
-                    <span
-                        key={idx}
-                        className={clsx(
-                            idx % 2 === 0 ? montserrat.className : satoshi.className,
-                            "inline-block px-8 text-4xl align-middle",
-                            idx % 2 === 0 ? "font-medium text-[#885739]" : "font-light italic text-[#3D3834]"
-                        )}
-                    >
-                        {text}
-                    </span>
-                ))}
-            </div>
-        </div>
-    );
-};
+const TextScroll: React.FC = () => (
+  <div className="marquee my-10 w-full">
+    <div className="marquee__track">
+      <Group />
+      <Group hidden />
+    </div>
+  </div>
+);
 
 export default TextScroll;

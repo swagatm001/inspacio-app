@@ -1,12 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface ScrollFadeInProps {
   children: React.ReactNode;
-  delay?: number; // Delay in milliseconds before animation starts
-  duration?: number; // Animation duration in milliseconds
-  threshold?: number; // How much of the element should be visible before triggering (0-1)
+  /** Delay in milliseconds before the reveal starts. */
+  delay?: number;
+  /** Reveal duration in milliseconds. */
+  duration?: number;
+  /** Fraction of the element that must be visible before it reveals (0 to 1). */
+  threshold?: number;
   className?: string;
 }
 
@@ -15,37 +18,31 @@ export const ScrollFadeIn: React.FC<ScrollFadeInProps> = ({
   delay = 0,
   duration = 600,
   threshold = 0.1,
-  className = '',
-}: ScrollFadeInProps) => {
+  className = "",
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            // Optionally unobserve after animation to improve performance
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: threshold,
-        rootMargin: '0px',
-      }
-    );
+    const el = elementRef.current;
+    if (!el) return;
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (typeof IntersectionObserver === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsVisible(true);
+      return;
     }
 
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold, rootMargin: "0px 0px -8% 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, [threshold]);
 
   return (
@@ -54,11 +51,11 @@ export const ScrollFadeIn: React.FC<ScrollFadeInProps> = ({
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
+        transform: isVisible ? "none" : "translateY(24px)",
         transition: `opacity ${duration}ms ease-out ${delay}ms, transform ${duration}ms ease-out ${delay}ms`,
       }}
     >
       {children}
     </div>
   );
-}
+};

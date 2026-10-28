@@ -22,6 +22,22 @@ const config: Config = {
       // => @media (min-width: 1280px) { ... }
     },
     extend: {
+      fontFamily: {
+        heading: ["var(--font-montserrat)", "sans-serif"],
+        body: ["var(--font-satoshi)", "sans-serif"],
+      },
+      colors: {
+        brand: {
+          orange: "#F36730",
+          "orange-dark": "#D9552A",
+          brown: "#885739",
+          tan: "#A6836E",
+          ink: "#3D3834",
+          sand: "#E0D9C9",
+          cream: "#F8F7F3",
+          wash: "#F3EEE8",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -32,11 +48,6 @@ const config: Config = {
       },
     },
   },
-  corePlugins: {
-    aspectRatio: false
-  },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
+  plugins: [],
 };
 export default config;

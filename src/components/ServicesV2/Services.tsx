@@ -48,7 +48,7 @@ export const Services = () => {
                                         ))}
                                     </ul>
                                 )}
-                                <BookFreeAppointment title='Book a FREE Appointment' bgClassName='bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3]' textClassName='text-[#3D3834]' />
+                                <BookFreeAppointment title='Book a FREE Appointment' variant='primary' />
                             </>
                         )}
                     </div>
@@ -78,42 +78,3 @@ export const Services = () => {
         </div>
     )
 }
-
-const Tab1Content = () => <div>
-    <h2 className="text-[#3D3834] text-2xl font-semibold mb-2">Service 1</h2>
-    <p className="mb-4 text-gray-600">This is the content for Service 1.</p>
-    <ul className="list-disc pl-5 mb-4">
-        <li className="mb-1 text-gray-700">Point 1</li>
-        <li className="mb-1 text-gray-700">Point 2</li>
-        <li className="mb-1 text-gray-700">Point 3</li>
-    </ul>
-    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
-        Learn More
-    </button>
-</div>;
-
-const Tab2Content = () => <div>
-    <h2 className="text-[#3D3834] text-2xl font-semibold mb-2">Service 2</h2>
-    <p className="mb-4 text-gray-600">This is the content for Service 2.</p>
-    <ul className="list-disc pl-5 mb-4">
-        <li className="mb-1 text-gray-700">Point 1</li>
-        <li className="mb-1 text-gray-700">Point 2</li>
-        <li className="mb-1 text-gray-700">Point 3</li>
-    </ul>
-    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
-        Learn More
-    </button>
-</div>;
-
-const Tab3Content = () => <div>
-    <h2 className="text-[#3D3834] text-2xl font-semibold mb-2">Service 3</h2>
-    <p className="mb-4 text-gray-600">This is the content for Service 3.</p>
-    <ul className="list-disc pl-5 mb-4">
-        <li className="mb-1 text-gray-700">Point 1</li>
-        <li className="mb-1 text-gray-700">Point 2</li>
-        <li className="mb-1 text-gray-700">Point 3</li>
-    </ul>
-    <button className="inline-flex gap-3 items-center mt-2 px-6 py-2 text-[#3D3834] bg-gradient-to-r from-[#E0D9C9] to-[#F8F7F3] border rounded-md transition border-1">
-        Learn More
-    </button>
-</div>;

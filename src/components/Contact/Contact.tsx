@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { satoshi } from "@/fonts/satoshi";
 import { montserrat } from "@/fonts/montserrat";
+import { Button } from "../ui/Button";
 
 const formGroupCSS = "w-full flex flex-col gap-2";
 const inputCSS =
@@ -25,14 +26,18 @@ interface I_FormData {
   isPrivacyPolicyChecked: boolean;
 }
 
-const sendMail = (data = {}) => {
-  return fetch(`/api/sendmail`, {
+const sendMail = async (data = {}) => {
+  const res = await fetch(`/api/sendmail`, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
     },
   });
+  if (!res.ok) {
+    throw new Error(`Could not send message (status ${res.status})`);
+  }
+  return res.json();
 };
 
 interface ContactProps {
@@ -52,15 +57,15 @@ export const Contact = ({ removeDescription }: ContactProps) => {
     setIsLoading(true);
     try {
       await sendMail(data);
-      setIsLoading(false);
       toast.success(
         "Your query has been successfully registered with us. Stay tuned we will get back to you shortly."
       );
       reset();
     } catch (error) {
-      console.log(error);
-      setIsLoading(false);
+      console.error(error);
       toast.error("Something went wrong, please try again later");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -172,12 +177,9 @@ export const Contact = ({ removeDescription }: ContactProps) => {
           )}
         </div> */}
         <div>
-          <button
-            type="submit"
-            className="bg-[#885739] text-white h-12 w-full rounded-lg"
-          >
+          <Button type="submit" variant="primary" size="lg" disabled={isLoading} className="w-full">
             {isLoading ? "Sending message, please wait..." : "Send message"}
-          </button>
+          </Button>
         </div>
         </form>
       </div>

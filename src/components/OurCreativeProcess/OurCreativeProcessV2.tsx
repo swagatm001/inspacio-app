@@ -2,7 +2,6 @@
 import { processConstants2 } from "@/constants/process";
 import { montserrat } from "@/fonts/montserrat";
 import { satoshi } from "@/fonts/satoshi";
-import { uuidv4 } from "@/utils/uuid4";
 import clsx from "clsx";
 import React from "react";
 
@@ -56,9 +55,8 @@ export const OurCreativeProcessV2: React.FC = () => {
                 <div className="hidden lg:block absolute left-1/2 -translate-x-4 -bottom-6 w-8 h-8 rounded-full bg-gradient-to-b from-amber-800 to-white"></div>
                 <div className="flex flex-col gap-12 relative z-10">
                     {processConstants2.steps.map((step, idx:number) => (
-                        <>
+                        <React.Fragment key={step.stepTitle}>
                         <div
-                            key={uuidv4()}
                             className="hidden lg:flex flex-row items-center justify-between gap-[10vw]"
                         >
                             {idx % 2 === 0 ? (
@@ -102,8 +100,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                             )}
                         </div>
                         <div
-                            key={uuidv4()}
-                            className="block lg:hidden flex flex-col items-center justify-between gap-[10vw]"
+                            className="lg:hidden flex flex-col items-center justify-between gap-[10vw]"
                         >
                                     {/* Image left */}
                                     <div className="flex-1 flex justify-end">
@@ -122,7 +119,7 @@ export const OurCreativeProcessV2: React.FC = () => {
                                         <p className={clsx(satoshi.className,"text-sm md:text-lg text-[#3D3834]")}>{step.desc}</p>
                                     </div>
                         </div>
-                        </>
+                        </React.Fragment>
                     ))}
                 </div>
             </div>

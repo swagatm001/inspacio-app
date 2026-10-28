@@ -6,6 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Interior Design Projects in Bangalore | Inspacio Portfolio",
     description: "Explore Inspacio’s interior design projects in Bangalore, featuring residential, commercial, architecture and turnkey project execution. View our portfolio.",
+    alternates: { canonical: "/projects" },
   };
 }
 

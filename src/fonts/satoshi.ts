@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 
 export const satoshi = localFont({
+  variable: "--font-satoshi",
+  display: "swap",
   src: [
     {
         path: "./satoshi/Satoshi-Regular.woff2",
@@ -10,7 +12,7 @@ export const satoshi = localFont({
     {
         path: "./satoshi/Satoshi-Medium.woff2",
         weight: '500',
-        style: 'medium'
+        style: 'normal'
     },
     {
         path: "./satoshi/Satoshi-MediumItalic.woff2",
@@ -20,7 +22,7 @@ export const satoshi = localFont({
     {
         path: "./satoshi/Satoshi-Light.woff2",
         weight: '300',
-        style: 'light'
+        style: 'normal'
     },
     {
         path: "./satoshi/Satoshi-LightItalic.woff2",
@@ -30,7 +32,7 @@ export const satoshi = localFont({
     {
         path: "./satoshi/Satoshi-Bold.woff2",
         weight: '700',
-        style: 'bold'
+        style: 'normal'
     },
     {
         path: "./satoshi/Satoshi-BoldItalic.woff2",
