@@ -4,12 +4,12 @@ import { satoshi } from "@/fonts/satoshi";
 import clsx from "clsx";
 import Image from "next/image";
 
-const paragraphClass = "text-lg text-[#3f3f3f] mb-4";
+const paragraphClass = "text-lg text-brand-body mb-4";
 
 const About = () => {
   return (
     <div className="pb-10">
-      <h1 className={clsx(montserrat.className, "text-3xl md:text-5xl font-medium text-[#3D3834] mb-10")}>
+      <h1 className={clsx(montserrat.className, "text-3xl md:text-5xl font-medium text-brand-ink mb-10")}>
         {ourStory.title}
       </h1>
 
@@ -25,13 +25,13 @@ const About = () => {
               className="object-cover"
             />
           </div>
-          <p className={clsx(satoshi.className, "mt-3 text-sm text-[#696969]")}>
+          <p className={clsx(satoshi.className, "mt-3 text-sm text-brand-muted")}>
             {ourStory.author.name}, {ourStory.author.role}
           </p>
         </div>
 
         <div className={clsx(satoshi.className, "lg:col-span-7")}>
-          <h2 className={clsx(montserrat.className, "text-2xl font-medium text-[#3D3834] mb-6")}>
+          <h2 className={clsx(montserrat.className, "text-2xl font-medium text-brand-ink mb-6")}>
             {ourStory.headline}
           </h2>
           {ourStory.paragraphs.map((text) => (
@@ -40,12 +40,12 @@ const About = () => {
             </p>
           ))}
           {ourStory.closing.map((text) => (
-            <p key={text} className={clsx(paragraphClass, "mb-1 font-medium text-[#3D3834]")}>
+            <p key={text} className={clsx(paragraphClass, "mb-1 font-medium text-brand-ink")}>
               {text}
             </p>
           ))}
 
-          <h2 className={clsx(montserrat.className, "text-2xl font-medium text-[#3D3834] mt-12 mb-6")}>
+          <h2 className={clsx(montserrat.className, "text-2xl font-medium text-brand-ink mt-12 mb-6")}>
             Leadership
           </h2>
           <p className={paragraphClass}>

@@ -11,19 +11,19 @@ import { InstagramIcon, WhatsAppIcon } from "../ui/Icons";
 
 const ContactMap = dynamic(() => import("./ContactMap"), { ssr: false });
 
-const labelClass = "text-[#A6836E] font-medium text-lg mb-1";
-const valueClass = "text-[#3D3834] text-xl whitespace-normal break-words";
+const labelClass = "text-brand-tan font-medium text-lg mb-1";
+const valueClass = "text-brand-ink text-xl whitespace-normal break-words";
 
 export const ContactForm = () => {
   const locationDetails = () => {
     return (
       <div className="flex flex-col gap-4 md:py-10">
-        <h1 className={clsx(montserrat.className, "hidden md:block text-6xl text-[#3D3834] font-medium")}>Contact Us</h1>
+        <h1 className={clsx(montserrat.className, "hidden md:block text-6xl text-brand-ink font-medium")}>Contact Us</h1>
         <div className="flex w-full">
           <div
             aria-hidden
             className="hidden md:block w-2 rounded-full"
-            style={{ background: "linear-gradient(to bottom,#885739,#E0D9C9)" }}
+            style={{ background: "linear-gradient(to bottom, rgb(var(--c-brown)), rgb(var(--c-sand)))" }}
           />
           <div className="flex flex-col gap-6 md:gap-10 md:pl-6 mt-6 mb-6">
             <div className="min-w-0">
@@ -69,7 +69,7 @@ export const ContactForm = () => {
   return (
     <div className="md:py-10">
       <div className="bg-contact-us-texture-pattern">
-        <h1 className={clsx(montserrat.className, "block md:hidden text-2xl text-[#3D3834] font-medium text-center")}>Contact Us</h1>
+        <h1 className={clsx(montserrat.className, "block md:hidden text-2xl text-brand-ink font-medium text-center")}>Contact Us</h1>
         <ImageLeftCopyRight
           wrapperClassName="gap-10"
           leftTemplate={locationDetails()}

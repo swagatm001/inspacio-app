@@ -21,6 +21,7 @@
 }
 .embla__container {
   display: flex;
+  align-items: stretch;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 }
@@ -32,7 +33,7 @@
 }
 
 .embla__slide__number {
-  height: var(--slide-height);
+  height: 100%;
   user-select: none;
   padding-left: var(--slide-spacing);
 }
@@ -225,5 +226,5 @@
   box-shadow: none;
 }
 .embla__progress--mode-light .embla__progress__bar {
-  background-color: #885739;
+  background-color: rgb(var(--c-brown));
 }

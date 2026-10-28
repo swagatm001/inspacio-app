@@ -12,7 +12,7 @@ type NavigationLinksProps = {
 
 export const NavigationLinks: React.FC<NavigationLinksProps> = ({
   className,
-  linkClassName = "text-[#F8F7F3]",
+  linkClassName = "text-brand-cream",
   onClick,
   isDropdownOpen,
 }) => {

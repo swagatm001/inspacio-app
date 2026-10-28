@@ -1192,6 +1192,21 @@ const prestige: Project = {
 }
 
 const cedar: Project = {
+  recognition: [
+    {
+      kind: "press",
+      label: "The Architects Diary",
+      title: "Featured in The Architects Diary",
+      href: "https://thearchitectsdiary.com/this-5000-sq-ft-residence-layers-family-life-across-split-level-spaces-chair-and-company-inspacio-design-studio/",
+      quote: "There is a moment, standing beneath the triple-height volume of this Bengaluru home, when the retractable sunroof slides open and the sky simply becomes part of the room.",
+      attribution: "Mehar Deep Kaur, writing for The Architects Diary",
+      credits: [
+        { label: "Design", name: "Chair and Company (Deena Rodrigues & Nicole David)" },
+        { label: "Execution", name: "Inspacio Design Studio" },
+        { label: "Photography", name: "Mohith Ananth" },
+      ],
+    },
+  ],
   intro: "A home that balances aesthetics with utility while reflecting the lifestyle and personality of its occupants. The result offers sensory richness and elevates everyday living.",
   thumbnail: "/images/cedar/61.webp",
   title: "Cedar String",

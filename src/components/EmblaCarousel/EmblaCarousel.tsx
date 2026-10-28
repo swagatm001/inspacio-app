@@ -31,10 +31,15 @@ type PropType = {
   /** Advance automatically, pausing while hovered or focused. */
   autoplay?: boolean
   autoplayDelay?: number
+  /** Slide width on desktop and on small screens, e.g. "33.333%" and "85%". */
+  slideSize?: string
+  slideSizeSm?: string
+  /** Scale down slides away from the active one (suits single-slide layouts). */
+  tween?: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options, isDarkBackground, fullWidth, autoplay = false, autoplayDelay = 6000 } = props
+  const { slides, options, isDarkBackground, fullWidth, autoplay = false, autoplayDelay = 6000, slideSize, slideSizeSm, tween = true } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     AutoPlay({ delay: autoplayDelay, playOnInit: autoplay, stopOnInteraction: false, stopOnMouseEnter: autoplay, stopOnFocusIn: true })
   ])
@@ -105,7 +110,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   )
 
   useEffect(() => {
-    if (!emblaApi) return
+    if (!emblaApi || !tween) return
 
     setTweenNodes(emblaApi)
     setTweenFactor(emblaApi)
@@ -117,12 +122,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       .on('reInit', tweenScale)
       .on('scroll', tweenScale)
       .on('slideFocus', tweenScale)
-  }, [emblaApi, tweenScale])
+  }, [emblaApi, tweenScale, tween])
 
   const rootClass = `embla${fullWidth ? ' embla--fullwidth' : ''}`
+  const rootStyle = {
+    ...(slideSize ? { '--slide-size': slideSize } : {}),
+    ...(slideSizeSm ? { '--slide-size-sm': slideSizeSm } : {})
+  } as React.CSSProperties
 
   return (
-    <div className={rootClass}>
+    <div className={rootClass} style={rootStyle}>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((node,index) => (

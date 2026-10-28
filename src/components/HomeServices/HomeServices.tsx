@@ -37,7 +37,7 @@ const HomeServices: React.FC = () => {
           <h2 id="home-services-heading" className="font-heading text-2xl md:text-[40px] leading-tight text-brand-ink">
             What We Do
           </h2>
-          <p className="font-body text-base md:text-lg text-[#696969] mt-3">
+          <p className="font-body text-base md:text-lg text-brand-muted mt-3">
             From the first sketch to the final handover, one team carries your project through every stage.
           </p>
           {sectors.length > 0 && (
@@ -84,7 +84,7 @@ const HomeServices: React.FC = () => {
 
                 <h3 className="font-heading text-xl font-medium text-brand-ink mb-3 text-balance">{service.title}</h3>
 
-                <ul className="font-body text-[15px] leading-snug text-[#4a4541] space-y-2 mb-6">
+                <ul className="font-body text-[15px] leading-snug text-brand-body space-y-2 mb-6">
                   {service.points.slice(0, 3).map((point) => (
                     <li key={point} className="flex gap-2">
                       <CheckIcon />

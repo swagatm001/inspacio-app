@@ -8,7 +8,7 @@ import { BlurImage } from "../ui/BlurImage";
 import { blurFor } from "@/utils/blur";
 import React from "react";
 
-const paragraphClass = "text-lg text-[#3f3f3f] mb-4";
+const paragraphClass = "text-lg text-brand-body mb-4";
 
 const OurStory: React.FC = () => {
   const excerpt = ourStory.homeExcerpt.map((i) => ourStory.paragraphs[i]);
@@ -17,7 +17,7 @@ const OurStory: React.FC = () => {
     <section className="mb-28" aria-labelledby="our-story-heading">
       <div className="flex flex-col items-center mb-10">
         <SectionEyebrow number="04" label="Our story" className="justify-center" />
-        <h2 id="our-story-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium text-[#3D3834]")}>
+        <h2 id="our-story-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium text-brand-ink")}>
           {ourStory.title}
         </h2>
       </div>
@@ -34,13 +34,13 @@ const OurStory: React.FC = () => {
               className="object-cover"
             />
           </div>
-          <p className={clsx(satoshi.className, "mt-3 text-sm text-[#696969]")}>
+          <p className={clsx(satoshi.className, "mt-3 text-sm text-brand-muted")}>
             {ourStory.author.name}, {ourStory.author.role}
           </p>
         </div>
 
         <div className={clsx(satoshi.className, "lg:col-span-7")}>
-          <h3 className={clsx(montserrat.className, "text-2xl font-medium text-[#3D3834] mb-6")}>
+          <h3 className={clsx(montserrat.className, "text-2xl font-medium text-brand-ink mb-6")}>
             {ourStory.headline}
           </h3>
           {excerpt.map((text) => (
@@ -48,7 +48,7 @@ const OurStory: React.FC = () => {
               {text}
             </p>
           ))}
-          <p className={clsx(paragraphClass, "font-medium text-[#3D3834]")}>
+          <p className={clsx(paragraphClass, "font-medium text-brand-ink")}>
             {ourStory.closing[0]} {ourStory.closing[1]}
           </p>
           <Button href={ourStory.redirectUrl} variant="secondary" arrow className="mt-2">

@@ -83,7 +83,7 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = "Layouts", intro = ["
           <h3 className="font-heading text-4xl font-medium text-brand-ink">{title}</h3>
           <ScrollFadeIn threshold={0.3}>
             {intro && intro.map((text, index) => (
-              <p key={index} className="font-body mt-4 text-lg md:text-xl text-[#3f3f3f]">{text}</p>
+              <p key={index} className="font-body mt-4 text-lg md:text-xl text-brand-body">{text}</p>
             ))}
           </ScrollFadeIn>
         </div>
@@ -94,7 +94,7 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = "Layouts", intro = ["
 
         <div className="lg:col-span-12 mt-10">
           {moreText && (
-            <div className="font-body text-2xl text-[#3f3f3f]">
+            <div className="font-body text-2xl text-brand-body">
               {moreText.title && <h4 className="font-heading text-2xl font-medium text-brand-ink">{moreText.title}</h4>}
               {moreText.points && moreText.points.length > 0 && (
                 <ul className="text-lg mt-6 md:text-xl list-disc list-inside">

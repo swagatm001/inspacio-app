@@ -27,7 +27,7 @@ export const OurCreativeProcessV2: React.FC = () => {
         <h2 id="process-heading" className="font-heading text-brand-ink text-3xl md:text-4xl font-medium">
           {processConstants2.title}
         </h2>
-        <p className="font-body text-base md:text-lg text-[#696969] mt-3">
+        <p className="font-body text-base md:text-lg text-brand-muted mt-3">
           Seven steps in two phases. Typically <span className="font-medium text-brand-ink">{formatWeeks(total)}</span> from first
           conversation to handover.
         </p>
@@ -46,10 +46,10 @@ export const OurCreativeProcessV2: React.FC = () => {
                 <span className="font-body text-xs font-medium tracking-[0.18em] uppercase text-brand-tan mr-3">Phase {phaseIndex + 1}</span>
                 {phase.name}
               </h3>
-              <span className="font-body text-sm text-[#8a847f]">
+              <span className="font-body text-sm text-brand-faint">
                 Steps {firstNumber} to {lastNumber} · {formatWeeks(sumWeeks(phaseSteps))}
               </span>
-              <p className="font-body basis-full text-base text-[#696969]">{phase.blurb}</p>
+              <p className="font-body basis-full text-base text-brand-muted">{phase.blurb}</p>
             </div>
 
             <ol className="relative ml-5 md:ml-6 border-l-2 border-brand-sand">
@@ -72,15 +72,15 @@ export const OurCreativeProcessV2: React.FC = () => {
                           <span className="font-body text-sm text-brand-brown bg-brand-wash rounded-full px-2.5 py-0.5">{step.timeline}</span>
                           <Link
                             href={`/services#${slugify(step.service)}`}
-                            className="font-body text-xs text-[#8a847f] border border-brand-sand rounded-full px-2.5 py-0.5 hover:text-brand-brown hover:border-brand-brown transition-colors"
+                            className="font-body text-xs text-brand-faint border border-brand-sand rounded-full px-2.5 py-0.5 hover:text-brand-brown hover:border-brand-brown transition-colors"
                           >
                             Part of {step.service}
                           </Link>
                         </div>
-                        <p className="font-body text-base md:text-lg text-[#3f3f3f] leading-relaxed">
+                        <p className="font-body text-base md:text-lg text-brand-body leading-relaxed">
                           <strong className="font-medium text-brand-ink">{lead}</strong> {rest}
                         </p>
-                        <p className="font-body text-sm md:text-base text-[#4a4541] mt-2">
+                        <p className="font-body text-sm md:text-base text-brand-body mt-2">
                           <span className="font-medium text-brand-brown">You receive: </span>
                           {step.outcome}
                         </p>
@@ -96,7 +96,7 @@ export const OurCreativeProcessV2: React.FC = () => {
       })}
 
       <div className="flex flex-col items-center text-center mt-8">
-        <p className="font-body text-base text-[#696969] mb-4">Step one costs nothing and commits you to nothing.</p>
+        <p className="font-body text-base text-brand-muted mb-4">Step one costs nothing and commits you to nothing.</p>
         <BookFreeAppointment title="Start with a free consultation" variant="primary" size="lg" />
       </div>
     </section>

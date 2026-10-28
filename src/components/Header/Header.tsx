@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ lightBackground = false }) => {
 
   // Dark text and logo on light pages, and on every page once the frosted bar appears.
   const light = lightBackground || scrolled;
-  const linkColor = light ? "text-brand-ink" : "text-[#F8F7F3]";
+  const linkColor = light ? "text-brand-ink" : "text-brand-cream";
   const barColor = light ? "bg-brand-brown" : "bg-white";
 
   return (
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ lightBackground = false }) => {
             >
               <NavigationLinks
                 className="flex-col gap-2"
-                linkClassName="text-[#F8F7F3] text-lg"
+                linkClassName="text-brand-cream text-lg"
                 isDropdownOpen={isDropdownOpen}
                 onClick={() => setIsDropdownOpen(false)}
               />
