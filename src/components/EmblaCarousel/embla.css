@@ -212,3 +212,18 @@
   padding-left: var(--slide-spacing-sm);
 }
 }
+/* Autoplay progress colours per background */
+.embla__progress--mode-dark {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+}
+.embla__progress--mode-dark .embla__progress__bar {
+  background-color: #ffffff;
+}
+.embla__progress--mode-light {
+  background-color: rgba(61, 56, 52, 0.12);
+  box-shadow: none;
+}
+.embla__progress--mode-light .embla__progress__bar {
+  background-color: #885739;
+}

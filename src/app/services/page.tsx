@@ -5,6 +5,9 @@ import { OurCreativeProcessV2 } from "@/components/OurCreativeProcess";
 import { FAQ } from "@/components/FAQ";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import CustomContainer from "@/components/Container/CustomContainer";
+import { services } from "@/constants/services";
+import { projectsConstants } from "@/constants/projects";
+import { blurMapFor } from "@/utils/blur";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -16,11 +19,14 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function ServicesPage() {
+    const slugs = Object.values(services).flatMap((s) => [...(s.relatedProjects ?? []), ...(s.sectorProjects ?? [])]);
+    const thumbnails = projectsConstants.filter((p) => slugs.includes(p.slug)).map((p) => p.thumbnail);
+    const blurMap = blurMapFor(thumbnails);
 
     return (
         <div className="flex flex-col gap-20 bg-[#F8F7F3] overflow-x-hidden pt-28">
             <CustomContainer>
-                <Services />
+                <Services blurMap={blurMap} />
                 <OurCreativeProcessV2 />
                 <WhyChooseUs />
                 <FAQ />

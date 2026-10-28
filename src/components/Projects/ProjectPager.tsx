@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { BlurImage } from "../ui/BlurImage";
+import { blurFor } from "@/utils/blur";
 import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
@@ -29,13 +30,9 @@ const PagerCard: React.FC<{ project: Project; direction: "previous" | "next" }> 
   const isNext = direction === "next";
   return (
     <Link href={`/projects/${project.slug}`} className={cardBase} aria-label={`${isNext ? "Next" : "Previous"} project: ${project.title}`}>
-      <Image
-        src={project.thumbnail}
-        alt=""
-        fill
-        sizes="(max-width: 640px) 100vw, 50vw"
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-      />
+      <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
+        <BlurImage src={project.thumbnail} blurDataURL={blurFor(project.thumbnail)} alt="" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
+      </div>
       <div
         aria-hidden="true"
         className={clsx(

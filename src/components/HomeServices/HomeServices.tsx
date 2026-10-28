@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { services } from "@/constants/services";
 import { slugify } from "@/utils/slugify";
 import { Button } from "../ui/Button";
+import { SectionEyebrow } from "../ui/SectionEyebrow";
 
 const FEATURED_SERVICES: { key: string; stage: string }[] = [
   { key: "Conceptualization & Design", stage: "Stage 01" },
@@ -32,7 +33,7 @@ const HomeServices: React.FC = () => {
     <section className="mb-28" aria-labelledby="home-services-heading">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
         <div className="max-w-2xl">
-          <p className="font-body text-sm font-medium tracking-[0.18em] uppercase text-brand-tan mb-3">Our services</p>
+          <SectionEyebrow number="01" label="Our services" />
           <h2 id="home-services-heading" className="font-heading text-2xl md:text-[40px] leading-tight text-brand-ink">
             What We Do
           </h2>

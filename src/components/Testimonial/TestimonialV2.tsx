@@ -46,7 +46,7 @@ const TestimonialV2: React.FC = () => {
       )}
       <div className="w-full flex justify-end">
         <div className="w-full md:w-[90%]">
-          <EmblaCarousel options={options} slides={slides} isDarkBackground={true} />
+          <EmblaCarousel options={options} slides={slides} isDarkBackground={true} autoplay autoplayDelay={7000} />
         </div>
       </div>
     </section>

@@ -1,65 +1,80 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 import { I_Project } from "./Gallery";
-import { montserrat } from "@/fonts/montserrat";
-import { satoshi } from "@/fonts/satoshi";
 import { useParallax } from "@/hooks/useParallax";
+import { BlurImage } from "../ui/BlurImage";
+import { RecognitionBadge } from "../ui/RecognitionBadge";
 
 interface GalleryCardProps {
   project: I_Project;
-  colSpan?: string;
+  /** Layout classes (column span and height). Defaults to a standard tile. */
+  className?: string;
 }
 
-export const GalleryCard: React.FC<GalleryCardProps> = ({ project, colSpan = "col-span-1" }) => {
+const ArrowIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+  </svg>
+);
+
+export const GalleryCard: React.FC<GalleryCardProps> = ({ project, className }) => {
   const imageRef = useParallax<HTMLImageElement>();
+  const meta = [project.category?.label, project.address].filter(Boolean).join(" · ");
 
   return (
     <Link
       href={`/projects/${project.slug}`}
       aria-label={`View project: ${project.title}`}
       className={clsx(
-        montserrat.className,
-        colSpan,
-        "relative block group rounded-lg overflow-hidden h-80 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#F36730]"
+        "group relative block overflow-hidden rounded-xl bg-brand-wash focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange",
+        className ?? "h-80"
       )}
     >
-      <Image
-        ref={imageRef}
-        src={project.thumbnail}
-        alt={project.title}
-        fill
-        sizes="(max-width: 1024px) 100vw, 50vw"
-        className="object-cover"
-        style={{ transform: "scale(1.15)" }}
-      />
-
-      {/* Gradient shadow at the bottom of the image */}
-      <div
-        className="absolute bottom-0 left-0 w-full h-40 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(180deg, rgba(45, 34, 28, 0) 30%, rgba(45, 34, 28, 0.7) 79%)" }}
-      />
-
-      {/* Title and address, hidden while the details panel is shown */}
-      <div className="absolute bottom-4 left-0 w-full z-20 px-2 md:px-6 py-2 text-center text-white transition-opacity duration-300 group-hover:opacity-0 group-focus-visible:opacity-0">
-        <p className="font-medium text-2xl drop-shadow mb-2">{project.title}</p>
-        <span className="text-sm text-gray-200 border rounded-full px-3 py-0.5 backdrop-blur-lg backdrop-saturate-200">
-          {project.address}
-        </span>
+      {/* Image: parallax on the img, gentle zoom on the wrapper */}
+      <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.04]">
+        <BlurImage
+          ref={imageRef}
+          src={project.thumbnail}
+          blurDataURL={project.thumbnailBlur}
+          alt={project.title}
+          fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover"
+          style={{ transform: "scale(1.15)" }}
+        />
       </div>
 
-      {/* Details panel, revealed on hover or keyboard focus */}
-      <div className="absolute inset-0 z-20 flex flex-col justify-center items-center p-4 bg-black/75 text-white opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-focus-visible:opacity-100 group-focus-visible:scale-100">
-        <div className="w-full text-center">
-          <p className="font-medium text-2xl mb-2">{project.title}</p>
-          <span className="text-sm text-gray-200 border rounded-full px-3 py-0.5">{project.address}</span>
-          <p className={clsx(satoshi.className, "font-normal w-[80%] text-lg mt-2 mb-4 mx-auto line-clamp-3")}>
-            {project.intro || project.description}
-          </p>
-          <span className="font-body inline-flex items-center h-10 px-5 rounded-full bg-white text-brand-ink font-medium">View project</span>
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"
+      />
+
+      {project.recognition && project.recognition.length > 0 && (
+        <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-1.5 pointer-events-none">
+          {project.recognition.map((item) => (
+            <RecognitionBadge key={item.title} item={{ ...item, href: undefined }} variant="compact" light />
+          ))}
+        </div>
+      )}
+
+      <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 text-white">
+        <div className="transition-transform duration-500 ease-out group-hover:-translate-y-1">
+          {meta && <p className="font-body text-[11px] md:text-xs uppercase tracking-[0.18em] text-white/75 mb-1">{meta}</p>}
+          <h3 className="font-heading text-xl md:text-2xl font-medium leading-snug text-balance drop-shadow-sm">{project.title}</h3>
+        </div>
+        <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-focus-visible:grid-rows-[1fr] group-focus-visible:opacity-100">
+          <div className="overflow-hidden">
+            {(project.intro || project.description) && (
+              <p className="font-body text-sm text-white/80 leading-snug line-clamp-2 mt-2">{project.intro || project.description}</p>
+            )}
+            <span className="font-body inline-flex items-center gap-2 mt-3 text-sm font-medium">
+              View project
+              <ArrowIcon />
+            </span>
+          </div>
         </div>
       </div>
     </Link>

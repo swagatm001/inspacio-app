@@ -1,7 +1,7 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import clsx from "clsx";
-import { Project, projectsConstants } from "@/constants/projects";
+import { ProjectList } from "./ProjectList";
 import { montserrat } from "@/fonts/montserrat";
 import { satoshi } from "@/fonts/satoshi";
 import { GalleryCard } from "@/components/LatestProject/GalleryCard";
@@ -33,22 +33,39 @@ const CloseIcon = () => (
   </svg>
 );
 
-const ProjectsCatalog: React.FC = () => {
+type View = "grid" | "list";
+
+const GridIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-4 h-4" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+  </svg>
+);
+
+const ListIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-4 h-4" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+);
+
+interface ProjectsCatalogProps {
+  projects: I_Project[];
+}
+
+const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects }) => {
   const [selectedLocation, setSelectedLocation] = useState<string>("");
   const [selectedType, setSelectedType] = useState<string>("");
-
-  const allProjects = useMemo(() => projectsConstants || [], []);
+  const [view, setView] = useState<View>("grid");
 
   const locations = useMemo(() => {
     const unique = new Set<string>();
-    allProjects.forEach((p: Project) => {
+    allProjects.forEach((p) => {
       if (p.address) unique.add(p.address);
     });
     return Array.from(unique).sort();
   }, [allProjects]);
 
   const projects = useMemo(() => {
-    return allProjects.filter((p: Project) => {
+    return allProjects.filter((p) => {
       if (selectedLocation && p.address && !String(p.address).toLowerCase().includes(selectedLocation.toLowerCase())) {
         return false;
       }
@@ -56,7 +73,7 @@ const ProjectsCatalog: React.FC = () => {
         return false;
       }
       return true;
-    }) as I_Project[];
+    });
   }, [allProjects, selectedLocation, selectedType]);
 
   const hasFilters = Boolean(selectedLocation || selectedType);
@@ -129,6 +146,23 @@ const ProjectsCatalog: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-5 text-sm md:text-base">
+            <div role="group" aria-label="View" className="hidden lg:inline-flex p-1 rounded-full border border-[#E0D9C9] bg-white shadow-sm">
+              {(["grid", "list"] as View[]).map((v) => (
+                <button
+                  key={v}
+                  type="button"
+                  aria-pressed={view === v}
+                  onClick={() => setView(v)}
+                  className={clsx(
+                    "inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-sm capitalize transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#885739]/40",
+                    view === v ? "bg-[#885739] text-white" : "text-[#3D3834] hover:bg-[#F3EEE8]"
+                  )}
+                >
+                  {v === "grid" ? <GridIcon /> : <ListIcon />}
+                  {v}
+                </button>
+              ))}
+            </div>
             <p className="text-[#696969]" aria-live="polite">
               Showing <span className="font-medium text-[#3D3834]">{projects.length}</span> of {allProjects.length} projects
             </p>
@@ -142,9 +176,16 @@ const ProjectsCatalog: React.FC = () => {
 
         {/* Projects grid */}
         {projects.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:grid-cols-2">
+          view === "list" ? (
+            <div className="hidden lg:block">
+              <ProjectList projects={projects} />
+            </div>
+          ) : null
+        ) : null}
+        {projects.length > 0 ? (
+          <div className={clsx("grid grid-cols-1 lg:grid-cols-3 gap-6 md:grid-cols-2", view === "list" && "lg:hidden")}>
             {projects.map((project) => (
-              <GalleryCard key={project.slug} project={project} />
+              <GalleryCard key={project.slug} project={project} className="h-80" />
             ))}
           </div>
         ) : (

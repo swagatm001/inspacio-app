@@ -15,7 +15,12 @@ const CheckIcon = () => (
 
 const serviceKeys = Object.keys(services);
 
-export const Services = () => {
+interface ServicesProps {
+  /** Blur previews for the project thumbnails used in the tabs. */
+  blurMap?: Record<string, string>;
+}
+
+export const Services: React.FC<ServicesProps> = ({ blurMap }) => {
   const [selectedKey, setSelectedKey] = useState<string>(serviceKeys[0]);
   const selected: Service = services[selectedKey];
 
@@ -129,9 +134,9 @@ export const Services = () => {
 
         <div className="lg:col-span-5">
           {isOverview && selected.sectorProjects ? (
-            <SectorTiles sectors={selected.points} slugs={selected.sectorProjects} />
+            <SectorTiles sectors={selected.points} slugs={selected.sectorProjects} blurMap={blurMap} />
           ) : selected.relatedProjects ? (
-            <ServiceGallery slugs={selected.relatedProjects} />
+            <ServiceGallery slugs={selected.relatedProjects} blurMap={blurMap} />
           ) : null}
         </div>
       </div>

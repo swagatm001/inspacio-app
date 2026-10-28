@@ -17,6 +17,7 @@ Open http://localhost:3000.
 | `npm run build` | Production build                  |
 | `npm run start` | Serve the production build        |
 | `npm run lint`  | Run ESLint (next/core-web-vitals) |
+| `npm run blur`  | Regenerate blurred image previews (runs automatically before `build`) |
 
 ## Environment variables
 
@@ -34,6 +35,8 @@ Put them in `.env.local` for local development.
 - `src/components` UI, grouped by section.
 - `src/constants` all copy and data: projects, services, testimonials, awards, partners, the founder's story and site-wide details (`site.ts`).
 - `src/hooks/useParallax.ts` the shared scroll parallax used by project images.
+- `src/generated/blur-map.json` tiny previews for every local image, used for blur-up loading. Run `npm run blur` after adding images.
+- `src/constants/instagram.ts` the six tiles in the footer strip; swap in post images and permalinks to show real posts.
 - `public/images` local images, optimised at request time by Next.js. Older project photos are served from ImageKit by absolute URL (allowed in `next.config.mjs`).
 
 ## Editing content

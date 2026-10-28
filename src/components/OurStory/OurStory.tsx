@@ -2,8 +2,10 @@ import { montserrat } from "@/fonts/montserrat";
 import { satoshi } from "@/fonts/satoshi";
 import { ourStory } from "@/constants/ourStory";
 import clsx from "clsx";
-import Image from "next/image";
 import { Button } from "../ui/Button";
+import { SectionEyebrow } from "../ui/SectionEyebrow";
+import { BlurImage } from "../ui/BlurImage";
+import { blurFor } from "@/utils/blur";
 import React from "react";
 
 const paragraphClass = "text-lg text-[#3f3f3f] mb-4";
@@ -13,18 +15,19 @@ const OurStory: React.FC = () => {
 
   return (
     <section className="mb-28" aria-labelledby="our-story-heading">
-      <h2
-        id="our-story-heading"
-        className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium mb-10 text-[#3D3834]")}
-      >
-        {ourStory.title}
-      </h2>
+      <div className="flex flex-col items-center mb-10">
+        <SectionEyebrow number="04" label="Our story" className="justify-center" />
+        <h2 id="our-story-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium text-[#3D3834]")}>
+          {ourStory.title}
+        </h2>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-5">
           <div className="relative w-full aspect-[4/5] max-h-[560px] rounded-lg overflow-hidden shadow-lg">
-            <Image
+            <BlurImage
               src={ourStory.author.photo}
+              blurDataURL={blurFor(ourStory.author.photo)}
               alt={`${ourStory.author.name}, ${ourStory.author.role} of Inspacio Design`}
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"

@@ -13,6 +13,9 @@ import DescriptivePara from "@/components/DescriptivePara/DescriptivePara";
 import HomeServices from "@/components/HomeServices/HomeServices";
 import StatsStrip from "@/components/StatsStrip/StatsStrip";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
+import FeaturedProject from "@/components/FeaturedProject/FeaturedProject";
+import { blurFor } from "@/utils/blur";
+import { awards } from "@/constants/awards";
 import { Header } from "@/components/Header";
 import { SITE_URL, siteConstants } from "@/constants/site";
 
@@ -49,6 +52,7 @@ const localBusinessJsonLd = {
   areaServed: "Bengaluru, Karnataka",
   founder: { "@type": "Person", name: "Swati Panda" },
   knowsAbout: ["Interior design", "Architecture", "Turnkey interior execution"],
+  award: awards.map((a) => `${a.title}: ${a.description}`),
   sameAs: [siteConstants.instagram],
 };
 
@@ -61,12 +65,15 @@ export default function Home() {
       />
       <End2EndWrapper className="h-[542px] lg:h-screen">
         <Header />
-        <VideoBanner />
+        <VideoBanner posterBlur={blurFor("/images/banner.jpg")} />
       </End2EndWrapper>
       <CustomContainer>
         <DescriptivePara />
         <StatsStrip />
         <ScrollFadeIn><HomeServices /></ScrollFadeIn>
+      </CustomContainer>
+      <ScrollFadeIn><FeaturedProject /></ScrollFadeIn>
+      <CustomContainer>
         <ScrollFadeIn><LatestProjects /></ScrollFadeIn>
         <ScrollFadeIn><OurStory /></ScrollFadeIn>
         <ScrollFadeIn><Partners /></ScrollFadeIn>

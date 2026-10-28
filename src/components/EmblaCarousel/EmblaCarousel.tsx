@@ -14,6 +14,7 @@ import {
 } from './ArrowButtons'
 import { DotButton, useDotButton } from './DotButtons'
 import AutoPlay from 'embla-carousel-autoplay';
+import { useAutoplayProgress } from './EmblaAutoPlayProgress';
 import './embla.css';
 import './base.css';
 
@@ -27,11 +28,18 @@ type PropType = {
   options?: EmblaOptionsType
   isDarkBackground?: boolean
   fullWidth?: boolean
+  /** Advance automatically, pausing while hovered or focused. */
+  autoplay?: boolean
+  autoplayDelay?: number
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options, isDarkBackground, fullWidth } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoPlay({ delay: 3000, playOnInit: false, stopOnInteraction: false, stopOnFocusIn: true })])
+  const { slides, options, isDarkBackground, fullWidth, autoplay = false, autoplayDelay = 6000 } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    AutoPlay({ delay: autoplayDelay, playOnInit: autoplay, stopOnInteraction: false, stopOnMouseEnter: autoplay, stopOnFocusIn: true })
+  ])
+  const progressNode = useRef<HTMLDivElement>(null)
+  const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef<HTMLElement[]>([])
 
@@ -130,6 +138,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} isDark={isDarkBackground} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} isDark={isDarkBackground} />
         </div>
+
+        {autoplay && (
+          <div
+            className={[
+              'embla__progress',
+              isDarkBackground ? 'embla__progress--mode-dark' : 'embla__progress--mode-light',
+              showAutoplayProgress ? '' : 'embla__progress--hidden'
+            ].filter(Boolean).join(' ')}
+            aria-hidden="true"
+          >
+            <div className="embla__progress__bar" ref={progressNode} />
+          </div>
+        )}
 
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (

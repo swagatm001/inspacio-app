@@ -6,6 +6,7 @@ import { montserrat } from "@/fonts/montserrat";
 import { satoshi } from "@/fonts/satoshi";
 import BookFreeAppointment from "../BookFreeAppointment/BookFreeAppointment";
 import { siteConstants } from "@/constants/site";
+import { InstagramStrip } from "../InstagramStrip/InstagramStrip";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -16,6 +17,8 @@ const navLinks = [
 ];
 
 const FooterV2: React.FC = () => (
+  <>
+  <InstagramStrip />
   <footer className="bg-[#885739] text-white pt-12 pb-4 w-full">
     <div className="flex flex-col md:flex-row flex-wrap justify-between items-start px-8 gap-8">
       <div className="flex-1 min-w-[280px]">
@@ -55,6 +58,7 @@ const FooterV2: React.FC = () => (
       &copy; {new Date().getFullYear()} Inspacio Design. All rights reserved.
     </div>
   </footer>
+  </>
 );
 
 export default FooterV2;

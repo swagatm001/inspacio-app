@@ -27,8 +27,24 @@ export interface Section {
   images?: string[];
 }
 
+export interface ProjectRecognition {
+  kind: "award" | "press";
+  /** Short label for badges, e.g. "Archello" or "WADE Asia 2025". */
+  label: string;
+  /** Full line, e.g. "Featured on Archello". */
+  title: string;
+  href?: string;
+  /** A short line quoted from the feature, with its attribution. */
+  quote?: string;
+  attribution?: string;
+  /** Credits worth showing, e.g. the photographer. */
+  credits?: { label: string; name: string }[];
+}
+
 export interface Project {
   slug: string;
+  /** Press features and awards tied to this project. */
+  recognition?: ProjectRecognition[];
   intro?: string;
   thumbnail: string;
   title: string;
@@ -472,6 +488,20 @@ const texport: Project = {
 };
 
 const penthouse: Project = {
+  recognition: [
+    {
+      kind: "press",
+      label: "Archello",
+      title: "Featured on Archello",
+      href: "https://archello.com/project/bengaluru-penthouse",
+      quote: "A home that had held six people’s lives in its floor plan and made it look, somehow, effortless.",
+      attribution: "Mehar Deep Kaur, writing for Archello",
+      credits: [
+        { label: "Photography", name: "Mohith Ananth" },
+        { label: "Styling", name: "Marchiata" },
+      ],
+    },
+  ],
   intro: "A 4,600 sq.ft. penthouse designed as a serene urban retreat: open, airy, and elegant. Natural light, soft textures, and bespoke lighting define this home of understated luxury.",
   thumbnail: "/images/penthouse.webp",
   title: "Penthouse at Tata Aquila Heights",
@@ -869,6 +899,13 @@ const bunsik: Project = {
 }
 
 const brita: Project = {
+  recognition: [
+    {
+      kind: "award",
+      label: "WADE Asia 2025",
+      title: "Presented at WADE Asia 2025",
+    },
+  ],
   category: {
     label: "Commercial",
     value: "commercial",

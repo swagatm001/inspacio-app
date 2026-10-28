@@ -10,4 +10,5 @@ export const partners: Partner[] = [
   { name: "Celegence", logo: "/images/client-logo/logo_4.png" },
   { name: "Excelya", logo: "/images/client-logo/logo_5.png" },
   { name: "Texport Overseas", logo: "/images/client-logo/logo_6.png" },
+  { name: "Hitachi", logo: "/images/client-logo/hitachi.svg" },
 ];

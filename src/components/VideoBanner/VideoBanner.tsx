@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
+import { BlurImage } from "../ui/BlurImage";
 import { montserrat } from "@/fonts/montserrat";
 import { satoshi } from "@/fonts/satoshi";
 import { Contact } from "../Contact";
@@ -12,7 +13,14 @@ import { Button } from "../ui/Button";
 const POSTER_SRC = "/images/banner.jpg";
 const VIDEO_SRC = "/videos/banner-video.mp4";
 
-export const VideoBanner: React.FC = () => {
+const HEADLINE = "Designing Spaces That Inspire";
+
+interface VideoBannerProps {
+  /** Blur preview for the poster image (from the server-side blur map). */
+  posterBlur?: string;
+}
+
+export const VideoBanner: React.FC<VideoBannerProps> = ({ posterBlur }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
@@ -49,14 +57,19 @@ export const VideoBanner: React.FC = () => {
       </video>
 
       {!hasStarted && (
-        <Image
-          src={POSTER_SRC}
-          alt="A living space designed by Inspacio"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 animate-kenburns">
+            <BlurImage
+              src={POSTER_SRC}
+              blurDataURL={posterBlur}
+              alt="A living space designed by Inspacio"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
       )}
 
       <button
@@ -85,14 +98,19 @@ export const VideoBanner: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-full flex flex-col md:flex-row items-center justify-between gap-6 px-6 md:px-10 lg:px-16 pt-16 pb-10 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
         <div className="pointer-events-auto w-full md:w-auto min-w-0 text-center md:text-left">
           <h1 className={clsx(montserrat.className, "text-2xl sm:text-4xl lg:text-5xl text-white text-balance")}>
-            Designing Spaces That Inspire
+            {HEADLINE.split(" ").map((word, i) => (
+              <span key={word} className="hero-rise" style={{ animationDelay: `${150 + i * 110}ms` }}>
+                {word}
+                {i < HEADLINE.split(" ").length - 1 ? "\u00A0" : ""}
+              </span>
+            ))}
           </h1>
-          <p className={clsx(satoshi.className, "text-base sm:text-lg lg:text-2xl text-white")}>
+          <p className={clsx(satoshi.className, "hero-rise text-base sm:text-lg lg:text-2xl text-white")} style={{ animationDelay: "650ms" }}>
             A journey where every design tells a story.
           </p>
         </div>
 
-        <div className="pointer-events-auto">
+        <div className="pointer-events-auto hero-rise" style={{ animationDelay: "850ms" }}>
           <Button variant="primary" size="lg" onClick={() => setOpen(true)} icon={<Image src="/images/phone_icon.svg" alt="" width={20} height={20} />}>
             Book a FREE Appointment
           </Button>

@@ -16,6 +16,8 @@ interface Props {
     finishLine?: string;
   };
   images?: string[];
+  /** Blur previews keyed by image path, attached on the server. */
+  blurs?: Record<string, string>;
 }
 
 const ZoomHint = () => (
@@ -44,7 +46,7 @@ const spanFor = (index: number, count: number) => {
   return "md:col-span-2";
 };
 
-const ProjectShowcaseSection: React.FC<Props> = ({ title = "Layouts", intro = [""], moreText, images = [] }) => {
+const ProjectShowcaseSection: React.FC<Props> = ({ title = "Layouts", intro = [""], moreText, images = [], blurs }) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const split = Math.floor(images.length / 2);
@@ -61,7 +63,7 @@ const ProjectShowcaseSection: React.FC<Props> = ({ title = "Layouts", intro = ["
       aria-label={`Open ${alt} in full screen`}
       className="group relative block w-full h-full cursor-zoom-in focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange rounded-md"
     >
-      <ParallaxImage src={src} alt={alt} />
+      <ParallaxImage src={src} alt={alt} blurDataURL={blurs?.[src]} />
       <ZoomHint />
     </button>
   );
