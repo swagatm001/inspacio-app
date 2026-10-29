@@ -4,6 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { services } from "@/constants/services";
 import { slugify } from "@/utils/slugify";
+import { sectors as sectorList } from "@/constants/sectors";
 import { Button } from "../ui/Button";
 import { SectionEyebrow } from "../ui/SectionEyebrow";
 
@@ -27,7 +28,6 @@ const ArrowIcon = () => (
 );
 
 const HomeServices: React.FC = () => {
-  const sectors = services["Our Expertise"]?.points ?? [];
 
   return (
     <section className="mb-28" aria-labelledby="home-services-heading">
@@ -40,11 +40,13 @@ const HomeServices: React.FC = () => {
           <p className="font-body text-base md:text-lg text-brand-muted mt-3">
             From the first sketch to the final handover, one team carries your project through every stage.
           </p>
-          {sectors.length > 0 && (
+          {sectorList.length > 0 && (
             <ul className="mt-4 flex flex-wrap gap-2" aria-label="Sectors we design for">
-              {sectors.map((sector) => (
-                <li key={sector} className="font-body text-sm text-brand-ink bg-white border border-brand-sand rounded-full px-3 py-1">
-                  {sector}
+              {sectorList.map((sector) => (
+                <li key={sector.slug}>
+                  <Link href={`/spaces/${sector.slug}`} className="font-body inline-block text-sm text-brand-ink bg-white border border-brand-sand rounded-full px-3 py-1 transition hover:border-brand-brown hover:text-brand-brown">
+                    {sector.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -64,7 +66,7 @@ const HomeServices: React.FC = () => {
             <li key={key} className="h-full">
               <Link
                 href={`/services#${slugify(key)}`}
-                className="group relative flex flex-col h-full rounded-xl border border-brand-sand bg-white p-6 overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand-tan focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/50"
+                className="group relative flex flex-col h-full rounded-3xl border border-brand-sand bg-white p-6 overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lift hover:border-brand-tan focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/50"
               >
                 <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-orange to-brand-brown opacity-0 transition-opacity group-hover:opacity-100" />
 

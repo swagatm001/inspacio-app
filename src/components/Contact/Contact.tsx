@@ -11,7 +11,7 @@ import { Button } from "../ui/Button";
 
 const formGroupCSS = "w-full flex flex-col gap-2";
 const inputCSS =
-  "border border-gray-200 h-11 rounded-lg px-3 drop-shadow-sm focus:outline-none";
+  "border border-brand-sand h-12 rounded-xl px-4 bg-white focus:outline-none focus:border-brand-brown";
 
 const emailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -93,7 +93,7 @@ export const Contact = ({ removeDescription }: ContactProps) => {
         <span className="absolute right-0 bottom-0 h-20 w-20 rounded-br-2xl border-b-4 border-r-4 border-brand-brown" />
 
         <form
-          className="grid grid-cols-1 gap-4 p-5 rounded bg-white border border-[#D9D9D9]"
+          className="grid grid-cols-1 gap-4 p-5 rounded-2xl bg-white border border-brand-sand"
           onSubmit={handleSubmit(onSubmit)}
         >
         <div className="flex flex-col lg:flex-row gap-6">

@@ -9,7 +9,7 @@ const AwardCard: React.FC<Award> = ({ title, description, presented }) => {
 
   return (
     <div className="min-h-[250px] flex items-center">
-      <div className="relative flex flex-col justify-center items-center bg-white border border-brand-sand shadow-sm rounded-lg px-5 py-7 min-h-[13rem] text-center">
+      <div className="relative flex flex-col justify-center items-center bg-white border border-brand-sand shadow-sm rounded-3xl px-5 py-7 min-h-[13rem] text-center">
         {year && (
           <span className="font-body absolute top-3 right-3 text-xs font-medium tracking-wide text-brand-brown bg-brand-wash rounded-full px-2.5 py-1">
             {year}

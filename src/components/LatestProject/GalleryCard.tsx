@@ -29,7 +29,7 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({ project, className }) 
       href={`/projects/${project.slug}`}
       aria-label={`View project: ${project.title}`}
       className={clsx(
-        "group relative block overflow-hidden rounded-sm bg-brand-wash focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange",
+        "group relative block overflow-hidden rounded-2xl bg-brand-wash transition-all duration-500 hover:-translate-y-1 hover:shadow-lift focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange",
         className ?? "h-80"
       )}
     >

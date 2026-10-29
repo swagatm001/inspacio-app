@@ -124,7 +124,7 @@ export const Lightbox: React.FC<LightboxProps> = ({ images, index, onClose, onIn
       )}
 
       <div
-        className="relative w-[92vw] h-[78vh] md:w-[86vw] md:h-[82vh]"
+        className="relative w-[92vw] h-[78vh] md:w-[86vw] md:h-[82vh] rounded-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <Image

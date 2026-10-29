@@ -33,6 +33,22 @@ export const faqs: Faq[] = [
     answer: "A relaxed conversation where we understand your needs, style, and goals, and you get to know our process and approach. There is no cost and no commitment.",
   },
   {
+    question: "Can I see the design before work starts?",
+    answer: "Yes. Before execution we present realistic 3D models and walkthroughs so you can experience the design in advance, with every texture, tone and lighting detail considered.",
+  },
+  {
+    question: "Are there any hidden costs?",
+    answer: "No. We believe great design comes with great trust: no hidden costs and no surprises, just complete clarity at every stage. Commercials are confirmed before work begins.",
+  },
+  {
+    question: "Who manages the work on site?",
+    answer: "Our own project management team oversees the on-site work, coordinates vendors and contractors, and checks quality against the design at every step through to handover.",
+  },
+  {
+    question: "Do you design the architecture as well as the interiors?",
+    answer: "Yes. We take on architecture design, interior design and turnkey execution, so one team can carry a project from planning through to the finished space.",
+  },
+  {
     question: "How do I get started?",
     answer: "Book a consultation, our interior designers from Bangalore will guide you based on your space and needs.",
   },

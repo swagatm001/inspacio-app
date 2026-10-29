@@ -25,7 +25,7 @@ export const InstagramStrip: React.FC = () => {
           {instagram.handle}
         </a>
       </div>
-      <ul className="grid grid-cols-3 md:grid-cols-6 gap-1 md:gap-2 px-1 md:px-2">
+      <ul className="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-3 px-3 md:px-5">
         {instagram.posts.slice(0, 6).map((post, i) => (
           <li key={`${post.image}-${i}`}>
             <a
@@ -33,7 +33,7 @@ export const InstagramStrip: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${post.alt} (opens Instagram)`}
-              className="group relative block aspect-square overflow-hidden bg-brand-wash focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange"
+              className="group relative block aspect-square overflow-hidden rounded-2xl bg-brand-wash transition-all duration-500 hover:-translate-y-1 hover:shadow-lift focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange"
             >
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
                 <BlurImage src={post.image} blurDataURL={blurFor(post.image)} alt="" fill sizes="(max-width: 768px) 33vw, 16vw" className="object-cover" />

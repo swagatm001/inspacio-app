@@ -14,8 +14,8 @@ const FeaturedProject: React.FC = () => {
   if (!project) return null;
 
   return (
-    <section className="bg-brand-ink text-white" aria-labelledby="featured-heading">
-      <div className="grid grid-cols-1 lg:grid-cols-12">
+    <section className="px-3 md:px-5" aria-labelledby="featured-heading">
+      <div className="grid grid-cols-1 lg:grid-cols-12 rounded-[28px] md:rounded-4xl overflow-hidden bg-brand-ink text-white shadow-soft">
         <Link
           href={`/projects/${project.slug}`}
           aria-label={`Open the ${project.title} project`}

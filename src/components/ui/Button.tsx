@@ -6,13 +6,13 @@ export type ButtonVariant = "primary" | "secondary" | "inverse" | "link";
 export type ButtonSize = "sm" | "md" | "lg";
 
 const base =
-  "font-body inline-flex items-center justify-center gap-2.5 font-medium uppercase tracking-[0.16em] whitespace-nowrap transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-brown/50 disabled:opacity-60 disabled:pointer-events-none";
+  "font-body inline-flex items-center justify-center gap-2.5 font-medium uppercase tracking-[0.16em] whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-brown/50 disabled:opacity-60 disabled:pointer-events-none";
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "rounded-sm bg-brand-orange text-white hover:bg-brand-orange-dark",
-  secondary: "rounded-sm border border-brand-ink/35 bg-transparent text-brand-ink hover:border-brand-ink hover:bg-brand-ink hover:text-white",
-  inverse: "rounded-sm bg-white text-brand-ink hover:bg-brand-cream",
-  link: "rounded-sm normal-case tracking-normal text-brand-brown underline-offset-4 hover:underline",
+  primary: "rounded-full bg-brand-orange text-white shadow-glow hover:bg-brand-orange-dark",
+  secondary: "rounded-full border border-brand-ink/25 bg-white/70 backdrop-blur-sm text-brand-ink hover:border-brand-ink hover:bg-brand-ink hover:text-white",
+  inverse: "rounded-full bg-white text-brand-ink shadow-soft hover:bg-brand-cream",
+  link: "rounded-full normal-case tracking-normal text-brand-brown underline-offset-4 hover:underline hover:translate-y-0",
 };
 
 const sizes: Record<ButtonSize, string> = {

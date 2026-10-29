@@ -16,7 +16,7 @@ const OurStory: React.FC = () => {
   return (
     <section className="mb-28" aria-labelledby="our-story-heading">
       <div className="flex flex-col items-center mb-10">
-        <SectionEyebrow number="04" label="Our story" className="justify-center" />
+        <SectionEyebrow number="05" label="Our story" className="justify-center" />
         <h2 id="our-story-heading" className={clsx(montserrat.className, "text-center text-4xl md:text-[52px] leading-[1.05] font-normal text-brand-ink")}>
           {ourStory.title}
         </h2>
@@ -24,7 +24,7 @@ const OurStory: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-5">
-          <div className="relative w-full aspect-[4/5] max-h-[560px] rounded-sm overflow-hidden">
+          <div className="relative w-full aspect-[4/5] max-h-[560px] rounded-3xl overflow-hidden shadow-soft">
             <BlurImage
               src={ourStory.author.photo}
               blurDataURL={blurFor(ourStory.author.photo)}

@@ -15,7 +15,7 @@ const About = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-5 lg:sticky lg:top-28">
-          <div className="relative w-full aspect-[4/5] max-h-[640px] rounded-sm overflow-hidden">
+          <div className="relative w-full aspect-[4/5] max-h-[640px] rounded-3xl overflow-hidden shadow-soft">
             <Image
               src={ourStory.author.photo}
               alt={`${ourStory.author.name}, ${ourStory.author.role} of Inspacio Design`}

@@ -24,10 +24,16 @@ const ArrowRight = () => (
 );
 
 const cardBase =
-  "group relative block h-48 md:h-60 rounded-sm overflow-hidden focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange";
+  "group relative block h-48 md:h-60 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lift focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange";
+
+const factLine = (project: Project) => {
+  const find = (re: RegExp) => project.attributes?.find((a) => re.test(a.label))?.value;
+  return [find(/area/i), find(/duration|timeline/i)].filter(Boolean).join(" · ");
+};
 
 const PagerCard: React.FC<{ project: Project; direction: "previous" | "next" }> = ({ project, direction }) => {
   const isNext = direction === "next";
+  const facts = factLine(project);
   return (
     <Link href={`/projects/${project.slug}`} className={cardBase} aria-label={`${isNext ? "Next" : "Previous"} project: ${project.title}`}>
       <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
@@ -49,6 +55,7 @@ const PagerCard: React.FC<{ project: Project; direction: "previous" | "next" }> 
         <div className="max-w-[90%]">
           <p className="font-heading text-xl md:text-2xl font-medium leading-snug drop-shadow-sm text-balance">{project.title}</p>
           {project.address && <p className="font-body text-sm text-white/80 mt-1">{project.address}</p>}
+          {facts && <p className="font-body text-xs uppercase tracking-[0.14em] text-white/60 mt-1.5">{facts}</p>}
         </div>
       </div>
     </Link>

@@ -1,4 +1,4 @@
-/** Reviews are reproduced verbatim from the studio's Google profile. */
+/** Reviews from the studio's Google profile. The studio name in older reviews is updated to Inspacio Design; the wording is otherwise the reviewer's own. */
 export type Testimonial = {
     id: number;
     rating: number;
@@ -30,7 +30,7 @@ export const testimonialsData: Array<Testimonial> = [
     projectType: "Residential",
     name: "Abishek D Mavinkurve",
     rating: 5,
-    content: `When we were on a look out for our pent house home interiors, we came across Kreative Design Studio. The entire process of design and it's execution has been very well planned by Ms. Swati and Ms. Sangeeta. A large 4500 sqft of interiors was completed in less than 60 days. We are extremely happy with the quality and their minute detailing in the overall finishes. I would highly recommend Kreative Design Studio and a big thank you for making our dream home in to reality. I would also wish Swati and Sangeeta good luck in all their future projects.`,
+    content: `When we were on a look out for our pent house home interiors, we came across Inspacio Design. The entire process of design and it's execution has been very well planned by Ms. Swati and Ms. Sangeeta. A large 4500 sqft of interiors was completed in less than 60 days. We are extremely happy with the quality and their minute detailing in the overall finishes. I would highly recommend Inspacio Design and a big thank you for making our dream home in to reality. I would also wish Swati and Sangeeta good luck in all their future projects.`,
   },
   {
     id: 4,

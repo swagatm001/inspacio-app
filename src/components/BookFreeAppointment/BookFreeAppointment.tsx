@@ -25,7 +25,7 @@ const BookFreeAppointment: React.FC<ButtonProps> = ({
         {title}
       </Button>
       <Modal open={open} onClose={() => setOpen(false)}>
-        <div className="bg-white p-6 rounded-lg">
+        <div className="bg-white p-6 rounded-3xl">
           <Contact />
         </div>
       </Modal>

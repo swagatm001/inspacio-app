@@ -14,7 +14,7 @@ export const Modal: React.FC<I_Modal> = ({ children, onClose, open }) => {
       center
       open={open}
       onClose={onClose}
-      classNames={{ modal: "w-full m-0 p-0 bg-transparent shadow-none", closeButton: "rounded-full bg-gray-200 outline-none", root: "backdrop-blur" }}
+      classNames={{ modal: "w-full m-0 p-0 bg-transparent shadow-none", closeButton: "rounded-full bg-white shadow-soft outline-none", root: "backdrop-blur" }}
     >
       <div className="p-6">{children}</div>
     </ReactModal>

@@ -25,7 +25,7 @@ const Awards: React.FC = () => {
   return (
     <section className="py-8" aria-labelledby="awards-heading">
       <div className="flex flex-col items-center mb-8">
-        <SectionEyebrow number="06" label="Recognition" className="justify-center" />
+        <SectionEyebrow number="07" label="Recognition" className="justify-center" />
         <h2 id="awards-heading" className={clsx(montserrat.className, "text-center text-4xl md:text-[52px] leading-[1.05] font-normal text-brand-ink")}>
           Awards
         </h2>

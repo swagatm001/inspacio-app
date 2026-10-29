@@ -42,6 +42,15 @@ const config: Config = {
           wash: "rgb(var(--c-wash) / <alpha-value>)",
         },
       },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "2.5rem",
+      },
+      boxShadow: {
+        soft: "0 24px 60px -28px rgb(26 20 17 / 0.35)",
+        lift: "0 30px 70px -30px rgb(26 20 17 / 0.45)",
+        glow: "0 14px 34px -12px rgb(232 120 58 / 0.55)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
