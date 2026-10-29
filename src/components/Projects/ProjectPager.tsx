@@ -24,7 +24,7 @@ const ArrowRight = () => (
 );
 
 const cardBase =
-  "group relative block h-48 md:h-60 rounded-2xl overflow-hidden focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange";
+  "group relative block h-48 md:h-60 rounded-sm overflow-hidden focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange";
 
 const PagerCard: React.FC<{ project: Project; direction: "previous" | "next" }> = ({ project, direction }) => {
   const isNext = direction === "next";

@@ -1,4 +1,4 @@
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import { ourStory } from "@/constants/ourStory";
 import clsx from "clsx";
@@ -17,14 +17,14 @@ const OurStory: React.FC = () => {
     <section className="mb-28" aria-labelledby="our-story-heading">
       <div className="flex flex-col items-center mb-10">
         <SectionEyebrow number="04" label="Our story" className="justify-center" />
-        <h2 id="our-story-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium text-brand-ink")}>
+        <h2 id="our-story-heading" className={clsx(montserrat.className, "text-center text-4xl md:text-[52px] leading-[1.05] font-normal text-brand-ink")}>
           {ourStory.title}
         </h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-5">
-          <div className="relative w-full aspect-[4/5] max-h-[560px] rounded-lg overflow-hidden shadow-lg">
+          <div className="relative w-full aspect-[4/5] max-h-[560px] rounded-sm overflow-hidden">
             <BlurImage
               src={ourStory.author.photo}
               blurDataURL={blurFor(ourStory.author.photo)}

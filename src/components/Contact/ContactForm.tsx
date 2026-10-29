@@ -3,7 +3,7 @@
 import { ImageLeftCopyRight } from "../ImageLeftCopyRight";
 import { Contact } from ".";
 import clsx from "clsx";
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import dynamic from "next/dynamic";
 import { siteConstants, whatsappHref } from "@/constants/site";

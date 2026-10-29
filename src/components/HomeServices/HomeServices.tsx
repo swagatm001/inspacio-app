@@ -34,7 +34,7 @@ const HomeServices: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
         <div className="max-w-2xl">
           <SectionEyebrow number="01" label="Our services" />
-          <h2 id="home-services-heading" className="font-heading text-2xl md:text-[40px] leading-tight text-brand-ink">
+          <h2 id="home-services-heading" className="font-heading text-4xl md:text-[52px] leading-[1.05] font-normal text-brand-ink">
             What We Do
           </h2>
           <p className="font-body text-base md:text-lg text-brand-muted mt-3">

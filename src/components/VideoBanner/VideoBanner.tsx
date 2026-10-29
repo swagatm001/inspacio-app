@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import { BlurImage } from "../ui/BlurImage";
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import { Contact } from "../Contact";
 import { Modal } from "../Modal";
@@ -97,7 +97,10 @@ export const VideoBanner: React.FC<VideoBannerProps> = ({ posterBlur }) => {
 
       <div className="absolute bottom-0 left-0 w-full flex flex-col md:flex-row items-center justify-between gap-6 px-6 md:px-10 lg:px-16 pt-16 pb-10 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
         <div className="pointer-events-auto w-full md:w-auto min-w-0 text-center md:text-left">
-          <h1 className={clsx(montserrat.className, "text-2xl sm:text-4xl lg:text-5xl text-white text-balance")}>
+          <p className="hero-rise font-body text-[11px] md:text-xs font-medium uppercase tracking-[0.28em] text-white/80 mb-3" style={{ animationDelay: "80ms" }}>
+            Architecture &amp; Interiors · Bengaluru
+          </p>
+          <h1 className={clsx(montserrat.className, "text-4xl sm:text-5xl lg:text-7xl font-light leading-[1.05] text-white text-balance")}>
             {HEADLINE.split(" ").map((word, i) => (
               <span key={word} className="hero-rise" style={{ animationDelay: `${150 + i * 110}ms` }}>
                 {word}
@@ -105,7 +108,7 @@ export const VideoBanner: React.FC<VideoBannerProps> = ({ posterBlur }) => {
               </span>
             ))}
           </h1>
-          <p className={clsx(satoshi.className, "hero-rise text-base sm:text-lg lg:text-2xl text-white")} style={{ animationDelay: "650ms" }}>
+          <p className={clsx(satoshi.className, "hero-rise mt-3 text-base sm:text-lg lg:text-xl text-white/85")} style={{ animationDelay: "650ms" }}>
             A journey where every design tells a story.
           </p>
         </div>

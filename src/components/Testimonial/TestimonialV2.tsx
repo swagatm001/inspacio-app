@@ -24,7 +24,7 @@ const TestimonialV2: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div className="max-w-xl">
             <SectionEyebrow number="" label="Client voices" light />
-            <h2 id="testimonials-heading" className="font-heading text-3xl md:text-[40px] leading-tight font-medium">
+            <h2 id="testimonials-heading" className="font-heading text-4xl md:text-[52px] leading-[1.05] font-normal">
               What Our Customers Say
             </h2>
             <p className="font-body text-sm md:text-base text-white/60 mt-3">

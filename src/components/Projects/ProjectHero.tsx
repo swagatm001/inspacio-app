@@ -43,7 +43,7 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ title, subtitle, image
             ))}
           </ul>
         )}
-        <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight text-balance max-w-4xl drop-shadow-sm">{title}</h1>
+        <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl font-light leading-[1.02] text-balance max-w-4xl drop-shadow-sm">{title}</h1>
         {subtitle && <p className="font-body mt-4 text-base sm:text-xl md:text-2xl text-white/85 max-w-3xl">{subtitle}</p>}
       </div>
     </div>

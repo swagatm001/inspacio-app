@@ -1,5 +1,5 @@
 import { partners } from "@/constants/partnerts";
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import clsx from "clsx";
 import Image from "next/image";
 import { SectionEyebrow } from "../ui/SectionEyebrow";
@@ -9,7 +9,7 @@ export const Partners = () => {
     <section className="mb-20" aria-labelledby="partners-heading">
       <div className="flex flex-col items-center mb-6">
         <SectionEyebrow number="05" label="Trusted by" className="justify-center" />
-        <h2 id="partners-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] text-brand-ink font-medium")}>
+        <h2 id="partners-heading" className={clsx(montserrat.className, "text-center text-4xl md:text-[52px] leading-[1.05] font-normal text-brand-ink font-medium")}>
           Our Trusted Partners
         </h2>
       </div>
@@ -22,7 +22,7 @@ export const Partners = () => {
                 alt={partner.name}
                 fill
                 sizes="140px"
-                className="object-contain"
+                className="object-contain grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100"
               />
             </div>
           </li>

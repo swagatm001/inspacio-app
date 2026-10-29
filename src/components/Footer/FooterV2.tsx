@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import BookFreeAppointment from "../BookFreeAppointment/BookFreeAppointment";
 import { siteConstants } from "@/constants/site";
@@ -22,7 +22,7 @@ const FooterV2: React.FC = () => (
   <footer className="bg-brand-ink text-white pt-12 pb-4 w-full">
     <div className="flex flex-col md:flex-row flex-wrap justify-between items-start px-8 gap-8">
       <div className="flex-1 min-w-[280px]">
-        <h2 className={clsx(montserrat.className, "text-5xl md:text-8xl font-medium mb-6")}>
+        <h2 className={clsx(montserrat.className, "text-6xl md:text-8xl font-light leading-[0.95] mb-8")}>
           Want to Start <br />a Project?
         </h2>
         <BookFreeAppointment title="Book a Free Consultation" variant="inverse" size="lg" />

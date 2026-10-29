@@ -30,7 +30,7 @@ export const FAQ: React.FC = () => {
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28">
             <SectionEyebrow number="" label="Good to know" />
-            <h2 id="faq-heading" className="font-heading text-3xl md:text-5xl font-medium text-brand-ink leading-tight mb-4">
+            <h2 id="faq-heading" className="font-heading text-4xl md:text-6xl font-light text-brand-ink leading-[1.05] mb-4">
               Frequently asked questions
             </h2>
             <p className="font-body text-base md:text-lg text-brand-muted">
