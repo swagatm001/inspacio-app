@@ -13,7 +13,7 @@ export const instagram = {
     { image: "/images/bunsik.webp", href: "https://www.instagram.com/inspaciodesignstudio/", alt: "Inspacio project photo" },
     { image: "/images/penthouse.webp", href: "https://www.instagram.com/inspaciodesignstudio/", alt: "Inspacio project photo" },
     { image: "/images/golfshire.webp", href: "https://www.instagram.com/inspaciodesignstudio/", alt: "Inspacio project photo" },
-    { image: "/images/cedar/61.webp", href: "https://www.instagram.com/inspaciodesignstudio/", alt: "Inspacio project photo" },
+    { image: "/images/cedar/DSC04231.webp", href: "https://www.instagram.com/inspaciodesignstudio/", alt: "Inspacio project photo" },
     { image: "/images/anthology/Anthology-13.webp", href: "https://www.instagram.com/inspaciodesignstudio/", alt: "Inspacio project photo" },
   ] as InstagramPost[],
 };
