@@ -8,6 +8,9 @@ import { satoshi } from "@/fonts/satoshi";
 import dynamic from "next/dynamic";
 import { siteConstants, whatsappHref } from "@/constants/site";
 import { InstagramIcon, WhatsAppIcon } from "../ui/Icons";
+import Link from "next/link";
+import { projectsConstants } from "@/constants/projects";
+import { localityOf } from "@/utils/seo";
 
 const ContactMap = dynamic(() => import("./ContactMap"), { ssr: false });
 
@@ -18,7 +21,7 @@ export const ContactForm = () => {
   const locationDetails = () => {
     return (
       <div className="flex flex-col gap-4 md:py-10">
-        <h1 className={clsx(montserrat.className, "hidden md:block text-6xl text-brand-ink font-medium")}>Contact Us</h1>
+        <p aria-hidden="true" className={clsx(montserrat.className, "hidden md:block text-6xl text-brand-ink font-medium")}>Contact Us</p>
         <div className="flex w-full">
           <div
             aria-hidden
@@ -79,6 +82,23 @@ export const ContactForm = () => {
       <div className="mt-8 px-0 md:px-6">
         {/* Map uses NEXT_PUBLIC_GOOGLE_MAPS_API_KEY */}
         <ContactMap />
+      </div>
+      <div className="mt-12 md:mt-16 px-0 md:px-6">
+        <h2 className={clsx(montserrat.className, "text-2xl md:text-3xl font-normal text-brand-ink mb-2")}>Where we have worked in Bangalore</h2>
+        <p className={clsx(satoshi.className, "text-base text-brand-muted mb-5 max-w-2xl")}>
+          We take projects across the city. These are some of the neighbourhoods where you can see our finished homes and offices.
+        </p>
+        <ul className="flex flex-wrap gap-2">
+          {Array.from(new Map(projectsConstants.map((p) => [localityOf(p.address), p])).entries())
+            .filter(([name]) => name)
+            .map(([name, p]) => (
+              <li key={name}>
+                <Link href={`/projects/${p.slug}`} className={clsx(satoshi.className, "inline-block rounded-full border border-brand-sand bg-white px-3.5 py-1.5 text-sm text-brand-ink transition hover:border-brand-brown hover:text-brand-brown")}>
+                  {name}
+                </Link>
+              </li>
+            ))}
+        </ul>
       </div>
     </div>
   );

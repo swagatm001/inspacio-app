@@ -10,9 +10,10 @@ interface ProjectHeroProps {
   image: string;
   imageBlur?: string;
   recognition?: ProjectRecognition[];
+  sector?: { name: string; href: string };
 }
 
-export const ProjectHero: React.FC<ProjectHeroProps> = ({ title, subtitle, image, imageBlur, recognition }) => (
+export const ProjectHero: React.FC<ProjectHeroProps> = ({ title, subtitle, image, imageBlur, recognition, sector }) => (
   <section className="pt-20 px-3 md:px-5 bg-brand-cream">
   <div className="relative h-[62vh] min-h-[460px] max-h-[760px] w-full overflow-hidden rounded-[28px] md:rounded-4xl bg-brand-ink text-white shadow-soft">
     <div className="absolute inset-0 animate-kenburns">
@@ -28,6 +29,16 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ title, subtitle, image
               Projects
             </Link>
           </li>
+          {sector && (
+            <>
+              <li aria-hidden="true">/</li>
+              <li>
+                <Link href={sector.href} className="underline-offset-4 hover:underline">
+                  {sector.name}
+                </Link>
+              </li>
+            </>
+          )}
           <li aria-hidden="true">/</li>
           <li aria-current="page" className="truncate max-w-[60vw]">{title}</li>
         </ol>

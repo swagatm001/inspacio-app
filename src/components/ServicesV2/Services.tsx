@@ -47,7 +47,10 @@ export const Services: React.FC<ServicesProps> = ({ blurMap }) => {
       {serviceKeys.map((key) => (
         <span key={key} id={slugify(key)} className="block scroll-mt-28" aria-hidden="true" />
       ))}
-      <h2 className="font-heading text-center text-3xl md:text-4xl font-medium mb-8 text-brand-ink">Services & Offerings</h2>
+      <div className="text-center mb-8">
+        <h1 className="font-heading text-3xl md:text-5xl font-normal text-brand-ink">Services & Offerings</h1>
+        <p className="font-body text-base md:text-lg text-brand-muted mt-3 max-w-2xl mx-auto">Architecture, interior design and turnkey execution for homes, offices and commercial spaces in Bangalore.</p>
+      </div>
 
       {/* Tabs */}
       <div className="w-full overflow-x-auto no-scrollbar border-b border-brand-sand">

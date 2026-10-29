@@ -5,6 +5,8 @@ import { helvetica } from "@/fonts/helvetica";
 import { display } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import { SITE_URL, siteConstants } from "@/constants/site";
+import { organizationJsonLd, websiteJsonLd } from "@/utils/seo";
+import { JsonLd } from "@/components/ui/JsonLd";
 import { FloatingActions } from "@/components/ContactActions/FloatingActions";
 import { MobileActionBar } from "@/components/ContactActions/MobileActionBar";
 
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  ...(siteConstants.googleSiteVerification ? { verification: { google: siteConstants.googleSiteVerification } } : {}),
 };
 
 export default function RootLayout({
@@ -37,8 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <body className={clsx(helvetica.className, display.variable, satoshi.variable)}>
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         {/* Bottom padding keeps the last content clear of the mobile action bar */}
         <main className="pb-[72px] lg:pb-0">
           <div id="modal-portal" />

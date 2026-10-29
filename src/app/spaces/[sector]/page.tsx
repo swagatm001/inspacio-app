@@ -15,6 +15,9 @@ import BookFreeAppointment from "@/components/BookFreeAppointment/BookFreeAppoin
 import { sectors, sectorBySlug, sectorOf } from "@/constants/sectors";
 import { projectsConstants } from "@/constants/projects";
 import { blurFor } from "@/utils/blur";
+import { breadcrumbJsonLd, localityOf, ORG_ID, absoluteUrl } from "@/utils/seo";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { services } from "@/constants/services";
 
 type Props = { params: { sector: string } };
 
@@ -25,10 +28,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const sector = sectorBySlug(params.sector);
   if (!sector) return { title: "Not found | Inspacio" };
+  const hero = projectsConstants.find((p) => p.slug === sector.heroProject);
   return {
     title: sector.seoTitle,
     description: sector.seoDescription,
     alternates: { canonical: `/spaces/${sector.slug}` },
+    openGraph: { title: sector.seoTitle, description: sector.seoDescription, images: hero ? [{ url: hero.thumbnail }] : undefined },
   };
 }
 
@@ -39,9 +44,23 @@ export default function SectorPage({ params }: Props) {
   const projects = projectsConstants.filter((p) => sectorOf(p) === sector.slug).map((p) => ({ ...p, thumbnailBlur: blurFor(p.thumbnail) })) as I_Project[];
   const hero = projectsConstants.find((p) => p.slug === sector.heroProject) ?? projectsConstants.find((p) => sectorOf(p) === sector.slug);
   const others = sectors.filter((s) => s.slug !== sector.slug);
+  const localities = Array.from(new Set(projects.map((p) => localityOf(p.address)).filter(Boolean)));
+  const stages = ["Conceptualization & Design", "Detailing & Documentation", "Execution & Supervision"].map((k) => services[k]).filter(Boolean);
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": absoluteUrl(`/spaces/${sector.slug}#service`),
+    name: `${sector.name} interior design and architecture`,
+    serviceType: `${sector.name} interior design`,
+    description: sector.seoDescription,
+    provider: { "@id": ORG_ID },
+    areaServed: { "@type": "City", name: "Bengaluru" },
+    url: absoluteUrl(`/spaces/${sector.slug}`),
+  };
 
   return (
     <div className="bg-brand-cream">
+      <JsonLd data={[serviceJsonLd, breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Projects", path: "/projects" }, { name: sector.name, path: `/spaces/${sector.slug}` }])]} />
       <End2EndWrapper>
         <Header lightBackground={true} />
       </End2EndWrapper>
@@ -95,6 +114,31 @@ export default function SectorPage({ params }: Props) {
         ) : (
           <p className="font-body text-brand-muted">Projects in this sector are being photographed. Ask us about recent work.</p>
         )}
+      </CustomContainer>
+
+      <CustomContainer className="py-10 md:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-4">
+            <SectionEyebrow number="" label="How we work" />
+            <h2 className="font-heading text-3xl md:text-4xl font-normal text-brand-ink leading-tight">
+              From concept to handover, one team
+            </h2>
+            {localities.length > 0 && (
+              <p className="font-body text-base text-brand-muted mt-4">
+                Recent {sector.name.toLowerCase()} work in {localities.join(", ")}.
+              </p>
+            )}
+          </div>
+          <ol className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {stages.map((s, i) => (
+              <li key={s.title} className="rounded-3xl border border-brand-sand bg-white p-6">
+                <p className="font-body text-xs tabular-nums text-brand-orange mb-3">{String(i + 1).padStart(2, "0")}</p>
+                <h3 className="font-heading text-xl font-medium text-brand-ink mb-2">{s.title}</h3>
+                <p className="font-body text-sm text-brand-body leading-relaxed">{s.paragraph[0]}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
       </CustomContainer>
 
       <CustomContainer className="py-10">

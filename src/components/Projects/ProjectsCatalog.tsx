@@ -85,9 +85,10 @@ const ProjectsCatalog: React.FC<ProjectsCatalogProps> = ({ projects: allProjects
   return (
     <div className="py-16">
       <section className="max-w-6xl mx-auto px-4 py-12">
-        <h1 className={clsx(montserrat.className, "text-2xl md:text-4xl text-center font-medium mb-8 text-brand-ink")}>
+        <h1 className={clsx(montserrat.className, "text-3xl md:text-5xl text-center font-normal mb-3 text-brand-ink")}>
           Projects
         </h1>
+        <p className={clsx(satoshi.className, "text-center text-base md:text-lg text-brand-muted mb-8")}>Homes, offices and commercial spaces designed and built across Bangalore.</p>
 
         {/* Filter bar */}
         <div className={clsx(satoshi.className, "mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between")}>

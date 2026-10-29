@@ -100,7 +100,7 @@ export const VideoBanner: React.FC<VideoBannerProps> = ({ posterBlur }) => {
       <div className="absolute bottom-0 left-0 w-full flex flex-col md:flex-row items-center justify-between gap-6 px-6 md:px-10 lg:px-16 pt-16 pb-10 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
         <div className="pointer-events-auto w-full md:w-auto min-w-0 text-center md:text-left">
           <div className="hero-rise flex flex-wrap items-center gap-x-4 gap-y-2 mb-3" style={{ animationDelay: "80ms" }}>
-            <p className="font-body text-[11px] md:text-xs font-medium uppercase tracking-[0.28em] text-white/80">Architecture &amp; Interiors · Bengaluru</p>
+            <p className="font-body text-[11px] md:text-xs font-medium uppercase tracking-[0.28em] text-white/80">Interior Designers &amp; Architects · Bengaluru</p>
             {awards[0] && (
               <span className="font-body inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-3 py-1 text-[11px] text-white whitespace-nowrap">
                 <LaurelIcon className="w-4 h-4 text-brand-orange" />
