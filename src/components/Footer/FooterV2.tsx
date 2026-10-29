@@ -11,6 +11,7 @@ import { InstagramStrip } from "../InstagramStrip/InstagramStrip";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Our Works", href: "/projects" },
+  { label: "Spaces", href: "/spaces/residential" },
   { label: "Services", href: "/services" },
   { label: "Our Story", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -19,7 +20,7 @@ const navLinks = [
 const FooterV2: React.FC = () => (
   <>
   <InstagramStrip />
-  <footer className="bg-brand-ink text-white pt-12 pb-4 w-full">
+  <footer className="bg-brand-ink text-white pt-14 pb-4 w-full rounded-t-[32px] md:rounded-t-5xl">
     <div className="flex flex-col md:flex-row flex-wrap justify-between items-start px-8 gap-8">
       <div className="flex-1 min-w-[280px]">
         <h2 className={clsx(montserrat.className, "text-6xl md:text-8xl font-light leading-[0.95] mb-8")}>

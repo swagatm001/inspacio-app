@@ -16,7 +16,8 @@ const TestimonialV2: React.FC = () => {
   const rating = averageRating(testimonialsData);
 
   return (
-    <section className="relative overflow-hidden bg-brand-ink text-white py-16 md:py-24" aria-labelledby="testimonials-heading">
+    <section className="px-3 md:px-5" aria-labelledby="testimonials-heading">
+      <div className="relative overflow-hidden rounded-[28px] md:rounded-4xl bg-brand-ink text-white py-16 md:py-24 shadow-soft">
       <span aria-hidden="true" className="pointer-events-none absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full bg-brand-orange/15 blur-3xl" />
       <span aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-24 w-[420px] h-[420px] rounded-full bg-brand-brown/30 blur-3xl" />
 
@@ -28,7 +29,7 @@ const TestimonialV2: React.FC = () => {
               What Our Customers Say
             </h2>
             <p className="font-body text-sm md:text-base text-white/60 mt-3">
-              Reviews as written on Google. Some predate our rebrand to Inspacio, when the studio was known as Kreative Dezine Studio.
+              Reviews from our Google profile. Some were written before our rebrand to Inspacio, when the studio was known as Kreative Dezine Studio.
             </p>
           </div>
           <div className="flex flex-col items-start md:items-end gap-3">
@@ -48,6 +49,7 @@ const TestimonialV2: React.FC = () => {
         </div>
 
         <EmblaCarousel options={options} slides={slides} isDarkBackground autoplay autoplayDelay={6000} slideSize="33.333%" slideSizeSm="88%" tween={false} />
+      </div>
       </div>
     </section>
   );

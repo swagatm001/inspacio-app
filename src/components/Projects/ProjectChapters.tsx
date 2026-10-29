@@ -16,7 +16,7 @@ interface ProjectChaptersProps {
 }
 
 const Highlights: React.FC<{ title: string; points: string[]; finishLine?: string }> = ({ title, points, finishLine }) => (
-  <aside className="mt-8 rounded-2xl border border-brand-sand bg-white p-6 md:p-8">
+  <aside className="mt-8 rounded-3xl border border-brand-sand bg-white p-6 md:p-8">
     <h3 className="font-heading text-lg md:text-xl font-medium text-brand-ink mb-5">{title.replace(/:$/, "")}</h3>
     <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
       {points.map((point, i) => (

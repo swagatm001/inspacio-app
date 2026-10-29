@@ -9,7 +9,7 @@ export const PressQuote: React.FC<{ items?: ProjectRecognition[] }> = ({ items }
 
   return (
     <section className="px-6 md:px-24 py-6 md:py-10" aria-label={feature.title}>
-      <figure className="max-w-6xl mx-auto rounded-sm bg-brand-ink text-white px-6 py-10 md:px-16 md:py-14 relative overflow-hidden">
+      <figure className="max-w-6xl mx-auto rounded-3xl md:rounded-4xl bg-brand-ink text-white shadow-soft px-6 py-10 md:px-16 md:py-14 relative overflow-hidden">
         <svg viewBox="0 0 24 24" fill="currentColor" className="absolute -top-4 -left-2 w-32 h-32 text-white/5" aria-hidden="true">
           <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.5v-6.5H5.25c0-1.6.95-2.5 2.5-2.5V6h-.58Zm9.33 0a5.17 5.17 0 0 0-5.17 5.17V18h6.5v-6.5h-3.25c0-1.6.95-2.5 2.5-2.5V6h-.58Z" />
         </svg>

@@ -19,7 +19,7 @@ const Tile: React.FC<{
     <Link
       href={`/projects/${project.slug}`}
       className={clsx(
-        "group relative block overflow-hidden rounded-sm bg-brand-wash focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/50",
+        "group relative block overflow-hidden rounded-2xl bg-brand-wash transition-all duration-500 hover:-translate-y-1 hover:shadow-lift focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/50",
         className
       )}
       aria-label={`${label ? `${label}: ` : ""}${project.title}`}

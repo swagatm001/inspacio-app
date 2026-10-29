@@ -6,6 +6,9 @@ import { ProjectChapters } from "@/components/Projects/ProjectChapters";
 import { ProjectPager } from "@/components/Projects/ProjectPager";
 import { ImageComparator } from "@/components/Projects/ImageComparator";
 import { PressQuote } from "@/components/Projects/PressQuote";
+import { ProjectFeedback } from "@/components/Projects/ProjectFeedback";
+import { ProjectEnquiry } from "@/components/Projects/ProjectEnquiry";
+import { sectorOf } from "@/constants/sectors";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { projectsConstants } from "@/constants/projects";
 import { blurFor, blurMapFor, dimsMapFor } from "@/utils/blur";
@@ -90,6 +93,12 @@ const ProjectPage = ({ params }: Props) => {
           dims={dimsMapFor(sectionImages)}
         />
       )}
+      <ScrollFadeIn>
+        <ProjectFeedback testimonialId={project.testimonialId} />
+      </ScrollFadeIn>
+      <ScrollFadeIn>
+        <ProjectEnquiry projectTitle={project.title} defaultSector={sectorOf(project)} />
+      </ScrollFadeIn>
       <ScrollFadeIn>
         <ProjectPager previous={previous} next={next} />
       </ScrollFadeIn>

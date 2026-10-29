@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/constants/site";
 import { projectsConstants } from "@/constants/projects";
+import { sectors } from "@/constants/sectors";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -19,5 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...pages, ...projects];
+  const spaces: MetadataRoute.Sitemap = sectors.map((s) => ({
+    url: `${SITE_URL}/spaces/${s.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...pages, ...spaces, ...projects];
 }

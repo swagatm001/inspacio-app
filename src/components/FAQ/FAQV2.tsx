@@ -83,7 +83,7 @@ export const FAQ: React.FC = () => {
             })}
           </ol>
 
-          <div className="mt-8 rounded-2xl border border-brand-sand bg-white p-6 md:p-7 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+          <div className="mt-8 rounded-3xl border border-brand-sand bg-white p-6 md:p-7 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
             <div>
               <p className="font-heading text-xl font-medium text-brand-ink mb-1">Still have a question?</p>
               <p className="font-body text-sm md:text-base text-brand-muted">The first conversation is free and commits you to nothing.</p>

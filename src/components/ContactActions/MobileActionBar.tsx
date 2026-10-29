@@ -13,7 +13,7 @@ export const MobileActionBar: React.FC = () => {
 
   return (
     <>
-      <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-brand-cream/95 backdrop-blur-md border-t border-brand-sand pb-[env(safe-area-inset-bottom)]">
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-brand-cream/95 backdrop-blur-md border-t border-brand-sand rounded-t-3xl shadow-[0_-12px_40px_-20px_rgb(26_20_17/0.35)] pb-[env(safe-area-inset-bottom)]">
         <div className="grid grid-cols-[auto_1fr] gap-3 p-3">
           {whatsappHref ? (
             <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="secondary" aria-label="Chat on WhatsApp" className="px-4" icon={<WhatsAppIcon className="w-5 h-5 text-[#25D366]" />}>
@@ -30,7 +30,7 @@ export const MobileActionBar: React.FC = () => {
         </div>
       </div>
       <Modal open={open} onClose={() => setOpen(false)}>
-        <div className="bg-white p-6 rounded-lg">
+        <div className="bg-white p-6 rounded-3xl">
           <Contact />
         </div>
       </Modal>

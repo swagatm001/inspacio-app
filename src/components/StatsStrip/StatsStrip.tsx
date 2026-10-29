@@ -6,7 +6,7 @@ const StatsStrip: React.FC = () => {
   if (!siteConstants.stats.length) return null;
   return (
     <section aria-label="Studio at a glance" className="mb-24">
-      <dl className="grid grid-cols-2 md:grid-cols-4 gap-6 rounded-lg border border-brand-sand bg-white px-6 py-8">
+      <dl className="grid grid-cols-2 md:grid-cols-4 gap-6 rounded-3xl border border-brand-sand bg-white px-6 py-8">
         {siteConstants.stats.map((stat) => (
           <div key={stat.label} className="text-center">
             <dd className="font-heading text-3xl md:text-4xl font-medium text-brand-brown">{stat.value}</dd>

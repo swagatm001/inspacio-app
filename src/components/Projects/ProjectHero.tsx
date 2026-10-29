@@ -13,8 +13,8 @@ interface ProjectHeroProps {
 }
 
 export const ProjectHero: React.FC<ProjectHeroProps> = ({ title, subtitle, image, imageBlur, recognition }) => (
-  <section className="pt-20 bg-brand-cream">
-  <div className="relative h-[62vh] min-h-[460px] max-h-[760px] w-full overflow-hidden bg-brand-ink text-white">
+  <section className="pt-20 px-3 md:px-5 bg-brand-cream">
+  <div className="relative h-[62vh] min-h-[460px] max-h-[760px] w-full overflow-hidden rounded-[28px] md:rounded-4xl bg-brand-ink text-white shadow-soft">
     <div className="absolute inset-0 animate-kenburns">
       <BlurImage src={image} blurDataURL={imageBlur} alt={title} fill priority sizes="100vw" className="object-cover" />
     </div>

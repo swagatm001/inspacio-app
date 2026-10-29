@@ -96,7 +96,7 @@ const Tile: React.FC<{
       onClick={() => onOpen(index)}
       aria-label={`Open ${img.alt} in full screen`}
       style={{ aspectRatio: `${img.w} / ${img.h}`, flex: row.short ? `0 0 calc(${(share * 100).toFixed(3)}% - 10px)` : `${a} 1 0%` }}
-      className="group relative block min-w-0 overflow-hidden rounded-sm bg-brand-wash cursor-zoom-in focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange"
+      className="group relative block min-w-0 overflow-hidden rounded-2xl bg-brand-wash cursor-zoom-in transition-shadow duration-500 hover:shadow-lift focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-orange"
     >
       <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]">
         {alone ? <DriftingImage img={img} sizes={sizes} /> : <BlurImage src={img.src} blurDataURL={img.blur} alt={img.alt} fill sizes={sizes} className="object-cover" />}

@@ -54,8 +54,10 @@ export const Header: React.FC<HeaderProps> = ({ lightBackground = false }) => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 w-full h-20 px-2 sm:px-4 md:px-8 z-50 transition-[background-color,box-shadow] duration-300",
-        scrolled && "bg-brand-cream/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(61,56,52,0.08)]",
+        "fixed z-50 transition-all duration-300",
+        scrolled
+          ? "top-3 left-3 right-3 md:left-5 md:right-5 h-16 rounded-full bg-brand-cream/85 backdrop-blur-md shadow-soft px-5 md:px-8"
+          : "top-0 left-0 w-full h-20 px-2 sm:px-4 md:px-8",
         !scrolled && !lightBackground && "bg-gradient-to-b from-black via-black/60 to-transparent"
       )}
     >

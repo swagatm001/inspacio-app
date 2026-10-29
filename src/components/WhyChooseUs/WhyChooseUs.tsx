@@ -35,7 +35,7 @@ export const WhyChooseUs: React.FC = () => {
 
       <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {/* Lead reason: dark, spans two columns on large screens */}
-        <li className="lg:col-span-2 relative overflow-hidden rounded-2xl bg-brand-ink text-white p-7 md:p-9 flex flex-col justify-between min-h-[260px]">
+        <li className="lg:col-span-2 relative overflow-hidden rounded-3xl bg-brand-ink shadow-soft text-white p-7 md:p-9 flex flex-col justify-between min-h-[260px]">
           <span aria-hidden="true" className="absolute -right-10 -bottom-10 w-56 h-56 rounded-full bg-brand-orange/20 blur-3xl" />
           <div className="flex items-center justify-between">
             <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 text-brand-orange">{ICONS[lead.id]}</span>

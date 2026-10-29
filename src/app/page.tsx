@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Awards from "@/components/Awards/Awards";
 import CustomContainer from "@/components/Container/CustomContainer";
-import { End2EndWrapper } from "@/components/End2EndWrapper";
 import FooterV2 from "@/components/Footer/FooterV2";
 import { LatestProjects } from "@/components/LatestProject";
 import OurStory from "@/components/OurStory/OurStory";
@@ -14,6 +13,7 @@ import HomeServices from "@/components/HomeServices/HomeServices";
 import StatsStrip from "@/components/StatsStrip/StatsStrip";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import FeaturedProject from "@/components/FeaturedProject/FeaturedProject";
+import { SectorsSection } from "@/components/Sectors/SectorsSection";
 import { blurFor } from "@/utils/blur";
 import { awards } from "@/constants/awards";
 import { Header } from "@/components/Header";
@@ -63,10 +63,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
-      <End2EndWrapper className="h-[542px] lg:h-screen">
-        <Header />
-        <VideoBanner posterBlur={blurFor("/images/banner.jpg")} />
-      </End2EndWrapper>
+      <Header lightBackground />
+      <div className="pt-20 px-3 md:px-5">
+        <div className="relative h-[520px] lg:h-[calc(100vh-6.5rem)] min-h-[520px] rounded-[28px] md:rounded-4xl overflow-hidden shadow-soft">
+          <VideoBanner posterBlur={blurFor("/images/banner.jpg")} />
+        </div>
+      </div>
       <CustomContainer>
         <DescriptivePara />
         <StatsStrip />
@@ -75,6 +77,7 @@ export default function Home() {
       <ScrollFadeIn><FeaturedProject /></ScrollFadeIn>
       <CustomContainer>
         <ScrollFadeIn><LatestProjects /></ScrollFadeIn>
+        <ScrollFadeIn><SectorsSection number="04" /></ScrollFadeIn>
         <ScrollFadeIn><OurStory /></ScrollFadeIn>
         <ScrollFadeIn><Partners /></ScrollFadeIn>
       </CustomContainer>
