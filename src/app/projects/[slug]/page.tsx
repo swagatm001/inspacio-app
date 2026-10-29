@@ -2,14 +2,13 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ProjectHero } from "@/components/Projects/ProjectHero";
 import { ProjectOverview } from "@/components/Projects/ProjectOverview";
-import ProjectShowcaseSection from "@/components/Projects/ProjectShowcaseSection";
+import { ProjectChapters } from "@/components/Projects/ProjectChapters";
 import { ProjectPager } from "@/components/Projects/ProjectPager";
 import { ImageComparator } from "@/components/Projects/ImageComparator";
 import { PressQuote } from "@/components/Projects/PressQuote";
-import Testimonials from "@/components/Testimonial/Testimonials";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { projectsConstants } from "@/constants/projects";
-import { blurFor, blurMapFor } from "@/utils/blur";
+import { blurFor, blurMapFor, dimsMapFor } from "@/utils/blur";
 
 type Props = {
   params: {
@@ -46,23 +45,27 @@ const ProjectPage = ({ params }: Props) => {
   const type = project.category?.label || "";
   const location = project.address || "";
   const year = project.year || "";
-  const imageCount = project.sections?.reduce((n, s) => n + (s.images?.length ?? 0), 0) ?? 0;
+  const sections = project.sections ?? [];
+  const sectionImages = sections.flatMap((s) => s.images ?? []);
 
   return (
     <div className="bg-brand-cream">
       <ProjectHero
         title={project.title}
         subtitle={project.subtitle || ""}
-        type={type}
-        location={location}
-        year={year}
         image={project.thumbnail}
         imageBlur={blurFor(project.thumbnail)}
         recognition={project.recognition}
       />
       {project.description && (
         <ScrollFadeIn>
-          <ProjectOverview description={project.description} type={type} location={location} year={year} imageCount={imageCount} recognition={project.recognition} />
+          <ProjectOverview
+            description={project.description}
+            type={type}
+            location={location}
+            year={year}
+            attributes={project.attributes}
+          />
         </ScrollFadeIn>
       )}
       <ScrollFadeIn>
@@ -79,20 +82,14 @@ const ProjectPage = ({ params }: Props) => {
           />
         </ScrollFadeIn>
       )}
-      {project.sections?.map((section, i) => (
-        <ScrollFadeIn key={`${section.title}-${i}`}>
-          <ProjectShowcaseSection
-            title={section.title}
-            intro={section.intro}
-            moreText={section.moreText}
-            images={section.images}
-            blurs={blurMapFor(section.images ?? [])}
-          />
-        </ScrollFadeIn>
-      ))}
-      <ScrollFadeIn>
-        <Testimonials projectType={project.type} />
-      </ScrollFadeIn>
+      {sections.length > 0 && (
+        <ProjectChapters
+          projectTitle={project.title}
+          sections={sections}
+          blurs={blurMapFor(sectionImages)}
+          dims={dimsMapFor(sectionImages)}
+        />
+      )}
       <ScrollFadeIn>
         <ProjectPager previous={previous} next={next} />
       </ScrollFadeIn>
