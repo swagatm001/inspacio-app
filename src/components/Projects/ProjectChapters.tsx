@@ -10,6 +10,8 @@ import { slugify } from "@/utils/slugify";
 
 interface ProjectChaptersProps {
   projectTitle: string;
+  /** e.g. "Jalahalli, Bangalore", used in image alt text. */
+  location?: string;
   sections: Section[];
   blurs: Record<string, string>;
   dims: Record<string, ImageDims>;
@@ -30,7 +32,7 @@ const Highlights: React.FC<{ title: string; points: string[]; finishLine?: strin
   </aside>
 );
 
-export const ProjectChapters: React.FC<ProjectChaptersProps> = ({ projectTitle, sections, blurs, dims }) => {
+export const ProjectChapters: React.FC<ProjectChaptersProps> = ({ projectTitle, location, sections, blurs, dims }) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const chapters = useMemo(
@@ -39,7 +41,7 @@ export const ProjectChapters: React.FC<ProjectChaptersProps> = ({ projectTitle, 
         const id = `chapter-${i + 1}-${slugify(section.title)}`;
         const images: GalleryImage[] = (section.images ?? []).map((src, n) => ({
           src,
-          alt: `${section.title}, photo ${n + 1}`,
+          alt: `${projectTitle}${location ? `, ${location}` : ""}: ${section.title.toLowerCase()}, photo ${n + 1}`,
           w: dims[src]?.w ?? 3,
           h: dims[src]?.h ?? 2,
           blur: blurs[src],
@@ -47,6 +49,7 @@ export const ProjectChapters: React.FC<ProjectChaptersProps> = ({ projectTitle, 
         return { id, number: String(i + 1).padStart(2, "0"), title: section.title, section, images };
       }),
     [sections, blurs, dims]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   );
 
   const allImages: LightboxImage[] = useMemo(

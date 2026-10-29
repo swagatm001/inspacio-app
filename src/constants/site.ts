@@ -27,6 +27,13 @@ export const siteConstants = {
     country: "IN",
   },
   ogImage: "/images/og-image.jpg",
+  logo: "/images/logo_dark.svg",
+  /** Studio location, used for local search data and the map. */
+  geo: { lat: 12.98339723305194, lng: 77.60063810988633 },
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=37%2C+Rama+Residency%2C+38%2C+Bowring+Hospital+Rd%2C+Shivaji+Nagar%2C+Bengaluru+560051",
+  founder: { name: "Swati Panda", role: "Founder & Principal Architect", alumniOf: "Piloo Mody College of Architecture", photo: "/images/director.webp" },
+  /** From Google Search Console, "HTML tag" method. Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in Vercel. */
+  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "",
   /**
    * Numbers strip under the homepage intro. Rendered only when this list has entries.
    * Example: [{ value: "13+", label: "Years of practice" }, { value: "120+", label: "Projects delivered" }]

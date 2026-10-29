@@ -15,9 +15,7 @@ import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import FeaturedProject from "@/components/FeaturedProject/FeaturedProject";
 import { SectorsSection } from "@/components/Sectors/SectorsSection";
 import { blurFor } from "@/utils/blur";
-import { awards } from "@/constants/awards";
 import { Header } from "@/components/Header";
-import { SITE_URL, siteConstants } from "@/constants/site";
 
 const title = "Best Interior Designers in Bangalore for Homes & Offices | Inspacio";
 const description =
@@ -31,38 +29,10 @@ export const metadata: Metadata = {
   // image from the root layout; a page-level openGraph block would replace it.
 };
 
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${SITE_URL}/#organization`,
-  name: siteConstants.name,
-  legalName: siteConstants.legalName,
-  url: SITE_URL,
-  image: `${SITE_URL}${siteConstants.ogImage}`,
-  email: siteConstants.email,
-  description,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: siteConstants.address.street,
-    addressLocality: siteConstants.address.locality,
-    addressRegion: siteConstants.address.region,
-    postalCode: siteConstants.address.postalCode,
-    addressCountry: siteConstants.address.country,
-  },
-  areaServed: "Bengaluru, Karnataka",
-  founder: { "@type": "Person", name: "Swati Panda" },
-  knowsAbout: ["Interior design", "Architecture", "Turnkey interior execution"],
-  award: awards.map((a) => `${a.title}: ${a.description}`),
-  sameAs: [siteConstants.instagram],
-};
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-28 md:gap-36 bg-brand-cream overflow-x-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
       <Header lightBackground />
       <div className="pt-20 px-3 md:px-5">
         <div className="relative h-[520px] lg:h-[calc(100vh-6.5rem)] min-h-[520px] rounded-[28px] md:rounded-4xl overflow-hidden shadow-soft">

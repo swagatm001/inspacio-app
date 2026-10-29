@@ -12,6 +12,9 @@ import { sectorOf } from "@/constants/sectors";
 import { ScrollFadeIn } from "@/components/ScrollFadeIn";
 import { projectsConstants } from "@/constants/projects";
 import { blurFor, blurMapFor, dimsMapFor } from "@/utils/blur";
+import { breadcrumbJsonLd, localityOf } from "@/utils/seo";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { sectorBySlug } from "@/constants/sectors";
 
 type Props = {
   params: {
@@ -28,8 +31,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) {
     return { title: "Project Not Found | Inspacio" };
   }
-  const title = `${project.title} | Inspacio Projects`;
-  const description = project.intro || project.subtitle || project.description;
+  const locality = localityOf(project.address);
+  const kind = project.category?.label === "Commercial" ? "Office Interiors" : "Home Interiors";
+  const title = `${project.title} | ${kind}${locality ? `, ${locality}` : ""}, Bangalore | Inspacio`;
+  const raw = project.intro || project.subtitle || project.description;
+  const description = raw.length > 158 ? raw.slice(0, 155).replace(/\s+\S*$/, "") + "…" : raw;
   return {
     title,
     description,
@@ -50,15 +56,24 @@ const ProjectPage = ({ params }: Props) => {
   const year = project.year || "";
   const sections = project.sections ?? [];
   const sectionImages = sections.flatMap((s) => s.images ?? []);
+  const sector = sectorBySlug(sectorOf(project));
+  const crumbs = [
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    ...(sector ? [{ name: sector.name, path: `/spaces/${sector.slug}` }] : []),
+    { name: project.title, path: `/projects/${project.slug}` },
+  ];
 
   return (
     <div className="bg-brand-cream">
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <ProjectHero
         title={project.title}
         subtitle={project.subtitle || ""}
         image={project.thumbnail}
         imageBlur={blurFor(project.thumbnail)}
         recognition={project.recognition}
+        sector={sector ? { name: sector.name, href: `/spaces/${sector.slug}` } : undefined}
       />
       {project.description && (
         <ScrollFadeIn>
@@ -89,6 +104,7 @@ const ProjectPage = ({ params }: Props) => {
         <ProjectChapters
           projectTitle={project.title}
           sections={sections}
+          location={location}
           blurs={blurMapFor(sectionImages)}
           dims={dimsMapFor(sectionImages)}
         />

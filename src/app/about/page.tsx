@@ -3,12 +3,15 @@ import { montserrat } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import clsx from "clsx";
 import Image from "next/image";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { founderJsonLd, breadcrumbJsonLd } from "@/utils/seo";
 
 const paragraphClass = "text-lg text-brand-body mb-4";
 
 const About = () => {
   return (
     <div className="pb-10">
+      <JsonLd data={[founderJsonLd(), breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Our Story", path: "/about" }])]} />
       <h1 className={clsx(montserrat.className, "text-3xl md:text-5xl font-medium text-brand-ink mb-10")}>
         {ourStory.title}
       </h1>
