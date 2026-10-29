@@ -7,6 +7,8 @@ import clsx from "clsx";
 export interface LightboxImage {
   src: string;
   alt?: string;
+  /** Short line shown under the image, e.g. the chapter name. */
+  caption?: string;
 }
 
 interface LightboxProps {
@@ -78,6 +80,11 @@ export const Lightbox: React.FC<LightboxProps> = ({ images, index, onClose, onIn
       <div className="absolute top-4 left-4 font-body text-sm text-white/80 select-none" aria-hidden="true">
         {index + 1} / {images.length}
       </div>
+      {current.caption && (
+        <p className="absolute bottom-4 left-4 right-20 font-body text-sm text-white/75 truncate select-none" aria-hidden="true">
+          {current.caption}
+        </p>
+      )}
 
       <button
         ref={closeRef}
@@ -117,7 +124,7 @@ export const Lightbox: React.FC<LightboxProps> = ({ images, index, onClose, onIn
       )}
 
       <div
-        className="relative w-[92vw] h-[82vh] md:w-[86vw] md:h-[86vh]"
+        className="relative w-[92vw] h-[78vh] md:w-[86vw] md:h-[82vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <Image

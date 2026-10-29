@@ -54,15 +54,15 @@ export const Header: React.FC<HeaderProps> = ({ lightBackground = false }) => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 w-full px-2 sm:px-4 md:px-8 z-50 transition-[background-color,box-shadow,height] duration-300",
-        scrolled ? "h-16 bg-brand-cream/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(61,56,52,0.08)]" : "h-20",
+        "fixed top-0 left-0 w-full h-20 px-2 sm:px-4 md:px-8 z-50 transition-[background-color,box-shadow] duration-300",
+        scrolled && "bg-brand-cream/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(61,56,52,0.08)]",
         !scrolled && !lightBackground && "bg-gradient-to-b from-black via-black/60 to-transparent"
       )}
     >
       <div className="h-full flex items-center justify-between">
         <Link href="/" aria-label="Inspacio home" className="focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-brown/50 rounded">
           <Image
-            className={clsx("h-auto select-none transition-[width] duration-300", scrolled ? "w-[124px]" : "w-[150px]")}
+            className="w-[150px] h-auto select-none"
             src={light ? headerConstants.logo.darkImageUrl : headerConstants.logo.imageUrl}
             alt={headerConstants.logo.altText}
             width={headerConstants.logo.width}

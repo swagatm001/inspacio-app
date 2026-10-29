@@ -45,6 +45,8 @@ export interface Project {
   slug: string;
   /** Press features and awards tied to this project. */
   recognition?: ProjectRecognition[];
+  /** Who did what, shown at the end of the project story. */
+  credits?: { label: string; name: string }[];
   intro?: string;
   thumbnail: string;
   title: string;
@@ -496,11 +498,13 @@ const penthouse: Project = {
       href: "https://archello.com/project/bengaluru-penthouse",
       quote: "A home that had held six people’s lives in its floor plan and made it look, somehow, effortless.",
       attribution: "Mehar Deep Kaur, writing for Archello",
-      credits: [
-        { label: "Photography", name: "Mohith Ananth" },
-        { label: "Styling", name: "Marchiata" },
-      ],
     },
+  ],
+  credits: [
+    { label: "Design & execution", name: "Inspacio Design Studio (Swati Panda)" },
+    { label: "Photography", name: "Mohith Ananth" },
+    { label: "Styling", name: "Marchiata" },
+    { label: "Words", name: "Mehar Deep Kaur, Archello" },
   ],
   intro: "A 4,600 sq.ft. penthouse designed as a serene urban retreat: open, airy, and elegant. Natural light, soft textures, and bespoke lighting define this home of understated luxury.",
   thumbnail: "/images/penthouse.webp",
@@ -1200,12 +1204,19 @@ const cedar: Project = {
       href: "https://thearchitectsdiary.com/this-5000-sq-ft-residence-layers-family-life-across-split-level-spaces-chair-and-company-inspacio-design-studio/",
       quote: "There is a moment, standing beneath the triple-height volume of this Bengaluru home, when the retractable sunroof slides open and the sky simply becomes part of the room.",
       attribution: "Mehar Deep Kaur, writing for The Architects Diary",
-      credits: [
-        { label: "Design", name: "Chair and Company (Deena Rodrigues & Nicole David)" },
-        { label: "Execution", name: "Inspacio Design Studio" },
-        { label: "Photography", name: "Mohith Ananth" },
-      ],
     },
+  ],
+  attributes: [
+    { label: "Area", value: "5,000 sq ft" },
+    { label: "Duration", value: "8 months" },
+    { label: "Layout", value: "Split-level, triple-height living" },
+  ],
+  credits: [
+    { label: "Design", name: "Chair and Company (Deena Rodrigues & Nicole David)" },
+    { label: "Execution", name: "Inspacio Design Studio (Swati Panda)" },
+    { label: "Photography", name: "Mohith Ananth" },
+    { label: "Styling", name: "Marchiata" },
+    { label: "Words", name: "Mehar Deep Kaur, The Architects Diary" },
   ],
   intro: "A home that balances aesthetics with utility while reflecting the lifestyle and personality of its occupants. The result offers sensory richness and elevates everyday living.",
   thumbnail: "/images/cedar/DSC04298.webp",

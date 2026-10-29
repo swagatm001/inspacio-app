@@ -160,3 +160,13 @@ body::before {
     transform: none;
   }
 }
+
+/* Hero scroll cue */
+@keyframes scrollCue {
+  0% { transform: scaleY(0); transform-origin: top; }
+  45% { transform: scaleY(1); transform-origin: top; }
+  55% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.scroll-cue { animation: scrollCue 2.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .scroll-cue { animation: none; } }

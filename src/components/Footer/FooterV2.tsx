@@ -19,7 +19,7 @@ const navLinks = [
 const FooterV2: React.FC = () => (
   <>
   <InstagramStrip />
-  <footer className="bg-brand-brown text-white pt-12 pb-4 w-full">
+  <footer className="bg-brand-ink text-white pt-12 pb-4 w-full">
     <div className="flex flex-col md:flex-row flex-wrap justify-between items-start px-8 gap-8">
       <div className="flex-1 min-w-[280px]">
         <h2 className={clsx(montserrat.className, "text-5xl md:text-8xl font-medium mb-6")}>
