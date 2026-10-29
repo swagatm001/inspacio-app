@@ -75,7 +75,7 @@ export const ProjectChapters: React.FC<ProjectChaptersProps> = ({ projectTitle, 
                   Chapter {i + 1}
                   {c.images.length > 0 && <span className="text-brand-faint normal-case tracking-normal">· {c.images.length} photos</span>}
                 </p>
-                <h2 className="font-heading text-3xl md:text-5xl font-medium text-brand-ink leading-tight text-balance mb-6">{c.title}</h2>
+                <h2 className="font-heading text-4xl md:text-6xl font-light text-brand-ink leading-[1.05] text-balance mb-6">{c.title}</h2>
                 {c.section.intro?.map((text, n) => (
                   <p key={n} className={clsx("font-body text-brand-body leading-relaxed mb-3", n === 0 ? "text-lg md:text-2xl text-brand-ink" : "text-base md:text-lg")}>
                     {text}

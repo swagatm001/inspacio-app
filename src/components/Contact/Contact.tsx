@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { satoshi } from "@/fonts/satoshi";
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import { Button } from "../ui/Button";
 
 const formGroupCSS = "w-full flex flex-col gap-2";

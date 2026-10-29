@@ -15,7 +15,7 @@ export const LatestProjects = () => {
       <div className="flex justify-between items-end mb-10">
         <div>
           <SectionEyebrow number="03" label="Selected work" />
-          <h2 id="latest-works-heading" className="font-heading text-2xl md:text-[40px] leading-tight text-brand-ink">
+          <h2 id="latest-works-heading" className="font-heading text-4xl md:text-[52px] leading-[1.05] font-normal text-brand-ink">
             Our Latest Works
           </h2>
         </div>

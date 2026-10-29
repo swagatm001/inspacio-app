@@ -44,7 +44,7 @@ const FeaturedProject: React.FC = () => {
               ))}
             </ul>
           )}
-          <h2 id="featured-heading" className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-balance mb-6">
+          <h2 id="featured-heading" className="font-heading text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] text-balance mb-6">
             {project.title}
           </h2>
           {project.subtitle && (

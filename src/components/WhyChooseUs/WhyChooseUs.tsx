@@ -27,7 +27,7 @@ export const WhyChooseUs: React.FC = () => {
     <section aria-labelledby="why-heading" className="py-12 md:py-16">
       <div className="max-w-2xl mb-10">
         <SectionEyebrow number="" label="Why Inspacio" />
-        <h2 id="why-heading" className="font-heading text-3xl md:text-5xl font-medium text-brand-ink leading-tight mb-4">
+        <h2 id="why-heading" className="font-heading text-4xl md:text-6xl font-light text-brand-ink leading-[1.05] mb-4">
           {WHY_CHOOSE_US.heading}
         </h2>
         {WHY_CHOOSE_US.subheading && <p className="font-body text-base md:text-lg text-brand-muted">{WHY_CHOOSE_US.subheading}</p>}

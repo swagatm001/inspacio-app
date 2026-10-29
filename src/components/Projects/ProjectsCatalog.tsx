@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from "react";
 import clsx from "clsx";
 import { ProjectList } from "./ProjectList";
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import { GalleryCard } from "@/components/LatestProject/GalleryCard";
 import { I_Project } from "@/components/LatestProject/Gallery";

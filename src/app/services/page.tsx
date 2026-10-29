@@ -34,7 +34,7 @@ export default function ServicesPage() {
     };
 
     return (
-        <div className="flex flex-col gap-20 bg-brand-cream overflow-x-hidden pt-28">
+        <div className="flex flex-col gap-28 md:gap-36 bg-brand-cream overflow-x-hidden pt-28">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
             <CustomContainer>
                 <Services blurMap={blurMap} />

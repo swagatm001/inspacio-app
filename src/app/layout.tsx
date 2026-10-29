@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import clsx from "clsx";
 import { helvetica } from "@/fonts/helvetica";
-import { montserrat } from "@/fonts/montserrat";
+import { display } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import { SITE_URL, siteConstants } from "@/constants/site";
 import { FloatingActions } from "@/components/ContactActions/FloatingActions";
@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(helvetica.className, montserrat.variable, satoshi.variable)}>
+      <body className={clsx(helvetica.className, display.variable, satoshi.variable)}>
         {/* Bottom padding keeps the last content clear of the mobile action bar */}
         <main className="pb-[72px] lg:pb-0">
           <div id="modal-portal" />

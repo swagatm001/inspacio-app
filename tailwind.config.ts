@@ -23,7 +23,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        heading: ["var(--font-montserrat)", "sans-serif"],
+        heading: ["var(--font-display)", "Georgia", "serif"],
         body: ["var(--font-satoshi)", "sans-serif"],
       },
       colors: {

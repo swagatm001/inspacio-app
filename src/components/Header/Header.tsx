@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({ lightBackground = false }) => {
 
         {/* Desktop navigation */}
         <nav aria-label="Primary" className="hidden lg:block">
-          <NavigationLinks className="gap-8" linkClassName={clsx(linkColor, "text-base font-medium")} />
+          <NavigationLinks className="gap-9" linkClassName={clsx(linkColor, "font-body text-[12px] font-medium uppercase tracking-[0.2em]")} />
         </nav>
 
         {/* Mobile and tablet menu */}

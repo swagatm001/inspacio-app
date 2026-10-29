@@ -4,7 +4,7 @@ import { ExternalIcon } from "../ui/Icons";
 import React from "react";
 import AwardCard from "./AwardCard";
 import clsx from "clsx";
-import { montserrat } from "@/fonts/montserrat";
+import { montserrat } from "@/fonts/display";
 import { satoshi } from "@/fonts/satoshi";
 import EmblaCarousel from "../EmblaCarousel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
@@ -26,13 +26,13 @@ const Awards: React.FC = () => {
     <section className="py-8" aria-labelledby="awards-heading">
       <div className="flex flex-col items-center mb-8">
         <SectionEyebrow number="06" label="Recognition" className="justify-center" />
-        <h2 id="awards-heading" className={clsx(montserrat.className, "text-center text-2xl md:text-[40px] font-medium text-brand-ink")}>
+        <h2 id="awards-heading" className={clsx(montserrat.className, "text-center text-4xl md:text-[52px] leading-[1.05] font-normal text-brand-ink")}>
           Awards
         </h2>
       </div>
       <div className={clsx(satoshi.className, "flex flex-col md:flex-row items-center w-full gap-8")}>
         <div className="basis-1/3 flex-shrink-0">
-          <h3 className="mb-4 text-2xl font-bold text-brand-ink">Celebrating Design Excellence</h3>
+          <h3 className="font-heading mb-4 text-3xl font-normal text-brand-ink">Celebrating Design Excellence</h3>
           <p className="text-lg text-gray-700">
             Honoured for creativity, craftsmanship, and meaningful design, each recognition strengthens our pursuit of
             timeless, human-centric spaces.

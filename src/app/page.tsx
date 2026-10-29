@@ -58,7 +58,7 @@ const localBusinessJsonLd = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20 bg-brand-cream overflow-x-hidden">
+    <div className="flex flex-col gap-28 md:gap-36 bg-brand-cream overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
