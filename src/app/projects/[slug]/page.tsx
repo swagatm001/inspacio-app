@@ -55,6 +55,7 @@ const ProjectPage = ({ params }: Props) => {
   const location = project.address || "";
   const year = project.year || "";
   const sections = project.sections ?? [];
+  const heroImage = project.heroImage ?? project.thumbnail;
   const sectionImages = sections.flatMap((s) => s.images ?? []);
   const sector = sectorBySlug(sectorOf(project));
   const crumbs = [
@@ -70,8 +71,8 @@ const ProjectPage = ({ params }: Props) => {
       <ProjectHero
         title={project.title}
         subtitle={project.subtitle || ""}
-        image={project.thumbnail}
-        imageBlur={blurFor(project.thumbnail)}
+        image={heroImage}
+        imageBlur={blurFor(heroImage)}
         recognition={project.recognition}
         sector={sector ? { name: sector.name, href: `/spaces/${sector.slug}` } : undefined}
       />
