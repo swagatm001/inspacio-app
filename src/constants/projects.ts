@@ -55,6 +55,8 @@ export interface Project {
   credits?: { label: string; name: string }[];
   intro?: string;
   thumbnail: string;
+  /** Image at the top of the project page. Defaults to the thumbnail. */
+  heroImage?: string;
   title: string;
   subtitle: string;
   image: string[];
@@ -907,19 +909,15 @@ const brita: Project = {
   },
   year:2025,
   intro:"A modern workspace that embodies Brita’s philosophy of purity and innovation. With curved wooden forms, cascading greenery, and fluid blue accents, the design reflects balance, function, and sustainability.",
-  thumbnail: "/images/brita.webp",
+  thumbnail: "/images/brita/SNF08946.webp",
+  heroImage: "/images/brita/SNF09051.webp",
   title: "Brita India Water Solutions Pvt. Ltd.",
   slug: "brita",
   image: [
-    "/images/brita/SNF08922.webp",
-    "/images/brita/SNF08925.webp",
-    "/images/brita/SNF08934.webp",
-    "/images/brita/SNF08937.webp",
     "/images/brita/SNF08946.webp",
     "/images/brita/SNF08949.webp",
     "/images/brita/SNF08955.webp",
     "/images/brita/SNF08958.webp",
-    "/images/brita/SNF08979.webp",
     "/images/brita/SNF08982.webp",
     "/images/brita/SNF08988.webp",
     "/images/brita/SNF09006.webp",
@@ -939,7 +937,6 @@ const brita: Project = {
     "/images/brita/SNF09120.webp",
     "/images/brita/SNF09129.webp",
     "/images/brita/SNF09132.webp",
-    "/images/brita/SNF09135.webp",
     "/images/brita/SNF09144.webp",
   ],
   subtitle: "A modern workspace reflecting purity and innovation with fluid forms and greenery.",
@@ -952,15 +949,10 @@ const brita: Project = {
       title: "The Space",
       intro: [],
       images: [
-        "/images/brita/SNF08922.webp",
-        "/images/brita/SNF08925.webp",
-        "/images/brita/SNF08934.webp",
-        "/images/brita/SNF08937.webp",
         "/images/brita/SNF08946.webp",
         "/images/brita/SNF08949.webp",
         "/images/brita/SNF08955.webp",
         "/images/brita/SNF08958.webp",
-        "/images/brita/SNF08979.webp",
         "/images/brita/SNF08982.webp"
       ]
     },
@@ -1012,7 +1004,6 @@ const brita: Project = {
         "/images/brita/SNF09120.webp",
         "/images/brita/SNF09129.webp",
         "/images/brita/SNF09132.webp",
-        "/images/brita/SNF09135.webp",
         "/images/brita/SNF09144.webp"
       ]
     }
